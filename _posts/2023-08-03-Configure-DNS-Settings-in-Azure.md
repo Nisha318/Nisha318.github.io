@@ -7,4 +7,3 @@
 <img src="/assets/images/Azure DNS 1.PNG">
 <img src="/assets/images/Azure DNS 2.PNG">
 <img src="/assets/images/Azure DNS 3.PNG">
-om
