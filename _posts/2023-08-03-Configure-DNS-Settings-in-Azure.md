@@ -1,6 +1,6 @@
  ## How to Configure DNS Settings in Microsoft Azure
  
- {% include video id="XsxDH4HcOWA" provider="youtube" %}
+ {% include video id="3wjQhngR_hM&t=7s" provider="youtube" %}
  
 <a href="https://microsoftlearning.github.io/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/Instructions/Exercises/M01-Unit%206%20Configure%20DNS%20settings%20in%20Azure.html"> Lab Guide from Microsoft Learning </a>
 
