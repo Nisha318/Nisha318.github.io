@@ -1,0 +1,50 @@
+## Enable Inter-VPC Connectivity with AWS Transit Gateway
+
+
+<img src="/images/AWS Transit Gateway 1.png">
+<img src="/images/AWS Transit Gateway 2.png">
+<img src="/images/AWS Transit Gateway 3.png">
+<img src="/images/AWS Transit Gateway 4.png">
+<img src="/images/AWS Transit Gateway 5.png">
+<img src="/images/AWS Transit Gateway 6.png">
+<img src="/images/AWS Transit Gateway 7.png">
+<img src="/images/AWS Transit Gateway 8.png">
+<img src="/images/AWS Transit Gateway 9.png">
+<img src="/images/AWS Transit Gateway 10.png">
+<img src="/images/AWS Transit Gateway 11.png">
+<img src="/images/AWS Transit Gateway 12.png">
+<img src="/images/AWS Transit Gateway 13.png">
+<img src="/images/AWS Transit Gateway 14.png">
+<img src="/images/AWS Transit Gateway 15.png">
+<img src="/images/AWS Transit Gateway 16.png">
+<img src="/images/AWS Transit Gateway 17.png">
+<img src="/images/AWS Transit Gateway 18.png">
+<img src="/images/AWS Transit Gateway 19.png">
+<img src="/images/AWS Transit Gateway 20.png">
+<img src="/images/AWS Transit Gateway 21.png">
+<img src="/images/AWS Transit Gateway 22.png">
+<img src="/images/AWS Transit Gateway 23.png">
+<img src="/images/AWS Transit Gateway 24.png">
+<img src="/images/AWS Transit Gateway 25.png">
+<img src="/images/AWS Transit Gateway 26.png">
+<img src="/images/AWS Transit Gateway 27.png">
+<img src="/images/AWS Transit Gateway 28.png">
+<img src="/images/AWS Transit Gateway 29.png">
+<img src="/images/AWS Transit Gateway 30.png">
+<img src="/images/AWS Transit Gateway 31.png">
+<img src="/images/AWS Transit Gateway 32.png">
+<img src="/images/AWS Transit Gateway 33.png">
+<img src="/images/AWS Transit Gateway 34.png">
+<img src="/images/AWS Transit Gateway 35.png">
+<img src="/images/AWS Transit Gateway 36.png">
+<img src="/images/AWS Transit Gateway 37.png">
+<img src="/images/AWS Transit Gateway 38.png">
+<img src="/images/AWS Transit Gateway 39.png">
+<img src="/images/AWS Transit Gateway 40.png">
+<img src="/images/AWS Transit Gateway 41.png">
+<img src="/images/AWS Transit Gateway 42.png">
+<img src="/images/AWS Transit Gateway 43.png">
+<img src="/images/AWS Transit Gateway 44.png">
+<img src="/images/AWS Transit Gateway 45.png">
+<img src="/images/AWS Transit Gateway 46.png">
+
