@@ -55,7 +55,7 @@ plugins:
   - jekyll-include-cache
 
 author:
-  name   : "Nisha Prudhomme"
+  name   : "Nisha P McDonnell"
   avatar : "/assets/images/bio-photo.jpg"
   bio    : "Highly skilled Network Engineer with over 6 years of experience designing, deploying, and supporting various network solutions with a demonstrated track record of providing solutions, meeting SLA commitments, reducing infrastructure costs, and improving incident resolution time. "
   links:
