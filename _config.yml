@@ -16,7 +16,7 @@
 title: Notes by Nisha
 email: eunishap+tech@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-Nisha is a Network Engineer and a Cloud Security Enthusiast who enjoys learning all things technology!
+:Nisha is a Network Engineer and a Cloud Security Enthusiast who enjoys learning all things technology!
 twitter_username: Nisha281
 github_username: Nisha318
 minimal_mistakes_skin: neon
@@ -61,7 +61,7 @@ author:
   bio    : "Highly skilled Network Engineer with over 6 years of experience designing, deploying, and supporting various network solutions with a demonstrated track record of providing solutions, meeting SLA commitments, reducing infrastructure costs, and improving incident resolution time. "
   links:
     - label: "Website"
-      icon: "fas fa-fw fa-link"
+      icon: "fas fa-fw fa-marker-alt" aria-hidden="true"
       url: "https://"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
