@@ -1,5 +1,5 @@
 ## Enable Inter-VPC Connectivity Using Peering Connections in AWS
-
+ {% include video id="LlKjWDGWXdk&t=3s" provider="youtube" %}
 
 <img src="/assets/images/AWS Peering 1.png">
 <img src="/assets/images/AWS Peering 2.png">
