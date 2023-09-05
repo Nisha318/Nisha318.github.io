@@ -1,7 +1,7 @@
 <h2>Deploy and Configure Azure Firewall and Rules to Allow/Deny Access to Certain Websites</h2>
 
 <figure> 
-<img src="assets/images/mainimage.jpg">
+<img src="/assets/images/mainimage.jpg">
   <figcaption>Fig.1 - Azure Premium Firewall Diagram | Image Source: Microsoft.com</figcaption>
 </figure>
 

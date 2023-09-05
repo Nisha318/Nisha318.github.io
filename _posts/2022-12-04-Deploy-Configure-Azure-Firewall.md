@@ -1,7 +1,7 @@
 ## Deploy and Configure Azure Firewall and Rules to Allow/Deny Access to Certain Websites
 
 <figure> 
-<img src="assets/images/mainimage.jpg">
+<img src="/assets/images/mainimage.jpg">
 
   <figcaption>Fig.1 - Azure Premium Firewall Diagram | Image Source: Microsoft.com</figcaption>
 </figure>
@@ -31,12 +31,12 @@ Azure Firewall allows us to control and filter traffic through the use of config
 This demonstration will utilize a Firewall Policy for configuring rulesets, which will prioritize and process rules based on the hierarchy listed below by default.
 
 <figure>
-  <img src="assets/images/Rule collection.JPG" alt="Firewall Ruleset Hierarchy - diagram" style="width:100%">
+  <img src="/assets/images/Rule collection.JPG" alt="Firewall Ruleset Hierarchy - diagram" style="width:100%">
   <figcaption>Fig.2 - Firewall Ruleset Hierarchy | Image source: Microsoft.com.</figcaption>
 </figure>
 
 <figure>
-  <img src="assets/images/default ruleset.PNG" alt="Default Ruleset">
+  <img src="/assets/images/default ruleset.PNG" alt="Default Ruleset">
   <figcaption>Fig.3 - Default Rule Collection Groups and their priority.</figcaption>
 </figure>
 
@@ -57,7 +57,7 @@ In this demonstration, I will explain the steps for deploying an Azure Firewall 
 </ul>
 
 <figure>
-  <img src="assets/images/demo image.jpg">
+  <img src="/assets/images/demo image.jpg">
   <figcaption>Fig.4 - Lab Diagram</figcaption>
   </figure>
 
@@ -72,7 +72,7 @@ In our first task, we need to create a Resource Group (RG) that will hold relate
 
 <figure>
 
-<img src="assets/images/1 - Resource Group.jpg">
+<img src="/assets/images/1 - Resource Group.jpg">
 <figcaption> Fig.5 Create a resource group </figcaption>
 
 </figure>
@@ -88,7 +88,7 @@ In the next task, we need to create a Virtual Network (VNet) with the subnet ran
 On the Basics tab, we select our Subscription, Resource group, and Region from the drop-down lists. For the Instance details, we provide a name for the Virtual Network. Then, click on Next: IP Addresses to advance to the next configuration tab.
 
 <figure>
-  <img src="assets/images/2 - Create virtual network.jpg">
+  <img src="/assets/images/2 - Create virtual network.jpg">
 <figcaption> Fig6. Create a virtual network — Basics</figcaption>
 </figure>
 
@@ -96,7 +96,7 @@ On the IP Addresses configuration tab, we can modify the IPv4 address space for 
 
 <figure>
 
-  <img src="assets/images/3 - Create virtual network 2.jpg">
+  <img src="/assets/images/3 - Create virtual network 2.jpg">
   <figcaption> Fig7. Create virtual network — Edit default subnet </figcaption>
 
 </figure>
@@ -104,7 +104,7 @@ On the IP Addresses configuration tab, we can modify the IPv4 address space for 
 
 <figure>
 
-  <img src="assets/images/4 - Edit Default Subnet.jpg">
+  <img src="/assets/images/4 - Edit Default Subnet.jpg">
   <figcaption> Fig8. Add “AzureFirewallSubnet”</figcaption>
 
 </figure>
@@ -117,7 +117,7 @@ Next, we will add a subnet for the virtual machine that we will deploy into this
 
 <figure>
 
-  <img src="assets/images/5 - Add Workload Subnet.jpg">
+  <img src="/assets/images/5 - Add Workload Subnet.jpg">
   <figcaption> Fig9. Add Virtual Machine Subnet — Workload-SN</figcaption>
 
 </figure>
@@ -128,7 +128,7 @@ Next, we can confirm and verify the IP Addresses configuration that we wish to d
 
 <figure>
 
-  <img src="assets/images/6 - Completed VNet and Subnets.jpg">
+  <img src="/assets/images/6 - Completed VNet and Subnets.jpg">
   <figcaption> Fig10. Verify configured IP Addresses configuration</figcaption>
 
 </figure>
@@ -145,7 +145,7 @@ New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile firewall.
 
 <figure>
 
-  <img src="assets/images/7 - Deploy Virtual Machine.jpg">
+  <img src="/assets/images/7 - Deploy Virtual Machine.jpg">
   <figcaption> Fig11. Deploy Virtual Machine on CloudShell using an ARM Template</figcaption>
 
 </figure>
@@ -157,7 +157,7 @@ Upon completion of the VM deployment on the Cloudshell, I searched the top bar f
 
 <figure>
 
-  <img src="assets/images/8 - Verify VM Deployment.jpg">
+  <img src="/assets/images/8 - Verify VM Deployment.jpg">
   <figcaption> Fig12. Verify Virtual Machine Deployment</figcaption>
 
 </figure>
@@ -171,7 +171,7 @@ With our virtual networks, subnets, and virtual machines now deployed, we are no
 
 <figure>
 
-  <img src="assets/images/9 - Search Firewall.jpg">
+  <img src="/assets/images/9 - Search Firewall.jpg">
   <figcaption> Fig13. Search for firewall in services list</figcaption>
 
 </figure>
@@ -187,7 +187,7 @@ Finally, we can choose to create a new virtual network for the firewall or choos
 
 <figure>
 
-  <img src="assets/images/10 - Create Firewall.jpg">
+  <img src="/assets/images/10 - Create Firewall.jpg">
   <figcaption> Fig14. Create a firewall</figcaption>
 
 </figure>
@@ -198,7 +198,7 @@ With the firewall deployment completed, I then clicked on “Go to Resource” t
 
 <figure>
 
-  <img src="assets/images/11 - Confirm Firewall.jpg">
+  <img src="/assets/images/11 - Confirm Firewall.jpg">
   <figcaption> Fig15. Verify Firewall Private IP Address</figcaption>
 
 </figure>
@@ -208,7 +208,7 @@ Next, I clicked on the name of the firewall’s Public IP to verify the assigned
 
 <figure>
 
-  <img src="assets/images/12 - Firewall Public IP.jpg">
+  <img src="/assets/images/12 - Firewall Public IP.jpg">
   <figcaption> Fig16. Verify Firewall Public IP Address</figcaption>
 
 </figure>
@@ -221,7 +221,7 @@ Our next task involves configuring a Route Table that will be used to store a cu
 
 <figure>
 
-  <img src="assets/images/13 - Create Route Table.jpg">
+  <img src="/assets/images/13 - Create Route Table.jpg">
   <figcaption> Fig17. Create a Route Table</figcaption>
 
 </figure>
@@ -233,14 +233,14 @@ On the Subnets menu listed under Settings, click on + Associate to display the c
 
 <figure>
 
-  <img src="assets/images/14 - Associate Route Table to Subnet.jpg">
+  <img src="/assets/images/14 - Associate Route Table to Subnet.jpg">
   <figcaption> Fig18. Associate Route Table with Workload-SN Subnet</figcaption>
 
 </figure>
 
 <figure>
 
-  <img src="assets/images/15 - Verify Associate Route Table to Subnet.jpg">
+  <img src="/assets/images/15 - Verify Associate Route Table to Subnet.jpg">
   <figcaption> Fig19. Verification of Route Table and Workload-SN Subnet Association</figcaption>
 
 </figure>
@@ -254,7 +254,7 @@ On the Workload-SN subnet that is associated with this route table, we want to c
 
 <figure>
 
-  <img src="assets/images/16 - Add Route to Route Table.jpg">
+  <img src="/assets/images/16 - Add Route to Route Table.jpg">
   <figcaption> Fig20. Add Route to Route Table</figcaption>
 
 </figure>
@@ -266,14 +266,14 @@ On the Add route configuration pane, we need to supply a name for the route (fw-
 
 <figure>
 
-  <img src="assets/images/Add Route.jpg">
+  <img src="/assets/images/Add Route.jpg">
   <figcaption> Fig21. Add route</figcaption>
 
 </figure>
 
 <figure>
 
-  <img src="assets/images/17 - Confirm Route added to route table.jpg">
+  <img src="/assets/images/17 - Confirm Route added to route table.jpg">
   <figcaption> Fig22. Verification of Default Route Added to Route Table</figcaption>
 
 </figure>
@@ -283,7 +283,7 @@ Let's take a quick glance at the Effective Routes for the network interface of t
 
 <figure>
 
-  <img src="assets/images/Effective Routes.jpg">
+  <img src="/assets/images/Effective Routes.jpg">
   <figcaption> Fig23. Effective Routes for the Workload subnet</figcaption>
 
 </figure>
@@ -297,7 +297,7 @@ With the default outbound route now in place, it is now time for us to add firew
 
 <figure>
 
-  <img src="assets/images/18 - Select FW Policy.jpg">
+  <img src="/assets/images/18 - Select FW Policy.jpg">
   <figcaption> Fig24. Select the Firewall Policy Resource</figcaption>
 
 </figure>
@@ -307,7 +307,7 @@ The first type of rule that we will add is an application rule. For this task, w
 
 <figure>
 
-  <img src="assets/images/19 - Add App Rule Collection.jpg">
+  <img src="/assets/images/19 - Add App Rule Collection.jpg">
   <figcaption> Fig25. Add a New Rule Collection for the Application Rules</figcaption>
 
 </figure>
@@ -333,8 +333,8 @@ Click on “Add” to add this new Rule Collection and Rule to the firewall poli
 
 <figure>
 
-  <img src="assets/images/19 - Add App Rule Collection.jpg">
-  <img src="assets/images/20 - Application Rule.jpg">
+  <img src="/assets/images/19 - Add App Rule Collection.jpg">
+  <img src="/assets/images/20 - Application Rule.jpg">
   <figcaption> Fig26. Add a Rule Collection and Rule</figcaption>
 
 </figure>
@@ -343,7 +343,7 @@ Click on “Add” to add this new Rule Collection and Rule to the firewall poli
 
 <figure>
 
-  <img src="assets/images/21 - App Rule Confirm.jpg">
+  <img src="/assets/images/21 - App Rule Confirm.jpg">
   <figcaption> Fig27. Verification of added rule collection and rule</figcaption>
 
 </figure>
@@ -357,7 +357,7 @@ While on the firewall policy resource page, click on Network rules located under
 
 <figure>
 
-  <img src="assets/images/22 - Network Rule Collection.jpg">
+  <img src="/assets/images/22 - Network Rule Collection.jpg">
   <figcaption> Fig28. Add a New Rule Collection for the Network Rules</figcaption>
 
 </figure>
@@ -383,8 +383,8 @@ Destination: 209.244.0.3, 209.244.0.4
 
 <figure>
 
-  <img src="assets/images/23 - Add Network Rule Collection.jpg">
-    <img src="assets/images/24 - Add Network Rule.jpg">
+  <img src="/assets/images/23 - Add Network Rule Collection.jpg">
+    <img src="/assets/images/24 - Add Network Rule.jpg">
   <figcaption> Fig29. Add a Rule Collection and Network Rule</figcaption>
 
 </figure>
@@ -392,7 +392,7 @@ Destination: 209.244.0.3, 209.244.0.4
 
 <figure>
 
-  <img src="assets/images/25 - Verify Network Rule.jpg">
+  <img src="/assets/images/25 - Verify Network Rule.jpg">
   <figcaption> Fig30. Verification of Configured Network Rule</figcaption>
 
 </figure>
@@ -406,7 +406,7 @@ In this task, we will add a DNAT rule that will allow us to connect a remote des
 
 <figure>
 
-  <img src="assets/images/26 - Add DNAT rule collection.jpg">
+  <img src="/assets/images/26 - Add DNAT rule collection.jpg">
   <figcaption> Fig31. Add a Rule Collection for DNAT rules</figcaption>
 
 </figure>
@@ -420,7 +420,7 @@ Priority: 200
 Rule collection group: DefaultDnatRuleCollectionGroup
 
 <figure>
-  <img src="assets/images/27 - Add DNAT rule.jpg">
+  <img src="/assets/images/27 - Add DNAT rule.jpg">
   <figcaption> Fig32. Add Rule Collection and Rule for Destination Network Address Translation (DNAT)</figcaption>
 
 </figure>
@@ -441,7 +441,7 @@ Translated address: 10.0.2.4 (this is the internal/private IP address of the wor
 Translated port: 3389
 
 <figure>
-  <img src="assets/images/27 - Add DNAT rule.jpg">
+  <img src="/assets/images/27 - Add DNAT rule.jpg">
   <figcaption> Fig32. Add Rule Collection and Rule for Destination Network Address Translation (DNAT)</figcaption>
 
 </figure>
@@ -450,7 +450,7 @@ Click on Add to add this rule collection and DNAT rule to the policy of the fire
 
 
 <figure>
-  <img src="assets/images/verify DNAT rule.jpg">
+  <img src="/assets/images/verify DNAT rule.jpg">
   <figcaption> Fig33. Verification of configured Destination Network Address Translation Rule (DNAT)</figcaption>
 
 </figure>
@@ -459,7 +459,7 @@ Click on Add to add this rule collection and DNAT rule to the policy of the fire
 We can view each of our configured rule collections by clicking on Rule collections under the Settings section of the firewall policy resource.
 
 <figure>
-  <img src="assets/images/28 - Configured Rule Collections.jpg">
+  <img src="/assets/images/28 - Configured Rule Collections.jpg">
   <figcaption> Fig34. Verification of Configured Rule Collections on the Firewall Policy</figcaption>
 
 </figure>
@@ -470,7 +470,7 @@ We can view each of our configured rule collections by clicking on Rule collecti
 For testing purposes in this exercise, we will configure the Srv-Work server’s primary and secondary DNS addresses with custom addresses. We can do this by navigating to the network interface of the Srv-Work virtual machine. Under Settings, select DNS servers. Under DNS servers, select Custom. Type 209.244.0.3 in the Add DNS server text box, and 209.244.0.4 in the next text box. Click on SAVE to accept the new settings.
 
 <figure>
-  <img src="assets/images/29 - Custom DNS.jpg">
+  <img src="/assets/images/29 - Custom DNS.jpg">
   <figcaption> Fig35. Configure custom DNS servers for Srv-Work virtual machine</figcaption>
 
 </figure>
@@ -481,7 +481,7 @@ Clicking back into the configured DNS servers page, we observe at the bottom of 
 
 
 <figure>
-  <img src="assets/images/30 - Save Custom DNSS.jpg">
+  <img src="/assets/images/30 - Save Custom DNSS.jpg">
   <figcaption> Fig36. Verification of Custom DNS servers</figcaption>
 
 </figure>
@@ -492,7 +492,7 @@ Clicking back into the configured DNS servers page, we observe at the bottom of 
 Finally, it is time to test the firewall rules that we have configured for this deployment. We will begin by launching the Remote Desktop Connection tool from our PC. We will enter the public IP address of the firewall, in my case it is 20.228.240.135. On the prompt, enter the admin account credentials that you configured when you deployed the workload server VM, then click on OK.
 
 <figure>
-  <img src="assets/images/35 - RDP test to VM.jpg">
+  <img src="/assets/images/35 - RDP test to VM.jpg">
   <figcaption> Fig37. Initiating RDP Connection to the Firewall’s Public IP Address</figcaption>
 
 </figure>
@@ -502,7 +502,7 @@ Finally, it is time to test the firewall rules that we have configured for this 
 Next, you will be prompted about a certificate for the workload server VM, Srv-Work. Click on “Yes” to proceed. A successful connection to the workload VM proves that our configured DNAT rule is working as expected and is translating our firewall’s Public IP address to that of the internal/private IP address of the Svr-Work VM.
 
 <figure>
-  <img src="assets/images/36 - Log in to VM RDP.jpg">
+  <img src="/assets/images/36 - Log in to VM RDP.jpg">
   <figcaption> Fig38. Confirm Connect Request to Srv-Work VM</figcaption>
 
 </figure>
@@ -514,7 +514,7 @@ Next, you will be prompted about a certificate for the workload server VM, Srv-W
 Once we are logged into the Srv-Work virtual machine, we need to launch the web browser so that we can test whether or not we will be permitted to access www.google.com site. Here, we can see that the firewall rule worked as expected to allow this communication. Remember, anything that is not explicitly permitted by a rule will be denied by default when using a firewall. The Application rule that we configured for Allow-Google is allowing this outbound traffic to Google.
 
 <figure>
-  <img src="assets/images/37 - Google test.jpg">
+  <img src="/assets/images/37 - Google test.jpg">
   <figcaption> Fig39. Testing Firewall Application Rule for Allow-Google</figcaption>
 
 </figure>
@@ -522,7 +522,7 @@ Once we are logged into the Srv-Work virtual machine, we need to launch the web 
 In this next test, I tried to navigate to www.microsoft.com in the web browser and was presented with the following feedback. This connection was denied by the firewall because we did not configure an explicit rule to allow connections from our subnet to communicate with this FQDN.
 
 <figure>
-  <img src="assets/images/38 - microsoft test.jpg">
+  <img src="/assets/images/38 - microsoft test.jpg">
   <figcaption> Fig40. Testing Firewall Application Rule for Connection to Microsoft.com</figcaption>
 
 </figure>
