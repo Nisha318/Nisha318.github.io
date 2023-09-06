@@ -2,9 +2,9 @@
 
 <img src="/assets/images/IAM AZ Policy 1.png">
 <img src="/assets/images/IAM AZ Policy 2.png">
-<img src="/assets/images/IAM AZ Policy 31.png">
+<img src="/assets/images/IAM AZ Policy 3.png">
 <img src="/assets/images/IAM AZ Policy 4.png">
-<img src="/assets/images/IAM AZ Policy 51.png">
+<img src="/assets/images/IAM AZ Policy 5.png">
 <img src="/assets/images/IAM AZ Policy 6.png">
 <img src="/assets/images/IAM AZ Policy 7.png">
 <img src="/assets/images/IAM AZ Policy 8.png">
