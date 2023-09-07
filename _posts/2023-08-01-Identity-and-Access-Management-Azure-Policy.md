@@ -21,5 +21,5 @@
 <img src="/assets/images/IAM AZ Policy 19.png">
 <img src="/assets/images/IAM AZ Policy 20.png">
 <img src="/assets/images/IAM AZ Policy 21.png">
-
-
+<img src="/assets/images/IAM AZ Policy 22.png">
+<img src="/assets/images/IAM AZ Policy 23.png">
