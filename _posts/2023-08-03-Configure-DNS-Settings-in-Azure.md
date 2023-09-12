@@ -3,7 +3,7 @@ title: "Post: How to Configure DNS Settings in Microsoft Azure"
 excerpt_separator: "<!--more-->"
 categories:
   - Azure
-  -Networking
+  - Networking
 tags:
   - Post Formats
   - readability
