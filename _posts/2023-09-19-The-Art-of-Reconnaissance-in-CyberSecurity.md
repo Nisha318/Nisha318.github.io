@@ -1,6 +1,6 @@
 ## The Art of Reconnaissance: A Critical Tool in Cybersecurity
 
-<img src="/images/5 - Reconnaissance.png">
+<img src="/assets/images/5 - Reconnaissance.png">
 
 Welcome to Day 4 of my <b>100 Days of Cybersecurity Challenge</b>. As I progress through this intensive learning journey, I’m thrilled to share some insights into one of the most critical aspects of cybersecurity: reconnaissance.
 
@@ -18,19 +18,19 @@ However, it’s a double-edged sword. Bad actors are also employing reconnaissan
 
 My hands-on learning session had me engaging with the essential tools of cybersecurity reconnaissance. I investigated domain ownership through WHOIS, conducted DNS queries using nslookup and dig, and searched for internet-connected devices with Shodan. I also probed the Google Hacking Database to discover security gaps that are exposed via search queries. Additionally, other resources like the Threat Intelligence Platform, viewdns.info, and Censys offered me a comprehensive overview of internet assets and their potential vulnerabilities.
 
-<img src="/images/WHOis.png">
-<img src="/images/nslookup1.png">
-<img src="/images/dig1.png">
-<img src="/images/shodan.png">
+<img src="/assets/images/WHOis.png">
+<img src="/assets/images/nslookup1.png">
+<img src="/assets/images/dig1.png">
+<img src="/assets/images/shodan.png">
 
 
 <h4>Resources and Moving Forward</h4>
 
 I’ve also been fortunate to access remarkable resources to bolster my reconnaissance skills. Platforms like Cisco Skills for All offer an ‘Ethical Hacker’ course, while ‘The Cyber Mentor’ provides a comprehensive ‘Ethical Hacking in 15 Hours’ training. For a more focused approach, TryHackMe’s ‘Passive Reconnaissance’ module was particularly insightful.
 
-<img src="/images/Cisco Skills For All.png">
-<img src="/images/cybermentor.png">
-<img src="/images/THM Reconnaissance.png">
+<img src="/assets/images/Cisco Skills For All.png">
+<img src="/assets/images/cybermentor.png">
+<img src="/assets/images/THM Reconnaissance.png">
 
 
 As I continue on this challenge, my excitement only grows. I’m committed to deepening my understanding of cybersecurity and amping up my skills to stay ahead in this ever-evolving cyber battleground. Stay tuned for more updates as I venture through the #100DaysOfCybersecurity.
