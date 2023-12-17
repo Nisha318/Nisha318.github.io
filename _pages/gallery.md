@@ -41,11 +41,12 @@ images:
     width: 140% !important;
 }
     .image-timeline:nth-child(n){
-  margin: 0px 0px 20px 15px;
+  margin: 0px 0px 20px 25px;
   border-radius: 5px;
   border: 1px dashed #f01367;
-  width: 32%;
+  width: 30%;
   height: auto;
+  margin-left: 25px;
 }
  }
  /* Responsive display for desktop 1280px */
@@ -57,7 +58,7 @@ images:
   margin: 0px 0px 20px 15px;
   border-radius: 5px;
   border: 1px dashed #f01367;
-  width: 32%;
+  width: 31%;
   height: auto;
 }
  }
