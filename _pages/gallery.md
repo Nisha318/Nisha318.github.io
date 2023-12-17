@@ -38,7 +38,7 @@ images:
  /* Responsive display for tablet minimum 1024px */
   @media screen and (min-width: 64em) {
     .gallery{
-    width: 140% !important;
+    width: 130% !important;
 }
     .image-timeline:nth-child(n){
   margin: 0px 0px 20px 25px;
@@ -46,13 +46,12 @@ images:
   border: 1px dashed #f01367;
   width: 30%;
   height: auto;
-  margin-left: 25px;
 }
  }
  /* Responsive display for desktop 1280px */
   @media screen and (min-width: 80em) {
     .gallery{
-    width: 140%;
+    width: 170% !important;
 }
   .image-timeline:nth-child(n){
   margin: 0px 0px 20px 15px;
