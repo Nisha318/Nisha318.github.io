@@ -2,7 +2,7 @@
 title: "Image Title - 2"
 excerpt: "Summary about image"
 header:
-  teaser: assets/images/unsplash-gallery-image-2-th.jpg
+  teaser: assets/images/attach to VPC2.png
 tags:
   - tag 1
   - tag 2
