@@ -10,12 +10,10 @@ images:
 
 <style>
 .gallery{
-    display: flex;
-    flex-direction: row;
     width: 100%;
 }
 .image-timeline:nth-child(n){
-  margin: 0px 0px 20px 0px;
+  margin: 0px 0px 20px 15px;
   border-radius: 5px;
   box-shadow: 2px 2px 8px #dadada;
   width: 250px;
