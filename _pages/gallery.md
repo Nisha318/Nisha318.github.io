@@ -1,5 +1,5 @@
 ---
-permalink: /about/
+permalink: /gallery/
 title: "Gallery"
 images:
   - 5 - Reconnaissance.png
