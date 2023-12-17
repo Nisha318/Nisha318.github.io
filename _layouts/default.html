@@ -1,0 +1,144 @@
+---
+---
+
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js">
+  <head>
+    {% include head.html %}
+  </head>
+<style>
+  /* main strollbar */
+
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+    }
+    
+    /* Track */
+    ::-webkit-scrollbar-track {
+    background: black; 
+    border: 1px solid #f01367;
+    border-radius: 10px;
+    }
+    
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+    background: #f01367; 
+    border-radius: 10px;
+    }
+    
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+    background: #f01367; 
+    }
+    
+    /* sidebar strollbar */
+    
+    /* width */
+    .sidebar::-webkit-scrollbar {
+    width: 7px;
+    }
+    
+    /* Track */
+    .sidebar::-webkit-scrollbar-track {
+    background: black; 
+    }
+    .sidebar::-webkit-scrollbar-track {
+    border-radius: 10px;
+    border: 1px solid #f01367;
+    }
+    
+    /* Handle */
+    .sidebar::-webkit-scrollbar-thumb {
+    background: #f01367; 
+    border-radius: 10px;
+    }
+    
+    /* Handle on hover */
+    .sidebar::-webkit-scrollbar-thumb:hover {
+    background: #721b3c; 
+    }
+  
+/* Responsive display for mobile 676px */
+ @media screen and (max-width: 42em) {
+    .gallery{
+    width: 100%;
+}
+  .image-timeline:nth-child(n){
+  margin: 20px 0px 20px 0px;
+  border-radius: 5px;
+  border: 1px dashed #f01367;
+  width: 100% !important;
+  height: auto;
+}
+ }
+ @media screen and (max-width: 64em) {
+    .gallery{
+    width: 100%;
+}
+  .image-timeline:nth-child(n){
+  margin: 20px 0px 20px 0px;
+  border-radius: 5px;
+  border: 1px dashed #f01367;
+  width: 49%;
+  height: auto;
+}
+}
+ /* Responsive display for tablet minimum 1024px */
+  @media screen and (min-width: 64em) {
+    .gallery{
+    width: 130% !important;
+}
+    .image-timeline:nth-child(n){
+  margin: 0px 0px 20px 25px;
+  border-radius: 5px;
+  border: 1px dashed #f01367;
+  width: 30%;
+  height: auto;
+}
+ }
+ /* Responsive display for desktop 1280px */
+  @media screen and (min-width: 80em) {
+    .gallery{
+    width: 150% !important;
+}
+  .image-timeline:nth-child(n){
+  margin: 0px 0px 20px 15px;
+  border-radius: 5px;
+  border: 1px dashed #f01367;
+  width: 30%;
+  height: auto;
+}
+ }
+</style>
+  <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
+    {% include_cached skip-links.html %}
+    {% include_cached masthead.html %}
+
+    <div class="initial-content">
+      {{ content }}
+    </div>
+
+
+    {% if site.search == true %}
+      <div class="search-content">
+        {% include_cached search/search_form.html %}
+      </div>
+    {% endif %}
+
+    <div id="footer" class="page__footer">
+      <footer>
+        {% include footer/custom.html %}
+        {% include_cached footer.html %}
+      </footer>
+    </div>
+    {% include scripts.html %}
+ 
+  </body>
+</html>
