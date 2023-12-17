@@ -3,7 +3,7 @@ title: "The Art of Reconnaissance in Cybersecurity"
 categories:
   - Blog
 tags:
-  - Cloud, Azure, Networking
+  - Azure
 ---
 
 ## How to Configure DNS Settings in Microsoft Azur
