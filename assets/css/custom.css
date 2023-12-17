@@ -1,0 +1,52 @@
+/* main strollbar */
+
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+    }
+    
+    /* Track */
+    ::-webkit-scrollbar-track {
+    background: black; 
+    border: 1px solid #f01367;
+    border-radius: 10px;
+    }
+    
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+    background: #f01367; 
+    border-radius: 10px;
+    }
+    
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+    background: #f01367; 
+    }
+    
+    /* sidebar strollbar */
+    
+    /* width */
+    .sidebar::-webkit-scrollbar {
+    width: 7px;
+    }
+    
+    /* Track */
+    .sidebar::-webkit-scrollbar-track {
+    background: black; 
+    }
+    .sidebar::-webkit-scrollbar-track {
+    border-radius: 10px;
+    border: 1px solid #f01367;
+    }
+    
+    /* Handle */
+    .sidebar::-webkit-scrollbar-thumb {
+    background: #f01367; 
+    border-radius: 10px;
+    }
+    
+    /* Handle on hover */
+    .sidebar::-webkit-scrollbar-thumb:hover {
+    background: #721b3c; 
+    }
+  
