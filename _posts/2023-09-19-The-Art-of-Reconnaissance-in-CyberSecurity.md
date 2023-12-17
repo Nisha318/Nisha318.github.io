@@ -1,3 +1,11 @@
+---
+title: "The Art of Reconnaissance in Cybersecurity"
+categories:
+  - Blog
+tags:
+  - Notes by Nisha
+---
+
 ## The Art of Reconnaissance: A Critical Tool in Cybersecurity
 
 <img src="/assets/images/5 - Reconnaissance.png">
