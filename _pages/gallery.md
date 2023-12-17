@@ -26,7 +26,7 @@ images:
  <h3 class="image-a">Nisha's Gallery</h3>
 {% capture notice-5 %}
 {% for image in page.images %}
-    <img class="image-timeline" src="/assets/images/{{ images }}" />
+    <img class="image-timeline" src="/assets/images/{{ image }}" />
 {% endfor %}
 
 {% endcapture%}
