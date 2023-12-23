@@ -2,7 +2,7 @@
 title: "Image Title - 1"
 excerpt: "Summary about image"
 header:
-  image: /assets/images/cybermentor.png #image content, you can remove it if you want
+  image: /assets/images/EDR_image.png #image content, you can remove it if you want
   teaser: assets/images/cybermentor.png
 tags:
   - tag 1
