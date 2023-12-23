@@ -1,5 +1,5 @@
 ---
-title: "Image Title - 1"
+title: "Endpoint Monitoring"
 excerpt: "Endpoint Detection and Response (EDR)"
 header:
   image: /assets/images/EDR_image.png #image content, you can remove it if you want
