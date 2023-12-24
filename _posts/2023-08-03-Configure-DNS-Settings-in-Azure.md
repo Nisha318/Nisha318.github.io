@@ -1,5 +1,5 @@
 ---
-title: "The Art of Reconnaissance in Cybersecurity"
+title: "How to Configure DNS Settings in Microsoft Azure"
 categories:
   - Blog
 tags:

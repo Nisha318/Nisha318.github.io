@@ -1,9 +1,9 @@
 ---
-title: "Image Title - 1"
-excerpt: "Summary about image"
+title: "Endpoint Monitoring"
+excerpt: "Endpoint Detection and Response (EDR)"
 header:
-  image: /assets/images/cybermentor.png #image content, you can remove it if you want
-  teaser: assets/images/cybermentor.png
+  image: /assets/images/EDR_image.png #image content, you can remove it if you want
+  teaser: assets/images/EDR_image.png
 tags:
   - tag 1
   - tag 2
