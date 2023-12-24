@@ -1,195 +1,226 @@
 ---
-permalink: /resume/
-title: "Nisha's Resume"
+cover: true
+title: Resume
+classes:
+  - wide
+permalink: /
 ---
 <style>
-    .resume-header{
-      text-align: center;
-    }
+  @media screen and (max-width: 64em) {
     .resume-links-headers{
       display: flex;
-      flex-direction: row;
-      column-gap: 10px;
-      justify-content: center;
+      flex-direction: column !important;
+      row-gap: 10px;
+      justify-content: left !important ;
       margin-bottom: 20px;
-    }
-    .resume-links-headers li{
-      text-decoration: none;
-    }
-    .resume-links-headers li:nth-child(1){
-      text-decoration: none;
-      list-style: none;
-    }
-    .resume-body-header{
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-    }
-    .resume-badges {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr); /* Three columns with equal width */
-        grid-gap: 10px; /* Gap between grid items */
-        border: 1px dashed rgb(90, 86, 86);
-        margin-top: 50px;
-        padding: 20px;
-        border-radius: 5px;
-    }
-    
-    .resume-badges img {
-        max-width: 100%; /* Ensure images don't exceed their container's width */
-        height: auto; /* Maintain aspect ratio */
-        width: 170px;
-    }
-    
-    </style>
-    <div class="resume-header">
-      <h2>Nisha P McDonnell</h2>
-      <div class="resume-links-headers">
-        <li><a href="mailto:eunishap@gmail.com">eunishap@gmail.com</a></li>
-        <li><a href="https://www.linkedin.com/in/nishaprudhomme/" target="_blank">Linkedin</a></li>
-        <li><a href="https://github.com/nisha318" target="_blank">Github</a></li>
-        <li><a href="/" target="_blank">Blog</a></li>
-      </div>
-      <img width="200px" height="auto" src="/assets/images/B5F770AE-96C3-4053-8B42-7C210012B102.png" alt="">
-    </div>
-    
-    <hr style="border: 1px solid black;">
-    <div class="resume-body">
-      <h5>Summary</h5>
-      <hr style="border: 1px solid black;">
-      <p>Network Security Engineer with a passion for strengthening cyber defenses, conducting thorough
-        investigations, and effectively handling incidents. Committed to continuous learning and skill
-        development through hands-on projects using home lab and active participation in CTF events.</p>
-    
-      <h5>Skills</h5>
-      <hr style="border: 1px solid black;">
+}
+.resume-links-headers li{
+  text-decoration: none;
+  list-style: none;
+}
+.resume-badges {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) !important; /* two columns with equal width */
+    grid-gap: 10px; /* Gap between grid items */
+    border: 1px dashed rgb(90, 86, 86);
+    margin-top: 50px;
+    padding: 20px;
+    border-radius: 5px;
+}
+.resume-badges img {
+    max-width: 100%; /* Ensure images don't exceed their container's width */
+    height: auto; /* Maintain aspect ratio */
+    width: 300px !important;
+}
+
+  }
+.resume-header{
+  text-align: center;
+}
+.resume-links-headers{
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.resume-links-headers li{
+  text-decoration: none;
+}
+.resume-links-headers li:nth-child(1){
+  text-decoration: none;
+  list-style: none;
+}
+.resume-body-header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.resume-badges {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns with equal width */
+    grid-gap: 10px; /* Gap between grid items */
+    border: 1px dashed rgb(90, 86, 86);
+    margin-top: 50px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.resume-badges img {
+    max-width: 100%; /* Ensure images don't exceed their container's width */
+    height: auto; /* Maintain aspect ratio */
+    width: 170px;
+}
+
+</style>
+<div class="resume-header">
+  <h2>Nisha P McDonnell</h2>
+  <div class="resume-links-headers">
+    <li><a href="mailto:eunishap@gmail.com">eunishap@gmail.com</a></li>
+    <li><a href="https://www.linkedin.com/in/nishaprudhomme/" target="_blank">Linkedin</a></li>
+    <li><a href="https://github.com/nisha318" target="_blank">Github</a></li>
+    <li><a href="/" target="_blank">Blog</a></li>
+  </div>
+  <img width="200px" height="auto" src="/assets/images/B5F770AE-96C3-4053-8B42-7C210012B102.png" alt="">
+</div>
+
+<hr style="border: 1px solid black;">
+<div class="resume-body">
+  <h5>Summary</h5>
+  <hr style="border: 1px solid black;">
+  <p>Network Security Engineer with a passion for strengthening cyber defenses, conducting thorough
+    investigations, and effectively handling incidents. Committed to continuous learning and skill
+    development through hands-on projects using home lab and active participation in CTF events.</p>
+
+  <h5>Skills</h5>
+  <hr style="border: 1px solid black;">
+  <ul>
+    <li><b>Security Tools:</b> Splunk, Vulnerability Patching, Palo Alto Firewall, Nessus, OpenVAS, Suricata IDS,
+      Microsoft Sentinel SIEM</li>
+    <li><b>Operating Systems:</b> Windows, Linux</li>
+    <li><b>Cloud Platforms:</b> Microsoft Azure, AWS</li>
+    <li><b>Infrastructure as Code (IAC):</b> Terraform</li>
+    <li><b>Virtualization:</b> VMware</li>
+    <li><b>Network Devices:</b> Cisco Routers, Switches, Dell Servers, Cisco Unified Communications</li>
+    <li><b>Active Directory:</b> O365, LAN/WAN</li>
+    <li><b>Network Analysis:</b> Wireshark, Traffic Analysis, Network Protocols, tcpdump</li>
+    <li><b>Languages:</b> PowerShell, Python, YAML, JSON</li>
+    <li><b>Others:</b> GitHub, HTML, Service Now, Prognosis IR Cloud</li>
+  </ul>
+  <hr style="border: 1px solid black;">
+  <h5>Experience</h5>
+  <hr style="border: 1px solid rgb(90, 86, 86);">
+  <span style="font-weight: bold;"><img width="60px" height="auto" src="/assets/images/0D23BA09-1B56-4581-8659-F3F8C8E693D4.png" alt=""> CDW | Remote, TX</span>
+  <div class="resume-body-header">
+    <span style="display: block; font-weight: bold; font-size: 20px;">Engineer II – Managed Services</span>
+    <span style="display: block; font-weight: bold; font-size: 20px;">Nov 2020 – Present</span>
+  </div>
+  <ul>
+    <li>Managing critical PKI certificate installations, enhancing network security</li>
+    <li>Investigates security advisories and implements and coordinates patching activities to mitigate
+      critical vulnerabilities.</li>
+    <li>Executes problem-solving skills to identify solutions to complex network issues and providing
+        root cause analysis.</li>
+    <li>Improves incident resolution time by 25% through the implementation of ITIL processes</li>
+    <li>Monitored systems for anomalies through network traffic analysis and log monitoring</li>
+  </ul>
+  <hr>
+  <span style="font-weight: bold;"><img width="60px" height="auto" src="/assets/images/0D23BA09-1B56-4581-8659-F3F8C8E693D4.png" alt=""> CDW | Remote, TX</span>
+  <div class="resume-body-header">
+    <span style="display: block; font-weight: bold; font-size: 20px;">Network Consulting Engineer</span>
+    <span style="display: block; font-weight: bold; font-size: 20px;">Nov 2018 – Nov 2020</span>
+  </div>
+  <ul>
+   <li> Provide support to designing, planning, and building communications networks</li>
+   <li>Configuring LAN switches and VPN devices to support voice communications networks</li>
+   <li>Used automation tools for the deployment, migration, and upgrade of UC Application servers</li>
+   <li>Analyzed existing voice and data networks, providing recommendations and solutions</li>
+   <li>Successfully achieved an average 85% of expected billable revenue targets</li>
+  </ul>
+  <hr>
+  <span style="font-weight: bold;"><img width="60px" height="auto" src="/assets/images/0D23BA09-1B56-4581-8659-F3F8C8E693D4.png" alt=""> CDW | Remote, TX</span>
+  <div class="resume-body-header">
+    <span style="display: block; font-weight: bold; font-size: 20px;">Associate Consulting Engineer</span>
+    <span style="display: block; font-weight: bold; font-size: 20px;">NMar 2017 – Nov 2018
+    </span>
+  </div>
+  <ul>
+    <li>Analyzed existing voice and data networks, providing recommendations and solutions</li>
+    <li>Used automation tools for the deployment, migration, and upgrade of UC Application servers</li>
+  </ul>
+  <hr>
+  <span style="font-weight: bold;"><img width="60px" height="auto" src="/assets/images/710262D3-CA0E-48BC-937E-E3354FEB01C8.jpeg" alt="">   Cypress-Fairbanks ISD | Remote, TX</span>
+  <div class="resume-body-header">
+    <span style="display: block; font-weight: bold; font-size: 20px;">Instructor, Technology Applications</span>
+    <span style="display: block; font-weight: bold; font-size: 20px;">Aug 2009 - Mar 2017</span>
+  </div>
+  <ul>
+   <li> Implemented and secured applications, web-based platforms, and content management
+    systems</li>
+   <li> Maintained confidentiality and privacy of student and staff information in compliance with
+    security policies and procedures</li>
+    <li>Protected student data and integrated technology for quality curriculum and instruction</li>
+  </ul>
+  <hr style="border: 1px solid black;">
+  <h5>KEY PROJECTS</h5>
+  <hr style="border: 1px solid rgb(90, 86, 86);">
+  <span style="font-weight: bold;">Open-Source SOC Home Lab</span>
+  <li>
+    Monitoring, Logging, SIEM, Security, EDR, Threat Intelligence, IDS/IPS, Scanning
+  </li>
+  
+  <span style="font-weight: bold;"><a href="https://nisha318.github.io/Vulnerability-Scanning-with-OpenVAS-Unveiling-Cybersecurity-Insights/">Cybersecurity Vulnerability Management Project (Nessus and OpenVAS)</a></span>
+  <li>
+    Executed credentialed vulnerability scans and remediated vulnerabilities, enhancing
+    cybersecurity posture
+  </li>
+
+  <span style="font-weight: bold;"><a href="https://github.com/Nisha318/Sentinel-SIEM-Projects/tree/main/Azure%20Sentinel%20Map%20With%20LIve%20Cyber%20Attacks!">Azure Cloud Detection Project : Sentinel SIEM</a></span>
+  <li>
+    Utilized PowerShell scripting, Windows Event Viewer, and APIs for real-time attack visualization.
+  </li>
+  <br>
+  <hr style="border: 1px solid black;">
+  <h5>CERTIFICATIONS</h5>
+  <hr style="border: 1px solid black;">
+
+  <ul>
+    <li> CompTIA Security+ CE</li>
+    <li>Microsoft Azure Administrator Associate</li>
+    <li>Microsoft Azure Network Engineer Associate</li>
+    <li>ITIL Foundations v3</li>
+    <li>Cisco Certified Network Associate (CCNA)
       <ul>
-        <li><b>Security Tools:</b> Splunk, Vulnerability Patching, Palo Alto Firewall, Nessus, OpenVAS, Suricata IDS,
-          Microsoft Sentinel SIEM</li>
-        <li><b>Operating Systems:</b> Windows, Linux</li>
-        <li><b>Cloud Platforms:</b> Microsoft Azure, AWS</li>
-        <li><b>Infrastructure as Code (IAC):</b> Terraform</li>
-        <li><b>Virtualization:</b> VMware</li>
-        <li><b>Network Devices:</b> Cisco Routers, Switches, Dell Servers, Cisco Unified Communications</li>
-        <li><b>Active Directory:</b> O365, LAN/WAN</li>
-        <li><b>Network Analysis:</b> Wireshark, Traffic Analysis, Network Protocols, tcpdump</li>
-        <li><b>Languages:</b> PowerShell, Python, YAML, JSON</li>
-        <li><b>Others:</b> GitHub, HTML, Service Now, Prognosis IR Cloud</li>
+        <li>CCNP Enterprise Core Specialist </li>
       </ul>
-      <hr style="border: 1px solid black;">
-      <h5>Experience</h5>
-      <hr style="border: 1px solid rgb(90, 86, 86);">
-      <span style="font-weight: bold;"><img width="60px" height="auto" src="/assets/images/0D23BA09-1B56-4581-8659-F3F8C8E693D4.png" alt=""> CDW | Remote, TX</span>
-      <div class="resume-body-header">
-        <span style="display: block; font-weight: bold; font-size: 20px;">Engineer II – Managed Services</span>
-        <span style="display: block; font-weight: bold; font-size: 20px;">Nov 2020 – Present</span>
-      </div>
+    </li>  
+  </ul>
+</div>
+<br>
+<hr style="border: 1px solid black;">
+<h5>EDUCATION</h5>
+  <hr style="border: 1px solid black;">
+
+  <ul>
+    <li> Master's in Cybersecurity and Information Assurance
       <ul>
-        <li>Managing critical PKI certificate installations, enhancing network security</li>
-        <li>Investigates security advisories and implements and coordinates patching activities to mitigate
-          critical vulnerabilities.</li>
-        <li>Executes problem-solving skills to identify solutions to complex network issues and providing
-            root cause analysis.</li>
-        <li>Improves incident resolution time by 25% through the implementation of ITIL processes</li>
-        <li>Monitored systems for anomalies through network traffic analysis and log monitoring</li>
+        <li> Western Governor’s University</li>
+        <li>In progress</li>
       </ul>
-      <hr>
-      <span style="font-weight: bold;"><img width="60px" height="auto" src="/assets/images/0D23BA09-1B56-4581-8659-F3F8C8E693D4.png" alt=""> CDW | Remote, TX</span>
-      <div class="resume-body-header">
-        <span style="display: block; font-weight: bold; font-size: 20px;">Network Consulting Engineer</span>
-        <span style="display: block; font-weight: bold; font-size: 20px;">Nov 2018 – Nov 2020</span>
-      </div>
-      <ul>
-       <li> Provide support to designing, planning, and building communications networks</li>
-       <li>Configuring LAN switches and VPN devices to support voice communications networks</li>
-       <li>Used automation tools for the deployment, migration, and upgrade of UC Application servers</li>
-       <li>Analyzed existing voice and data networks, providing recommendations and solutions</li>
-       <li>Successfully achieved an average 85% of expected billable revenue targets</li>
-      </ul>
-      <hr>
-      <span style="font-weight: bold;"><img width="60px" height="auto" src="/assets/images/0D23BA09-1B56-4581-8659-F3F8C8E693D4.png" alt=""> CDW | Remote, TX</span>
-      <div class="resume-body-header">
-        <span style="display: block; font-weight: bold; font-size: 20px;">Associate Consulting Engineer</span>
-        <span style="display: block; font-weight: bold; font-size: 20px;">NMar 2017 – Nov 2018
-        </span>
-      </div>
-      <ul>
-        <li>Analyzed existing voice and data networks, providing recommendations and solutions</li>
-        <li>Used automation tools for the deployment, migration, and upgrade of UC Application servers</li>
-      </ul>
-      <hr>
-      <span style="font-weight: bold;">Cypress-Fairbanks ISD | Remote, TX</span>
-      <div class="resume-body-header">
-        <span style="display: block; font-weight: bold; font-size: 20px;">Instructor, Technology Applications</span>
-        <span style="display: block; font-weight: bold; font-size: 20px;">Aug 2009 - Mar 2017</span>
-      </div>
-      <ul>
-       <li> Implemented and secured applications, web-based platforms, and content management
-        systems</li>
-       <li> Maintained confidentiality and privacy of student and staff information in compliance with
-        security policies and procedures</li>
-        <li>Protected student data and integrated technology for quality curriculum and instruction</li>
-      </ul>
-      <hr style="border: 1px solid black;">
-      <h5>KEY PROJECTS</h5>
-      <hr style="border: 1px solid rgb(90, 86, 86);">
-      <span style="font-weight: bold;">Open-Source SOC Home Lab</span>
-      <li>
-        Monitoring, Logging, SIEM, Security, EDR, Threat Intelligence, IDS/IPS, Scanning
-      </li>
-      
-      <span style="font-weight: bold;"><a href="https://nisha318.github.io/Vulnerability-Scanning-with-OpenVAS-Unveiling-Cybersecurity-Insights/">Cybersecurity Vulnerability Management Project (Nessus and OpenVAS)</a></span>
-      <li>
-        Executed credentialed vulnerability scans and remediated vulnerabilities, enhancing
-        cybersecurity posture
-      </li>
-    
-      <span style="font-weight: bold;"><a href="https://github.com/Nisha318/Sentinel-SIEM-Projects/tree/main/Azure%20Sentinel%20Map%20With%20LIve%20Cyber%20Attacks!">Azure Cloud Detection Project : Sentinel SIEM</a></span>
-      <li>
-        Utilized PowerShell scripting, Windows Event Viewer, and APIs for real-time attack visualization.
-      </li>
-      <br>
-      <hr style="border: 1px solid black;">
-      <h5>CERTIFICATIONS</h5>
-      <hr style="border: 1px solid black;">
-    
-      <ul>
-        <li> CompTIA Security+ CE</li>
-        <li>Microsoft Azure Administrator Associate</li>
-        <li>Microsoft Azure Network Engineer Associate</li>
-        <li>ITIL Foundations v3</li>
-        <li>Cisco Certified Network Associate (CCNA)
-          <ul>
-            <li>CCNP Enterprise Core Specialist </li>
-          </ul>
-        </li>  
-      </ul>
-    </div>
-    <br>
-    <hr style="border: 1px solid black;">
-    <h5>EDUCATION</h5>
-      <hr style="border: 1px solid black;">
-    
-      <ul>
-        <li> Master's in Cybersecurity and Information Assurance
-          <ul>
-            <li> Western Governor’s University</li>
-            <li>In progress</li>
-          </ul>
-          <li>Bachelor of Science, University of Louisiana at Lafayette</li>
-        </li>  
-      </ul>
-      <hr style="border: 1px solid black;">
-      
-      <h1 style="text-align: center;">Badges Obtained</h1>
-      <div class="resume-badges">
-        <img src="/assets/images/resume-badge-azure-admin.png">
-        <img src="/assets/images/resume-badge-azure-networking.png">
-        <img src="/assets/images/resume-badge-ccna.jpg">
-        <img src="/assets/images/resume-badge-ccnp-collab.png">
-        <img src="/assets/images/resume-badge-Enterprise Core.jpg">
-        <img src="/assets/images/resume-badge-securityplus.png">
-        <img src="/assets/images/resume-badge-teams.png">
-        <img src="/assets/images/resume-badge-teams-support.PNG">
-      </div>
-    </div>
+      <li>Bachelor of Science, University of Louisiana at Lafayette</li>
+    </li>  
+  </ul>
+  <hr style="border: 1px solid black;">
+
+  <h1 style="text-align: center; margin-top: 100px; ">Badges Obtained</h1>
+  <div class="resume-badges">
+    <img src="/assets/images/resume-badge-azure-admin.png">
+    <img src="/assets/images/resume-badge-azure-networking.png">
+    <img src="/assets/images/resume-badge-ccna.jpg">
+    <img src="/assets/images/resume-badge-ccnp-collab.png">
+    <img src="/assets/images/resume-badge-Enterprise Core.jpg">
+    <img src="/assets/images/resume-badge-securityplus.png">
+    <img src="/assets/images/resume-badge-teams.png">
+    <img src="/assets/images/resume-badge-teams-support.PNG">
+  </div>
+</div>
