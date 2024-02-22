@@ -13,7 +13,7 @@ If you are new to SIEM, please complete the Introduction to SIEM. This room cove
 </ul>
 
 <h5>Task 1 Introduction </h5>
-Splunk is one of the leading SIEM solutions in the market that provides the ability to collect, analyze and correlate the network and machine logs in real-time. In this room, we will explore the basics of Splunk and its functionalities and how it provides better visibility of network activities and help in speeding up the detection.</br>
+Splunk is one of the leading SIEM solutions in the market that provides the ability to collect, analyze and correlate the network and machine logs in real-time. In this room, we will explore the basics of Splunk and its functionalities and how it provides better visibility of network activities and help in speeding up the detection.<br>
 
 
 Continue with the next task.
@@ -24,13 +24,13 @@ Continue with the next task.
 
 Before moving forward, deploy the machine. When you deploy the machine, it will be assigned an IP. Access this room in a web browser on the AttackBox, or via the VPN at http://MACHINE_IP. The machine will take up to 3-5 minutes to start.
 
-<b>Continue with the next task. </b> </br>
+<b>Continue with the next task. </b> <br>
 
 <h5>Task 3 Splunk Components </h5>
 
 
-<b>Which component is used to collect and send data over the Splunk instance?</b></br>
-- Forwarder
+<b>Q1 - Which component is used to collect and send data over the Splunk instance?</b><br>
+<i> Answer: Forwarder</i>
 
 <b>Splunk Forwarder</b>
 
@@ -41,3 +41,4 @@ Splunk Forwarder is a lightweight agent installed on the endpoint intended to be
 <li>Linux host generating host-centric logs. </li>
 <li>Database generating DB connection requests, responses, and errors.</li>
 </ul>
+
