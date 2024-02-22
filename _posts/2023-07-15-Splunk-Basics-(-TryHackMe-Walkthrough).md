@@ -30,7 +30,7 @@ Before moving forward, deploy the machine. When you deploy the machine, it will 
 
 
 <b>Q1 - Which component is used to collect and send data over the Splunk instance?</b><br>
-<i> Answer: Forwarder</i>
+<em> Answer: Forwarder</em>
 
 <b>Splunk Forwarder</b>
 
