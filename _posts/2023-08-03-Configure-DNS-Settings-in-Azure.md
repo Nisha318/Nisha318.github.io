@@ -6,7 +6,7 @@ tags:
   - Azure
 ---
 
-## How to Configure DNS Settings in Microsoft Azur
+## How to Configure DNS Settings in Microsoft Azure
  
 <iframe width="560" height="315" src="https://www.youtube.com/embed/3wjQhngR_hM?si=haAlUC4PZjPCe0Qx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
  
