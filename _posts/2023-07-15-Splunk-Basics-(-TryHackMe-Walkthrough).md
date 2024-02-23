@@ -57,7 +57,7 @@ Splunk Forwarder is a lightweight agent installed on the endpoint intended to be
 <h5>Task 4 Navigating Splunk </h5>
 
 <b>Q1 - In the Add Data tab, which option is used to collect data from files and ports?</b><br>
-<em> Answer: </em>
+<em> Answer: Monitor</em>
 
 
 <h5>Task 5 Adding Data </h5>
