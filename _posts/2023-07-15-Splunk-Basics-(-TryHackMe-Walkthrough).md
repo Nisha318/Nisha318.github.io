@@ -86,7 +86,7 @@ Scroll down the interesting fields panel on the left and click on source_country
 
 <em>Answer: 2814</em>
 
-<b>Q5 - How many VPN Events were observed by the IP 107.3.206.58?</b>
+<b>Q5 - How many VPN Events were observed by the IP 107.3.206.58?</b><br>
 <em>Answer: 14</em>
 <img src="/assets/img/splunk_thm_basics_q5IP2.png">
 
