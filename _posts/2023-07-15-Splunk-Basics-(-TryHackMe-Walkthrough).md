@@ -79,7 +79,7 @@ Splunk Forwarder is a lightweight agent installed on the endpoint intended to be
 
 <b>Q4 - What is the number of events that originated from all countries except France?</b>
 Remove the IP address from the query search bar that was added in the previous question.
-Scroll down the interesting fields panel on the left and click on source_country.  Then, select "yes" from the pop-up pane to add this field to the search query. 
+Scroll down the interesting fields panel on the left and click on source_country. 
 <img src="/assets/img/splunk_thm_basics_q4countries.png">
 <img src="/assets/img/splunk_thm_basics_q4countries2.png">
 
