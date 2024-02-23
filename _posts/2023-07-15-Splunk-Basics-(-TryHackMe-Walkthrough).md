@@ -1,3 +1,4 @@
+---
 title: "Splunk Basics (TryHackMe Splunk 101 Walkthrough)"
 categories:
   - Blog
