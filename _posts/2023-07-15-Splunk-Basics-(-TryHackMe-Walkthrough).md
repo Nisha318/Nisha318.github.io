@@ -8,7 +8,7 @@ tags:
   - Cybersecurity
 ---
 
-<img src="/assets/images/splunk_thm_basics_header.png">
+<images src="/assets/images/splunk_thm_basics_header.png">
 <a href="https://tryhackme.com/room/splunk101">https://tryhackme.com/room/splunk101</a>
 
  {% include video id="zyaof9kP54I" provider="youtube" %}
@@ -34,7 +34,7 @@ Continue with the next task.
 
 Before moving forward, deploy the machine. When you deploy the machine, it will be assigned an IP. Access this room in a web browser on the AttackBox, or via the VPN at http://MACHINE_IP. The machine will take up to 3-5 minutes to start.
 
-<img src="/assets/img/Splunk-THM_machine_ip.png">
+<images src="/assets/images/Splunk-THM_machine_ip.png">
 
 <b>Continue with the next task. </b> <br>
 
@@ -63,32 +63,32 @@ Splunk Forwarder is a lightweight agent installed on the endpoint intended to be
 <h5>Task 5 Adding Data </h5>
 
 <b>Q1 - Upload the data attached to this task and create an index "VPN_Logs". How many events are present in the log file?</b><br>
-<img src="/assets/img/splunk_thm_basics_q1events.png">
+<images src="/assets/images/splunk_thm_basics_q1events.png">
 
 <em>Answer: 2862</em>
 
 <b>Q2 - How many log events by the user Maleena are captured?</b>
-<img src="/assets/img/splunk_thm_basics_q2user.png">
+<images src="/assets/images/splunk_thm_basics_q2user.png">
 
 
 <em>Answer: 60</em>
 
 <b>Q3 - What is the name associated with IP 107.14.182.38?</b>
-<img src="/assets/img/splunk_thm_basics_q3IP.png">
+<images src="/assets/images/splunk_thm_basics_q3IP.png">
 <em>Answer: Smith</em>
 
 <b>Q4 - What is the number of events that originated from all countries except France?</b>
 Remove the IP address from the query search bar that was added in the previous question.
 Scroll down the interesting fields panel on the left and click on source_country. 
-<img src="/assets/img/splunk_thm_basics_q4countries.png">
-<img src="/assets/img/splunk_thm_basics_q4countries2.png">
+<images src="/assets/images/splunk_thm_basics_q4countries.png">
+<images src="/assets/images/splunk_thm_basics_q4countries2.png">
 
 
 <em>Answer: 2814</em>
 
 <b>Q5 - How many VPN Events were observed by the IP 107.3.206.58?</b><br>
 <em>Answer: 14</em>
-<img src="/assets/img/splunk_thm_basics_q5IP2.png">
+<images src="/assets/images/splunk_thm_basics_q5IP2.png">
 
 
 <h5>Task 6 Conclusion </h5>
