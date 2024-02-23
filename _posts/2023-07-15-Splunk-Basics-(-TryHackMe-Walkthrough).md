@@ -1,7 +1,17 @@
-## Splunk Basics (THM Walkthorugh)
+## Splunk Basics (THM Walkthrough)
+
+---
+title: "Splunk Basics (TryHackMe Splunk 101 Walkthrough)"
+categories:
+  - Blog
+tags:
+  - Cybersecurity
+---
 
 <img src="/assets/images/splunk_thm_basics_header.png">
 <a href="https://tryhackme.com/room/splunk101">https://tryhackme.com/room/splunk101</a>
+
+ {% include video id="zyaof9kP54I" provider="youtube" %}
 
 <h4>Learning Objectives and Pre-requisites</h4>
 If you are new to SIEM, please complete the Introduction to SIEM. This room covers the following learning objectives:
