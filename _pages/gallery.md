@@ -12,7 +12,7 @@ classes: wide
 
 </style>
 
- <h3 class="image-a">Nisha's Gallery</h3>
+ <h3 class="image-a">Nisha's Project Gallery</h3>
 <!-- {% capture notice-5 %}
 {% for image in page.images %}
     <img class="image-timeline" src="/assets/images/{{ image }}" />
