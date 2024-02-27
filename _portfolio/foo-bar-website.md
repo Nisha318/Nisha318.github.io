@@ -1,5 +1,5 @@
 ---
-title: "Image Title - 3"
+title: "Vulnerability Management"
 excerpt: "Summary about image"
 header:
   image:  /assets/images/event 2.jpg #image content, you can remove it if you want
