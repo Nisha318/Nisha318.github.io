@@ -1,3 +1,14 @@
+title: "How to Create Configure a DMZ on Palo Alto FIrewall"
+categories:
+  - Blog
+tags:
+  - Network Security
+  - Cybersecurity
+  - Networking
+  - Firewall
+---
+
+
 ### Configuring a DMZ Zone and Policy Using Palo Alto Firewall
 
 On Day 2 of my #100DaysofCybersecurity challenge, I focused on enhancing defenses by making progress on my Palo Alto Firewall lab.  
