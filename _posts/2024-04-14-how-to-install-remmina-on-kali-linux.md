@@ -1,3 +1,4 @@
+---
 title: "How to Install Remmina on Kali Linux"
 categories:
   - Blog

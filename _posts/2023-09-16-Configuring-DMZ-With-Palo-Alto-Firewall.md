@@ -1,3 +1,4 @@
+---
 title: "How to Create Configure a DMZ on Palo Alto FIrewall"
 categories:
   - Blog
