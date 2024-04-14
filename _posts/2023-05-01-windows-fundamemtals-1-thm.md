@@ -9,5 +9,3 @@ tags:
 ---
 
 ## Windows Fundamentals 1 - TryHackMe Walkthrough
-
-
