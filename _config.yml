@@ -15,7 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 title: Notes by Nisha
 email: eunishap+tech@gmail.com
-description: "Nisha is a Network Engineer and a Cloud Security Enthusiast who enjoys learning all things technology!"
+description: "Nisha is a Cybersecurity Engineer who enjoys learning all things technology!"
 twitter_username: Nisha281
 github_username: Nisha318
 minimal_mistakes_skin: neon
@@ -73,7 +73,7 @@ collections:
 author:
   name   : "Nisha P McDonnell"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "Highly skilled Network Engineer with over 6 years of experience designing, deploying, and supporting various network solutions with a demonstrated track record of providing solutions, meeting SLA commitments, reducing infrastructure costs, and improving incident resolution time. "
+  bio    : "Hello, my name is Nisha!  I am a Cybersecurity Engineer with "
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
