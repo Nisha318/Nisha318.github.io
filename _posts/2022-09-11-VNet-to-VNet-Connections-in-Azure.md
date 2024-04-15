@@ -1,3 +1,4 @@
+---
 title: "How to Create VNet-to-VNet Connections in Microsoft Azure"
 categories:
   - Blog
@@ -7,7 +8,6 @@ tags:
   - Networking
   - VNet
 ---
-
 
 
 ## How to Create VNet-to-VNet Connections in Microsoft Azure

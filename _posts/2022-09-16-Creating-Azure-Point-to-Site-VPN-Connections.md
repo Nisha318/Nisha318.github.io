@@ -1,3 +1,4 @@
+---
 title: "How to Create Point-to-Site VPN Connections in Microsoft Azure"
 categories:
   - Blog
