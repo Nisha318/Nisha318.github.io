@@ -8,7 +8,6 @@ tags:
   - Splunk
   - Log Management
   - Monitoring
-
   image:
   path: /assets/images/thm_splunk_incident_handling_featured.PNG  # Path to the image file relative to your site root
   thumbnail: /assets/images/thm_splunk_incident_handling_featured.PNG  # Optional smaller image for thumbnails
