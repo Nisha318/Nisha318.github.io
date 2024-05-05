@@ -1,7 +1,6 @@
 ---
 title: "Incident Handling With Splunk / Splunk 201 (TryHackMe Walkthrough)"
-  header:
-  teaser: /assets/images/thm_splunk_incident_handling_featured.PNG
+teaser: /assets/images/thm_splunk_incident_handling_featured.PNG
 og_image: /assets/images/thm_splunk_incident_handling_featured.PNG
 categories:
   - Blog
