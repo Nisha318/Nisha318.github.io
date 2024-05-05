@@ -9,6 +9,8 @@ tags:
   - Splunk
   - Log Management
   - Monitoring
+  header:
+  teaser: /assets/images/thm_splunk_incident_handling_featured.PNG
 ---
 
 
