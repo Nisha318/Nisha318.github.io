@@ -1,5 +1,6 @@
 ---
 title: "Incident Handling With Splunk / Splunk 201 (TryHackMe Walkthrough)"
+og_image: /assets/images/thm_splunk_incident_handling_featured.PNG
 categories:
   - Blog
 tags:
@@ -14,7 +15,7 @@ tags:
 ### Learn to use Splunk for incident handling through interactive scenarios.
 
 <img src="/assets/images/thm_splunk_incident_handling.PNG">
-<a href="https://tryhackme.com/r/room/splunk201"> https://tryhackme.com/r/room/splunk201</a>
+Room:<a href="https://tryhackme.com/r/room/splunk201"> https://tryhackme.com/r/room/splunk201</a>
 
 
 <h4>Learning Objectives and Pre-requisites</h4>
