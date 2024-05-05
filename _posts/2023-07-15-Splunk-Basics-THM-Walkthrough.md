@@ -11,7 +11,7 @@ tags:
 ---
 
 
-### Splunk Basics ( Tryhackme Walkthrough) 
+### Splunk Basics ( TryHackMe Walkthrough) 
 
 <img src="/assets/images/splunk_thm_basics_header.png">
 <a href="https://tryhackme.com/room/splunk101">https://tryhackme.com/room/splunk101</a>
