@@ -1,3 +1,14 @@
+---
+title: "Deploy and Configure Azure Firewall and Rules to Allow/Deny Access to Certain Websites"
+categories:
+  - Blog
+tags:
+  - Cloud
+  - Azure
+  - Networking
+  - Firewall
+---
+
 ## Deploy and Configure Azure Firewall and Rules to Allow/Deny Access to Certain Websites
 
 <figure> 

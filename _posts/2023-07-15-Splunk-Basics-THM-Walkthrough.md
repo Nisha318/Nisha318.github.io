@@ -1,9 +1,13 @@
 ---
-title: "Splunk Basics (TryHackMe Splunk 101 Walkthrough)"
+title: "Splunk Basics / Splunk 101 (TryHackMe Walkthrough)"
 categories:
   - Blog
 tags:
   - Cybersecurity
+  - SIEM
+  - Splunk
+  - Log Management
+  - Monitoring
 ---
 
 
