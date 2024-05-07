@@ -7,8 +7,9 @@ tags:
   - Azure
   - Networking
   - VPN
-tagline: "This is a custom tagline content which overrides the default page excerpt."
 ---
+
+
 
 ## How to Create Point-to-Site VPN Connections in Microsoft Azure
 
