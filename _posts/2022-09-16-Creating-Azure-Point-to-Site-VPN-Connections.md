@@ -7,9 +7,12 @@ tags:
   - Azure
   - Networking
   - VPN
+tagline: "This is a custom tagline content which overrides the default page excerpt."
+header:
+  overlay_image: /assets/images/3 - VPCs.png
+  caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
+
 ---
-
-
 
 ## How to Create Point-to-Site VPN Connections in Microsoft Azure
 
