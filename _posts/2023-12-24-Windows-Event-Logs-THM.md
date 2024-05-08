@@ -8,9 +8,9 @@ tags:
   - Logging
   - Monitoring
   - Endpoint Security
-#teaser: /assets/images/thm_splunk_incident_handling_featured.PNG   Path to the teaser image
 tagline: "Introduction to Windows Event Logs and the tools to query them."
 header:
+  teaser: /assets/images/nessus logo.png
   overlay_filter: rgba(255, 0, 0, 0.5)
   overlay_image: /assets/images/nessus logo.png
   caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
