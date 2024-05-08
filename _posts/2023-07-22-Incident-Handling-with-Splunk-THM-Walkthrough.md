@@ -9,14 +9,11 @@ tags:
   - Log Management
   - Monitoring
 #teaser: assets/images/thm_splunk_incident_handling_featured.PNG   Path to the teaser image
-excerpt: "This post should [...]"
+tagline: "This is a custom tagline content which overrides the default page excerpt."
 header:
-  overlay_image: /assets/images/thm_splunk_incident_handling.PNG
-  overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
+  overlay_image: /assets/images/thm_splunk_incident_handling_featured.PNG
   caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
-  actions:
-    - label: "More Info"
-      url: "https://unsplash.com"
+
 ---
 
 
