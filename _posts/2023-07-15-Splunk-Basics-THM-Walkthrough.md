@@ -8,13 +8,17 @@ tags:
   - Splunk
   - Log Management
   - Monitoring
+  #teaser: /assets/images/thm_splunk_incident_handling_featured.PNG   Path to the teaser image
+tagline: "Learn the basics of Splunk."
+header:
+  overlay_filter: rgba(255, 0, 0, 0.5)
+  overlay_image: /assets/images/splunkbanner.png
+  caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
 ---
 
 
-### Splunk Basics ( TryHackMe Walkthrough) 
+Room Link:  <a href="https://tryhackme.com/room/splunk101" target="_blank" rel="noopener noreferrer"> https://tryhackme.com/room/splunk101</a>
 
-<img src="/assets/images/splunk_thm_basics_header.png">
-<a href="https://tryhackme.com/room/splunk101">https://tryhackme.com/room/splunk101</a>
 
  {% include video id="zyaof9kP54I" provider="youtube" %}
 
@@ -68,28 +72,36 @@ Splunk Forwarder is a lightweight agent installed on the endpoint intended to be
 <h5>Task 5 Adding Data </h5>
 
 <b>Q1 - Upload the data attached to this task and create an index "VPN_Logs". How many events are present in the log file?</b>
-<img src="/assets/images/splunk_thm_basics_q1events.png">
 
 <em>Answer: 2862</em>
 
+<img src="/assets/images/splunk_thm_basics_q1events.png">
+
+
+
 <b>Q2 - How many log events by the user Maleena are captured?</b>
+
+<em>Answer: 60</em>
 <img src="/assets/images/splunk_thm_basics_q2user.png">
 
 
-<em>Answer: 60</em>
 
 <b>Q3 - What is the name associated with IP 107.14.182.38?</b>
-<img src="/assets/images/splunk_thm_basics_q3IP.png">
+
 <em>Answer: Smith</em>
+<img src="/assets/images/splunk_thm_basics_q3IP.png">
+
 
 <b>Q4 - What is the number of events that originated from all countries except France?</b>
 Remove the IP address from the query search bar that was added in the previous question.
 Scroll down the interesting fields panel on the left and click on source_country. 
+
+<em>Answer: 2814</em>
 <img src="/assets/images/splunk_thm_basics_q4countries.png">
 <img src="/assets/images/splunk_thm_basics_q4countries2.png">
 
 
-<em>Answer: 2814</em>
+
 
 <b>Q5 - How many VPN Events were observed by the IP 107.3.206.58?</b><br>
 <em>Answer: 14</em>
