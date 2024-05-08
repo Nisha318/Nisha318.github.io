@@ -17,7 +17,6 @@ header:
   actions:
     - label: "More Info"
       url: "https://unsplash.com"
-
 ---
 
 
