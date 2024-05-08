@@ -11,8 +11,9 @@ tags:
 #teaser: assets/images/thm_splunk_incident_handling_featured.PNG   Path to the teaser image
 tagline: "This is a custom tagline content which overrides the default page excerpt."
 header:
-  teaser: /assets/images/thm_splunk_incident_handling.PNG
-  og_image: /assets/images/page-header-og-image.png
+  overlay_filter: rgba(255, 0, 0, 0.5)
+  overlay_image: /assets/images/nessus logo.png
+  caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
 ---
 
 
