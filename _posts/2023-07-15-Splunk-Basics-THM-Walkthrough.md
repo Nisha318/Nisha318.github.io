@@ -11,7 +11,7 @@ tags:
   #teaser: /assets/images/thm_splunk_incident_handling_featured.PNG   Path to the teaser image
 tagline: "Learn the basics of Splunk."
 header:
-  overlay_filter: rgba(255, 0, 0, 0.5)
+  overlay_filter: rgba(0, 0, 0, 0.0)
   overlay_image: /assets/images/splunkbanner.png
   caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
 ---
