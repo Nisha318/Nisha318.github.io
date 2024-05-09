@@ -13,7 +13,7 @@ tagline: "Learn the basics of Splunk."
 header:
   teaser: /assets/images/splunkbanner.png
   overlay_filter: rgba(134,134,134, 0.0)
-  overlay_image: /assets/images/Splunk Logo2.png
+  overlay_image: /assets/images/Splunk Logo2
   caption: "Photo credit: [**AI-Generated**](https://chatgpt.com/)"
 ---
 
