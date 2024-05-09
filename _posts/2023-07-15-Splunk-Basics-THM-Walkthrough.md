@@ -12,7 +12,7 @@ tags:
 tagline: "Learn the basics of Splunk."
 header:
   teaser: /assets/images/splunkbanner.png
-  overlay_filter: rgba(0, 0, 0, 0.0)
+  overlay_filter: rgba(134,134,134, 0.0)
   overlay_image: /assets/images/Splunk Logo2.png
   caption: "Photo credit: [**AI-Generated**](https://chatgpt.com/)"
 ---
