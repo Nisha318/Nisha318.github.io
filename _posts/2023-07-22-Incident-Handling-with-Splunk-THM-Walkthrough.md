@@ -12,6 +12,7 @@ tags:
 tagline: "This is a custom tagline content which overrides the default page excerpt."
 header:
   overlay_filter: rgba(0, 0, 0, 0.5)
+  overlay_image: /assets/images/nessus logo.png
   caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
 ---
 
