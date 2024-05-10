@@ -13,6 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
+logo: "/assets/images/avatar-1.jpg"
 title: Notes by Nisha
 email: eunishap+tech@gmail.com
 description: "Nisha is a Cybersecurity Engineer who enjoys learning all things technology!"
