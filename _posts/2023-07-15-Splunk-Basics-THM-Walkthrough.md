@@ -8,13 +8,13 @@ tags:
   - Splunk
   - Log Management
   - Monitoring
-image: /assets/images/splunk_thm_basics_header.png
+image: /assets/images/splunk_logo.jpg
 tagline: "Learn the basics of Splunk."
 header:
   teaser: /assets/images/splunk_thm_basics_header.png
   overlay_filter: rgba(0, 0, 0, 0.0)
   overlay_image: /assets/images/splunk_thm_basics_header.png
-  caption: "Photo credit: [**TryHackMe**](https://tryhackme.com/)"
+  caption: "Photo credit: [**Splunk**](https://www.splunk.com/)"
 ---
 
 
