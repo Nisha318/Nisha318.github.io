@@ -8,7 +8,7 @@ tags:
   - Splunk
   - Log Management
   - Monitoring
-image: /assets/images/splunk_thm_basics_header.png  Path to the teaser image
+image: /assets/images/splunk_thm_basics_header.png
 tagline: "Learn the basics of Splunk."
 header:
   teaser: /assets/images/splunk_thm_basics_header.png
