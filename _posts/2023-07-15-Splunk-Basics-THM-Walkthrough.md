@@ -11,7 +11,7 @@ tags:
 #teaser: /assets/images/thm_splunk_incident_handling_featured.PNG   Path to the teaser image
 tagline: "Learn the basics of Splunk."
 header:
-  teaser: /assets/images/splunkbanner.png
+  teaser: /assets/images/Splunk Logo2.png
   overlay_filter: rgba(0, 0, 0, 0.0)
   overlay_image: /assets/images/Splunk Logo2.png
   caption: "Photo credit: [**AI-Generated**](https://chatgpt.com/)"
