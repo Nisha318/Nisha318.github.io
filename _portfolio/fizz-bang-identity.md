@@ -8,6 +8,7 @@ header:
 tags:
   - Splunk
   - Microsoft Sentinel
+  - Elastic Stack
   - Cybersecurity
 
 category:
