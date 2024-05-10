@@ -11,10 +11,10 @@ tags:
 image: /assets/images/splunk_logo.jpg
 tagline: "Learn the basics of Splunk."
 header:
-  teaser: /assets/images/splunk_thm_basics_header.png
+  teaser: /assets/images/splunkbanner.png
   overlay_filter: rgba(0, 0, 0, 0.0)
-  overlay_image: /assets/images/splunk_thm_basics_header.png
-  caption: "Photo credit: [**Splunk**](https://www.splunk.com/)"
+  overlay_image: /assets/images/splunkbanner.png
+  caption: "Photo credit: [**AI**](https://www.chatgpt.com/)"
 ---
 
 
