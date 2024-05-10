@@ -74,7 +74,7 @@ collections:
 author:
   name   : "Nisha P McDonnell"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "Hello, my name is Nisha!  I am a Cybersecurity Engineer with "
+  bio    : "Cybersecurity Engineer "
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
