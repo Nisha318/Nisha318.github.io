@@ -1,31 +1,30 @@
 ---
 layout: single
-title: "Portfolio"
+title: "Portfolio Test"
 permalink: /test/
 header:
-    overlay_image: /assets/images/joel-filipe-small-warmer.jpg
-    caption: "Photo by [Joel Filipe](https://unsplash.com/@joelfilip) on [Unsplash](https://unsplash.com)"
+    overlay_image: /assets/images/splunkbanner.png
+    caption: "Photo credit: [**AI-Generated**](https://chatgpt.com/)"
 author_profile: true
 classes: wide
 date: April 30, 2023
 
 feature_row0-1:
-  - image_path: assets/gif/gifify.gif
-    alt: "AWS app demo"
-    title: "Gifify App"
-    text: "I developed a Gifify app where a user can upload a video and get it processed into a gif. This is a Flask app deployed to AWS EC2 instance. The user login data is saved into DynamoDB, while the users' uploaded videos and resulting gifs are stored on S3 buckets. The video processing is implemented through a Lambda function (deployed via Docker to ECS)."
-    url: "https://github.com/k-bosko/gifify"
+  - image_path: assets/images/1 - Diagram.jpg
+    alt: "AWS VPC Diagram"
+    title: "AWS VPC"
+    text: "I developed a ...."
+    url: "https://github.com/nisha318"
     btn_label: "Code"
     btn_class: "btn--primary"
     tags:
         - AWS
-        - Lambda
-        - S3
+        - Networking
+        - VPC
         - EC2
-        - DynamoDB
-        - Flask
-        - ECS
-        - Docker
+        - Route Table
+        - Peering
+
 
 feature_row0-2:
   - image_path: assets/gif/wumpus.gif
