@@ -9,48 +9,124 @@ header:
 classes: wide
 ---
 
-### Amazon DynamoDB for Serverless Architectures | AWS training and certification [<i class="fas fa-link" aria-hidden="true"></i>](../assets/docs/certificates/kbosko_AWS_DynamoDB_certificate.pdf)
-- How Amazon DynamoDB Works
-- Operating Amazon DynamoDB
-- Design Considerations
-- Serverless Architecture Patterns
 
-Projects:
-- DynamoDB: How to Get Started [<i class="fab fa-fw fa-github" aria-hidden="true"></i>](https://github.com/k-bosko/DynamoDB)
-- Gifify app
+### <a name="Blue Team Level 1 (BTL1)"></a>Blue Team Level 1 (BTL1) Certification | Security Blue Team [<i class="fas fa-link" aria-hidden="true"></i>](https://www.credly.com/badges/a6eb0903-aaf5-40d8-80bb-e636fbc069fe/public_url)
+Tools: Autopsy, CMD, DeepBlueCLI, MISP, Powershell, Splunk, TheHive, VirusTotal, Volatility, Windows Event Log, Wireshark
+
+Syllabus: [<i class="fas fa-paperclip"></i>](https://d2y9h8w1ydnujs.cloudfront.net/BTL1Syllabus.pdf)
+ - Security Fundamentals
+ - Phishing Analysis
+ - Threat Intelligence
+ - Digital Forensics
+ - Security Information and Event Management
+ - Incident Response
+
+### <a name="CompTIA Security+ Certification"></a>CompTIA Security+ Certification | CompTIA [<i class="fas fa-link" aria-hidden="true"></i>](https://www.credly.com/badges/b318bd77-23fc-4029-b336-267f20d69d23/public_url)
+
+- Access Control
+- CompTIA
+- Cryptography
+- Cyber Forensics
+- Data Security
+- Disaster Recovery Planning
+- Firewall Configuration
+- Malware Identification
+- Mobile Device Security
+- Network Security
+- Security Configuration
+- Security Policies
+- Threat Analysis
+- Threat Detection
+
+
+<!-----
+Projects: 
+- Target Audience for Starbucks Rewards Mobile App (Capstone) [<i class="fab fa-fw fa-github" aria-hidden="true"></i>](https://github.com/k-bosko/Starbucks_rewards) [<i class="fas fa-blog" aria-hidden="true"></i>](/Starbucks-Rewards-Program/) [<img src="/assets/images/icons/ppt2.png" height="25" width="25" alt="">](/assets/docs/reports/kbosko-data-science-starbucks-capstone.pdf)
+- Predicting Charity Donors with Supervised ML [<i class="fab fa-fw fa-github" aria-hidden="true"></i>](https://github.com/k-bosko/finding_donors)
+- Customer Segmentation for Arvato (PCA, K-Means) [<i class="fab fa-fw fa-github" aria-hidden="true"></i>](https://github.com/k-bosko/customer_segmentation)
+- NLP for Disaster Response App [<i class="fab fa-fw fa-github" aria-hidden="true"></i>](https://github.com/k-bosko/disaster_response) [app](https://disaster-reponse-api.herokuapp.com)
+- Recommendation Engines for IBM Platform [<i class="fab fa-fw fa-github" aria-hidden="true"></i>](https://github.com/k-bosko/recommendations_IBM)
+- Image Classifier with PyTorch [<i class="fab fa-fw fa-github" aria-hidden="true"></i>](https://github.com/k-bosko/image_classifier)
+- Data Science blog post [<i class="fab fa-fw fa-github" aria-hidden="true"></i>](https://github.com/k-bosko/insight_fellows) [<i class="fas fa-blog" aria-hidden="true"></i>](/Insight-Data-Science-Fellows/)
+
+ -->
 
 ----------------------------------------
 
-### AWS Lambda Foundations| AWS training and certification [<i class="fas fa-link" aria-hidden="true"></i>](../assets/docs/certificates/kbosko_AWS_Lambda_certificate.pdf)
-- AWS Lambda Function Permissions
-- How Lambda Works
-- Authoring Lambda Functions
-- Configuring Your Lambda Functions
-- Deploying and Testing Serverless Applications
-- Monitoring and Troubleshooting
 
+
+### AWS Cloud Architecting| AWS Academy [<i class="fas fa-link" aria-hidden="true"></i>](https://www.credly.com/badges/73ff0705-60e5-4846-ac27-88e1be2a09d2/public_url)
+- Introduction to Cloud Architecting
+- Beast Practice building AWS solutions
+- Amazon S3 Versioning and Data Storage
+- Moving date to and from Amazon S3
+- Amazon S3 Transfer Acceleration
+- EC2 Machine Images and instance types
+- Adding storage to EC2
+- Amazon pricing options
+- Database layer considerations
+- Amazon Relation Database Service RDS
+- Amazon DynamoDB
+- Database Security controls
+- Creating an AWS Networking environment
+- Securing AWS Network environments
+- AWS Site-to-Site VPN
+- AWS Direct Connect
+- Connecting VPCs in AWS with VPC Peering
+- Scaling your VPC network with AWS Transit Gateway.
+- Securing User and Application Access
+- Account users and AWS Identity and Access Management
+- Examining IAM Policies
+- Organizing and Federating users
+- EC2 Instance Profiles
+- Scaling compute resources
+- Scaling databases
+- Create a Highly Available Web App
+- Monitoring
+- Automating Architecture
+- AWS Cloud Formation
+- Automating Deployments
+- Elastic Beanstalk
+- Caching Content
+- Edge and web session caching
+- Database caching
+- Building Decoupled Architectures
+- Building Microservice sand Serverless architectures
+- AWS Lambda
+- Extending Serverless architectures with Amazon API Gateway
+- Disaster planning and strategies
+- Disaster recovery patterns
+- Disaster Planning
+
+<!-----
 Projects:
-- Gifify app
+ -->
+
+# March 02, 2023
+----------------------------------------
+
+###  Configure SIEM security operations using Microsoft Sentinel | Microsoft Azure Security  [<i class="fas fa-link" aria-hidden="true"></i>](https://learn.microsoft.com/api/credentials/share/en-us/NishaPrudhomme-6229/2167EF37DF02B061?sharingId=7EF06CE6B9CD4BD3)
+- Security Operations Analyst
+- Azure
+- Microsoft Sentinel
+- Azure Log Analytics
+- Azure Logic Apps
+- Kusto Query Language (KQL)
+- Role-Based Access Control (RBAC)
+
+# December 19, 2023
 
 ----------------------------------------
 
-### AWS Cloud Foundations| AWS Academy [<i class="fas fa-link" aria-hidden="true"></i>](https://www.credly.com/badges/2d0cb903-f99f-4e0e-a10a-6027bc77acc8/public_url)
-- AWS Architecture
-- AWS Cloud concepts
-- AWS Core Services (S3, EC2, DynamoDB, RDS, etc)
-- AWS Pricing and AWS Support
+### Cisco Certified CyberOps Associate (200-201) Cert Prep: | LinkedIn Learning [<i class="fas fa-link" aria-hidden="true"></i>](https://www.linkedin.com/learning/paths/cyberops-associate-prepare-for-the-cisco-cybersecurity-operations-fundamentals-200-201-cbrops-exam?trk=learning-serp_learning-search-card_search-card&upsellOrderOrigin=default_guest_learning)
+- Host-Based Analysis  [<i class="fas fa-paperclip"></i>](../assets/docs/certificates/CertificateOfCompletion_Cisco%20Certified%20CyberOps%20Associate%20200201%20Cert%20Prep%203%20HostBased%20Analysis.pdf)
+-- System Monitoring 
+-- Cybersecurity
+-- Netstat
 
-----------------------------------------
-
-### MongoDB Basics | MongoDB University [<i class="fas fa-link" aria-hidden="true"></i>](https://university.mongodb.com/course_completion/b7db8cde-7d3e-46d0-9731-3cb98bd43260?utm_source=copy&utm_medium=social&utm_campaign=university_social_sharing)
-- Importing, Exporting, and Querying Data
-- Creating and Manipulating Documents
-- Advanced CRUD Operations
-- Indexing and Aggregation Pipeline
-
-Projects:
-- GhostKitchen app [<i class="fab fa-fw fa-github" aria-hidden="true"></i>](https://github.com/k-bosko/GhostKitchen-II)
-
+# Projects: 09/30/23
+# - Name [<i class="fab fa-fw fa-github" aria-hidden="true"></i>](https://github.com/nisha318/#)
+<!-----
 ----------------------------------------
 ### Marketing Analytics with Python | DataCamp [<i class="fas fa-link" aria-hidden="true"></i>](https://www.datacamp.com/statement-of-accomplishment/track/5ce028dc1fb95454ddec86549442d8c8fa79e341)
  - Predicting Customer Churn in Python [<i class="fas fa-link" aria-hidden="true"></i>](https://www.datacamp.com/statement-of-accomplishment/course/7947b18bcde3fed9e459b1b2bebded4bfcf8a302)
@@ -66,33 +142,7 @@ Projects:
 
 ----------------------------------------
 
-### <a name="Data-Science"></a>Data Science Nanodegree | Udacity [<i class="fas fa-link" aria-hidden="true"></i>](https://graduation.udacity.com/confirm/NK2275JF)
-Tools: Python, Shell, Git, Flask, Plotly, Jupyter Notebook
 
-Syllabus: [<i class="fas fa-paperclip"></i>](https://s3-us-west-2.amazonaws.com/udacity-printer/production/syllabus/syllabus-nd025-1.0.0-en-us.pdf)
- - Supervised Learning
- - Deep Learning
- - Unsupervised Learning
- - CRISP-DM Process
- - Software Engineering for Data Science
- - Data Engineering
- - Machine Learning Pipelines
- - Experimental Design & A/B Testing
- - Natural Language Processing (NLP)
- - Recommendation Systems
-
-Projects:
-- Target Audience for Starbucks Rewards Mobile App (Capstone) [<i class="fab fa-fw fa-github" aria-hidden="true"></i>](https://github.com/k-bosko/Starbucks_rewards) [<i class="fas fa-blog" aria-hidden="true"></i>](/Starbucks-Rewards-Program/) [<img src="/assets/images/icons/ppt2.png" height="25" width="25" alt="">](/assets/docs/reports/kbosko-data-science-starbucks-capstone.pdf)
-- Predicting Charity Donors with Supervised ML [<i class="fab fa-fw fa-github" aria-hidden="true"></i>](https://github.com/k-bosko/finding_donors)
-- Customer Segmentation for Arvato (PCA, K-Means) [<i class="fab fa-fw fa-github" aria-hidden="true"></i>](https://github.com/k-bosko/customer_segmentation)
-- NLP for Disaster Response App [<i class="fab fa-fw fa-github" aria-hidden="true"></i>](https://github.com/k-bosko/disaster_response) [app](https://disaster-reponse-api.herokuapp.com)
-- Recommendation Engines for IBM Platform [<i class="fab fa-fw fa-github" aria-hidden="true"></i>](https://github.com/k-bosko/recommendations_IBM)
-- Image Classifier with PyTorch [<i class="fab fa-fw fa-github" aria-hidden="true"></i>](https://github.com/k-bosko/image_classifier)
-- Data Science blog post [<i class="fab fa-fw fa-github" aria-hidden="true"></i>](https://github.com/k-bosko/insight_fellows) [<i class="fas fa-blog" aria-hidden="true"></i>](/Insight-Data-Science-Fellows/)
-
-
-
-----------------------------------------
 
 ### <a name="Math-for-ML"></a>Mathematics for Machine Learning | Coursera [<i class="fas fa-link" aria-hidden="true"></i>](https://www.coursera.org/account/accomplishments/specialization/CLR3C392PVWD)
 Syllabus: [<i class="fas fa-paperclip"></i>](https://www.coursera.org/specializations/mathematics-machine-learning)
@@ -146,36 +196,55 @@ Syllabus: [<i class="fas fa-paperclip"></i>](https://www.coursera.org/specializa
  - Intermediate II [<i class="fas fa-link" aria-hidden="true"></i>](https://www.coursera.org/account/accomplishments/records/MRTLVQAXSXVP)
  - Advanced [<i class="fas fa-link" aria-hidden="true"></i>](https://www.coursera.org/account/accomplishments/records/F6A3ADUY2KLL)
 
+
+---> 
 ----------------------------------------
-### <a name="Digital-Marketing"></a> Digital Marketing | Udacity [<i class="fas fa-link" aria-hidden="true"></i>](https://graduation.udacity.com/confirm/PKMPZVQP)
-Tools:  Google Analytics, Google AdWords, Facebook Ad Manager, Google’s PageSpeed, SEMrush, MOZ, MailChimp
+### <a name="Vmware Install, Configure, Manage"></a> Vmware Install, Configure, Manage | Stanly CC IT Academy [<i class="fas fa-link" aria-hidden="true"></i>](/assets/docs/certificates/VMWare%20-%20ICM.pdf)
+Tools:   
 
-Syllabus: [<i class="fas fa-paperclip"></i>](https://d20vrrgs8k4bvw.cloudfront.net/documents/en-US/DMND+Syllabus+(2).pdf)
- - Marketing Fundamentals
- - Content Marketing
- - Social Media Marketing (SMM)
- - Social Media Advertising
- - Search Engine Optimization (SEO)
- - Search Engine Marketing (SEM)
- - Display Advertising
- - Email Marketing
- - Google Analytics
+Syllabus: [<i class="fas fa-paperclip"></i>](#)
+ -  
 
-Projects:
- - Prepare to Market [<i class="far fa-file-pdf" aria-hidden="true"></i>](/assets/docs/reports/kbosko-digital-marketing-1-prepare-to-market.pdf)
- - Market Your Content [<i class="far fa-file-pdf" aria-hidden="true"></i>](/assets/docs/reports/kbosko-digital-marketing-2-content-marketing.pdf) [<i class="fas fa-blog" aria-hidden="true"></i>](/Udacity-Review-Digital-Marketing-Nanodegree//)
- - Run a Facebook Ad Campaign [<i class="far fa-file-pdf" aria-hidden="true"></i>](/assets/docs/reports/kbosko-digital-marketing-3-facebook-campaign.pdf)
- - Conduct a SEO Audit [<i class="far fa-file-pdf" aria-hidden="true"></i>](/assets/docs/reports/kbosko-digital-marketing-4-seo.pdf)
- - Run an AdWords Campaign [<i class="far fa-file-pdf" aria-hidden="true"></i>](/assets/docs/reports/kbosko-digital-marketing-5-AdWords-campaign.pdf)
- - Evaluate a Display Campaign [<i class="far fa-file-pdf" aria-hidden="true"></i>](/assets/docs/reports/kbosko-digital-marketing-6-evaluate-display-campaign.pdf)
- - Market with Email [<i class="far fa-file-pdf" aria-hidden="true"></i>](/assets/docs/reports/kbosko-digital-marketing-7-email-marketing.pdf)
+
+ 
+
+
 
 ----------------------------------------
 
-### <a name="Business-Foundations"></a>Business Foundations | Coursera
-Syllabus: [<i class="fas fa-paperclip"></i>](https://www.coursera.org/specializations/wharton-business-foundations)
- - Introduction to Marketing [<i class="fas fa-link" aria-hidden="true"></i>](https://www.coursera.org/account/accomplishments/records/TGEZ6ZE34CN7)
- - Introduction to Corporate Finance [<i class="fas fa-link" aria-hidden="true"></i>](https://www.coursera.org/account/accomplishments/records/DE3NQX93ZCJ2)
-- Introduction to Operations Management [<i class="fas fa-link" aria-hidden="true"></i>](https://www.coursera.org/account/accomplishments/records/BGJX6R478WA6)
- - Introduction to Financial Accounting [<i class="fas fa-link" aria-hidden="true"></i>](https://www.coursera.org/account/accomplishments/records/6VPP8T5N5VXP)
- -  Managing Social and Human Capital [<i class="fas fa-link" aria-hidden="true"></i>](https://www.coursera.org/account/accomplishments/records/RKQ4TPMN9NDY)
+### <a name="Cisco Independent Study"></a>Cisco Certified Network Professional - Collaboration | Cisco Certification
+Syllabus: [<i class="fas fa-paperclip"></i>](#)
+- Introduction to Networking [<i class="fas fa-link" aria-hidden="true"></i>](#)
+- Routing & Switching Essentials [<i class="fas fa-link" aria-hidden="true"></i>](#)
+- Scaling Networks [<i class="fas fa-link" aria-hidden="true"></i>](#)
+- Connecting Networks [<i class="fas fa-link" aria-hidden="true"></i>](#)
+
+ Certifications:
+ - Cisco Certified Network Associate [<i class="fas fa-paperclip"></i>](https://www.credly.com/badges/733921d5-18ed-45bc-a464-973674e77728/public_url)
+Skills:
+----------------------------------------
+
+### <a name="Cisco Networking Academy"></a>CCNA Routing & Switching | Cisco Networking Academy
+Syllabus: [<i class="fas fa-paperclip"></i>](#)
+- Introduction to Networking [<i class="fas fa-link" aria-hidden="true"></i>](#)
+- Routing & Switching Essentials [<i class="fas fa-link" aria-hidden="true"></i>](#)
+- Scaling Networks [<i class="fas fa-link" aria-hidden="true"></i>](#)
+- Connecting Networks [<i class="fas fa-link" aria-hidden="true"></i>](#)
+
+ Certifications:
+ - Cisco Certified Network Associate [<i class="fas fa-paperclip"></i>](https://www.credly.com/badges/733921d5-18ed-45bc-a464-973674e77728/public_url)
+Skills:
+- Access Connectivity
+- Architectures and Services
+- Assurance and Automation
+- Automation
+- Connectivity
+- Core Routing
+- High Availability and Fast Convergence
+- IP
+- IP services
+- Network Access
+- Network Fundamentals
+- Programability
+- Security
+- Security Fundamentals
