@@ -55,7 +55,7 @@ Projects:
 
 
 
-### AWS Cloud Architecting| AWS Academy [<i class="fas fa-link" aria-hidden="true"></i>](https://www.credly.com/badges/73ff0705-60e5-4846-ac27-88e1be2a09d2/public_url)
+### AWS Cloud Architecting | AWS Academy [<i class="fas fa-link" aria-hidden="true"></i>](https://www.credly.com/badges/73ff0705-60e5-4846-ac27-88e1be2a09d2/public_url)
 - Introduction to Cloud Architecting
 - Beast Practice building AWS solutions
 - Amazon S3 Versioning and Data Storage
@@ -102,7 +102,6 @@ Projects:
 Projects:
  -->
 
-# March 02, 2023
 ----------------------------------------
 
 ###  Configure SIEM security operations using Microsoft Sentinel | Microsoft Azure Security  [<i class="fas fa-link" aria-hidden="true"></i>](https://learn.microsoft.com/api/credentials/share/en-us/NishaPrudhomme-6229/2167EF37DF02B061?sharingId=7EF06CE6B9CD4BD3)
@@ -114,7 +113,6 @@ Projects:
 - Kusto Query Language (KQL)
 - Role-Based Access Control (RBAC)
 
-# December 19, 2023
 
 ----------------------------------------
 
