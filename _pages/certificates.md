@@ -18,8 +18,18 @@ Syllabus: [<i class="fas fa-paperclip"></i>](https://d2y9h8w1ydnujs.cloudfront.n
  - Phishing Analysis
  - Threat Intelligence
  - Digital Forensics
- - Security Information and Event Management
+ - Security Information and Event Management (SIEM)
  - Incident Response
+ - Blue Team
+ - Cyber Defense
+ - Cyber Security
+ - Endpoint Security
+ - Incident Report Writing
+ - Information Security
+ - Network Security
+ - Security Investigations
+ - Security Operations
+ - SOC
 
 ### <a name="CompTIA Security+ Certification"></a>CompTIA Security+ Certification | CompTIA [<i class="fas fa-link" aria-hidden="true"></i>](https://www.credly.com/badges/b318bd77-23fc-4029-b336-267f20d69d23/public_url)
 
