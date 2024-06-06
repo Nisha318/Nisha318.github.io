@@ -15,11 +15,11 @@ tags:
   - CTF
   - Privilege Escalation
   - Machines
-#teaser: assets/images/thm/thm-ice00.png  Path to the teaser image
+#teaser: assets/images/thm/thm-ice-00.png  Path to the teaser image
 tagline: "ICE - Tryhackme Walkthrough by Nisha."
 header:
   overlay_filter: rgba(0, 0, 0, 0.5)
-  overlay_image: /assets/images/ice-0.png
+  overlay_image: /assets/images/thm-ice-0.png
   caption: "Photo credit: [**imgur**](https://imgur.com/6Ijftag)"
 ---
 
@@ -42,14 +42,14 @@ Get connected to the TryHackMe network using OpenVPN. Make sure to first downloa
 
 Click on Start Machine to deploy the machine!
 
-<img src="/assets/images/thm/ice-2.png">
+<img src="/assets/images/thm/thm-ice-2.png">
 
 Time to Scan and Enumerate our target!
 
 
 An NMAP scan reveals the following ports were discovered to be open:
 
-<img src="/assets/images/thm/ice-3.png">
+<img src="/assets/images/thm/thm-ice-3.png">
 
 <strong> Q: One of the more interesting ports that is open is Microsoft Remote Desktop (MSRDP). What port is this open on? </strong><br>
 <em> Answer: 3389</em>
