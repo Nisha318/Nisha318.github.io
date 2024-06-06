@@ -26,6 +26,7 @@ header:
 <h5>Deploy & hack into a Windows machine, exploiting a very poorly secured media server. </h5>
 
 <img src="/assets/images/thm/ice-1.png">
+
 Room:<a href="https://tryhackme.com/r/room/ice"> https://tryhackme.com/r/room/ice</a>
 
 
