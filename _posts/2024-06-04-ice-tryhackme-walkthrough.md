@@ -15,7 +15,7 @@ tags:
   - CTF
   - Privilege Escalation
   - Machines
-#teaser: assets/images/thm_splunk_incident_handling_featured.PNG   Path to the teaser image
+#teaser: assets/images/thm/thm-ice00.png  Path to the teaser image
 tagline: "ICE - Tryhackme Walkthrough by Nisha."
 header:
   overlay_filter: rgba(0, 0, 0, 0.5)
@@ -24,7 +24,7 @@ header:
 ---
 
 
-### Deploy & hack into a Windows machine, exploiting a very poorly secured media server.
+<h5>>Deploy & hack into a Windows machine, exploiting a very poorly secured media server. </h5>
 
 <img src="/assets/images/thm/ice-1.png">
 Room:<a href="https://tryhackme.com/r/room/ice"> https://tryhackme.com/r/room/ice</a>
