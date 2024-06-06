@@ -1,5 +1,5 @@
 ---
-title: "TryHackMe Blue - Walkthrough"
+title: "TryHackMe Ice - Walkthrough"
 categories:
   - Blog
 tags:
@@ -15,8 +15,8 @@ tags:
 tagline: "ICE - Tryhackme Walkthrough by Nisha."
 header:
   overlay_filter: rgba(0, 0, 0, 0.5)
-  overlay_image: /assets/images/nessus logo.png
-  caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
+  overlay_image: /assets/images/ice-2.png
+  caption: "Photo credit: [**imgur**](https://imgur.com/6Ijftag)"
 ---
 
 
