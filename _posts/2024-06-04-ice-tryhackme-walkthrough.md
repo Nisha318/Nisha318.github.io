@@ -3,7 +3,6 @@ title: "TryHackMe Ice - Walkthrough"
 toc: true
 toc_label: "Table of Contents"
 toc_icon: "list-alt"
-toc_sticky: true
 categories:
   - Blog
 tags:
@@ -19,12 +18,12 @@ tags:
 tagline: "ICE - Tryhackme Walkthrough by Nisha."
 header:
   overlay_filter: rgba(0, 0, 0, 0.5)
-  overlay_image: /assets/images/thm-ice-0.png
+  overlay_image: /assets/images/thm/thm-ice-0.png
   caption: "Photo credit: [**imgur**](https://imgur.com/6Ijftag)"
 ---
 
 
-<h5>>Deploy & hack into a Windows machine, exploiting a very poorly secured media server. </h5>
+<h5>Deploy & hack into a Windows machine, exploiting a very poorly secured media server. </h5>
 
 <img src="/assets/images/thm/ice-1.png">
 Room:<a href="https://tryhackme.com/r/room/ice"> https://tryhackme.com/r/room/ice</a>
