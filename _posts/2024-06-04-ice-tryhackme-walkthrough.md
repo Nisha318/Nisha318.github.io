@@ -1,5 +1,9 @@
 ---
 title: "TryHackMe Ice - Walkthrough"
+toc: true
+toc_label: "Table of Contents"
+toc_icon: "list-alt"
+toc_sticky: true
 categories:
   - Blog
 tags:
@@ -15,7 +19,7 @@ tags:
 tagline: "ICE - Tryhackme Walkthrough by Nisha."
 header:
   overlay_filter: rgba(0, 0, 0, 0.5)
-  overlay_image: /assets/images/ice-2.png
+  overlay_image: /assets/images/ice-0.png
   caption: "Photo credit: [**imgur**](https://imgur.com/6Ijftag)"
 ---
 
