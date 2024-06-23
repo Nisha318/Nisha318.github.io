@@ -13,12 +13,12 @@ tags:
   - Ethical Hacking
   - TryHackMe
 
-teaser: assets/images/thm/thm-ice-00.png  
-tagline: "Introduction to Offensive Security - THM Walkthrough by Nisha."
+teaser: assets/images/thm/thm-intro-to-offensive-security0.png  
+tagline: "Hack your first website (legally in a safe environment) and experience an ethical hacker's job."
 header:
   overlay_filter: rgba(0, 0, 0, 0.5)
-  overlay_image: /assets/images/thm/thm-ice-0.png
-  caption: "Photo credit: [**imgur**](https://imgur.com/6Ijftag)"
+  overlay_image: /assets/images/thm/thm-intro-to-offensive-security.png
+  caption: "Photo credit: [**TryHackMe**](https://tryhackme.com)"
 ---
 
 ## Task 1 - 
