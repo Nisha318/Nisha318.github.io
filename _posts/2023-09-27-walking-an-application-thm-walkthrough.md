@@ -19,7 +19,7 @@ header:
   overlay_image: /assets/images/thm/thm-walk-app-0.png
   caption: "Photo credit: [**TryHackMe**](https://tryhackme.com/r/room/walkinganapplication)"
 ---
-<strong> Room Link: </strong>  <a href="https://tryhackme.com/r/room/walkinganapplication">https://tryhackme.com/r/room/walkinganapplication</a>
+<strong> Room Link: </strong>  <a href="https://tryhackme.com/r/room/walkinganapplication" target="_blank">https://tryhackme.com/r/room/walkinganapplication</a>
 
 
 
@@ -30,7 +30,7 @@ header:
 
   <p>In the "Walking An Application" room on TryHackMe, you will learn how to manually assess a web application for security vulnerabilities using only the built-in tools available in your web browser. Automated security tools and scripts often miss many potential vulnerabilities and valuable information. This room emphasizes the importance of manual review to identify and understand these overlooked issues.</p>
 
-  <h3>Objectives</h3>
+  <h4>Objectives</h4>
   <p>In this room, you will use the following built-in browser tools to uncover and analyze security issues:</p>
   <ul>
     <li><strong>View Source</strong>: Learn to view the human-readable source code of a website directly through your browser.</li>
@@ -48,7 +48,7 @@ header:
 
 <!-- Task 2: Importance of Completing a Site Review for Discovered Pages -->
 <div id="task-2-site-review">
-  <h3>Task 2: Importance of Completing a Site Review for Discovered Pages</h3>
+  <h4>Importance of Completing a Site Review for Discovered Pages</h4>
   <p>As a penetration tester, one of your primary responsibilities is to identify features within a website or web application that could be vulnerable to exploitation. These typically include interactive elements that engage with the user.</p>
 
   <p>Identifying these interactive parts can range from easily spotting a login form to thoroughly examining the website's JavaScript. A good starting point is to use your browser to explore the website, taking notes on each page, area, and feature, and summarizing your findings.</p>
