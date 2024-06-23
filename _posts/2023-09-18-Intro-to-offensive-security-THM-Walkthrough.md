@@ -42,7 +42,7 @@ The task includes: <br>
   <li> Starting the Machine: Load a virtual machine in Split View to access FakeBank. </li>
   <li> Using GoBuster: Execute a command in the terminal to find hidden pages on the FakeBank website by brute-forcing with a list of potential page names. </li>
   <li> Accessing Hidden Pages: Locate a hidden bank transfer page and perform a simulated hack by transferring money between accounts, demonstrating how an attacker might exploit such vulnerabilities. </li>
-  <li> Verify the success of the transfer and answer related questions before terminating the virtual machine. This exercise simulates real-world penetration testing to identify and report vulnerabilities in web applications.
+  <li> Verify the success of the transfer and answer related questions before terminating the virtual machine. This exercise simulates real-world penetration testing to identify and report vulnerabilities in web applications. </li>
 </ul>
 
 <strong> Your First Hack </strong>
