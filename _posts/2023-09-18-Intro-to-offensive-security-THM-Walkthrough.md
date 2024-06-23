@@ -20,6 +20,7 @@ header:
   overlay_image: /assets/images/thm/thm-intro-to-offensive-security.png
   caption: "Photo credit: [**TryHackMe**](https://tryhackme.com/r/room/introtooffensivesecurity)"
 ---
+Room Link: <a href="https://tryhackme.com/r/room/introtooffensivesecurity" target="_blank">https://tryhackme.com/r/room/introtooffensivesecurity</a>
 
 ## Task 1 - What is Offensive Security?
 
@@ -54,9 +55,7 @@ The task includes: <br>
 
   Execute the following command on the terminal:
 
-```
- gobuster -u http://fakebank.com -w wordlist.txt dir
-
+```gobuster -u http://fakebank.com -w wordlist.txt dir
  ```
 
 <img src="/assets/images/thm/thm-gify-introcyber1.gif">

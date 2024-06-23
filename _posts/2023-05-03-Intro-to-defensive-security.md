@@ -49,72 +49,105 @@ This room covers various critical topics in defensive security, including:
 
 By completing this room, you will gain a comprehensive understanding of these essential aspects of defensive security.
 
-<strong> Question: Which of the following options better represents the process where you simulate a hacker's actions to find vulnerabilities in a system? </strong> <br>
-<ul>
-  <li>Offensive Security</li>
-  <li>Defensive Security</li>
-
-</ul>
+<strong> Question: Which team focuses on defensive security? </strong> <br>
 
 <em>Answer: Blue Team</em>  <br>
 
-## Task 2 - Hacking Your First Machine
+## Task 2 - Areas of Defensive Security
 
-This TryHackMe module introduces beginners to hacking by guiding them through a simulated and legal exercise. The task involves using a command-line tool called GoBuster to brute-force the website of a fake bank application, FakeBank, to uncover hidden directories and pages. Participants start by opening a terminal on a virtual machine provided by the platform. <br>
+Areas of Defensive Security: An Overview <br>
+In the "Intro to Defensive Security" room, two primary topics are covered:
+<ol>
+    <li> Security Operations Center (SOC) and Threat Intelligence </li>
+    <li>Digital Forensics and Incident Response (DFIR), including Malware Analysis </li>
+</ol>
 
-The task includes: <br>
+
+<H4> Security Operations Center (SOC) </H4>
+A Security Operations Center (SOC) is a team of cybersecurity experts who monitor network systems to detect and respond to malicious activities. Key areas of focus for a SOC include:
+
 <ul>
-
-  <li> Starting the Machine: Load a virtual machine in Split View to access FakeBank. </li>
-  <li> Using GoBuster: Execute a command in the terminal to find hidden pages on the FakeBank website by brute-forcing with a list of potential page names. </li>
-  <li> Accessing Hidden Pages: Locate a hidden bank transfer page and perform a simulated hack by transferring money between accounts, demonstrating how an attacker might exploit such vulnerabilities. </li>
-  <li> Verify the success of the transfer and answer related questions before terminating the virtual machine. This exercise simulates real-world penetration testing to identify and report vulnerabilities in web applications.
+    <li>Vulnerabilities: Identifying and patching system weaknesses to prevent exploitation.</li>
+    <li>Policy Violations: Ensuring compliance with security policies, such as preventing the unauthorized uploading of sensitive data.</li>
+    <li>Unauthorized Activity: Detecting and blocking unauthorized access, such as stolen login credentials.</li>
+    <li>Network Intrusions: Identifying and mitigating intrusions, whether through malicious links or exploited servers.</li>
 </ul>
 
-<strong> Your First Hack </strong>
+SOC responsibilities also include threat intelligence, which involves gathering information on potential threats to prepare and defend against adversaries.
 
+<H4>Threat Intelligence</H4>
+Threat intelligence involves collecting and analyzing data on actual and potential threats to inform a company's defense strategies. This process includes:
 
-   <strong> Step 1 - Open a terminal </strong>
-     On the machine, open the terminal using the Terminal icon:  <img src="/assets/images/thm/thm-introcyber-terminal-icon.png"> <br>
- <strong> Step 2 - Find hidden website pages </strong>
-
-  Execute the following command on the terminal:
-
-  gobuster -u http://fakebank.com -w wordlist.txt dir
-  <img src="/assets/images/thm/thm-gify-introcyber1.gif">
-
-  <strong> Step 3 - Hack the Bank </strong>
-
-  Transfer $2000 from the bank account 2276, to your account (account number 8881). <br>
-
-<img src="/assets/images/thm/thm-introcyber2.gif">
-If your transfer was successful, you should now be able to see your new balance reflected on your account page. Go there now and confirm you got the money! (You may need to hit Refresh for the changes to appear)<br>
-
-<strong> Question: Above your account balance, you should now see a message indicating the answer to this question. Can you find the answer you need? </strong> <br>
-  
-<em>Answer: BANK-HACKED</em>
-
-
-If you were a penetration tester or security consultant, this is an exercise you’d perform for companies to test for vulnerabilities in their web applications; find hidden pages to investigate for vulnerabilities. <br>
-
-## Task 3 - Careers in Cyber Security
-
-<H3> How to Start Learning Cybersecurity </H3>
-Many people wonder how to become hackers (security consultants) or defenders (security analysts fighting cybercrime). The process is straightforward: focus on a specific area of cybersecurity, and practice regularly through hands-on exercises. By dedicating a little time each day to learning on TryHackMe, you can build the skills necessary to land your first job in the industry. <br>
-
-<strong>Real Success Stories: </strong><br>
-
-<a href="https://tryhackme.com/resources/blog/construction-worker-to-security-engineer-how-paul-used-tryhackme-to-land-his-first-job-in-security">Paul </a> transitioned from a construction worker to a security engineer. <br>
-<a href="https://tryhackme.com/resources/blog/the-teacher-becomes-the-student">Kassandra</a> moved from being a music teacher to a security professional. <br>
-<a href="https://tryhackme.com/resources/blog/brandons-success-story">Brandon </a>leveraged TryHackMe during school to secure his first job in cybersecurity. <br>
-
-<H3> Career Paths in Cybersecurity:</H3>
-For more detailed insights into various cybersecurity careers, explore the cyber careers room on TryHackMe. Here’s a brief overview of a few offensive security roles:<br>
 <ul>
-  <li> Penetration Tester: Tests technology products to identify security vulnerabilities. </li>
-  <li> Red Teamer: Simulates adversary attacks to provide feedback from an attacker’s perspective.</li>
-  <li> Security Engineer: Designs, monitors, and maintains security controls, networks, and systems to prevent cyberattacks. </li>
+    <li>Data Collection: Gathering information from network logs and public sources. </li>
+   <li>Data Processing and Analysis: Organizing data for analysis to understand attackers' motives and tactics.
+    <li>Actionable Insights: Developing recommendations to mitigate threats and enhance security.</li>
 </ul>
 
-By committing to daily practice and exploring different career paths, you can successfully enter the cybersecurity field.
+1. Understanding adversaries' tactics helps predict and counteract their actions effectively.
+
+<ul>
+Digital Forensics and Incident Response (DFIR)
+DFIR encompasses the following areas:
+
+Digital Forensics: Investigating and analyzing digital evidence to understand attacks and identify perpetrators. Key areas include:
+
+File System Analysis: Examining storage for programs, files, and deleted content.
+System Memory Analysis: Investigating system memory for malicious programs.
+System Logs: Reviewing logs for activity and traces of attacks.
+Network Logs: Analyzing network traffic to detect ongoing or past attacks.
+<ul>
+
+2. Incident Response: Managing and responding to cyber incidents to minimize damage and recover quickly. The incident response process includes:
+
+<ul>
+    <li> Preparation: Training teams and implementing preventive measures.</li>
+    <li>Detection and Analysis: Identifying and assessing incidents.</li>
+    <li>Containment, Eradication, and Recovery: Stopping the spread, eliminating threats, and restoring systems.</li>
+    <li>Post-Incident Activity: Reporting and learning from incidents to prevent future occurrences.</li>
+</ul>
+
+<H5>Malware Analysis</H5>
+Malware analysis involves studying malicious software to understand its behavior and impact. Types of malware include:
+
+<ul>
+    <li>Virus: Code that spreads by altering files.</li>
+    <li>Trojan Horse: Malicious software disguised as a legitimate program.</li>
+    <li>Ransomware: Software that encrypts files and demands a ransom for decryption.</li>
+</ul>
+
+
+<H5>Analysis methods include:</H5>
+
+<ul>
+
+    <li>Static Analysis: Inspecting malware without executing it, often requiring knowledge of assembly language.</li>
+    <li>Dynamic Analysis: Running malware in a controlled environment to observe its behavior.</li>
+
+<p>
+By understanding malware, security professionals can develop strategies to detect, prevent, and respond to such threats effectively.
+
+<strong>Question:</strong>What would you call a team of cyber security professionals that monitors a network and its systems for malicious events?<br>
+<em>Answer: Security Operations Center </em>
+
+<strong>Question:</strong>What does DFIR stand for?<br>
+<em>Answer: Digital Forensics and Incident Response<br>
+<strong>Question:<strong>Which kind of malware requires the user to pay money to regain access to their files?<br>
+
+<em> Answer: ransomware </em>
+
+</p>
+
+## Task 3 - Practical Example of Defensive Security
+
+<img src="/assets/images/thm/thm-intro-to-defensive-security2.png">
+<p>
+In this exercise, we will interact with a SIEM to monitor the different events on our network and systems in real-time. Some of the events are typical and harmless; others might require further intervention from us. Find the event flagged in red, take note of it, and click on it for further inspection.
+
+Next, we want to learn more about the suspicious activity or event. The suspicious event might have been triggered by an event, such as a local user, a local computer, or a remote IP address. To send and receive postal mail, you need a physical address; similarly, you need an IP address to send and receive data over the Internet. An IP address is a logical address that allows you to communicate over the Internet. We inspect the cause of the trigger to confirm whether the event is indeed malicious. If it is malicious, we need to take due action, such as reporting to someone else in the SOC and blocking the IP address.
+
+</p>
+
+<strong> Question: </strong>What is the flag that you obtained by following along?<br>
+<em> Answer: THM{THREAT-BLOCKED}</em>
 
