@@ -18,7 +18,7 @@ tagline: "Hack your first website (legally in a safe environment) and experience
 header:
   overlay_filter: rgba(0, 0, 0, 0.5)
   overlay_image: /assets/images/thm/thm-intro-to-offensive-security.png
-  caption: "Photo credit: [**TryHackMe**](https://tryhackme.com)"
+  caption: "Photo credit: [**TryHackMe**](https://tryhackme.com/r/room/introtooffensivesecurity)"
 ---
 
 ## Task 1 - What is Offensive Security?
@@ -53,11 +53,12 @@ The task includes: <br>
  <strong> Step 2 - Find hidden website pages </strong>
 
   Execute the following command on the terminal:
-```shell
-# Your Kali Linux commands go here
+
+```
  gobuster -u http://fakebank.com -w wordlist.txt dir
 
- 
+ ```
+
 <img src="/assets/images/thm/thm-gify-introcyber1.gif">
 
 <p>
