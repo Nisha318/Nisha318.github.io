@@ -81,6 +81,7 @@ If you were a penetration tester or security consultant, this is an exercise you
 ## Task 3 - Careers in Cyber Security
 
 <H3> How to Start Learning Cybersecurity </H3>
+
 Many people wonder how to become hackers (security consultants) or defenders (security analysts fighting cybercrime). The process is straightforward: focus on a specific area of cybersecurity, and practice regularly through hands-on exercises. By dedicating a little time each day to learning on TryHackMe, you can build the skills necessary to land your first job in the industry. <br>
 <p>
 <strong>Real Success Stories: </strong><br>

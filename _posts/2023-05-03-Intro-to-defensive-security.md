@@ -11,8 +11,7 @@ tags:
   - Blue Team
   - TryHackMe
 
-tagline: "Introducing defensive security and related topics, such as threat intelligence, SOC, DFIR, and SIEM."
-header:
+tagline: "Introducing defensive security and related topics, such as threat intelligence, SOC, DFIR, and SIEM."header:
  teaser: assets/images/thm/thm-intro-to-defensive-security2.png
   overlay_filter: rgba(0, 0, 0, 0.5)
   overlay_image: /assets/images/thm/thm-intro-to-defensive-security0.png
@@ -23,7 +22,7 @@ header:
 
 ## Task 1 - Introduction to Defensive Security
 
-<H3> Learning Objectives: </H3>
+<strong> Learning Objectives: </strong>
 Offensive security primarily aims at breaking into systems through various methods like exploiting bugs, abusing insecure setups, and bypassing access control policies. This is the realm of red teams and penetration testers.
 
 On the other hand, defensive security focuses on two key tasks:
@@ -78,7 +77,7 @@ In the "Intro to Defensive Security" room, two primary topics are covered:
 </p>
 
 
-<H4> Security Operations Center (SOC) </H4>
+<strong> Security Operations Center (SOC) </strong>
 A Security Operations Center (SOC) is a team of cybersecurity experts who monitor network systems to detect and respond to malicious activities. Key areas of focus for a SOC include:
 
 <ul>
@@ -90,7 +89,7 @@ A Security Operations Center (SOC) is a team of cybersecurity experts who monito
 
 SOC responsibilities also include threat intelligence, which involves gathering information on potential threats to prepare and defend against adversaries.
 
-<H4>Threat Intelligence</H4>
+<strong>Threat Intelligence</strong>
 Threat intelligence involves collecting and analyzing data on actual and potential threats to inform a company's defense strategies. This process includes:
 
 <ul>
@@ -101,7 +100,7 @@ Threat intelligence involves collecting and analyzing data on actual and potenti
 </ul>
 
 
-<h4>Digital Forensics and Incident Response (DFIR)</h4>
+<strong>Digital Forensics and Incident Response (DFIR)</strong>
 
 <p>
 DFIR encompasses the following areas:
@@ -127,7 +126,7 @@ Key areas include:
 
 <img src="/assets/images/thm/thm-intro-to-defensive-security3.png">
 
-<H5>Malware Analysis</H5>
+<strong>Malware Analysis</strong>
 Malware analysis involves studying malicious software to understand its behavior and impact. Types of malware include:
 
 <ul>
