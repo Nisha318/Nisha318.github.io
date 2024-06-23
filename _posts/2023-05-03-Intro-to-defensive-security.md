@@ -1,5 +1,5 @@
 ---
-title: "Introduction to Offensive Security - THM Walkthrough by Nisha"
+title: "Introduction to Defensive Security - THM Walkthrough by Nisha"
 toc: true
 toc_label: "Table of Contents"
 toc_icon: "list-alt"
@@ -7,21 +7,47 @@ categories:
   - Blog
 tags:
   - Cybersecurity
-  - Offensive
-  - Red Team
-  - Penetration Testing
-  - Ethical Hacking
+  - Defensive
+  - Blue Team
   - TryHackMe
 
-teaser: assets/images/thm/thm-intro-to-offensive-security0.png  
-tagline: "Hack your first website (legally in a safe environment) and experience an ethical hacker's job."
+teaser: assets/images/thm/thm-intro-to-defensive-security1.png
+tagline: "Introducing defensive security and related topics, such as threat intelligence, SOC, DFIR, and SIEM."
 header:
   overlay_filter: rgba(0, 0, 0, 0.5)
-  overlay_image: /assets/images/thm/thm-intro-to-offensive-security.png
+  overlay_image: /assets/images/thm/thm-intro-to-defensive-security0.png
   caption: "Photo credit: [**TryHackMe**](https://tryhackme.com)"
 ---
 
-## Task 1 - What is Offensive Security?
+## Task 1 - Introduction to Defensive Security
+
+<H3> Learning Objectives of the "Intro to Defensive Security" Room </H3>
+Offensive security primarily aims at breaking into systems through various methods like exploiting bugs, abusing insecure setups, and bypassing access control policies. This is the realm of red teams and penetration testers.
+
+On the other hand, defensive security focuses on two key tasks:
+
+Preventing intrusions from occurring.
+Detecting intrusions when they happen and responding appropriately.
+Blue teams are central to the defensive security field, and their responsibilities include:
+
+User Cyber Security Awareness: Training users to protect against attacks targeting their systems.
+Documenting and Managing Assets: Keeping track of systems and devices to manage and protect them effectively.
+Updating and Patching Systems: Ensuring all systems are updated and patched to defend against known vulnerabilities.
+Setting Up Preventative Security Devices: Implementing firewalls and intrusion prevention systems (IPS) to control and block network traffic based on rules and attack signatures.
+Setting Up Logging and Monitoring Devices: Monitoring the network to detect malicious activities and intrusions, such as unauthorized devices appearing on the network. <br>
+
+This room covers various critical topics in defensive security, including:
+
+<ul>
+    <li> Security Operations Center (SOC)</li>
+    <li> Threat Intelligence</li>
+    <li> Digital Forensics and Incident Response (DFIR)</li>
+    <li> Malware Analysis</li>
+
+</ul>
+
+
+By completing this room, you will gain a comprehensive understanding of these essential aspects of defensive security.
 
 <strong> Question: Which of the following options better represents the process where you simulate a hacker's actions to find vulnerabilities in a system? </strong> <br>
 <ul>
@@ -30,7 +56,7 @@ header:
 
 </ul>
 
-<em>Answer: Offensive Security</em>  <br>
+<em>Answer: Blue Team</em>  <br>
 
 ## Task 2 - Hacking Your First Machine
 
@@ -53,27 +79,21 @@ The task includes: <br>
  <strong> Step 2 - Find hidden website pages </strong>
 
   Execute the following command on the terminal:
-```shell
-# Your Kali Linux commands go here
- gobuster -u http://fakebank.com -w wordlist.txt dir
 
- 
-<img src="/assets/images/thm/thm-gify-introcyber1.gif">
+  gobuster -u http://fakebank.com -w wordlist.txt dir
+  <img src="/assets/images/thm/thm-gify-introcyber1.gif">
 
-<p>
   <strong> Step 3 - Hack the Bank </strong>
 
   Transfer $2000 from the bank account 2276, to your account (account number 8881). <br>
 
 <img src="/assets/images/thm/thm-introcyber2.gif">
-</p>
-
 If your transfer was successful, you should now be able to see your new balance reflected on your account page. Go there now and confirm you got the money! (You may need to hit Refresh for the changes to appear)<br>
-<p>
+
 <strong> Question: Above your account balance, you should now see a message indicating the answer to this question. Can you find the answer you need? </strong> <br>
   
 <em>Answer: BANK-HACKED</em>
-</p>
+
 
 If you were a penetration tester or security consultant, this is an exercise you’d perform for companies to test for vulnerabilities in their web applications; find hidden pages to investigate for vulnerabilities. <br>
 
@@ -81,19 +101,19 @@ If you were a penetration tester or security consultant, this is an exercise you
 
 <H3> How to Start Learning Cybersecurity </H3>
 Many people wonder how to become hackers (security consultants) or defenders (security analysts fighting cybercrime). The process is straightforward: focus on a specific area of cybersecurity, and practice regularly through hands-on exercises. By dedicating a little time each day to learning on TryHackMe, you can build the skills necessary to land your first job in the industry. <br>
-<p>
+
 <strong>Real Success Stories: </strong><br>
 
-<a href="https://tryhackme.com/resources/blog/construction-worker-to-security-engineer-how-paul-used-tryhackme-to-land-his-first-job-in-security" target="_blank">Paul </a> transitioned from a construction worker to a security engineer. <br>
-<a href="https://tryhackme.com/resources/blog/the-teacher-becomes-the-student" target="_blank">Kassandra</a> moved from being a music teacher to a security professional. <br>
-<a href="https://tryhackme.com/resources/blog/brandons-success-story" target="_blank">Brandon </a>leveraged TryHackMe during school to secure his first job in cybersecurity. <br>
+<a href="https://tryhackme.com/resources/blog/construction-worker-to-security-engineer-how-paul-used-tryhackme-to-land-his-first-job-in-security">Paul </a> transitioned from a construction worker to a security engineer. <br>
+<a href="https://tryhackme.com/resources/blog/the-teacher-becomes-the-student">Kassandra</a> moved from being a music teacher to a security professional. <br>
+<a href="https://tryhackme.com/resources/blog/brandons-success-story">Brandon </a>leveraged TryHackMe during school to secure his first job in cybersecurity. <br>
 
 <H3> Career Paths in Cybersecurity:</H3>
 For more detailed insights into various cybersecurity careers, explore the cyber careers room on TryHackMe. Here’s a brief overview of a few offensive security roles:<br>
 <ul>
-  <li> <strong>Penetration Tester:</strong> Tests technology products to identify security vulnerabilities. </li>
-  <li> <strong>Red Teamer:</strong> Simulates adversary attacks to provide feedback from an attacker’s perspective.</li>
-  <li> <strong>Security Engineer:</strong> Designs, monitors, and maintains security controls, networks, and systems to prevent cyberattacks. </li>
+  <li> Penetration Tester: Tests technology products to identify security vulnerabilities. </li>
+  <li> Red Teamer: Simulates adversary attacks to provide feedback from an attacker’s perspective.</li>
+  <li> Security Engineer: Designs, monitors, and maintains security controls, networks, and systems to prevent cyberattacks. </li>
 </ul>
 
 By committing to daily practice and exploring different career paths, you can successfully enter the cybersecurity field.
