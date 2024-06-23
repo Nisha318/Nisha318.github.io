@@ -14,7 +14,7 @@ tags:
 
 tagline: "Manually review a web application for security issues using only your browsers developer tools. Hacking with just your browser, no tools or scripts."
 header:
- teaser: assets/images/thm/thm-walk-app-1.png
+  teaser: assets/images/thm/thm-walk-app-1.png
   overlay_filter: rgba(0, 0, 0, 0.5)
   overlay_image: /assets/images/thm/thm-walk-app-0.png
   caption: "Photo credit: [**TryHackMe**](https://tryhackme.com/r/room/walkinganapplication)"
