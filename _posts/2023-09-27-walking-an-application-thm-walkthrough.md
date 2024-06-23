@@ -21,14 +21,7 @@ header:
 ---
 <strong> Room Link: </strong>  <a href="https://tryhackme.com/r/room/walkinganapplication" target="_blank">https://tryhackme.com/r/room/walkinganapplication</a>
 
-
-
-## Task 1 - Walking An Application
-
-<!-- Introduction to the TryHackMe Room: "Walking An Application" -->
-<section id="walking-an-application">
-
-  <p>In the "Walking An Application" room on TryHackMe, you will learn how to manually assess a web application for security vulnerabilities using only the built-in tools available in your web browser. Automated security tools and scripts often miss many potential vulnerabilities and valuable information. This room emphasizes the importance of manual review to identify and understand these overlooked issues.</p>
+<p>In the "Walking An Application" room on TryHackMe, you will learn how to manually assess a web application for security vulnerabilities using only the built-in tools available in your web browser. Automated security tools and scripts often miss many potential vulnerabilities and valuable information. This room emphasizes the importance of manual review to identify and understand these overlooked issues.</p>
 
   <h4>Objectives</h4>
   <p>In this room, you will use the following built-in browser tools to uncover and analyze security issues:</p>
@@ -40,6 +33,13 @@ header:
   </ul>
   <p>By mastering these tools, you will be equipped to conduct a thorough and effective manual review of web applications, enhancing your ability to find and address security vulnerabilities that automated tools might miss.</p>
 
+
+## Task 1 - Walking An Application
+
+<!-- Introduction to the TryHackMe Room: "Walking An Application" -->
+<section id="walking-an-application">
+
+  
   To begin, start the virtual machine on this task, wait 2 minutes.  Use either the in-browser attackbox or your own device over VPN to connect to the URL provided for your machine. 
 
 </section>
