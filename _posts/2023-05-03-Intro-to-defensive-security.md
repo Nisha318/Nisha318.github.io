@@ -18,7 +18,7 @@ header:
   overlay_image: /assets/images/thm/thm-intro-to-defensive-security0.png
   caption: "Photo credit: [**TryHackMe**](https://tryhackme.com)"
 ---
-
+Room Link: <a href="https://tryhackme.com/r/room/defensivesecurity">https://tryhackme.com/r/room/defensivesecurity</a>
 ## Task 1 - Introduction to Defensive Security
 
 <H3> Learning Objectives of the "Intro to Defensive Security" Room </H3>
