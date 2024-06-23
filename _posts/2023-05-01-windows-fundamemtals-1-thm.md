@@ -8,5 +8,5 @@ tags:
   - RDP
   - Tools
 ---
-
+<strong> Room Link: </strong> 
 ## Windows Fundamentals 1 - TryHackMe Walkthrough

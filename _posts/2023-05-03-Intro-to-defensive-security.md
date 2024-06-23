@@ -11,30 +11,39 @@ tags:
   - Blue Team
   - TryHackMe
 
-teaser: assets/images/thm/thm-intro-to-defensive-security1.png
 tagline: "Introducing defensive security and related topics, such as threat intelligence, SOC, DFIR, and SIEM."
 header:
+ teaser: assets/images/thm/thm-intro-to-defensive-security2.png
   overlay_filter: rgba(0, 0, 0, 0.5)
   overlay_image: /assets/images/thm/thm-intro-to-defensive-security0.png
   caption: "Photo credit: [**TryHackMe**](https://tryhackme.com)"
 ---
-Room Link: <a href="https://tryhackme.com/r/room/defensivesecurity">https://tryhackme.com/r/room/defensivesecurity</a>
+
+<strong> Room Link: </strong> <a href="https://tryhackme.com/r/room/defensivesecurity">https://tryhackme.com/r/room/defensivesecurity</a>
+
 ## Task 1 - Introduction to Defensive Security
 
-<H3> Learning Objectives of the "Intro to Defensive Security" Room </H3>
+<H3> Learning Objectives: </H3>
 Offensive security primarily aims at breaking into systems through various methods like exploiting bugs, abusing insecure setups, and bypassing access control policies. This is the realm of red teams and penetration testers.
 
 On the other hand, defensive security focuses on two key tasks:
+<ul>
+    <li>Preventing intrusions from occurring.</li>
+    <li>Detecting intrusions when they happen and responding appropriately.</li>
+</ul>
 
-Preventing intrusions from occurring.
-Detecting intrusions when they happen and responding appropriately.
+<p>
+
 Blue teams are central to the defensive security field, and their responsibilities include:
 
-User Cyber Security Awareness: Training users to protect against attacks targeting their systems.
-Documenting and Managing Assets: Keeping track of systems and devices to manage and protect them effectively.
-Updating and Patching Systems: Ensuring all systems are updated and patched to defend against known vulnerabilities.
-Setting Up Preventative Security Devices: Implementing firewalls and intrusion prevention systems (IPS) to control and block network traffic based on rules and attack signatures.
-Setting Up Logging and Monitoring Devices: Monitoring the network to detect malicious activities and intrusions, such as unauthorized devices appearing on the network. <br>
+<ul>
+
+    <li>User Cyber Security Awareness: Training users to protect against attacks targeting their systems.</li>
+    <li>Documenting and Managing Assets: Keeping track of systems and devices to manage and protect them effectively.</li>
+    <li>Updating and Patching Systems: Ensuring all systems are updated and patched to defend against known vulnerabilities.</li>
+    <li>Setting Up Preventative Security Devices: Implementing firewalls and intrusion prevention systems (IPS) to control and block network traffic based on rules and attack signatures.</li>
+    <li>Setting Up Logging and Monitoring Devices: Monitoring the network to detect malicious activities and intrusions, such as unauthorized devices appearing on the network.</li> <br>
+</ul>
 
 This room covers various critical topics in defensive security, including:
 
@@ -53,14 +62,20 @@ By completing this room, you will gain a comprehensive understanding of these es
 
 <em>Answer: Blue Team</em>  <br>
 
+</p>
+
+
 ## Task 2 - Areas of Defensive Security
 
+<p>
 Areas of Defensive Security: An Overview <br>
 In the "Intro to Defensive Security" room, two primary topics are covered:
 <ol>
     <li> Security Operations Center (SOC) and Threat Intelligence </li>
     <li>Digital Forensics and Incident Response (DFIR), including Malware Analysis </li>
 </ol>
+
+</p>
 
 
 <H4> Security Operations Center (SOC) </H4>
@@ -82,23 +97,26 @@ Threat intelligence involves collecting and analyzing data on actual and potenti
     <li>Data Collection: Gathering information from network logs and public sources. </li>
    <li>Data Processing and Analysis: Organizing data for analysis to understand attackers' motives and tactics.
     <li>Actionable Insights: Developing recommendations to mitigate threats and enhance security.</li>
+    <li>Understanding adversaries' tactics helps predict and counteract their actions effectively.</li>
 </ul>
 
-1. Understanding adversaries' tactics helps predict and counteract their actions effectively.
 
-<ul>
-Digital Forensics and Incident Response (DFIR)
+<h4>Digital Forensics and Incident Response (DFIR)</h4>
+
+<p>
 DFIR encompasses the following areas:
 
-Digital Forensics: Investigating and analyzing digital evidence to understand attacks and identify perpetrators. Key areas include:
+    1. Digital Forensics: Investigating and analyzing digital evidence to understand attacks and identify perpetrators. 
 
-File System Analysis: Examining storage for programs, files, and deleted content.
-System Memory Analysis: Investigating system memory for malicious programs.
-System Logs: Reviewing logs for activity and traces of attacks.
-Network Logs: Analyzing network traffic to detect ongoing or past attacks.
+Key areas include:
 <ul>
+    <li>File System Analysis: Examining storage for programs, files, and deleted content.</li>
+    <li>System Memory Analysis: Investigating system memory for malicious programs.</li>
+    <li>System Logs: Reviewing logs for activity and traces of attacks.</li>
+    <li>Network Logs: Analyzing network traffic to detect ongoing or past attacks.</li>
+</ul>
 
-2. Incident Response: Managing and responding to cyber incidents to minimize damage and recover quickly. The incident response process includes:
+    2. Incident Response: Managing and responding to cyber incidents to minimize damage and recover quickly. The incident response process includes:
 
 <ul>
     <li> Preparation: Training teams and implementing preventive measures.</li>
@@ -106,6 +124,8 @@ Network Logs: Analyzing network traffic to detect ongoing or past attacks.
     <li>Containment, Eradication, and Recovery: Stopping the spread, eliminating threats, and restoring systems.</li>
     <li>Post-Incident Activity: Reporting and learning from incidents to prevent future occurrences.</li>
 </ul>
+
+<img src="/assets/images/thm/thm-intro-to-defensive-security3.png">
 
 <H5>Malware Analysis</H5>
 Malware analysis involves studying malicious software to understand its behavior and impact. Types of malware include:
@@ -124,7 +144,7 @@ Malware analysis involves studying malicious software to understand its behavior
     <li>Static Analysis: Inspecting malware without executing it, often requiring knowledge of assembly language.</li>
     <li>Dynamic Analysis: Running malware in a controlled environment to observe its behavior.</li>
 
-<p>
+
 By understanding malware, security professionals can develop strategies to detect, prevent, and respond to such threats effectively.
 
 <strong>Question:</strong>What would you call a team of cyber security professionals that monitors a network and its systems for malicious events?<br>
@@ -146,7 +166,10 @@ In this exercise, we will interact with a SIEM to monitor the different events o
 
 Next, we want to learn more about the suspicious activity or event. The suspicious event might have been triggered by an event, such as a local user, a local computer, or a remote IP address. To send and receive postal mail, you need a physical address; similarly, you need an IP address to send and receive data over the Internet. An IP address is a logical address that allows you to communicate over the Internet. We inspect the cause of the trigger to confirm whether the event is indeed malicious. If it is malicious, we need to take due action, such as reporting to someone else in the SOC and blocking the IP address.
 
+<img src="/assets/images/thm/thm-intro-def.gif">
+
 </p>
+
 
 <strong> Question: </strong>What is the flag that you obtained by following along?<br>
 <em> Answer: THM{THREAT-BLOCKED}</em>

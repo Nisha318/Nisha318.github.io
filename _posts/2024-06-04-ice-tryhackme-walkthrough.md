@@ -27,7 +27,7 @@ header:
 
 <img src="/assets/images/thm/ice-1.png">
 
-Room:<a href="https://tryhackme.com/r/room/ice"> https://tryhackme.com/r/room/ice</a>
+<strong> Room Link: </strong> <a href="https://tryhackme.com/r/room/ice"> https://tryhackme.com/r/room/ice</a>
 
 
 {% include toc %}

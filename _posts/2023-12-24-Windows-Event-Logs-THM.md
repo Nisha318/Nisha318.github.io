@@ -20,4 +20,4 @@ header:
 
 ### Introduction to Windows Event Logs and the tools to query them.
 
-Room Link:  <a href="https://tryhackme.com/r/room/windowseventlogs" target="_blank" rel="noopener noreferrer"> https://tryhackme.com/r/room/windowseventlogs</a>
+<strong> Room Link: </strong>   <a href="https://tryhackme.com/r/room/windowseventlogs" target="_blank" rel="noopener noreferrer"> https://tryhackme.com/r/room/windowseventlogs</a>

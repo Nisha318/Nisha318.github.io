@@ -18,7 +18,7 @@ header:
 ---
 
 
-Room Link:  <a href="https://tryhackme.com/room/splunk101" target="_blank" rel="noopener noreferrer"> https://tryhackme.com/room/splunk101</a>
+<strong> Room Link: </strong>  <a href="https://tryhackme.com/room/splunk101" target="_blank" rel="noopener noreferrer"> https://tryhackme.com/room/splunk101</a>
 
 
  {% include video id="zyaof9kP54I" provider="youtube" %}

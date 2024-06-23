@@ -21,7 +21,7 @@ header:
   overlay_image: /assets/images/thm/thm-intro-to-offensive-security.png
   caption: "Photo credit: [**TryHackMe**](https://tryhackme.com/r/room/introtooffensivesecurity)"
 ---
-Room Link: <a href="https://tryhackme.com/r/room/introtooffensivesecurity" target="_blank">https://tryhackme.com/r/room/introtooffensivesecurity</a>
+<strong> Room Link: </strong>  <a href="https://tryhackme.com/r/room/introtooffensivesecurity" target="_blank">https://tryhackme.com/r/room/introtooffensivesecurity</a>
 
 ## Task 1 - What is Offensive Security?
 

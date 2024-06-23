@@ -25,7 +25,7 @@ header:
 ### Deploy & hack into a Windows machine, leveraging common misconfiguration issues. 
 
 <img src="/assets/images/thm/blue-1.png">
-Room:<a href="https://tryhackme.com/r/room/blue"> https://tryhackme.com/r/room/blue</a>
+<strong> Room Link: </strong> <a href="https://tryhackme.com/r/room/blue"> https://tryhackme.com/r/room/blue</a>
 
 
 <h4>Learning Objectives</h4>
