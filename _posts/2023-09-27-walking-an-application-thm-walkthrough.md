@@ -23,7 +23,7 @@ header:
 
 <p>In the "Walking An Application" room on TryHackMe, you will learn how to manually assess a web application for security vulnerabilities using only the built-in tools available in your web browser. Automated security tools and scripts often miss many potential vulnerabilities and valuable information. This room emphasizes the importance of manual review to identify and understand these overlooked issues.</p>
 
-  <h4>Objectives</h4>
+<strong>>Objectives</strong><br>
   <p>In this room, you will use the following built-in browser tools to uncover and analyze security issues:</p>
   <ul>
     <li><strong>View Source</strong>: Learn to view the human-readable source code of a website directly through your browser.</li>
@@ -40,7 +40,8 @@ header:
 <section id="walking-an-application">
 
   
-  To begin, start the virtual machine on this task, wait 2 minutes.  Use either the in-browser attackbox or your own device over VPN to connect to the URL provided for your machine. 
+  To begin, start the virtual machine on this task, wait 2 minutes.<br>
+Use either the in-browser attackbox or your own device over VPN to connect to the URL provided for your machine. 
 
 </section>
 
@@ -48,7 +49,7 @@ header:
 
 <!-- Task 2: Importance of Completing a Site Review for Discovered Pages -->
 <div id="task-2-site-review">
-  <h4>Importance of Completing a Site Review for Discovered Pages</h4>
+</strong>Importance of Completing a Site Review for Discovered Pages</strong>
   <p>As a penetration tester, one of your primary responsibilities is to identify features within a website or web application that could be vulnerable to exploitation. These typically include interactive elements that engage with the user.</p>
 
   <p>Identifying these interactive parts can range from easily spotting a login form to thoroughly examining the website's JavaScript. A good starting point is to use your browser to explore the website, taking notes on each page, area, and feature, and summarizing your findings.</p>
@@ -67,8 +68,6 @@ header:
 
   <p>Performing a detailed site review sets the stage for a thorough and effective penetration test, ensuring that all potential vulnerabilities are identified and examined.</p>
 </div>
-
-<em> Answer: No answer needed </em>
 
 ## Task 3 - Viewing The Page Source
 
