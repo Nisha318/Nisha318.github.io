@@ -97,35 +97,55 @@ Use either the in-browser attackbox or your own device over VPN to connect to th
     <li><strong>External Files:</strong> CSS, JavaScript, and images can be included via HTML. Sometimes, directory listing is enabled by mistake, revealing all files in a directory. This can expose confidential information like backup files or source code. Check the directories for misconfigurations and find the <code>flag.txt</code> file.</li>
   </ul>
 
-  <p>Websites often use frameworks—prebuilt code collections for common features like blogs, user management, and form processing. Viewing the page source can indicate if a framework is in use and its version. Knowing the framework and version can help identify known vulnerabilities. For example, a comment at the bottom of the page might indicate the framework and version, along with a link to the framework's website. Reviewing this information can lead you to another flag by identifying if the framework is outdated.</p>
+  <p>Websites often use frameworks—prebuilt code collections for common features like blogs, user management, and form processing. Viewing the page source can indicate if a framework is in use and its version. Knowing the framework and version can help identify known vulnerabilities. For example, a comment at the bottom of the page might indicate the framework and version, along with a link to the framework's website. Reviewing this information can lead you to another flag by identifying if the framework is outdated.
 
-
-Right-click on the page and select "View page source" <br>
-Visit the page that is referenced in the page comment to retrieve the flag. <br>
+Right-click on the page and select "View page source" 
+Visit the page that is referenced in the page comment to retrieve the flag.</p>
 
 <strong> Q: What is the flag from the HTML comment? </strong><br>
-<em> Answer: THM{HTML_COMMENTS_ARE_DANGEROUS}</em><br>
+<em> Answer: THM{HTML_COMMENTS_ARE_DANGEROUS}</em>
+<p>
+
+</p>
 
 <img src="/assets/images/thm/thm_wap_1.png"><br>
+<p>
+
+</p>
 
 <strong> Q: What is the flag from the secret link? </strong><br>
 <em> Answer: THM{NOT_A_SECRET_ANYMORE} </em><br>
+<p>
+
+</p>
 
 <img src="/assets/images/thm/thm_wap_2.png">
 
+<p>
+
+</p>
+
+
 <strong> Q: What is the directory listing flag? </strong><br>
 <em> Answer: THM{INVALID_DIRECTORY_PERMISSIONS} </em><br>
+<p></p>
 
 <img src="/assets/images/thm/thm_wap_3.png"><br>
+<p></p>
 
 <strong> Q: What is the framework flag? </strong><br>
 <em> Answer: THM{KEEP_YOUR_SOFTWARE_UPDATED} </em><br>
-
+<p></p>
 <img src="/assets/images/thm/thm_wap_4.png"><br>
 
+<p></p>
+
+</div>
 
 ## Task 4 - Developer Tools - Inspector
+
 <!-- Task 4: Using the Inspector Tool -->
+
 <div id="task-4-inspector">
 
 <strong>Developer Tools</strong><br>
