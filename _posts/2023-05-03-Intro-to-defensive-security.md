@@ -13,7 +13,7 @@ tags:
 
 tagline: "Introducing defensive security and related topics, such as threat intelligence, SOC, DFIR, and SIEM."
 header:
-  teaser: assets/images/thm/thm-intro-to-defensive-security2.png
+  teaser: assets/images/thm/thm-intro-to-defensive-security1.png
   overlay_filter: rgba(0, 0, 0, 0.5)
   overlay_image: /assets/images/thm/thm-intro-to-defensive-security0.png
   caption: "Photo credit: [**TryHackMe**](https://tryhackme.com)"
