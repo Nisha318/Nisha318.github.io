@@ -215,5 +215,5 @@ Locate the DIV element with the class premium-customer-blocker and click on it. 
 <strong> Q: What is the flag shown on the contact-msg network request? </strong><br>
 <em> Answer: THM{GOT_AJAX_FLAG} </em><br>
 
-</div>
+
 
