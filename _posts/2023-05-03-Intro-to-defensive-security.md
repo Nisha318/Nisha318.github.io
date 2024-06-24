@@ -103,20 +103,21 @@ Threat intelligence involves collecting and analyzing data on actual and potenti
 
 <strong>Digital Forensics and Incident Response (DFIR)</strong><br>
 
-<p>
+
 DFIR encompasses the following areas:
+<p>
 
     1. Digital Forensics: Investigating and analyzing digital evidence to understand attacks and identify perpetrators. 
 
-Key areas include:
+Key areas include:</p>
 <ul>
     <li>File System Analysis: Examining storage for programs, files, and deleted content.</li>
     <li>System Memory Analysis: Investigating system memory for malicious programs.</li>
     <li>System Logs: Reviewing logs for activity and traces of attacks.</li>
     <li>Network Logs: Analyzing network traffic to detect ongoing or past attacks.</li>
 </ul>
-
-    2. Incident Response: Managing and responding to cyber incidents to minimize damage and recover quickly. The incident response process includes:
+<p>
+    2. Incident Response: Managing and responding to cyber incidents to minimize damage and recover quickly. The incident response process includes:</p>
 
 <ul>
     <li> Preparation: Training teams and implementing preventive measures.</li>
@@ -125,7 +126,7 @@ Key areas include:
     <li>Post-Incident Activity: Reporting and learning from incidents to prevent future occurrences.</li>
 </ul>
 
-<img src="/assets/images/thm/thm-intro-to-defensive-security3.png">
+<img src="/assets/images/thm/thm-intro-to-defensive-security3.png"><br>
 
 <strong>Malware Analysis</strong><br>
 Malware analysis involves studying malicious software to understand its behavior and impact. Types of malware include:
@@ -137,7 +138,7 @@ Malware analysis involves studying malicious software to understand its behavior
 </ul>
 
 
-<strong>>Analysis methods include:</strong>
+<strong>Analysis methods include:</strong>
 
 <ul>
 
@@ -151,18 +152,18 @@ By understanding malware, security professionals can develop strategies to detec
 <p>
 <strong>Question:</strong>  What would you call a team of cyber security professionals that monitors a network and its systems for malicious events?<br>
 
-<em>Answer: Security Operations Center </em><br>
+<em>Answer: Security Operations Center </em></p><br>
 
-
+<p>
 <strong>Question:</strong>What does DFIR stand for?<br>
 
-<em>Answer: Digital Forensics and Incident Response</em><br>
+<em>Answer: Digital Forensics and Incident Response</em></p><br>
 
+<p>
+<strong>Question:</strong>Which kind of malware requires the user to pay money to regain access to their files?<br>
 
-<strong>Question:<strong>Which kind of malware requires the user to pay money to regain access to their files?<br>
+<em> Answer: ransomware </em> </p><br>
 
-<em> Answer: ransomware </em> <br>
-</p>
 
 
 ## Task 3 - Practical Example of Defensive Security
