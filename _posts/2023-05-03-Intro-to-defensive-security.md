@@ -10,6 +10,8 @@ tags:
   - Defensive
   - Blue Team
   - TryHackMe
+date: YYYY-MM-DD HH:MM:SS
+thumbnail: assets/images/thm/thm-intro-to-defensive-security1.png
 
 tagline: "Introducing defensive security and related topics, such as threat intelligence, SOC, DFIR, and SIEM."
 header:
@@ -153,17 +155,17 @@ By understanding malware, security professionals can develop strategies to detec
 <p>
 <strong>Question:</strong>  What would you call a team of cyber security professionals that monitors a network and its systems for malicious events?<br>
 
-<em>Answer: Security Operations Center </em></p><br>
+<em>Answer: Security Operations Center </em></p>
 
 <p>
 <strong>Question:</strong>What does DFIR stand for?<br>
 
-<em>Answer: Digital Forensics and Incident Response</em></p><br>
+<em>Answer: Digital Forensics and Incident Response</em></p>
 
 <p>
 <strong>Question:</strong>Which kind of malware requires the user to pay money to regain access to their files?<br>
 
-<em> Answer: ransomware </em> </p><br>
+<em> Answer: ransomware </em> </p>
 
 
 
