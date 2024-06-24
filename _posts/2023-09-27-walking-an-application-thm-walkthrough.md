@@ -171,10 +171,10 @@ Every modern browser includes developer tools; this is a tool kit used to aid we
   <p>On the Acme IT Support website, navigate to the news section, where you will find three news articles.</p>
 
 <p>
-The first two articles are readable, but the third has been blocked with a floating notice above the content stating you have to be a premium customer to view the article. These floating boxes blocking the page contents are often referred to as paywalls as they put up a metaphorical wall in front of the content you wish to see until you pay.
-
-Right-clicking on the premium notice ( paywall ), you should be able to select the Inspect option from the menu, which opens the developer tools either on the bottom or right-hand side depending on your browser or preferences. You'll now see the elements/HTML that make up the website.
-
+The first two articles are readable, but the third has been blocked with a floating notice above the content stating you have to be a premium customer to view the article. These floating boxes blocking the page contents are often referred to as paywalls as they put up a metaphorical wall in front of the content you wish to see until you pay.</p>
+<p>
+Right-clicking on the premium notice ( paywall ), you should be able to select the Inspect option from the menu, which opens the developer tools either on the bottom or right-hand side depending on your browser or preferences. You'll now see the elements/HTML that make up the website.</p>
+<p>
 Locate the DIV element with the class premium-customer-blocker and click on it. You'll see all the CSS styles in the styles box that apply to this element, such as margin-top: 60px and text-align: center. The style we're interested in is the display: block. If you click on the word block, you can type a value of your own choice. Try typing none, and this will make the box disappear, revealing the content underneath it and a flag. If the element didn't have a display field, you could click below the last style and add in your own. Have a play with the element inspector, and you'll see you can change any of the information on the website, including the content. Remember this is only edited on your browser window, and when you press refresh, everything will be back to normal.
 </p> <br>
 
@@ -188,8 +188,6 @@ Locate the DIV element with the class premium-customer-blocker and click on it. 
 
 
 ## Task 5 - Developer Tools - Debugger
-
-
 
 <p>The Debugger panel in developer tools is primarily designed for debugging JavaScript, making it a valuable resource for web developers trying to identify issues in their code. For penetration testers, it offers the capability to delve into the JavaScript code. In Firefox and Safari, this tool is named Debugger, while in Google Chrome, it's referred to as Sources.</p>
 
@@ -212,8 +210,19 @@ Locate the DIV element with the class premium-customer-blocker and click on it. 
 
 ## Task 6 - Developer Tools - Network
 
+<!-- Task 6: Using Developer Tools - Network -->
+<div id="task-6-network">
+
+  <p>The Network tab in developer tools is useful for monitoring every external request made by a webpage. By clicking on the Network tab and refreshing the page, you can view all the files the page is requesting.</p>
+
+  <p>Try this on the contact page. If the list becomes too cluttered, you can use the trash can icon to clear it.</p>
+
+  <p>With the Network tab open, fill out the contact form and click the Send Message button. You will see an event appear in the Network tab. This event represents the form submission happening in the background via AJAX. AJAX allows web applications to send and receive data in the background without reloading the current page.</p>
+
+<img src="/assets/images/thm/thm-walk-app-7.gif"> <br>
+
 <strong> Q: What is the flag shown on the contact-msg network request? </strong><br>
 <em> Answer: THM{GOT_AJAX_FLAG} </em><br>
 
-
+</div>
 
