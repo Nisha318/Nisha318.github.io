@@ -143,34 +143,43 @@ Malware analysis involves studying malicious software to understand its behavior
 
     <li>Static Analysis: Inspecting malware without executing it, often requiring knowledge of assembly language.</li>
     <li>Dynamic Analysis: Running malware in a controlled environment to observe its behavior.</li>
+</ul>
 
-
-By understanding malware, security professionals can develop strategies to detect, prevent, and respond to such threats effectively.
+<p>
+By understanding malware, security professionals can develop strategies to detect, prevent, and respond to such threats effectively.</p><br>
 
 <strong>Question:</strong>What would you call a team of cyber security professionals that monitors a network and its systems for malicious events?<br>
-<em>Answer: Security Operations Center </em>
+<em>Answer: Security Operations Center </em><br>
 
 <strong>Question:</strong>What does DFIR stand for?<br>
-<em>Answer: Digital Forensics and Incident Response<br>
+<em>Answer: Digital Forensics and Incident Response</em><br>
+
+
 <strong>Question:<strong>Which kind of malware requires the user to pay money to regain access to their files?<br>
 
-<em> Answer: ransomware </em>
+<em> Answer: ransomware </em> <br>
 
-</p>
+
 
 ## Task 3 - Practical Example of Defensive Security
 
 <img src="/assets/images/thm/thm-intro-to-defensive-security2.png">
 <p>
-In this exercise, we will interact with a SIEM to monitor the different events on our network and systems in real-time. Some of the events are typical and harmless; others might require further intervention from us. Find the event flagged in red, take note of it, and click on it for further inspection.
+By understanding malware, security professionals can develop strategies to detect, prevent, and respond to such threats effectively.</p><br>
 
-Next, we want to learn more about the suspicious activity or event. The suspicious event might have been triggered by an event, such as a local user, a local computer, or a remote IP address. To send and receive postal mail, you need a physical address; similarly, you need an IP address to send and receive data over the Internet. An IP address is a logical address that allows you to communicate over the Internet. We inspect the cause of the trigger to confirm whether the event is indeed malicious. If it is malicious, we need to take due action, such as reporting to someone else in the SOC and blocking the IP address.
+<p>
+By understanding malware, security professionals can develop strategies to detect, prevent, and respond to such threats effectively.</p><br>
 
-<img src="/assets/images/thm/thm-intro-def.gif">
+<p>
+In this exercise, we will interact with a SIEM to monitor the different events on our network and systems in real-time. Some of the events are typical and harmless; others might require further intervention from us. Find the event flagged in red, take note of it, and click on it for further inspection. </p><br>
 
-</p>
+<p>
+Next, we want to learn more about the suspicious activity or event. The suspicious event might have been triggered by an event, such as a local user, a local computer, or a remote IP address. To send and receive postal mail, you need a physical address; similarly, you need an IP address to send and receive data over the Internet. An IP address is a logical address that allows you to communicate over the Internet. We inspect the cause of the trigger to confirm whether the event is indeed malicious. If it is malicious, we need to take due action, such as reporting to someone else in the SOC and blocking the IP address.</p><br>
+
+<img src="/assets/images/thm/thm-intro-def.gif"> <br>
+
 
 
 <strong> Question: </strong>What is the flag that you obtained by following along?<br>
-<em> Answer: THM{THREAT-BLOCKED}</em>
+<em> Answer: THM{THREAT-BLOCKED}</em> <br>
 
