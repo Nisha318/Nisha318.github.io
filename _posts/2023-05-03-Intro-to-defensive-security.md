@@ -127,7 +127,7 @@ Key areas include:
 
 <img src="/assets/images/thm/thm-intro-to-defensive-security3.png">
 
-<strong>Malware Analysis</strong>
+<strong>Malware Analysis</strong><br>
 Malware analysis involves studying malicious software to understand its behavior and impact. Types of malware include:
 
 <ul>
@@ -137,7 +137,7 @@ Malware analysis involves studying malicious software to understand its behavior
 </ul>
 
 
-<H5>Analysis methods include:</H5>
+<strong>>Analysis methods include:</strong>
 
 <ul>
 
@@ -148,17 +148,21 @@ Malware analysis involves studying malicious software to understand its behavior
 <p>
 By understanding malware, security professionals can develop strategies to detect, prevent, and respond to such threats effectively.</p><br>
 
-<strong>Question:</strong>What would you call a team of cyber security professionals that monitors a network and its systems for malicious events?<br>
+<p>
+<strong>Question:</strong>  What would you call a team of cyber security professionals that monitors a network and its systems for malicious events?<br>
+
 <em>Answer: Security Operations Center </em><br>
 
+
 <strong>Question:</strong>What does DFIR stand for?<br>
+
 <em>Answer: Digital Forensics and Incident Response</em><br>
 
 
 <strong>Question:<strong>Which kind of malware requires the user to pay money to regain access to their files?<br>
 
 <em> Answer: ransomware </em> <br>
-
+</p>
 
 
 ## Task 3 - Practical Example of Defensive Security
