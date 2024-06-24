@@ -78,7 +78,7 @@ In the "Intro to Defensive Security" room, two primary topics are covered:
 </p>
 
 
-<strong> Security Operations Center (SOC) </strong>
+<strong> Security Operations Center (SOC) </strong><br>
 A Security Operations Center (SOC) is a team of cybersecurity experts who monitor network systems to detect and respond to malicious activities. Key areas of focus for a SOC include:
 
 <ul>
@@ -90,18 +90,18 @@ A Security Operations Center (SOC) is a team of cybersecurity experts who monito
 
 SOC responsibilities also include threat intelligence, which involves gathering information on potential threats to prepare and defend against adversaries.
 
-<strong>Threat Intelligence</strong>
+<strong>Threat Intelligence</strong><br>
 Threat intelligence involves collecting and analyzing data on actual and potential threats to inform a company's defense strategies. This process includes:
 
 <ul>
     <li>Data Collection: Gathering information from network logs and public sources. </li>
-   <li>Data Processing and Analysis: Organizing data for analysis to understand attackers' motives and tactics.
+   <li>Data Processing and Analysis: Organizing data for analysis to understand attackers' motives and tactics.</li>
     <li>Actionable Insights: Developing recommendations to mitigate threats and enhance security.</li>
     <li>Understanding adversaries' tactics helps predict and counteract their actions effectively.</li>
 </ul>
 
 
-<strong>Digital Forensics and Incident Response (DFIR)</strong>
+<strong>Digital Forensics and Incident Response (DFIR)</strong><br>
 
 <p>
 DFIR encompasses the following areas:
