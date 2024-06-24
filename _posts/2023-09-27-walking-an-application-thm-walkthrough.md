@@ -149,14 +149,18 @@ Visit the page that is referenced in the page comment to retrieve the flag.</p>
 <div id="task-4-inspector">
 
 <strong>Developer Tools</strong><br>
-
-Every modern browser includes developer tools; this is a tool kit used to aid web developers in debugging web applications and gives you a peek under the hood of a website to see what is going on. As a pentester, we can leverage these tools to provide us with a much better understanding of the web application. We're specifically focusing on three features of the developer tool kit, Inspector, Debugger and Network.
+<p>
+Every modern browser includes developer tools; this is a tool kit used to aid web developers in debugging web applications and gives you a peek under the hood of a website to see what is going on. As a pentester, we can leverage these tools to provide us with a much better understanding of the web application. We're specifically focusing on three features of the developer tool kit, Inspector, Debugger and Network.</p>
 
 
 <strong>Opening Developer Tools</strong><br>
-The way to access developer tools is different for every browser. The example below is demonstrated on a Firefox browser:<br>
+<p>The way to access developer tools is different for every browser. The example below is demonstrated on a Firefox browser:</p><br>
 
 <img src="/assets/images/thm/thm-walk-app-4.gif"><br>
+
+<p>
+
+</p>
 
 <strong> Inspector </strong><br>
 
@@ -174,9 +178,10 @@ Right-clicking on the premium notice ( paywall ), you should be able to select t
 Locate the DIV element with the class premium-customer-blocker and click on it. You'll see all the CSS styles in the styles box that apply to this element, such as margin-top: 60px and text-align: center. The style we're interested in is the display: block. If you click on the word block, you can type a value of your own choice. Try typing none, and this will make the box disappear, revealing the content underneath it and a flag. If the element didn't have a display field, you could click below the last style and add in your own. Have a play with the element inspector, and you'll see you can change any of the information on the website, including the content. Remember this is only edited on your browser window, and when you press refresh, everything will be back to normal.
 </p> <br>
 
-<img src="/assets/images/thm/thm-walk-app-5.gif">
+<img src="/assets/images/thm/thm-walk-app-5.gif"><br>
 
-
+<p> 
+</p>
 <strong> Q: What is the flag behind the paywall?</strong><br>
 <em> Answer: THM{NOT_SO_HIDDEN} </em><br>
 </div>
@@ -184,7 +189,7 @@ Locate the DIV element with the class premium-customer-blocker and click on it. 
 
 ## Task 5 - Developer Tools - Debugger
 
-<h2>Developer Tools - Debugger</h2>
+
 
 <p>The Debugger panel in developer tools is primarily designed for debugging JavaScript, making it a valuable resource for web developers trying to identify issues in their code. For penetration testers, it offers the capability to delve into the JavaScript code. In Firefox and Safari, this tool is named Debugger, while in Google Chrome, it's referred to as Sources.</p>
 
@@ -196,7 +201,10 @@ Locate the DIV element with the class premium-customer-blocker and click on it. 
 
 <p>We can partially restore the formatting using the "Pretty Print" option, represented by two braces <code>{ }</code>, to make the code somewhat more readable. However, due to the obfuscation, it may still be challenging to understand. By scrolling to the bottom of the <code>flash.min.js</code> file, you will find the line: <code>flash['remove']();</code></p>
 
-<p><em>(Click on the image to enlarge)</em></p>
+
+<img src="/assets/images/thm/thm-walk-app-6.gif"> <br>
+
+
 
 <strong> Q: What is the flag in the red box? </strong><br>
 <em> Answer: THM{CATCH_ME_IF_YOU_CAN} </em><br>
