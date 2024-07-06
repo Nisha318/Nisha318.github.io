@@ -4,7 +4,7 @@ toc: true
 toc_label: "Table of Contents"
 toc_icon: "list-alt"
 categories:
-  - CTF
+  - Blog
 tags:
   - Cybersecurity
   - Offensive
