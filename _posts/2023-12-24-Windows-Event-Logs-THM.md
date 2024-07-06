@@ -10,10 +10,10 @@ tags:
   - Endpoint Security
 tagline: "Introduction to Windows Event Logs and the tools to query them."
 header:
-  teaser: /assets/images/nessus logo.png
+  teaser: /assets/images/thm/thm-windows-event-logs-0
   overlay_filter: rgba(0, 0, 0, 0.5)
-  overlay_image: /assets/images/nessus logo.png
-  caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
+  overlay_image: /assets/images/thm/thm-endpoint-security-monitoring-0.png
+  caption: "Photo credit: [**TryHackMe**](https://tryhackme.com)"
 
 ---
 
