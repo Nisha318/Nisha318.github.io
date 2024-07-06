@@ -34,7 +34,7 @@ header:
 
 ## Task 3 - 
 
-<img src="/assets/images/htb/meow-1.png">
-<img src="/assets/images/htb/meow-2.png">
-<img src="/assets/images/htb/meow-3.png">
+<img src="/assets/images/htb/htb-meow-1.png">
+<img src="/assets/images/htb/htb-meow-2.png">
+<img src="/assets/images/htb/htb-meow-3.png">
 
