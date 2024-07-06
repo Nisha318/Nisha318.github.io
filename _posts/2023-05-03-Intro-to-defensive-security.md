@@ -10,7 +10,7 @@ tags:
   - Defensive
   - Blue Team
   - TryHackMe
-date: YYYY-MM-DD HH:MM:SS
+date: 2023-05-03 00:00:00
 thumbnail: assets/images/thm/thm-intro-to-defensive-security1.png
 
 tagline: "Introducing defensive security and related topics, such as threat intelligence, SOC, DFIR, and SIEM."
