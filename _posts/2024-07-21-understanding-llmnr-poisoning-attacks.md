@@ -44,6 +44,7 @@ LLMNR poisoning is an attack technique where an attacker responds to these multi
 In my lab setup, I simulated an LLMNR poisoning attack using the Responder tool. Below are the steps I followed, along with screenshots from the demonstration:
 <ol>
 <li>Setting up Responder: I configured Responder to listen for LLMNR and NBT-NS queries on my local network.</li>
+<img src="assets/images/tcm academy/llmnr-capture-ntlmv2hash-1.png">
 
 <li>Capturing Queries: As soon as a legitimate user made an LLMNR request, Responder intercepted and responded to the query.</li>
 
@@ -61,16 +62,6 @@ To protect your network from LLMNR poisoning attacks, it is essential to impleme
     <li>Group Policy: On Windows networks, you can disable LLMNR through Group Policy. Navigate to Computer Configuration -> Administrative Templates -> Network -> DNS Client and set the Turn off multicast name resolution policy to Enabled.</li>
 
     <li>Registry: You can also disable NBT-NS by modifying the registry. Set Start to 4 in the following registry path: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NetBT\Parameters\Interfaces.</li>
-
-    <li>Use Strong Passwords: Ensure that all user accounts have strong, complex passwords to make brute-forcing NTLMv2 hashes more difficult.</li>
-
-<li>Network Segmentation: Implement network segmentation to limit the exposure of sensitive information and reduce the attack surface.</li>
-
-<li>Monitor Network Traffic: Use network monitoring tools to detect unusual LLMNR and NBT-NS traffic, which could indicate an ongoing attack.</li>
-
-<li>Implement SMB Signing: Enable SMB signing to protect against man-in-the-middle attacks, ensuring the authenticity of SMB communications.</li>
-
-<li>Educate Users: Train users to recognize and report unusual network behavior, such as frequent authentication prompts, which could indicate an attack.</li>
 </ul>
 </ol>
 
