@@ -60,11 +60,11 @@ In my lab setup, I simulated an LLMNR poisoning attack using the Responder tool.
 <li> Preparing Hashes for Cracking:  I saved the hashes into files that are suitable for use with some of the popular hash cracking tools on Kali Linux. 
 </li>
 <img src="/assets/images/tcm-academy/llmnr-capture-ntlmv2hash-5.png">
-<img src="/assets/images/tcm-academy/llmnr-capture-ntlmv2hash-6.png">
+8
 
 <li> Cracking the Hashes to Uncover Password:  I used Hashcat and John the Ripper tools to crack the hashes and reveal the password for the victim user. 
 </li>
-<img src="/assets/images/tcm-academy/llmnr-capture-ntlmv2hash-5.png">
+<img src="/assets/images/tcm-academy/llmnr-capture-ntlmv2hash-7.png">
 <img src="/assets/images/tcm-academy/llmnr-capture-ntlmv2hash-6.png">
 </ol>
 
