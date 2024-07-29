@@ -34,38 +34,42 @@ LLMNR poisoning is an attack technique where an attacker responds to these multi
 
 ## How LLMNR Poisoning Works
 <ol>
-<li> Network Monitoring: The attacker monitors the network for LLMNR and NetBIOS Name Service (NBT-NS) requests using tools like Responder.</li>
-<li>Spoofing Responses: When a legitimate LLMNR request is broadcasted (e.g., a user mistypes a network resource name), the attacker’s machine responds to the query, pretending to be the requested resource.</li>
-<li>Capturing Hashes: The requesting machine, believing it has found the correct resource, sends its credentials (in the form of NTLMv2 hashes) to the attacker.</li>
-<li>Hash Exploitation: The attacker captures these hashes and can either brute-force them offline or use them in pass-the-hash attacks to gain unauthorized access to the network.</li>
+<li> <strong>Network Monitoring:</strong> The attacker monitors the network for LLMNR and NetBIOS Name Service (NBT-NS) requests using tools like Responder.</li>
+<li><strong>Spoofing Responses:</strong> When a legitimate LLMNR request is broadcasted (e.g., a user mistypes a network resource name), the attacker’s machine responds to the query, pretending to be the requested resource.</li>
+<li><strong>Capturing Hashes:</strong> The requesting machine, believing it has found the correct resource, sends its credentials (in the form of NTLMv2 hashes) to the attacker.</li>
+<li><strong>Hash Exploitation:</strong> The attacker captures these hashes and can either brute-force them offline or use them in pass-the-hash attacks to gain unauthorized access to the network.</li>
 </ol>
 
 ## Demonstration: Capturing NTLMv2 Hashes with Responder
 In my lab setup, I simulated an LLMNR poisoning attack using the Responder tool. Below are the steps I followed, along with screenshots from the demonstration:
 <ol>
-<li>Setting up Responder: I configured Responder to listen for LLMNR and NBT-NS queries on my local network.</li>
+<li><strong>Setting up Responder: </strong>I configured Responder to listen for LLMNR and NBT-NS queries on my local network.</li>
 <img src="/assets/images/tcm-academy/llmnr-capture-ntlmv2hash-1.png">
 
-<li>Triggering Event: I triggered an LLMNR event by initiating a connection to the SMB share from a client machine on the network. </li>
+<li><strong>Triggering Event:</strong> I triggered an LLMNR event by initiating a connection to the SMB share from a client machine on the network. </li>
 
 <img src="/assets/images/tcm-academy/llmnr-capture-ntlmv2hash-3.png">
 
-<li>Capturing Queries: As soon as a legitimate user made an LLMNR request, Responder intercepted and responded to the query.</li>
+<li><strong>Capturing Queries:</strong> As soon as a legitimate user made an LLMNR request, Responder intercepted and responded to the query.</li>
 
 
-<li>Capturing Hashes: The user’s machine sent its NTLMv2 hash to my attacking machine, which was captured and displayed by Responder.</li>
+<li><strong>Capturing Hashes:</strong> The user’s machine sent its NTLMv2 hash to my attacking machine, which was captured and displayed by Responder.</li>
 
 <img src="/assets/images/tcm-academy/llmnr-capture-ntlmv2hash-4.png">
 
-<li> Preparing Hashes for Cracking:  I saved the hashes into files that are suitable for use with some of the popular hash cracking tools on Kali Linux. 
+<li> <strong>Preparing Hashes for Cracking: </strong> I saved the hashes into files that are suitable for use with some of the popular hash cracking tools on Kali Linux. 
 </li>
 <img src="/assets/images/tcm-academy/llmnr-capture-ntlmv2hash-5.png">
-8
 
-<li> Cracking the Hashes to Uncover Password:  I used Hashcat and John the Ripper tools to crack the hashes and reveal the password for the victim user. 
+
+<li> <strong>Cracking the Hashes to Uncover the User's Password:</strong>  I used Hashcat and John the Ripper tools to crack the hashes and reveal the password for the victim user. 
 </li>
-<img src="/assets/images/tcm-academy/llmnr-capture-ntlmv2hash-7.png">
+
 <img src="/assets/images/tcm-academy/llmnr-capture-ntlmv2hash-6.png">
+
+<img src="/assets/images/tcm-academy/llmnr-capture-ntlmv2hash-7.png">
+
+<img src="/assets/images/tcm-academy/llmnr-capture-ntlmv2hash-8.png">
 </ol>
 
 
@@ -80,15 +84,15 @@ To protect your network from LLMNR poisoning attacks, it is essential to impleme
 
     <li>Registry: You can also disable NBT-NS by modifying the registry. Set Start to 4 in the following registry path: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NetBT\Parameters\Interfaces.</li>
 </ul>
-<li> Use Strong Passwords: Ensure that all user accounts have strong, complex passwords to make brute-forcing NTLMv2 hashes more difficult.</li>
+<li><strong> Use Strong Passwords:</strong> Ensure that all user accounts have strong, complex passwords to make brute-forcing NTLMv2 hashes more difficult.</li>
 
-<li> Network Segmentation: Implement network segmentation to limit the exposure of sensitive information and reduce the attack surface.</li>
+<li> <strong>Network Segmentation:</strong> Implement network segmentation to limit the exposure of sensitive information and reduce the attack surface.</li>
 
-<li>Monitor Network Traffic: Use network monitoring tools to detect unusual LLMNR and NBT-NS traffic, which could indicate an ongoing attack.</li>
+<li><strong>Monitor Network Traffic:</strong> Use network monitoring tools to detect unusual LLMNR and NBT-NS traffic, which could indicate an ongoing attack.</li>
 
-<li>Implement SMB Signing: Enable SMB signing to protect against man-in-the-middle attacks, ensuring the authenticity of SMB communications.</li>
+<li><strong>Implement SMB Signing:</strong> Enable SMB signing to protect against man-in-the-middle attacks, ensuring the authenticity of SMB communications.</li>
 
-<li>Educate Users: Train users to recognize and report unusual network behavior, such as frequent authentication prompts, which could indicate an attack.</li>
+<li><strong>Educate Users:</strong> Train users to recognize and report unusual network behavior, such as frequent authentication prompts, which could indicate an attack.</li>
 
 </ol>
 
