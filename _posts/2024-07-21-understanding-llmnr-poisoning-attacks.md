@@ -15,7 +15,7 @@ tags:
   - LLMNR
 
  
-#  tagline: "Hack your first website (legally in a safe environment) and experience an ethical hacker's job."
+tagline: "Understanding LLMNR Poisoning and Mitigation Techniques."
 header:
   teaser: assets/images/tcm/tcm-llmnr-0.png
   overlay_filter: rgba(0, 0, 0, 0.5)
@@ -71,6 +71,8 @@ To protect your network from LLMNR poisoning attacks, it is essential to impleme
 <li>Implement SMB Signing: Enable SMB signing to protect against man-in-the-middle attacks, ensuring the authenticity of SMB communications.</li>
 
 <li>Educate Users: Train users to recognize and report unusual network behavior, such as frequent authentication prompts, which could indicate an attack.</li>
+</ul>
+</ol>
 
 ## Conclusion
 LLMNR poisoning is a serious threat that can compromise network security by capturing NTLMv2 hashes. However, by understanding how the attack works and implementing the mitigation strategies outlined in this post, you can protect your network from such vulnerabilities. Always stay vigilant and proactive in securing your network infrastructure.
