@@ -102,7 +102,7 @@ nmap --script=smb2-security-mode.nse -445 <target IP address> -Pn
 
    ![Identify Hosts](/assets/images/tcm-academy/smb-relay-2.png)
 
-2. ** Create a targets file.
+2. ** Create a targets file.**
 
 ```
 sudo nano target.txt
