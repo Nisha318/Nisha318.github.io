@@ -93,7 +93,9 @@ Here is used the <a href="https://hashcat.net/hashcat/">Hashcat</a> tool on my i
 
 Next, I used <a href=" "> John the Ripper</a> to take another crack at it:
 
-` sudo john --wordlist=/usr/share/wordlists/rockyou.txt punisher.hash `
+```
+ sudo john --wordlist=/usr/share/wordlists/rockyou.txt punisher.hash
+ ```
 
 
 <img src="/assets/images/tcm-academy/llmnr-capture-ntlmv2hash-7.png">
