@@ -92,6 +92,8 @@ To protect your network from LLMNR poisoning attacks, it is essential to impleme
 
 <li><strong>Implement SMB Signing:</strong> Enable SMB signing to protect against man-in-the-middle attacks, ensuring the authenticity of SMB communications.</li>
 
+<li><strong>Use DNSSEC:</strong> Implement DNS Security Extensions (DNSSEC) to ensure the authenticity and integrity of DNS responses.</li>
+
 <li><strong>Educate Users:</strong> Train users to recognize and report unusual network behavior, such as frequent authentication prompts, which could indicate an attack.</li>
 
 </ol>
