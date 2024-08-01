@@ -20,7 +20,7 @@ tags:
 header:
   teaser: assets/images/htb/htb-dancing-0.PNG 
   overlay_filter: rgba(0, 0, 0, 0.5)
-  overlay_image: /assets/images/ctf_hero_header_image.png
+  overlay_image: /assets/images/htb/htb-dancing-0.PNG
   caption: "Photo credit: [**AI**](https://chatgpt.com/)"
 ---
 <strong> Room Link: </strong>  <a href="https://app.hackthebox.com/starting-point?tier=0" target="_blank">https://app.hackthebox.com/starting-point?tier=0</a>
