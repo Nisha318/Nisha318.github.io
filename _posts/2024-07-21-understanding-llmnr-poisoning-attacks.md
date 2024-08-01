@@ -19,7 +19,7 @@ tagline: "Master the tactics and defenses against LLMNR poisoning to secure your
 header:
   teaser: assets/images/tcm-academy/tcm-llmnr-0.png
   overlay_filter: rgba(0, 0, 0, 0.5)
-  overlay_image: /assets/images/ctf_hero_header_image.png
+  overlay_image: /assets/images/tcm-academy/tcm-llmnr-0.png
   caption: "Photo credit: [**AI**](https://chatgpt.com/)"
 ---
 
