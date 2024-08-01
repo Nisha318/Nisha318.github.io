@@ -156,7 +156,8 @@ ntlmrelayx.py -tf targets.txt -smb2support -i
 
    ![Interactive Shell](/assets/images/tcm-academy/smb-relay-11.png)
 
-      <img src="/assets/images/tcm-academy/smb-relay-12.png">
+
+ <img src="/assets/images/tcm-academy/smb-relay-12.png">     
 
 
 9. **Send Commands**: Sent specific commands to the target system using the `-c` option.
