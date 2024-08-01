@@ -31,6 +31,7 @@ In this blog post, I will be discussing a common network attack called Link-Loca
 Link-Local Multicast Name Resolution (LLMNR) is a protocol that allows computers on the same local network to perform name resolution for hosts when DNS queries fail. LLMNR operates similarly to NetBIOS over TCP/IP, enabling name resolution by sending multicast queries to all devices in the same subnet.
 
 LLMNR poisoning is an attack technique where an attacker responds to these multicast queries pretending to be the requested host. By doing so, the attacker can capture sensitive information such as usernames and hashed passwords (NTLMv2 hashes). This information can be further exploited to perform pass-the-hash attacks or brute-force the password offline.
+<img src="/assets/images/tcm-academy/tcm-llmnr-1.png">
 
 ## How LLMNR Poisoning Works
 <ol>
