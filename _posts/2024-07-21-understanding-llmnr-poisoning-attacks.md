@@ -25,7 +25,7 @@ header:
 
 
 ## Introduction
-In this blog post, I will be discussing a common network attack called Link-Local Multicast Name Resolution (LLMNR) poisoning. This type of attack can be highly effective in capturing NTLMv2 hashes, which can then be used to gain unauthorized access to systems. I will also share insights on how to mitigate this attack, ensuring your network remains secure. To illustrate this attack, I have included screenshots from my recent lab demonstration where I successfully captured NTLMv2 hashes using Responder.
+In this blog post, I will be discussing a common network attack called Link-Local Multicast Name Resolution (LLMNR) poisoning. This type of attack can be highly effective in capturing NTLMv2 hashes, which can then be used to gain unauthorized access to systems in a Windows environment. I will also share insights on how to mitigate this this type of vulnerability attack, ensuring your network remains secure. To illustrate this attack, I have included screenshots from my recent lab demonstration where I successfully captured NTLMv2 hashes using Responder.
 
 ## What is LLMNR Poisoning?
 Link-Local Multicast Name Resolution (LLMNR) is a protocol that allows computers on the same local network to perform name resolution for hosts when DNS queries fail. LLMNR operates similarly to NetBIOS over TCP/IP, enabling name resolution by sending multicast queries to all devices in the same subnet.
@@ -43,34 +43,40 @@ LLMNR poisoning is an attack technique where an attacker responds to these multi
 ## Demonstration: Capturing NTLMv2 Hashes with Responder
 In my lab setup, I simulated an LLMNR poisoning attack using the Responder tool. Below are the steps I followed, along with screenshots from the demonstration:
 <ol>
-<li><strong>Setting up Responder: </strong>I configured Responder to listen for LLMNR and NBT-NS queries on my local network.</li>
+<li><strong>Setting up Responder: </strong>I configured Responder to listen for LLMNR and NBT-NS queries on my local network.</li></br>
 <img src="/assets/images/tcm-academy/llmnr-capture-ntlmv2hash-1.png">
 
-<li><strong>Triggering Event:</strong> I triggered an LLMNR event by initiating a connection to the SMB share from a client machine on the network. </li>
+<li><strong>Triggering Event:</strong> I triggered an LLMNR event by initiating a connection to the SMB share from a legitimate user account via a client machine on the network. </li></br>
 
 <img src="/assets/images/tcm-academy/llmnr-capture-ntlmv2hash-3.png">
 
-<li><strong>Capturing Queries:</strong> As soon as a legitimate user made an LLMNR request, Responder intercepted and responded to the query.</li>
+<li><strong>Capturing Queries:</strong> As soon as a legitimate user made an LLMNR request, Responder intercepted and responded to the query.</li></br>
 
 
-<li><strong>Capturing Hashes:</strong> The user’s machine sent its NTLMv2 hash to my attacking machine, which was captured and displayed by Responder.</li>
+<li><strong>Capturing Hashes:</strong> The user’s machine sent its NTLMv2 hash to my attacking machine, which was captured and displayed by Responder.</li></br>
 
 <img src="/assets/images/tcm-academy/llmnr-capture-ntlmv2hash-4.png">
+<ul>
+  <li>The IP address of the victim (in this example: 192.168.86.38)</li>
+  <li>The domain and username of the victim (in this example: MARVEL\fcastle)</li>
+  <li>The victim’s password hash</li>
+</ul>
+With the victim’s hash in hand, I can attempt to use several tools to crack it and uncover the user's password.
 
 <li> <strong>Preparing Hashes for Cracking: </strong> I saved the hashes into files that are suitable for use with some of the popular hash cracking tools on Kali Linux. 
-</li>
+</li></br>
 <img src="/assets/images/tcm-academy/llmnr-capture-ntlmv2hash-5.png">
 
 
 <li> <strong>Cracking the Hashes to Uncover the User's Password:</strong>  I used Hashcat and John the Ripper tools to crack the hashes and reveal the password for the victim user. 
-</li>
-
-<img src="/assets/images/tcm-academy/llmnr-capture-ntlmv2hash-6.png">
-
-<img src="/assets/images/tcm-academy/llmnr-capture-ntlmv2hash-7.png">
-
-<img src="/assets/images/tcm-academy/llmnr-capture-ntlmv2hash-8.png">
+</li></br>
 </ol>
+<img src="/assets/images/tcm-academy/llmnr-capture-ntlmv2hash-6.png"></br>
+
+<img src="/assets/images/tcm-academy/llmnr-capture-ntlmv2hash-7.png"></br>
+
+<img src="/assets/images/tcm-academy/llmnr-capture-ntlmv2hash-8.png"></br>
+
 
 
 ## Mitigating LLMNR Poisoning Attacks
