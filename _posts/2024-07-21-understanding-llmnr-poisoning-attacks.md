@@ -15,9 +15,9 @@ tags:
   - LLMNR
 
  
-tagline: "Understanding LLMNR Poisoning and Mitigation Techniques."
+tagline: "Master the tactics and defenses against LLMNR poisoning to secure your network."
 header:
-  teaser: assets/images/tcm/tcm-llmnr-0.png
+  teaser: assets/images/tcm-academy/tcm-llmnr-0.png
   overlay_filter: rgba(0, 0, 0, 0.5)
   overlay_image: /assets/images/ctf_hero_header_image.png
   caption: "Photo credit: [**AI**](https://chatgpt.com/)"

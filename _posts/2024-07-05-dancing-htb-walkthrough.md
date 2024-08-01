@@ -15,8 +15,7 @@ tags:
   - Networking Services
   - SMB
   - Reconnaissance
-
- htb-
+  
 # tagline: "Hack your first website (legally in a safe environment) and experience an ethical hacker's job."
 header:
   teaser: assets/images/htb/htb-dancing-0.PNG 
