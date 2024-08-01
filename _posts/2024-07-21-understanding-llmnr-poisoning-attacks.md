@@ -1,5 +1,6 @@
 ---
 title: "Understanding LLMNR Poisoning and Mitigation Techniques"
+date: 2024-07-21
 toc: true
 toc_label: "Table of Contents"
 toc_icon: "list-alt"
@@ -17,21 +18,22 @@ tags:
  
 tagline: "Master the tactics and defenses against LLMNR poisoning to secure your network."
 header:
-  teaser: assets/images/tcm-academy/tcm-llmnr-0.png
+  teaser: assets/images/tcm-academy/smb-relay-0.png
   overlay_filter: rgba(0, 0, 0, 0.5)
-  overlay_image: /assets/images/tcm-academy/tcm-llmnr-0.png
+  overlay_image: /assets/images/tcm-academy/smb-relay-0.png
   caption: "Photo credit: [**AI**](https://chatgpt.com/)"
 ---
 
 
 ## Introduction
 In this blog post, I will be discussing a common network attack called Link-Local Multicast Name Resolution (LLMNR) poisoning. This type of attack can be highly effective in capturing NTLMv2 hashes, which can then be used to gain unauthorized access to systems in a Windows environment. I will also share insights on how to mitigate this this type of vulnerability attack, ensuring your network remains secure. To illustrate this attack, I have included screenshots from my recent lab demonstration where I successfully captured NTLMv2 hashes using Responder.
+<img src="/assets/images/tcm-academy/tcm-llmnr-1.png">
 
 ## What is LLMNR Poisoning?
 Link-Local Multicast Name Resolution (LLMNR) is a protocol that allows computers on the same local network to perform name resolution for hosts when DNS queries fail. LLMNR operates similarly to NetBIOS over TCP/IP, enabling name resolution by sending multicast queries to all devices in the same subnet.
 
 LLMNR poisoning is an attack technique where an attacker responds to these multicast queries pretending to be the requested host. By doing so, the attacker can capture sensitive information such as usernames and hashed passwords (NTLMv2 hashes). This information can be further exploited to perform pass-the-hash attacks or brute-force the password offline.
-<img src="/assets/images/tcm-academy/tcm-llmnr-1.png">
+
 
 ## How LLMNR Poisoning Works
 <ol>
@@ -102,9 +104,6 @@ Next, I used <a href=" "> John the Ripper</a> to take another crack at it:
 
 
 
-
-
-
 ## Mitigating LLMNR Poisoning Attacks
 
 To protect your network from LLMNR poisoning attacks, it is essential to implement the following mitigation strategies:
@@ -126,6 +125,8 @@ To protect your network from LLMNR poisoning attacks, it is essential to impleme
     <li><strong>Implement SMB Signing:</strong> Enable SMB signing to protect against man-in-the-middle attacks, ensuring the authenticity of SMB communications.</li>
 
     <li><strong>Use DNSSEC:</strong> Implement DNS Security Extensions (DNSSEC) to ensure the authenticity and integrity of DNS responses.</li>
+
+    <li><strong>Restrict Local Admins:</strong> Limiting the use of local admin on machine can decrease the risk of experiencing this type of attack</li>
 
     <li><strong>Educate Users:</strong> Train users to recognize and report unusual network behavior, such as frequent authentication prompts, which could indicate an attack.</li>
 
