@@ -68,7 +68,8 @@ In my lab setup, I simulated an LLMNR poisoning attack using the Responder tool.
   <li>The victim’s password hash</li>
 </ul>
 
-With the victim’s hash in hand, I can attempt to use several tools to crack it and uncover the user's password. </br>
+With the victim’s hash in hand, I can attempt to use several tools to crack it and uncover the user's password.  
+
 
 <li> <strong>Preparing Hashes for Cracking: </strong> I saved the hashes into files that are suitable for use with some of the popular hash cracking tools on Kali Linux. 
 </li>
@@ -81,7 +82,7 @@ With the victim’s hash in hand, I can attempt to use several tools to crack it
 
 Here is used the <a href="https://hashcat.net/hashcat/">Hashcat</a> tool on my initial attempt to crack the user's password hash.
 </ol>
-'hashcat -m 5600 hashes.txt /usr/share/wordlists/rockyou.txt '
+' hashcat -m 5600 hashes.txt /usr/share/wordlists/rockyou.txt '
 
 <img src="/assets/images/tcm-academy/llmnr-capture-ntlmv2hash-6.png">
 
@@ -89,7 +90,7 @@ Here is used the <a href="https://hashcat.net/hashcat/">Hashcat</a> tool on my i
 
 Next, I used <a href=" "> John the Ripper</a> to take another crack at it:
 
-'sudo john --wordlist=/usr/share/wordlists/rockyou.txt punisher.hash'
+' sudo john --wordlist=/usr/share/wordlists/rockyou.txt punisher.hash '
 
 
 <img src="/assets/images/tcm-academy/llmnr-capture-ntlmv2hash-7.png">
