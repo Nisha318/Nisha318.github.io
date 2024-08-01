@@ -67,23 +67,35 @@ In my lab setup, I simulated an LLMNR poisoning attack using the Responder tool.
   <li>The domain and username of the victim (in this example: MARVEL\fcastle)</li>
   <li>The victim’s password hash</li>
 </ul>
-With the victim’s hash in hand, I can attempt to use several tools to crack it and uncover the user's password.
+
+With the victim’s hash in hand, I can attempt to use several tools to crack it and uncover the user's password. </br>
 
 <li> <strong>Preparing Hashes for Cracking: </strong> I saved the hashes into files that are suitable for use with some of the popular hash cracking tools on Kali Linux. 
 </li>
+
 <img src="/assets/images/tcm-academy/llmnr-capture-ntlmv2hash-5.png">
 
 
 <li> <strong>Cracking the Hashes to Uncover the User's Password:</strong>  I used Hashcat and John the Ripper tools to crack the hashes and reveal the password for the victim user. 
 </li>
+
+Here is used the <a href="https://hashcat.net/hashcat/">Hashcat</a> tool on my initial attempt to crack the user's password hash.
 </ol>
+'hashcat -m 5600 hashes.txt /usr/share/wordlists/rockyou.txt '
+
 <img src="/assets/images/tcm-academy/llmnr-capture-ntlmv2hash-6.png">
+
+<img src="/assets/images/tcm-academy/llmnr-capture-ntlmv2hash-8.png">
+
+Next, I used <a href=" "> John the Ripper</a> to take another crack at it:
+
+'sudo john --wordlist=/usr/share/wordlists/rockyou.txt punisher.hash'
 
 
 <img src="/assets/images/tcm-academy/llmnr-capture-ntlmv2hash-7.png">
 
 
-<img src="/assets/images/tcm-academy/llmnr-capture-ntlmv2hash-8.png">
+
 
 
 
