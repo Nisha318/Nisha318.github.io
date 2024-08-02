@@ -16,14 +16,6 @@ tags:
   - NTLM Relay
   - PNPT Exam
 
- 
-tagline: "Secure Your Network: Uncovering SMB Relay Attacks and Effective Mitigation Strategies."
-header:
-  teaser: assets/images/tcm-academy/smb-relay-0.png
-  overlay_filter: rgba(0, 0, 0, 0.5)
-  overlay_image: /assets/images/tcm-academy/smb-relay-0.png
-  caption: "Photo credit: [**AI**](https://chatgpt.com/)"
----
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -39,6 +31,9 @@ header:
 ## Introduction
 
 In this blog post, I will walk you through a demonstration of an IPv6 DNS takeover attack using the mitm6 (Man in the Middle for IPv6) tool in an Active Directory (AD) pentesting environment. This type of attack exploits weaknesses in the network's handling of IPv6, allowing an attacker to become a Man-in-the-Middle (MITM) and relay NTLM authentication requests to a Domain Controller (DC).
+
+<img src="/assets/images/tcm-academy/tcm-mitm6-1.png">
+
 
 ## Understanding IPv6 DNS Takeover
 
