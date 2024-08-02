@@ -1,5 +1,5 @@
 ---
-title: "IPv6 DNS Takeover with mitm6 in an Active Directory Environment"
+title: "IPv6 DNS Takeover with MITM6 in an Active Directory Environment"
 date: 2024-07-22
 toc: true
 toc_label: "Table of Contents"
