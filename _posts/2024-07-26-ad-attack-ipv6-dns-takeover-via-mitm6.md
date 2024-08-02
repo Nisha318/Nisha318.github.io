@@ -16,6 +16,13 @@ tags:
   - NTLM Relay
   - PNPT Exam
 
+tagline: "Unveiling Mitm6 and NTLM Relay in an Active Directory Environment"
+header:
+  teaser: assets/images/htb/htb-meow-0.png
+  overlay_filter: rgba(0, 0, 0, 0.5)
+  overlay_image: /assets/images/ctf_hero_header_image.png
+  caption: "Photo credit: [**AI**](https://chatgpt.com/)"
+---
 
 ## Table of Contents
 1. [Introduction](#introduction)
