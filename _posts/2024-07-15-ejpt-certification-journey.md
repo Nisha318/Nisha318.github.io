@@ -10,7 +10,7 @@ tags:
   - Penetration Testing
 header:
   teaser: assets/docs/certificates/ine-ejpt.png
-  image: /assets/docs/certificates/ine-ejpt.png
+  #image: /assets/docs/certificates/ine-ejpt.png
   caption: "My INE Security Junior Penetration Tester (eJPT) certification"
 toc: true
 toc_label: "Contents"
