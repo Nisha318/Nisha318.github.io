@@ -9,6 +9,11 @@ header:
 classes: wide
 ---
 
+### <a name="Blue Team Level 1 (BTL1)"></a>Blue Team Level 1 (BTL1) Certification | Security Blue Team [<i class="fas fa-link" aria-hidden="true"></i>](https://www.credly.com/badges/a6eb0903-aaf5-40d8-80bb-e636fbc069fe/public_url)
+Tools: Autopsy, CMD, DeepBlueCLI, MISP, Powershell, Splunk, TheHive, VirusTotal, Volatility, Windows Event Log, Wireshark
+
+Syllabus: [<i class="fas fa-paperclip"></i>](https://d2y9h8w1ydnujs.cloudfront.net/BTL1Syllabus.pdf)
+
 <section id="security-skills">
   <h2>Security Skills</h2>
   <div class="skills-grid">
@@ -56,43 +61,54 @@ classes: wide
 </style>
 
 
-### <a name="Blue Team Level 1 (BTL1)"></a>Blue Team Level 1 (BTL1) Certification | Security Blue Team [<i class="fas fa-link" aria-hidden="true"></i>](https://www.credly.com/badges/a6eb0903-aaf5-40d8-80bb-e636fbc069fe/public_url)
-Tools: Autopsy, CMD, DeepBlueCLI, MISP, Powershell, Splunk, TheHive, VirusTotal, Volatility, Windows Event Log, Wireshark
 
-Syllabus: [<i class="fas fa-paperclip"></i>](https://d2y9h8w1ydnujs.cloudfront.net/BTL1Syllabus.pdf)
- - Security Fundamentals
- - Phishing Analysis
- - Threat Intelligence
- - Digital Forensics
- - Security Information and Event Management (SIEM)
- - Incident Response
- - Blue Team
- - Cyber Defense
- - Cyber Security
- - Endpoint Security
- - Incident Report Writing
- - Information Security
- - Network Security
- - Security Investigations
- - Security Operations
- - SOC
 
 ### <a name="CompTIA Security+ Certification"></a>CompTIA Security+ Certification | CompTIA [<i class="fas fa-link" aria-hidden="true"></i>](https://www.credly.com/badges/b318bd77-23fc-4029-b336-267f20d69d23/public_url)
 
-- Access Control
-- CompTIA
-- Cryptography
-- Cyber Forensics
-- Data Security
-- Disaster Recovery Planning
-- Firewall Configuration
-- Malware Identification
-- Mobile Device Security
-- Network Security
-- Security Configuration
-- Security Policies
-- Threat Analysis
-- Threat Detection
+<section id="additional-skills">
+  <h2>Additional Security Skills</h2>
+  <div class="skills-grid">
+    <div>Access Control</div>
+    <div>CompTIA</div>
+    <div>Cryptography</div>
+    <div>Cyber Forensics</div>
+    <div>Data Security</div>
+    <div>Disaster Recovery Planning</div>
+    <div>Firewall Configuration</div>
+    <div>Malware Identification</div>
+    <div>Mobile Device Security</div>
+    <div>Network Security</div>
+    <div>Security Configuration</div>
+    <div>Security Policies</div>
+    <div>Threat Analysis</div>
+    <div>Threat Detection</div>
+  </div>
+</section>
+
+<style>
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    background-color: #333333; /* Dark background for the entire grid */
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .skills-grid div {
+    background-color: #444444; /* Slightly lighter background for individual items */
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: #ffffff; /* White text for visibility */
+  }
+
+  #additional-skills h2 {
+    color: #ffffff; /* White text for the section title */
+    text-align: center;
+  }
+</style>
+
 
 
 <!-----
@@ -112,47 +128,77 @@ Projects:
 
 
 ### AWS Cloud Architecting | AWS Academy [<i class="fas fa-link" aria-hidden="true"></i>](https://www.credly.com/badges/73ff0705-60e5-4846-ac27-88e1be2a09d2/public_url)
-- Introduction to Cloud Architecting
-- Beast Practice building AWS solutions
-- Amazon S3 Versioning and Data Storage
-- Moving date to and from Amazon S3
-- Amazon S3 Transfer Acceleration
-- EC2 Machine Images and instance types
-- Adding storage to EC2
-- Amazon pricing options
-- Database layer considerations
-- Amazon Relation Database Service RDS
-- Amazon DynamoDB
-- Database Security controls
-- Creating an AWS Networking environment
-- Securing AWS Network environments
-- AWS Site-to-Site VPN
-- AWS Direct Connect
-- Connecting VPCs in AWS with VPC Peering
-- Scaling your VPC network with AWS Transit Gateway.
-- Securing User and Application Access
-- Account users and AWS Identity and Access Management
-- Examining IAM Policies
-- Organizing and Federating users
-- EC2 Instance Profiles
-- Scaling compute resources
-- Scaling databases
-- Create a Highly Available Web App
-- Monitoring
-- Automating Architecture
-- AWS Cloud Formation
-- Automating Deployments
-- Elastic Beanstalk
-- Caching Content
-- Edge and web session caching
-- Database caching
-- Building Decoupled Architectures
-- Building Microservice sand Serverless architectures
-- AWS Lambda
-- Extending Serverless architectures with Amazon API Gateway
-- Disaster planning and strategies
-- Disaster recovery patterns
-- Disaster Planning
+<section id="aws-skills">
+  <h2>AWS Skills</h2>
+  <div class="skills-grid">
+    <div>Introduction to Cloud Architecting</div>
+    <div>Best Practice building AWS solutions</div>
+    <div>Amazon S3 Versioning and Data Storage</div>
+    <div>Moving data to and from Amazon S3</div>
+    <div>Amazon S3 Transfer Acceleration</div>
+    <div>EC2 Machine Images and instance types</div>
+    <div>Adding storage to EC2</div>
+    <div>Amazon pricing options</div>
+    <div>Database layer considerations</div>
+    <div>Amazon Relational Database Service (RDS)</div>
+    <div>Amazon DynamoDB</div>
+    <div>Database Security controls</div>
+    <div>Creating an AWS Networking environment</div>
+    <div>Securing AWS Network environments</div>
+    <div>AWS Site-to-Site VPN</div>
+    <div>AWS Direct Connect</div>
+    <div>Connecting VPCs in AWS with VPC Peering</div>
+    <div>Scaling your VPC network with AWS Transit Gateway</div>
+    <div>Securing User and Application Access</div>
+    <div>Account users and AWS Identity and Access Management (IAM)</div>
+    <div>Examining IAM Policies</div>
+    <div>Organizing and Federating users</div>
+    <div>EC2 Instance Profiles</div>
+    <div>Scaling compute resources</div>
+    <div>Scaling databases</div>
+    <div>Create a Highly Available Web App</div>
+    <div>Monitoring</div>
+    <div>Automating Architecture</div>
+    <div>AWS CloudFormation</div>
+    <div>Automating Deployments</div>
+    <div>Elastic Beanstalk</div>
+    <div>Caching Content</div>
+    <div>Edge and web session caching</div>
+    <div>Database caching</div>
+    <div>Building Decoupled Architectures</div>
+    <div>Building Microservices and Serverless architectures</div>
+    <div>AWS Lambda</div>
+    <div>Extending Serverless architectures with Amazon API Gateway</div>
+    <div>Disaster planning and strategies</div>
+    <div>Disaster recovery patterns</div>
+    <div>Disaster Planning</div>
+  </div>
+</section>
+
+<style>
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    background-color: #333333; /* Dark background for the entire grid */
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .skills-grid div {
+    background-color: #444444; /* Slightly lighter background for individual items */
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: #ffffff; /* White text for visibility */
+  }
+
+  #aws-skills h2 {
+    color: #ffffff; /* White text for the section title */
+    text-align: center;
+  }
+</style>
+
 
 <!-----
 Projects:
