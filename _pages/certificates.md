@@ -9,16 +9,22 @@ header:
 classes: wide
 ---
 
-### <a name="Splunk Core Certified Power User"></a>Splunk Core Certified Power User | Splunk [<i class="fas fa-link" aria-hidden="true"></i>](https://www.credly.com/badges/a6eb0903-aaf5-40d8-80bb-e636fbc069fe/public_url)
+### <a name="Splunk Core Certified Power User"></a>Splunk Core Certified Power User | Splunk [<i class="fas fa-link" aria-hidden="true"></i>](#)
 
 
-Syllabus: [<i class="fas fa-paperclip"></i>](#)
+Syllabus: [<i class="fas fa-paperclip"></i>](https://www.splunk.com/en_us/pdfs/training/splunk-test-blueprint-power-user.pdf)
+
+Training: 
+
+<a href="#"></a>
+<a href="#"></a>
+
 
 <section id="security-skills">
   <h2>Skills</h2>
   <div class="skills-grid">
-    <div>Using Fields</div>
-    <div>Statistical Processing</div>
+    <div><a href="Using Fields">Using Fields</a</div>
+    <div><a href="Statistical Processing">Statistical Processing</div>
   </div>
 </section>
 
