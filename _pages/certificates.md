@@ -14,7 +14,7 @@ classes: wide
 
 Syllabus: [<i class="fas fa-paperclip"></i>](https://www.splunk.com/en_us/pdfs/training/splunk-test-blueprint-power-user.pdf)
 
-Projects:
+Projects: <a href="https://github.com/Nisha318/Splunk-Projects">Splunk Project Repo</a>
 
 Videos:
 
