@@ -24,11 +24,14 @@ Videos:
 Training: 
 
 <ul>
+
+
+  <li> <a href="/assets/images/badges/splunk-search-expert.png"> Splunk Search Expert </a> </li>
   <li> <a href="https://github.com/Nisha318/Nisha318.github.io/blob/master/assets/images/badges/splunk-beginner.jpg">Splunk Beginner</a> </li>
 
   <li> <a href="https://github.com/Nisha318/Nisha318.github.io/blob/master/assets/images/badges/splunk-zero.PNG">Splunk Zero to Power User</a> </li>
 
-  <li> <a href="https://github.com/Nisha318/Nisha318.github.io/blob/master/assets/images/badges/CertificateOfCompletion_Splunk%20for%20Security%20Analytics%20and%20Monitoring.pdf">Splunk for Security Analytics and Monitoring</a> </li>
+  <li> <a href="/assets/images/badges/splunk-security-analytics.PNG">Splunk for Security Analytics and Monitoring</a> </li>
 
 </ul>
 
