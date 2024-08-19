@@ -14,6 +14,13 @@ classes: wide
 
 Syllabus: [<i class="fas fa-paperclip"></i>](https://www.splunk.com/en_us/pdfs/training/splunk-test-blueprint-power-user.pdf)
 
+Projects:
+
+Videos:
+
+<a href="https://youtu.be/zyaof9kP54I">Splunk Basics 101 - TryHackMe Walkthrough</a>
+
+
 Training: 
 
 <a href="https://github.com/Nisha318/Nisha318.github.io/blob/master/assets/images/badges/splunk-beginner.jpg">Splunk Beginner</a>
