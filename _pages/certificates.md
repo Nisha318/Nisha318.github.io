@@ -9,6 +9,46 @@ header:
 classes: wide
 ---
 
+### <a name="Splunk Core Certified Power User"></a>Splunk Core Certified Power User | Splunk [<i class="fas fa-link" aria-hidden="true"></i>](https://www.credly.com/badges/a6eb0903-aaf5-40d8-80bb-e636fbc069fe/public_url)
+
+
+Syllabus: [<i class="fas fa-paperclip"></i>](#)
+
+<section id="security-skills">
+  <h2>Skills</h2>
+  <div class="skills-grid">
+    <div>Using Fields</div>
+    <div>Statistical Processing</div>
+  </div>
+</section>
+
+<style>
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    background-color: #333333; /* Dark background for the entire grid */
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .skills-grid div {
+    background-color: #444444; /* Slightly lighter background for individual items */
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: #ffffff; /* White text for visibility */
+  }
+
+  #security-skills h2 {
+    color: #ffffff; /* White text for the section title */
+    text-align: center;
+  }
+</style>
+
+
+
+
 ### <a name="Blue Team Level 1 (BTL1)"></a>Blue Team Level 1 (BTL1) Certification | Security Blue Team [<i class="fas fa-link" aria-hidden="true"></i>](https://www.credly.com/badges/a6eb0903-aaf5-40d8-80bb-e636fbc069fe/public_url)
 Tools: Autopsy, CMD, DeepBlueCLI, MISP, Powershell, Splunk, TheHive, VirusTotal, Volatility, Windows Event Log, Wireshark
 
