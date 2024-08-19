@@ -16,15 +16,16 @@ Syllabus: [<i class="fas fa-paperclip"></i>](https://www.splunk.com/en_us/pdfs/t
 
 Training: 
 
-<a href="#"></a>
-<a href="#"></a>
-
+<a href="https://github.com/Nisha318/Nisha318.github.io/blob/master/assets/images/badges/splunk-beginner.jpg">Splunk Beginner</a>
+<a href="https://github.com/Nisha318/Nisha318.github.io/blob/master/assets/images/badges/splunk-zero.PNG">Splunk Zero to Power User</a>
+<a href="https://github.com/Nisha318/Nisha318.github.io/blob/master/assets/images/badges/CertificateOfCompletion_Splunk%20for%20Security%20Analytics%20and%20Monitoring.pdf">Splunk for Security Analytics and Monitoring</a>
 
 <section id="security-skills">
   <h2>Skills</h2>
   <div class="skills-grid">
-    <div><a href="Using Fields">Using Fields</a</div>
+    <div><a href="https://github.com/Nisha318/Nisha318.github.io/blob/master/assets/images/badges/Using%20Fields%20-%20Certificate.pdf">Using Fields</a</div>
     <div><a href="Statistical Processing">Statistical Processing</div>
+    <div><a href="https://github.com/Nisha318/Nisha318.github.io/blob/master/assets/images/badges/Certificate%20of%20Completion.pdf">Working With Time</a> </div>
   </div>
 </section>
 
