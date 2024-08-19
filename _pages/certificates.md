@@ -23,20 +23,33 @@ Videos:
 
 Training: 
 
-<a href="https://github.com/Nisha318/Nisha318.github.io/blob/master/assets/images/badges/splunk-beginner.jpg">Splunk Beginner</a>
-<a href="https://github.com/Nisha318/Nisha318.github.io/blob/master/assets/images/badges/splunk-zero.PNG">Splunk Zero to Power User</a>
-<a href="https://github.com/Nisha318/Nisha318.github.io/blob/master/assets/images/badges/CertificateOfCompletion_Splunk%20for%20Security%20Analytics%20and%20Monitoring.pdf">Splunk for Security Analytics and Monitoring</a>
+<ul>
+  <li> <a href="https://github.com/Nisha318/Nisha318.github.io/blob/master/assets/images/badges/splunk-beginner.jpg">Splunk Beginner</a> </li>
 
-<section id="security-skills">
+  <li> <a href="https://github.com/Nisha318/Nisha318.github.io/blob/master/assets/images/badges/splunk-zero.PNG">Splunk Zero to Power User</a> </li>
+
+  <li> <a href="https://github.com/Nisha318/Nisha318.github.io/blob/master/assets/images/badges/CertificateOfCompletion_Splunk%20for%20Security%20Analytics%20and%20Monitoring.pdf">Splunk for Security Analytics and Monitoring</a> </li>
+
+</ul>
+
+<section id="splunk-skills">
   <h2>Skills</h2>
-  <div class="skills-grid">
-    <div><a href="https://github.com/Nisha318/Nisha318.github.io/blob/master/assets/images/badges/Using%20Fields%20-%20Certificate.pdf">Using Fields</a</div>
-    <div><a href="Statistical Processing">Statistical Processing</div>
-    <div><a href="https://github.com/Nisha318/Nisha318.github.io/blob/master/assets/images/badges/Certificate%20of%20Completion.pdf">Working With Time</a> </div>
+
+<div class="skills-grid">
+
+
+ <div> <a href="https://github.com/Nisha318/Nisha318.github.io/blob/master/assets/images/badges/Using%20Fields%20-%20Certificate.pdf">Using Fields</a></div> 
+
+ <div> <a href="Statistical Processing">Statistical Processing</a></div> 
+
+  <div> <a href="https://github.com/Nisha318/Nisha318.github.io/blob/master/assets/images/badges/Certificate%20of%20Completion.pdf">Working With Time</a>   </div> 
+
   </div>
 </section>
 
+
 <style>
+
   .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
