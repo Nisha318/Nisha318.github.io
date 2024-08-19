@@ -38,11 +38,11 @@ Training:
 <div class="skills-grid">
 
 
- <div> <a href="https://github.com/Nisha318/Nisha318.github.io/blob/master/assets/images/badges/Using%20Fields%20-%20Certificate.pdf">Using Fields</a></div> 
+ <div> <a href="/assets/images/badges/splunk-using-fields.png">Using Fields</a></div> 
 
- <div> <a href="Statistical Processing">Statistical Processing</a></div> 
+ <div> <a href="/assets/images/badges/splunk-statistical-processing.png">Statistical Processing</a></div> 
 
-  <div> <a href="https://github.com/Nisha318/Nisha318.github.io/blob/master/assets/images/badges/Certificate%20of%20Completion.pdf">Working With Time</a>   </div> 
+  <div> <a href="/assets/images/badges/splunk-working-with-time.PNG">Working With Time</a>   </div> 
 
   </div>
 </section>
