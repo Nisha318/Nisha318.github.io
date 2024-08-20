@@ -26,7 +26,7 @@ Training:
 <ul>
 
 
-  <li> <a href="/assets/images/badges/splunk-search-expert.png"> Splunk Search Expert </a> </li>
+  <li> <a href="/assets/images/badges/splunk-search-expert.PNG"> Splunk Search Expert </a> </li>
   <li> <a href="https://github.com/Nisha318/Nisha318.github.io/blob/master/assets/images/badges/splunk-beginner.jpg">Splunk Beginner</a> </li>
 
   <li> <a href="https://github.com/Nisha318/Nisha318.github.io/blob/master/assets/images/badges/splunk-zero.PNG">Splunk Zero to Power User</a> </li>
