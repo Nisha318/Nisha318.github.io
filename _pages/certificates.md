@@ -35,7 +35,7 @@ Training:
 
   <li> <a href="/assets/images/badges/splunk-security-analytics.PNG">Splunk for Security Analytics and Monitoring</a> </li>
 
-    <li> <a href="https://github.com/Nisha318/Nisha318.github.io/blob/master/assets/images/badges/splunk-beginner.jpg">Splunk Beginner</a> </li>
+    <li> <a href="/assets/images/badges/splunk-beginner.jpg">Splunk Beginner</a> </li>
 
 </ul>
 
