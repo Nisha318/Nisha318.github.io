@@ -29,9 +29,9 @@ Training:
   <li> <a href="/assets/images/badges/splunk-search-expert.PNG"> Splunk Search Expert </a> </li>
 
   <li> <a href="/assets/docs/certificates/splunk-advanced-core.png">Advanced Splunk Core Training </a></li>
-  <li> <a href="https://github.com/Nisha318/Nisha318.github.io/blob/master/assets/images/badges/splunk-zero.PNG">Splunk Zero to Power User</a> </li>
+  <li> <a href="/assets/images/badges/splunk-zero.PNG">Splunk Zero to Power User</a> </li>
 
-  <li> <a href="https://tryhackme.com/nisha281/badges/advanced-splunk">Splunk: Parsing and Manipulating Data</a> </li>
+  <li> <a href="/assets/images/badges/advanced-splunk">Splunk: Parsing and Manipulating Data</a> </li>
 
   <li> <a href="/assets/images/badges/splunk-security-analytics.PNG">Splunk for Security Analytics and Monitoring</a> </li>
 
