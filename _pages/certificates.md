@@ -48,7 +48,7 @@ Training:
  <div> <a href="/assets/images/badges/splunk-statistical-processing.PNG">Statistical Processing</a></div> 
 
   <div> <a href="/assets/images/badges/splunk-working-with-time.PNG">Working With Time</a>   </div> 
-
+ <div>  <a href="/assets/images/badges/splunk-knowlege-objects.PNG">"Knowledge Objects"</a> </div>
   </div>
 </section>
 
