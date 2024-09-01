@@ -104,6 +104,8 @@ defaults:
       path: ""
       type: posts
     values:
+      teaser: true
+      teaser_position: left
       layout: single
       author_profile: true
       read_time: true
