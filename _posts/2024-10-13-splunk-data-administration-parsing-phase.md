@@ -49,6 +49,7 @@ Here’s an example of how I used **regex101** to fine-tune my regex patterns:
 
 ```regex
 <event>([\r\n]+)?
+```
 
 
 ![Regex101 Example](/assets/images/splunk/regex-01.png)
@@ -83,6 +84,7 @@ Using a regex pattern and updating the `props.conf` file, I configured Splunk to
 
 ```regex
 s/\d{3}-\d{2}-\d{4}/xxx-xx-xxxx/g
+```
 
 ![Regex101 Example](/assets/images/splunk/regex-02.png)
 ![Masking PII](/assets/images/splunk/parsing-11.png)
