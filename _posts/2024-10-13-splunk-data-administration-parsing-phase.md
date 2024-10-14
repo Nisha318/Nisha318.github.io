@@ -30,7 +30,9 @@ Splunk handles massive amounts of data from various sources—whether it’s log
 3. **Indexing Stage** – After parsing, the structured events are written to disk and indexed, making them ready for future searches.
 4. **Search Stage** – Once indexed, data becomes available for searching, reporting, and alerting through the Splunk search head.
 
-In this article, I'll be focusing on the **Parsing Stage**, where I worked on **event line breaking**, **time extraction**, and **masking sensitive PII data** to make logs more structured and easier to analyze, especially logs from sources like Web Application Firewalls (WAF).
+In this article, I'll be focusing on the **Parsing Stage**, where I worked on **event line breaking**, **time extraction**, and **masking sensitive PII data** to make logs more structured and easier to analyze, especially logs from sources like Web Application Firewalls (WAF). 
+
+You may reference <a href="https://docs.splunk.com/Documentation/SplunkCloud/9.2.2406/Data/Overviewofeventprocessing" >official Splunk documentation </a> for more details about managing event processing on Splunk. 
 
 
 ![Splunk Data Flow](/assets/images/splunk/parsing-2.png)
@@ -44,6 +46,10 @@ To help me create the right regex patterns for breaking these logs into structur
 By applying the regular expressions (regex) I developed, I was able to identify event boundaries in the logs, split them into individual events, and make the data far more readable. In this case, I worked with JSON logs, using regex to match each event tag and successfully split the logs into structured events.
 
 Here’s an example of how I used **regex101** to fine-tune my regex patterns:
+
+```regex
+<event>([\r\n]+)?
+
 
 ![Regex101 Example](/assets/images/splunk/regex-01.png)
 
@@ -74,6 +80,10 @@ Using a regex pattern and updating the `props.conf` file, I configured Splunk to
 
 ![Masking PII](/assets/images/splunk/parsing-9.png)
 ![Masking PII](/assets/images/splunk/parsing-10.png)
+
+```regex
+s/\d{3}-\d{2}-\d{4}/xxx-xx-xxxx/g
+
 ![Regex101 Example](/assets/images/splunk/regex-02.png)
 ![Masking PII](/assets/images/splunk/parsing-11.png)
 ![Masking PII](/assets/images/splunk/parsing-12.png)
