@@ -10,7 +10,7 @@ toc_icon: "list-alt"
 toc_sticky: true
 tags: [Splunk, Data Parsing, Regex, WAF Logs, PII Masking, Magic 6]
 
-tagline: "Unveiling Mitm6 and NTLM Relay in an Active Directory Environment"
+tagline: "Unlocking the Power of Data: Optimizing Event Processing and Privacy in Splunk"
 header:
   image: /assets/images/splunk/0-parsing.png
   caption: "Optimizing Splunk Data Administration"
