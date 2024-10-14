@@ -27,7 +27,7 @@ header:
 
 
 ## Introduction
-In this blog post, I will be discussing a common network attack called Link-Local Multicast Name Resolution (LLMNR) poisoning. This type of attack can be highly effective in capturing NTLMv2 hashes, which can then be used to gain unauthorized access to systems in a Windows environment. I will also share insights on how to mitigate this this type of vulnerability attack, ensuring your network remains secure. To illustrate this attack, I have included screenshots from my recent lab demonstration where I successfully captured NTLMv2 hashes using Responder.
+In this blog post, I discuss a common network attack called Link-Local Multicast Name Resolution (LLMNR) poisoning. This type of attack can be highly effective in capturing NTLMv2 hashes, which can then be used to gain unauthorized access to systems in a Windows environment. I will also share insights on how to mitigate this this type of vulnerability attack, ensuring your network remains secure. To illustrate this attack, I have included screenshots from my recent lab demonstration where I successfully captured NTLMv2 hashes using Responder.
 <img src="/assets/images/tcm-academy/tcm-llmnr-1.png">
 
 ## What is LLMNR Poisoning?
