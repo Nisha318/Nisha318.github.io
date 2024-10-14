@@ -12,9 +12,9 @@ tags: [Splunk, Data Parsing, Regex, WAF Logs, PII Masking, Magic 6]
 
 tagline: "Unlocking the Power of Data: Optimizing Event Processing and Privacy in Splunk"
 header:
-  image: /assets/images/splunk/0-parsing.png
+  image: /assets/images/splunk/parsing-2.png
   caption: "Optimizing Splunk Data Administration"
-  teaser: assets/images/splunk/0-parsing.png
+  teaser: assets/images/splunk/parsing-2.png
   overlay_filter: rgba(0, 0, 0, 0.5)
   overlay_image: /assets/images/ctf_hero_header_image.png
   caption: "Photo credit: [**AI**](https://chatgpt.com/)"
