@@ -5,12 +5,10 @@ date: 2024-10-16
 author: Nisha McDonnell
 excerpt: "A detailed walkthrough of how to solve the 'Investigating Web Attacks Challenge' on Let's Defend using the bWAPP web application as the victim."
 categories:
-  - CTF
-  - Web Security
+  - Blog
 tags:
-  - Web Attacks
+  - Web Application Security
   - Incident Response
-  - bWAPP
   - Cybersecurity
   - Let's Defend
 tagline: "A detailed walkthrough of how to solve the 'Investigating Web Attacks Challenge' on Let's Defend using the bWAPP web application as the victim."
