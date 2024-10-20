@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Investigating Web Attacks Challenge Walkthrough (Let's Defend)"
+title: "Investigate Web Attacks Challenge Walkthrough (Let's Defend)"
 date: 2024-10-16
 author: Nisha McDonnell
 excerpt: "A detailed walkthrough of how to solve the 'Investigating Web Attacks Challenge' on Let's Defend using the bWAPP web application as the victim."
@@ -74,7 +74,7 @@ The logs showed repeated POST requests to /bWAPP/login.php with the same User-Ag
 
 
 <strong> Question: 4. Is the third attack successful?</strong>
-The third attack, the brute-force login attempt, was indeed successful. We can confirm this because the HTTP status codes changed from 200 OK to 302 Found, indicating that the attacker was successfully redirected to another page (portal), likely after a successful login.
+The third attack, the brute-force login attempt, was indeed successful. We can confirm this because the HTTP status codes changed from 200 OK to 302 Found, indicating that the attacker was successfully redirected to another page (portal), likely after a successful login.  In addition, the significant increase in the size of the response is a telltale sign of a successful attack.
 
 <strong>Answer: Yes</strong>
 
