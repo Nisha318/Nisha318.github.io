@@ -167,8 +167,8 @@ Now that we know the architecture of the process, let's perform some further rec
 run post/multi/recon/local_exploit_suggester
 ```
 
-<strong> Q: Running the local exploit suggester will return quite a few results for potential escalation exploits. What is the full path (starting with exploit/) for the first returned exploit? </strong><br>
-<em> Answer: exploit/windows/local/bypassuac_eventvwr </em>
+ Q: Running the local exploit suggester will return quite a few results for potential escalation exploits. What is the full path (starting with exploit/) for the first returned exploit? <br>
+ Answer: exploit/windows/local/bypassuac_eventvwr 
 
 <img src="/assets/images/thm/thm-ice-14.png">
 
