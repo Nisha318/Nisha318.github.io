@@ -58,7 +58,7 @@ This box simulates a vulnerable educational institution's network infrastructure
 
 ## Detailed Walkthrough
 
-## Initial Enumeration
+### Initial Enumeration
 
 Starting with a thorough nmap scan to identify open ports and services:
 
@@ -76,7 +76,7 @@ The scan revealed the following open ports and services:
 
 From this, I identified two primary attack vectors to explore: the FTP service and the web server running on port 80.
 
-## FTP Enumeration
+### FTP Enumeration
 
 I began by connecting to the FTP service on the target machine. To do this, I used the ftp command, followed by the target IP address. I used anonymous login since this option was enabled on the server.
 
@@ -123,7 +123,7 @@ hashcat -m 0 hashes.txt /usr/share/wordlists/rockyou.txt
 
 <img src="/assets/images/tcm-academy/academy-08.png">
 
-## Web Application Discovery
+### Web Application Discovery
 
 With the information gathered from the FTP service, I turned my attention to the web server running on port 80. I opened the browser and navigated to the target IP address. The Apache default page appeared, indicating that the server was running Apache and no custom web page had been configured yet.
 
@@ -171,14 +171,14 @@ Upon visiting http://192.168.17.136/academy, I found a login form requesting a s
 
 
 
-## Gaining Initial Access
+### Gaining Initial Access
 
 Using the previously obtained credentials, I successfully log into the academy student portal login page:
 
 
 <img src="/assets/images/tcm-academy/academy-12-student.png">
 
-## Exploiting File Upload
+### Exploiting File Upload
 
 After successfully logging into the system, I explored the available options within the online course registration page. The "My Profile" page at http://192.168.17.136/academy/my-profile.php contained a photo upload form:
 
@@ -219,7 +219,7 @@ The shell connected back immediately to my Kali machine and I was logged in to t
 
 <img src="/assets/images/tcm-academy/academy-19.png">
 
-## Privilege Escalation
+### Privilege Escalation
 
 Using LINPEAS for initial enumeration:
 
@@ -367,7 +367,7 @@ At this point, I realized I could exploit this recurring task for further access
 
 <img src="/assets/images/tcm-academy/academy-37.png">
 
-## Root Access
+### Root Access
 
 Abusing the Periodic Backup Script
 Since the backup.sh script was running automatically, I decided to modify it to add a reverse shell payload. This way, when the script executed, it would also execute the reverse shell, giving me access to the system.
@@ -401,7 +401,7 @@ When the backup script executed, it gave me root access:
 
 <img src="/assets/images/tcm-academy/academy-40.png">
 
-## Success - Root Access Achieved
+### Success - Root Access Achieved
 
 Finally, I captured the flag from the /root directory:
 
@@ -415,7 +415,7 @@ cat flag.txt
 <img src="/assets/images/tcm-academy/academy-41.png">
 
 
-## Conclusion
+### Conclusion
 
 This walkthrough demonstrated a complete penetration testing workflow, from initial enumeration through privilege escalation to ultimately achieving root access. The Academy box provided excellent practice in:
 - Service enumeration
@@ -444,7 +444,7 @@ chmod +x linpeas.sh
 ./linpeas.sh
 ```
 
-## Tools Used
+### Tools Used
 - nmap: Network scanning
 - dirb/ffuf: Directory enumeration
 - hashcat: Password cracking
