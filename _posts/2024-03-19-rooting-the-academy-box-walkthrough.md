@@ -18,7 +18,7 @@ header:
   image: /assets/images/tcm-academy/academy-ctf-header.svg
   caption: "Navigating the Digital Labyrinth: A Journey Through Ethical Hacking"
   teaser: /assets/images/tcm-academy/academy-teaser.svg
-  overlay_image: /assets/images/tcm-academy/overlay-pattern.svg
+  overlay_image: /assets/images/tcm-academy/academy-overlay-pattern.svg
   overlay_filter: rgba(0, 0, 0, 0.5)
 ---
 
