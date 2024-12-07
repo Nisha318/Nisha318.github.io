@@ -15,10 +15,10 @@ tags:
   - Web App Security
 tagline: "From Zero to Root: A Step-by-Step Guide to Compromising the Academy Box"
 header:
-  image: /assets/images/academy/ctf-header.svg
+  image: /assets/images/tcm-academy/academy-ctf-header.svg
   caption: "Navigating the Digital Labyrinth: A Journey Through Ethical Hacking"
-  teaser: /assets/images/academy/academy-teaser.svg
-  overlay_image: /assets/images/academy/overlay-pattern.svg
+  teaser: /assets/images/tcm-academy/academy-teaser.svg
+  overlay_image: /assets/images/tcm-academy/overlay-pattern.svg
   overlay_filter: rgba(0, 0, 0, 0.5)
 ---
 
