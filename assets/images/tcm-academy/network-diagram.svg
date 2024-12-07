@@ -1,0 +1,86 @@
+<svg width="800" height="600" viewBox="0 0 800 600">
+  <!-- Background -->
+  <rect width="800" height="600" fill="white"/>
+  
+  <!-- Nodes -->
+  <!-- Attacker Machine -->
+  <g transform="translate(100,300)">
+    <rect x="-60" y="-30" width="120" height="60" rx="10" fill="#ff6b6b" stroke="#333" stroke-width="2"/>
+    <text x="0" y="5" text-anchor="middle" font-family="Arial" font-size="14">Attacker Machine</text>
+    <text x="0" y="25" text-anchor="middle" font-family="Arial" font-size="12">(Kali Linux)</text>
+  </g>
+
+  <!-- Target Box -->
+  <g transform="translate(400,300)">
+    <rect x="-70" y="-40" width="140" height="80" rx="10" fill="#4ecdc4" stroke="#333" stroke-width="2"/>
+    <text x="0" y="0" text-anchor="middle" font-family="Arial" font-size="14">Academy Box</text>
+    <text x="0" y="20" text-anchor="middle" font-family="Arial" font-size="12">Target</text>
+  </g>
+
+  <!-- Student Portal -->
+  <g transform="translate(600,200)">
+    <rect x="-60" y="-30" width="120" height="60" rx="10" fill="#96ceb4" stroke="#333" stroke-width="2"/>
+    <text x="0" y="5" text-anchor="middle" font-family="Arial" font-size="14">Student Portal</text>
+  </g>
+
+  <!-- PHP Shell -->
+  <g transform="translate(600,300)">
+    <rect x="-60" y="-30" width="120" height="60" rx="10" fill="#ff9f1c" stroke="#333" stroke-width="2"/>
+    <text x="0" y="5" text-anchor="middle" font-family="Arial" font-size="14">PHP Shell</text>
+  </g>
+
+  <!-- Root Access -->
+  <g transform="translate(600,400)">
+    <rect x="-60" y="-30" width="120" height="60" rx="10" fill="#ff4242" stroke="#333" stroke-width="2"/>
+    <text x="0" y="5" text-anchor="middle" font-family="Arial" font-size="14">Root Access</text>
+  </g>
+
+  <!-- Connection Lines and Labels -->
+  <!-- Attacker to Target -->
+  <g stroke="#666" stroke-width="2" fill="none">
+    <!-- FTP Connection -->
+    <path d="M 170,280 C 250,280 300,280 320,280"/>
+    <text x="245" y="270" text-anchor="middle" font-family="Arial" font-size="12">Port 21 (FTP)</text>
+    
+    <!-- HTTP Connection -->
+    <path d="M 170,300 C 250,300 300,300 320,300"/>
+    <text x="245" y="320" text-anchor="middle" font-family="Arial" font-size="12">Port 80 (HTTP)</text>
+    
+    <!-- SSH Connection -->
+    <path d="M 170,320 C 250,320 300,320 320,320"/>
+    <text x="245" y="340" text-anchor="middle" font-family="Arial" font-size="12">Port 22 (SSH)</text>
+  </g>
+
+  <!-- Target to Components -->
+  <g stroke="#666" stroke-width="2" fill="none">
+    <!-- To Student Portal -->
+    <path d="M 480,280 C 520,280 520,200 530,200"/>
+    <text x="505" y="190" text-anchor="middle" font-family="Arial" font-size="12">Web App</text>
+    
+    <!-- To PHP Shell -->
+    <path d="M 480,300 L 530,300"/>
+    <text x="505" y="290" text-anchor="middle" font-family="Arial" font-size="12">Upload</text>
+    
+    <!-- To Root Access -->
+    <path d="M 480,320 C 520,320 520,400 530,400"/>
+    <text x="505" y="390" text-anchor="middle" font-family="Arial" font-size="12">Escalation</text>
+  </g>
+
+  <!-- Legend -->
+  <g transform="translate(50,50)">
+    <rect x="0" y="0" width="160" height="120" rx="5" fill="white" stroke="#333" stroke-width="1"/>
+    <text x="80" y="25" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold">Legend</text>
+    
+    <!-- Initial Access -->
+    <rect x="10" y="40" width="20" height="20" fill="#4ecdc4"/>
+    <text x="40" y="55" font-family="Arial" font-size="12">Target System</text>
+    
+    <!-- Web Component -->
+    <rect x="10" y="70" width="20" height="20" fill="#96ceb4"/>
+    <text x="40" y="85" font-family="Arial" font-size="12">Web Component</text>
+    
+    <!-- Attack Path -->
+    <rect x="10" y="100" width="20" height="20" fill="#ff4242"/>
+    <text x="40" y="115" font-family="Arial" font-size="12">Attack Goal</text>
+  </g>
+</svg>

