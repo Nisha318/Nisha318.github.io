@@ -268,7 +268,4 @@ cat flag.txt
 - LINPEAS: Privilege escalation enumeration
 - pspy: Process monitoring
 
-{% include notice.html 
-    type="warning" 
-    title="Ethical Considerations" 
-    content="The techniques demonstrated in this walkthrough should only be used in authorized testing environments. Unauthorized testing can result in legal consequences and system damage." %}
+
