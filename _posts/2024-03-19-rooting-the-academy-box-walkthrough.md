@@ -26,12 +26,6 @@ header:
 
 In this blog post, I'll walk you through the process of rooting the Academy box from the TCM Academy's Practical Ethical Hacker course. The box was designed to test your skills in directory busting, FTP exploration, PHP webshell uploads, and Linux privilege escalation.
 
-### Prerequisites
-- Basic understanding of Linux command line
-- Familiarity with web application security concepts
-- Knowledge of common enumeration tools (nmap, dirb, ffuf)
-- Basic understanding of PHP and MySQL
-- Comfortable with privilege escalation concepts
 
 ### Key Learning Objectives
 - Network service enumeration
