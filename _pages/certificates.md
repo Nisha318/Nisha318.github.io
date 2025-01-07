@@ -4,28 +4,18 @@ permalink: /certificates/
 title: Certificates
 author_profile: true
 header:
-    overlay_image: /assets/images/joel-filipe-small-warmer.jpg
-    caption: "Photo by [Joel Filipe](https://unsplash.com/@joelfilip) on [Unsplash](https://unsplash.com)"
+  teaser: /assets/images/ctf_hero_header_image.png
+  overlay_filter: rgba(0, 0, 0, 0.5)
+  overlay_image: /assets/images/ctf_hero_header_image.png
+  caption: "Photo credit: [**AI**](https://chatgpt.com/)"
+author_profile: true
 classes: wide
 ---
 
-### <a name="Splunk Core Certified Power User"></a>Splunk Core Certified Power User | Splunk [<i class="fas fa-link" aria-hidden="true"></i>](#)
 
 
-Syllabus: [<i class="fas fa-paperclip"></i>](https://www.splunk.com/en_us/pdfs/training/splunk-test-blueprint-power-user.pdf)
 
-Projects: <a href="https://github.com/Nisha318/Splunk-Projects">Splunk Project Repo</a>
-
-Videos:
-
-<a href="https://youtu.be/zyaof9kP54I">Splunk Basics 101 - TryHackMe Walkthrough</a>
-
-
-Training: 
-
-<ul>
-
-
+### Splunk Core Certified Power User Certification| Splunk  [<i class="fas fa-link" aria-hidden="true"></i>](https://www.credly.com/badges/503873d1-c0bb-4f5d-b32e-593bdee4ad46/public_url)
   <li> <a href="/assets/images/badges/splunk-search-expert.PNG"> Splunk Search Expert </a> </li>
 
   <li> <a href="/assets/docs/certificates/splunk-advanced-core.png">Advanced Splunk Core Training </a></li>
@@ -36,50 +26,14 @@ Training:
   <li> <a href="/assets/images/badges/splunk-security-analytics.PNG">Splunk for Security Analytics and Monitoring</a> </li>
 
   <li> <a href="/assets/images/badges/splunk-beginner.jpg">Splunk Beginner</a> </li>
+Projects: <a href="https://github.com/Nisha318/Splunk-Projects">Splunk Project Repo</a>
+-
+-
+-
 
-</ul>
+Videos:
 
-<section id="splunk-skills">
-  <h2>Skills</h2>
-
-<div class="skills-grid">
-
-
- <div> <a href="/assets/images/badges/splunk-using-fields.PNG">Using Fields</a></div> 
-
- <div> <a href="/assets/images/badges/splunk-statistical-processing.PNG">Statistical Processing</a></div> 
-
-  <div> <a href="/assets/images/badges/splunk-working-with-time.PNG">Working With Time</a>   </div> 
- <div>  <a href="/assets/images/badges/splunk-knowlege-objects.PNG">Knowledge Objects</a> </div>
-  </div>
-</section>
-
-
-<style>
-
-  .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 10px;
-    background-color: #333333; /* Dark background for the entire grid */
-    padding: 20px;
-    border-radius: 10px;
-  }
-
-  .skills-grid div {
-    background-color: #444444; /* Slightly lighter background for individual items */
-    padding: 10px;
-    text-align: center;
-    border-radius: 5px;
-    color: #ffffff; /* White text for visibility */
-  }
-
-  #security-skills h2 {
-    color: #ffffff; /* White text for the section title */
-    text-align: center;
-  }
-</style>
-
+<a href="https://youtu.be/zyaof9kP54I">Splunk Basics 101 - TryHackMe Walkthrough</a>
 
 
 
@@ -107,41 +61,14 @@ Syllabus: [<i class="fas fa-paperclip"></i>](https://d2y9h8w1ydnujs.cloudfront.n
     <div>Security Investigations</div>
     <div>Security Operations</div>
     <div>SOC</div>
-  </div>
-</section>
 
-<style>
-  .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 10px;
-    background-color: #333333; /* Dark background for the entire grid */
-    padding: 20px;
-    border-radius: 10px;
-  }
-
-  .skills-grid div {
-    background-color: #444444; /* Slightly lighter background for individual items */
-    padding: 10px;
-    text-align: center;
-    border-radius: 5px;
-    color: #ffffff; /* White text for visibility */
-  }
-
-  #security-skills h2 {
-    color: #ffffff; /* White text for the section title */
-    text-align: center;
-  }
-</style>
 
 
 
 
 ### <a name="CompTIA Security+ Certification"></a>CompTIA Security+ Certification | CompTIA [<i class="fas fa-link" aria-hidden="true"></i>](https://www.credly.com/badges/b318bd77-23fc-4029-b336-267f20d69d23/public_url)
 
-<section id="additional-skills">
-  <h2>Additional Security Skills</h2>
-  <div class="skills-grid">
+
     <div>Access Control</div>
     <div>CompTIA</div>
     <div>Cryptography</div>
@@ -156,55 +83,10 @@ Syllabus: [<i class="fas fa-paperclip"></i>](https://d2y9h8w1ydnujs.cloudfront.n
     <div>Security Policies</div>
     <div>Threat Analysis</div>
     <div>Threat Detection</div>
-  </div>
-</section>
-
-<style>
-  .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 10px;
-    background-color: #333333; /* Dark background for the entire grid */
-    padding: 20px;
-    border-radius: 10px;
-  }
-
-  .skills-grid div {
-    background-color: #444444; /* Slightly lighter background for individual items */
-    padding: 10px;
-    text-align: center;
-    border-radius: 5px;
-    color: #ffffff; /* White text for visibility */
-  }
-
-  #additional-skills h2 {
-    color: #ffffff; /* White text for the section title */
-    text-align: center;
-  }
-</style>
-
-
-
-<!-----
-Projects: 
-- Target Audience for Starbucks Rewards Mobile App (Capstone) [<i class="fab fa-fw fa-github" aria-hidden="true"></i>](https://github.com/k-bosko/Starbucks_rewards) [<i class="fas fa-blog" aria-hidden="true"></i>](/Starbucks-Rewards-Program/) [<img src="/assets/images/icons/ppt2.png" height="25" width="25" alt="">](/assets/docs/reports/kbosko-data-science-starbucks-capstone.pdf)
-- Predicting Charity Donors with Supervised ML [<i class="fab fa-fw fa-github" aria-hidden="true"></i>](https://github.com/k-bosko/finding_donors)
-- Customer Segmentation for Arvato (PCA, K-Means) [<i class="fab fa-fw fa-github" aria-hidden="true"></i>](https://github.com/k-bosko/customer_segmentation)
-- NLP for Disaster Response App [<i class="fab fa-fw fa-github" aria-hidden="true"></i>](https://github.com/k-bosko/disaster_response) [app](https://disaster-reponse-api.herokuapp.com)
-- Recommendation Engines for IBM Platform [<i class="fab fa-fw fa-github" aria-hidden="true"></i>](https://github.com/k-bosko/recommendations_IBM)
-- Image Classifier with PyTorch [<i class="fab fa-fw fa-github" aria-hidden="true"></i>](https://github.com/k-bosko/image_classifier)
-- Data Science blog post [<i class="fab fa-fw fa-github" aria-hidden="true"></i>](https://github.com/k-bosko/insight_fellows) [<i class="fas fa-blog" aria-hidden="true"></i>](/Insight-Data-Science-Fellows/)
-
- -->
-
-----------------------------------------
 
 
 
 ### AWS Cloud Architecting | AWS Academy [<i class="fas fa-link" aria-hidden="true"></i>](https://www.credly.com/badges/73ff0705-60e5-4846-ac27-88e1be2a09d2/public_url)
-<section id="aws-skills">
-  <h2>AWS Skills</h2>
-  <div class="skills-grid">
     <div>Introduction to Cloud Architecting</div>
     <div>Best Practice building AWS solutions</div>
     <div>Amazon S3 Versioning and Data Storage</div>
@@ -246,39 +128,7 @@ Projects:
     <div>Disaster planning and strategies</div>
     <div>Disaster recovery patterns</div>
     <div>Disaster Planning</div>
-  </div>
-</section>
 
-<style>
-  .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 10px;
-    background-color: #333333; /* Dark background for the entire grid */
-    padding: 20px;
-    border-radius: 10px;
-  }
-
-  .skills-grid div {
-    background-color: #444444; /* Slightly lighter background for individual items */
-    padding: 10px;
-    text-align: center;
-    border-radius: 5px;
-    color: #ffffff; /* White text for visibility */
-  }
-
-  #aws-skills h2 {
-    color: #ffffff; /* White text for the section title */
-    text-align: center;
-  }
-</style>
-
-
-<!-----
-Projects:
- -->
-
-----------------------------------------
 
 ###  Configure SIEM security operations using Microsoft Sentinel | Microsoft Azure Security  [<i class="fas fa-link" aria-hidden="true"></i>](https://learn.microsoft.com/api/credentials/share/en-us/NishaPrudhomme-6229/2167EF37DF02B061?sharingId=7EF06CE6B9CD4BD3)
 - Security Operations Analyst
@@ -298,82 +148,9 @@ Projects:
 -- Cybersecurity
 -- Netstat
 
-# Projects: 09/30/23
-# - Name [<i class="fab fa-fw fa-github" aria-hidden="true"></i>](https://github.com/nisha318/#)
-<!-----
+ 
 ----------------------------------------
-### Marketing Analytics with Python | DataCamp [<i class="fas fa-link" aria-hidden="true"></i>](https://www.datacamp.com/statement-of-accomplishment/track/5ce028dc1fb95454ddec86549442d8c8fa79e341)
- - Predicting Customer Churn in Python [<i class="fas fa-link" aria-hidden="true"></i>](https://www.datacamp.com/statement-of-accomplishment/course/7947b18bcde3fed9e459b1b2bebded4bfcf8a302)
- - Customer Analytics and A/B Testing in Python [<i class="fas fa-link" aria-hidden="true"></i>](https://www.datacamp.com/statement-of-accomplishment/course/f9b1378a8315ee335279c53040bbf287fd455976)
- - Customer Segmentation in Python [<i class="fas fa-link" aria-hidden="true"></i>](https://www.datacamp.com/statement-of-accomplishment/course/ba3b88ff56410c965375234a097f96c7109c6a20)
- - Machine Learning for Marketing in Python [<i class="fas fa-link" aria-hidden="true"></i>](https://www.datacamp.com/statement-of-accomplishment/course/617028b2c4adee4da2d94bf59c5d4dd154d35261)
-
-Projects:
- - Customer Lifetime Value (CLV) [<i class="fab fa-fw fa-github" aria-hidden="true"></i>](https://github.com/k-bosko/CLV_prediction)
- - Cohort Analysis [<i class="fab fa-fw fa-github" aria-hidden="true"></i>](https://github.com/k-bosko/cohort_analysis)
- - RFM Analysis [<i class="fab fa-fw fa-github" aria-hidden="true"></i>](https://github.com/k-bosko/RFM_analysis)
- - Customer Churn Prediction [<i class="fab fa-fw fa-github" aria-hidden="true"></i>](https://github.com/k-bosko/customer_churn)
-
-----------------------------------------
-
-
-
-### <a name="Math-for-ML"></a>Mathematics for Machine Learning | Coursera [<i class="fas fa-link" aria-hidden="true"></i>](https://www.coursera.org/account/accomplishments/specialization/CLR3C392PVWD)
-Syllabus: [<i class="fas fa-paperclip"></i>](https://www.coursera.org/specializations/mathematics-machine-learning)
-- Linear Algebra [<i class="fas fa-link" aria-hidden="true"></i>](https://www.coursera.org/account/accomplishments/records/HMR2TSNAYX3F)
-- Multivariate Calculus [<i class="fas fa-link" aria-hidden="true"></i>](https://www.coursera.org/account/accomplishments/records/WYU2B7Y86Z7X)
-- Principal Component Analysis (PCA) [<i class="fas fa-link" aria-hidden="true"></i>](https://www.coursera.org/account/accomplishments/records/7NWF72UG5KL4)
-
-
-----------------------------------------
-### <a name="Predictive-Analytics"></a>Predictive Analytics for Business | Udacity  [<i class="fas fa-link" aria-hidden="true"></i>](https://graduation.udacity.com/confirm/GDRHK39M)
-Tools: Alteryx, Tableau, Python
-
-Syllabus: [<i class="fas fa-paperclip"></i>](https://d20vrrgs8k4bvw.cloudfront.net/documents/en-US/Predictive+Analytics+for+Business+Nanodegree+Syllabus.pdf)
- - Data Wrangling
- - Classification Models
- - A/B Testing
- - Time Series Forecasting
- - Segmentation and Clustering
-
- Projects:
-  - Recommending New Store Format for a Grocery Store (Capstone) [<i class="fas fa-chart-line"></i>](https://public.tableau.com/profile/katerina.bosko#!/vizhome/AllocatingGroceryStorestoSegmentsandForecastingProduceSales/Dashboard3) [<i class="far fa-file-pdf" aria-hidden="true"></i>](/assets/docs/reports/kbosko-predictive-analytics-capstone.pdf)
-  - Linear Regression Model to Choose New Store Location [<i class="fab fa-fw fa-github" aria-hidden="true"></i>](https://github.com/k-bosko/new_store_location) [<i class="far fa-file-pdf" aria-hidden="true"></i>](/assets/docs/reports/kbosko-predictive-analytics-new-store-location.pdf)
-  - Linear Regression Model to Predict Sales for a Catalog Launch [<i class="fab fa-fw fa-github" aria-hidden="true"></i>](https://github.com/k-bosko/predicting_catalog_demand) [<i class="far fa-file-pdf" aria-hidden="true"></i>](/assets/docs/reports/kbosko-predictive-analytics-catalog.pdf)
-  - A/B Test a New Menu Launch [<i class="far fa-file-pdf" aria-hidden="true"></i>](/assets/docs/reports/kbosko-predictive-analytics-ab-test.pdf)
-
-----------------------------------------
-
-### <a name="Excel-to-MySQL"></a>Excel to MySQL: Analytic Techniques for Business | Coursera [<i class="fas fa-link" aria-hidden="true"></i>](https://www.coursera.org/account/accomplishments/specialization/AEE26XQ29CD5)
-Tools: Excel, Tableau, Teradata, MySQL, Jupyter Notebook
-
-Syllabus: [<i class="fas fa-paperclip"></i>](https://www.coursera.org/specializations/excel-mysql)
- - Business Metrics for Data-Driven Companies [<i class="fas fa-link" aria-hidden="true"></i>](https://www.coursera.org/account/accomplishments/records/D9XE4KYLU9V2)
- - Mastering Data Analysis in Excel [<i class="fas fa-link" aria-hidden="true"></i>](https://www.coursera.org/account/accomplishments/records/8QK9BQ3Y6ZQS)
- - Data Visualization and Communication with Tableau [<i class="fas fa-link" aria-hidden="true"></i>](https://www.coursera.org/account/accomplishments/records/KDT78YHZEHVL)
- - Managing Big Data with MySQL [<i class="fas fa-link" aria-hidden="true"></i>](https://www.coursera.org/account/accomplishments/records/H69WSK9HZZ2V)
- - Increasing Real Estate Management Profits: Harnessing Data Analytics [<i class="fas fa-link" aria-hidden="true"></i>](https://www.coursera.org/account/accomplishments/records/B9ANNHF2TLMZ)
-
-
-Projects:
- - Increasing Profits for Watershed Properties [<i class="fas fa-chart-line"></i>](https://public.tableau.com/profile/katerina.bosko#!/vizhome/Bosko_dashboardforWatershedproperties/FinalDashboard) [<img src="/assets/images/icons/ppt2.png" height="25" width="25" alt="">](/assets/docs/reports/kbosko-excel-to-mysql-capstone-presentation.pdf) [<i class="far fa-file-pdf" aria-hidden="true"></i>](/assets/docs/reports/kbosko-excel-to-mysql-capstone-report.pdf)
- - Dillard's Sale Trends: Teradata SQL queries [<i class="far fa-file-pdf" aria-hidden="true"></i>](/assets/docs/reports/kbosko-excel-to-mysql-Teradata-queries.pdf)
-
-
-
-----------------------------------------
-
-### <a name="Excel"></a>Excel Skills for Business | Coursera [<i class="fas fa-link" aria-hidden="true"></i>](https://www.coursera.org/account/accomplishments/specialization/FZ4C9RHTRZJT)
-Syllabus: [<i class="fas fa-paperclip"></i>](https://www.coursera.org/specializations/excel)
- - Essentials [<i class="fas fa-link" aria-hidden="true"></i>](https://www.coursera.org/account/accomplishments/records/L8E2H3YV3TK2)
- - Intermediate I [<i class="fas fa-link" aria-hidden="true"></i>](https://www.coursera.org/account/accomplishments/records/MRTLVQAXSXVP)
- - Intermediate II [<i class="fas fa-link" aria-hidden="true"></i>](https://www.coursera.org/account/accomplishments/records/MRTLVQAXSXVP)
- - Advanced [<i class="fas fa-link" aria-hidden="true"></i>](https://www.coursera.org/account/accomplishments/records/F6A3ADUY2KLL)
-
-
----> 
-----------------------------------------
-### <a name="Vmware Install, Configure, Manage"></a> Vmware Install, Configure, Manage | Stanly CC IT Academy [<i class="fas fa-link" aria-hidden="true"></i>](/assets/docs/certificates/VMWare%20-%20ICM.pdf)
+###  Vmware Install, Configure, Manage | Stanly CC IT Academy [<i class="fas fa-link" aria-hidden="true"></i>](/assets/docs/certificates/VMWare%20-%20ICM.pdf)
 Tools:   
 
 Syllabus: [<i class="fas fa-paperclip"></i>](#)
@@ -386,19 +163,7 @@ Syllabus: [<i class="fas fa-paperclip"></i>](#)
 
 ----------------------------------------
 
-### <a name="Cisco Independent Study"></a>Cisco Certified Network Professional - Collaboration | Cisco Certification
-Syllabus: [<i class="fas fa-paperclip"></i>](#)
-- Introduction to Networking [<i class="fas fa-link" aria-hidden="true"></i>](#)
-- Routing & Switching Essentials [<i class="fas fa-link" aria-hidden="true"></i>](#)
-- Scaling Networks [<i class="fas fa-link" aria-hidden="true"></i>](#)
-- Connecting Networks [<i class="fas fa-link" aria-hidden="true"></i>](#)
-
- Certifications:
- - Cisco Certified Network Associate [<i class="fas fa-paperclip"></i>](https://www.credly.com/badges/733921d5-18ed-45bc-a464-973674e77728/public_url)
-Skills:
-----------------------------------------
-
-### <a name="Cisco Networking Academy"></a>CCNA Routing & Switching | Cisco Networking Academy
+### CCNA Routing & Switching | Cisco Networking Academy
 Syllabus: [<i class="fas fa-paperclip"></i>](#)
 - Introduction to Networking [<i class="fas fa-link" aria-hidden="true"></i>](#)
 - Routing & Switching Essentials [<i class="fas fa-link" aria-hidden="true"></i>](#)
