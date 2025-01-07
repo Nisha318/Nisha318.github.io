@@ -33,10 +33,10 @@ tags:
 
 
 feature_row0-2:
-  - image_path:  
+  - image_path:  /assets/images/aws/aws-dev-environment.jpg
     alt: "AWS Devops "
     title: "Build a Dev Environment with Terraform and AWS "
-    text: "AWS Devops"
+    text: "I built a development environment on AWS using Terraform for infrastructure as code. Configured a Virtual Private Cloud (VPC) with a public subnet, internet gateway, and a public route table. Deployed an EC2 instance within the public subnet and configured security groups to manage access. Utilized Terraform templates to automate resource provisioning and setup. Gained practical knowledge in designing and deploying cloud-based development environments."
 url: "https://github.com/Nisha318/Terraform-AWS-Configs/blob/main/Build%20a%20Dev%20Environment%20with%20Terraform%20and%20AWS/README.md"
 btn_label: "AWS"
 btn_class: "btn--primary"
