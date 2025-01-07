@@ -38,12 +38,12 @@ feature_row0-2:
     btn_label: "AWS"
     btn_class: "btn--primary"
     tags:
-      - AWS
-      - Internet Gateway
-      - Route Table
-      - EC2
-      - Subnet
-      - Security Group
+        - AWS
+        - Internet Gateway
+        - Route Table
+        - EC2
+        - Subnet
+        - Security Group
 
 ---
 
