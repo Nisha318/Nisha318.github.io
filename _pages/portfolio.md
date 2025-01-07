@@ -17,9 +17,9 @@ feature_row0-1:
     title: "Use Terraform to Build an AWS Three-Tier VPC Network Architecture"
     text: "I built and deployed a scalable three-tier AWS network architecture using Terraform modules. This project included configuring a Virtual Private Cloud (VPC) with route tables, subnets, NAT gateways, and an internet gateway. I automated the provisioning of EC2 instances for application hosting within the tiers and integrated S3 for secure data storage. Additionally, I deployed Application Load Balancers to ensure high availability and used AWS Certificate Manager to manage SSL/TLS certificates. This project enhanced my understanding of cloud infrastructure automation and AWS networking best practices."
     url: "https://github.com/Nisha318/Terraform-Modules/blob/main/README.md"
-  btn_label: "AWS"
-  btn_class: "btn--primary"
-  tags:
+    btn_label: "AWS"
+    btn_class: "btn--primary"
+    tags:
       - AWS Networking
       - VPC
       - Internet Gateway
@@ -44,13 +44,13 @@ feature_row0-2:
     btn_label2: "DevOps "
     btn_class: "btn--primary"
     tags:
-        - AWS
-        - Internet Gateway
-        - Route Table
-        - EC2
-        - Subnet
-        - Security Group   
-        
+      - AWS
+      - Internet Gateway
+      - Route Table
+      - EC2
+      - Subnet
+      - Security Group   
+
 ---
 
 ## Projects in Cloud Computing
