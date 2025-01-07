@@ -217,7 +217,7 @@ feature_row5:
         -  
 ---
 
-## Projects in Computer Science
+## Projects in Cloud Computing
 
 {% include feature_row id="feature_row0-1" type="left" %}
 <a name="Gifify AWS app"></a>
@@ -232,7 +232,7 @@ feature_row5:
 <a name="KD Tree algorithm"></a>
 {% include feature_row id="feature_row0-5" type="left" %}
 
-## Projects in Data Science
+## Projects in Penetration Testing
 
 &nbsp;
 <a name="Signal-Processing">
@@ -252,4 +252,20 @@ feature_row5:
 {% include feature_row id="feature_row3" type="left" %}
 
 
-
+## Projects in Security Operations
+&nbsp;
+<a name="Signal-Processing">
+{% include feature_row id="feature_row1-0" type="left" %}
+{% include feature_row id="feature_row5" type="left" %}
+<a name="Deep-Learning">
+{% include feature_row id="feature_row2-1" type="left" %}
+<a name="Marketing-Analytics"></a>
+{% include feature_row id="feature_row2-2" type="left" %}
+<a name="Purchase-Analytics"></a>
+{% include feature_row id="feature_row2-3" type="left" %}
+<a name="Tableau-Dashboard"></a>
+{% include feature_row id="feature_row2-4" type="left" %}
+<!-- <a name="Digital-Marketing"></a>
+{% include feature_row id="feature_row4" type="left" %} -->
+<a name="Recommender-System"></a>
+{% include feature_row id="feature_row3" type="left" %}
