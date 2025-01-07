@@ -14,6 +14,7 @@ date: April 30, 2023
 feature_row0-1:
   - image_path: assets/images/aws/aws-three-tier-vpc.png
     alt: "AWS networking"
+<<<<<<< HEAD
     title: "Use Terraform to Build an AWS Three-Tier VPC Network Architecture"
     text: "I built and deployed a scalable three-tier AWS network architecture using Terraform modules. This project included configuring a Virtual Private Cloud (VPC) with route tables, subnets, NAT gateways, and an internet gateway. I automated the provisioning of EC2 instances for application hosting within the tiers and integrated S3 for secure data storage. Additionally, I deployed Application Load Balancers to ensure high availability and used AWS Certificate Manager to manage SSL/TLS certificates. This project enhanced my understanding of cloud infrastructure automation and AWS networking best practices."
 url: "https://github.com/Nisha318/Terraform-Modules/blob/main/README.md"
@@ -50,6 +51,24 @@ tags:
   - EC2
   - Subnet
   - Security Group   
+=======
+    title: "AWS Three-Tier VPC Network Architecture"
+    text: "I built and deployed a scalable three-tier AWS network architecture using Terraform modules. This project included configuring a Virtual Private Cloud (VPC) with route tables, subnets, NAT gateways, and an internet gateway. I automated the provisioning of EC2 instances for application hosting within the tiers and integrated S3 for secure data storage. Additionally, I deployed Application Load Balancers to ensure high availability and used AWS Certificate Manager to manage SSL/TLS certificates. This project enhanced my understanding of cloud infrastructure automation and AWS networking best practices."
+    url: "https://github.com/Nisha318/Terraform-Modules/blob/main/README.md"
+    btn_label: "AWS"
+    btn_class: "btn--primary"
+    tags:
+        - AWS
+        - VPC
+        - Internet Gateway
+        - Route Table
+        - NAT Gateway
+        - Subnets
+        - S3
+        - AWS Certificate Manager
+        - Application Load Balancer
+        - Terraform Modules
+>>>>>>> 2ed193084f31bd18aa8db870e29ec807c76ff657
 ---
 
 ## Projects in Cloud Computing
@@ -57,3 +76,5 @@ tags:
 {% include feature_row id="feature_row0-1" type="left" %}
 <a name="Use Terraform to Build an AWS Three-Tier VPC Network Architecture"></a>
 
+{% include feature_row id="feature_row0-2" type="left" %}
+<a name="Buid a Dev Environment with Terraform and AWS"></a>
