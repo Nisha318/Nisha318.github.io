@@ -12,7 +12,7 @@ date: April 30, 2023
 feature_row0-1:
   - image_path: assets/images/aws/aws-three-tier-vpc.png
     alt: "AWS Networking"
-    title: "Use Terraform to Build an AWS Three-Tier VPC Network Architecture"
+    title: "Use"
     text: "I built and deployed a scalable three-tier AWS network architecture using Terraform modules. This project included configuring a VPC with route tables, subnets, and an internet gateway. I automated the provisioning of EC2 instances for application hosting within the tiers and integrated S3 for secure data storage. Additionally, I deployed Application Load Balancers to ensure high availability. This project enhanced my understanding of cloud infrastructure automation and AWS networking best practices."
     url: "https://github.com/Nisha318/Terraform-Modules/blob/main/README.md"
     btn_label: "View Code"
