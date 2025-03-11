@@ -34,6 +34,8 @@ In this blog post, I'll walk you through the process of rooting the Academy box 
 - File upload bypass techniques
 - Linux privilege escalation through cron job manipulation
 
+<img src="/assets/images/tcm-academy/academy-01.png">
+
 ## Environment Setup
 
 This box simulates a vulnerable educational institution's network infrastructure, specifically targeting their student registration system. The environment represents a common scenario where seemingly minor misconfigurations can lead to full system compromise.
