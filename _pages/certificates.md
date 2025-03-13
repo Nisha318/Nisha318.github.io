@@ -6,7 +6,7 @@ author_profile: true
 header:
   teaser: /assets/images/ctf_hero_header_image.png
   overlay_filter: rgba(0, 0, 0, 0.5)
-  overlay_image: /assets/images/ctf_hero_header_image.png
+  overlay_image: /assets/images/00-hero.jpg
   caption: "Photo credit: [**AI**](https://chatgpt.com/)"
 classes: wide
 ---

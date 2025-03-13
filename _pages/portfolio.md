@@ -3,7 +3,7 @@ layout: single
 title: "Portfolio"
 permalink: /portfolio/
 header:
-  overlay_image: /assets/images/ctf_hero_header_image.png
+  overlay_image: /assets/images/00-hero.jpg
   caption: "Photo credit: [AI](https://chatgpt.com/)"
 author_profile: true
 classes: wide

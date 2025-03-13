@@ -4,7 +4,7 @@ title: "Certificates"
 author_profile: true
 permalink: /test/
 header:
-    overlay_image: /assets/images/splunkbanner.png
+  overlay_image: /assets/images/00-hero.jpg
     caption: "Photo credit: [**AI-Generated**](https://chatgpt.com/)"
 author_profile: true
 classes: wide
