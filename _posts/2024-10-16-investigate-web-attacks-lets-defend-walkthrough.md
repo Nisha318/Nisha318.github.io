@@ -15,7 +15,7 @@ tagline: "A detailed walkthrough of how to solve the 'Investigating Web Attacks 
 header:
   image: /assets/images/letsdefend/webattack-0.png
   caption: "Web Attack Investigated"
-  teaser: assets/images/letsdefend/webattack-0.png
+  teaser: assets/images/letsdefend/webattack-00.png
   overlay_filter: rgba(0, 0, 0, 0.5)
   overlay_image: /assets/images/ctf_hero_header_image.png
   caption: "Photo credit: [**AI**](https://chatgpt.com/)"

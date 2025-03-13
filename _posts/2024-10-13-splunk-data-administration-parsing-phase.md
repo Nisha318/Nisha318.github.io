@@ -14,7 +14,7 @@ tagline: "Unlocking the Power of Data: Optimizing Event Processing and Privacy i
 header:
   image: /assets/images/splunk/parsing-2.png
   caption: "Optimizing Splunk Data Administration"
-  teaser: assets/images/splunk/parsing-2.png
+  teaser: assets/images/splunk/parsing-00.png
   overlay_filter: rgba(0, 0, 0, 0.5)
   overlay_image: /assets/images/ctf_hero_header_image.png
   caption: "Photo credit: [**AI**](https://chatgpt.com/)"

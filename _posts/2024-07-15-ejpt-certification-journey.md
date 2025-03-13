@@ -9,7 +9,7 @@ tags:
   - Ethical Hacking
   - Penetration Testing
 header:
-  teaser: assets/docs/certificates/ine-ejpt.png
+  teaser: assets/images/ine-ejpt-00.png
   #image: /assets/docs/certificates/ine-ejpt.png
   caption: "My INE Security Junior Penetration Tester (eJPT) certification"
 toc: true
