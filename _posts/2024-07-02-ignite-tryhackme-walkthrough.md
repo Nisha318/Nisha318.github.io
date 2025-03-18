@@ -223,8 +223,7 @@ cat /root/root.txt
 
 I retrieved the root flag from /root/root.txt:
 
-bash
-Copy code
+
 
 ### Root flag:
 
@@ -240,7 +239,7 @@ To prevent similar attacks:
 ### Input Validation
 - Sanitize and validate all user inputs, especially in query parameters.
 
-###Disable Dangerous PHP Functions
+### Disable Dangerous PHP Functions
 - In your php.ini, disable functions such as eval(), system(), and exec() unless absolutely necessary. Test thoroughly to ensure application functionality.
 
 ### Least Privilege Principle
