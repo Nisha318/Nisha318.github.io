@@ -30,7 +30,7 @@ I kicked things off with an aggressive all-port scan:
 nmap -p- -T4 -A 10.10.95.27
 ```
 
-<img src="assets/images/thm/ctf/lazyadmin-02.png" alt="Nmap Scan Results for LazyAdmin">
+<img src="assets/images/thm/ctf/lazyadmin-02.png">
 
 Discovered open ports:
 - 22 (SSH)
