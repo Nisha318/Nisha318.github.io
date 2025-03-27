@@ -18,7 +18,7 @@ keywords: ["LazyAdmin walkthrough", "TryHackMe LazyAdmin", "SweetRice CMS exploi
 toc: true
 toc_sticky: true
 header:
-  overlay_image: /assets/images/thm/ctf/lazyadmin-hero.jpg
+  overlay_image: /assets/images/thm/ctf/lazyadmin-01.jpg
   overlay_filter: 0.3
   caption: "Pwned the LazyAdmin machine on TryHackMe"
 ---
