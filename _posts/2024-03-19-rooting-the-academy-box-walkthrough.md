@@ -7,20 +7,44 @@ toc: true
 toc_label: "Table of Contents"
 toc_sticky: true
 categories:
-  - Blog
+  - TryHackMe
+  - Ethical Hacking
+  - TCM Academy
+  - Capture The Flag
+  - Linux Security
 tags:
   - Penetration Testing
   - Enumeration
   - Linux Privilege Escalation
   - Web App Security
+  - FTP Enumeration
+  - Reverse Shell
+  - Cron Job Exploitation
+  - File Upload Vulnerability
+  - Hash Cracking
+  - CTF Walkthrough
+seo_keywords:
+  - Rooting Academy Box walkthrough
+  - TCM Academy Practical Ethical Hacker lab
+  - TryHackMe Academy CTF
+  - Linux privilege escalation via cron jobs
+  - Ethical hacking step-by-step guide
+  - File upload vulnerability exploitation
+  - Hashcat password cracking demo
+  - Enumeration and exploitation techniques
+  - How to root a CTF box
+  - Academy box penetration testing tutorial
+excerpt: >
+  In this ethical hacking walkthrough, follow step-by-step as I enumerate, exploit, and escalate privileges to root the Academy box from TCM Academy’s Practical Ethical Hacking course. Learn real-world skills like FTP enumeration, file upload exploitation, hash cracking with Hashcat, and Linux privilege escalation via cron job abuse.
 tagline: "From Zero to Root: A Step-by-Step Guide to Compromising the Academy Box"
 header:
   image: /assets/images/tcm-academy/academy-header-image.png
   caption: "Navigating the Digital Labyrinth: A Journey Through Ethical Hacking"
-  teaser: /assets/images/tcm-academy/academy-teaser.png
+  teaser: /assets/images/tcm-academy/academy-00.png
   overlay_image: /assets/images/tcm-academy/academy-overlay-pattern.png
   overlay_filter: rgba(0, 0, 0, 0.5)
 ---
+
 
 # Rooting the Academy Box: A Practical Ethical Hacking Walkthrough
 
