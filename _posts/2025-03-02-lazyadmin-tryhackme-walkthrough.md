@@ -10,10 +10,7 @@ related: true
 description: "A complete walkthrough of the LazyAdmin room on TryHackMe, demonstrating enumeration, exploitation, and privilege escalation on a Linux system running SweetRice CMS."
 tags: [TryHackMe, CTF, Walkthrough, Privilege Escalation, Web Exploits, Reverse Shell, Enumeration, Cybersecurity]
 categories: 
-  - TryHackMe
-  - CTF Walkthroughs
-  - Linux Exploitation
-  - Web Application Security
+  - Blog
 keywords: ["LazyAdmin walkthrough", "TryHackMe LazyAdmin", "SweetRice CMS exploit", "Privilege escalation", "CTF root flag", "web shell exploit", "Linux reverse shell", "named pipe reverse shell", "exploit-db 40716", "exploit-db 40718"]
 toc: true
 toc_sticky: true

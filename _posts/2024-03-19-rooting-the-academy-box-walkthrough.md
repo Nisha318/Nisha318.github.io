@@ -7,7 +7,7 @@ toc: true
 toc_label: "Table of Contents"
 toc_sticky: true
 categories:
-  - blog
+  - Blog
 tags:
   - Penetration Testing
   - Enumeration
