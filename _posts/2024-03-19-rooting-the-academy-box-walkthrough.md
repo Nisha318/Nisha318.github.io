@@ -7,11 +7,7 @@ toc: true
 toc_label: "Table of Contents"
 toc_sticky: true
 categories:
-  - TryHackMe
-  - Ethical Hacking
-  - TCM Academy
-  - Capture The Flag
-  - Linux Security
+  - blog
 tags:
   - Penetration Testing
   - Enumeration
