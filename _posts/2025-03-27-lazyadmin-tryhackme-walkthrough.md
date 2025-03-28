@@ -22,7 +22,8 @@ tags:
 toc: true
 toc_sticky: true
 header:
-  overlay_image: /assets/images/thm/ctf/lazyadmin-01.jpg
+  teaser: /assets/images/thm/ctf/lazyadmin-01.png
+  overlay_image: /assets/images/00-hero.jpg
   overlay_filter: 0.3
   caption: "Pwned the LazyAdmin machine on TryHackMe"
 ---
@@ -48,7 +49,7 @@ I began by performing a full port scan to identify open services:
 nmap -p- -T4 -A 10.10.95.27
 ```
 
-<img src="assets/images/thm/ctf/lazyadmin-02.png" alt="Nmap Scan Results for LazyAdmin" style="max-width:100%; height:auto;">
+<img src="assets/images/thm/ctf/lazyadmin-02.png" alt="Nmap Scan Results for LazyAdmin">
 
 The results revealed two open ports:
 - **Port 22:** SSH  
