@@ -49,7 +49,7 @@ I began by performing a full port scan to identify open services:
 nmap -p- -T4 -A 10.10.95.27
 ```
 
-<img src="assets/images/thm/ctf/lazyadmin-02.png" alt="Nmap Scan Results for LazyAdmin">
+<img src="assets/images/thm/ctf/lazyadmin-02.png">
 
 The results revealed two open ports:
 - **Port 22:** SSH  
