@@ -6,7 +6,7 @@ classes: wide
 author_profile: true
 excerpt: "A step-by-step walkthrough of compromising the Dev Box from TCM Security’s PNPT training course, including detailed explanations, mitigation steps, and a comprehensive mapping to MITRE ATT&CK tactics and techniques."
 read_time: true
-comments: no
+comments: false
 share: true
 related: true
 toc: true
@@ -25,11 +25,10 @@ tags:
 tagline: "A step-by-step walkthrough of compromising the Dev Box from TCM Security’s PNPT training course, including detailed explanations, mitigation steps, and a comprehensive mapping to MITRE ATT&CK tactics and techniques."
 header:
   image: /assets/images/tcm-security/dev-00.png
-  caption: "Dev"
   teaser: /assets/images/tcm-security/dev-00.png
   overlay_filter: rgba(0, 0, 0, 0.5)
-  overlay_image: "/assets/images/tcm-security/dev-00.png"
-  caption: "Photo credit: [**AI**](https://chatgpt.com/)""
+  overlay_image: /assets/images/tcm-security/dev-00.png
+  caption: "Photo credit: [**AI-generated**](https://chat.openai.com/)"
 ---
 
 ## Introduction
