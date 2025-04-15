@@ -25,7 +25,7 @@ header:
   caption: "Dev"
   teaser: /assets/images/tcm-security/dev-00.png
   overlay_filter: rgba(0, 0, 0, 0.5)
-  overlay_image: /assets/images/tcm-security/dev-00.png
+  overlay_image: "/assets/images/tcm-security/dev-00.png"
   caption: "Photo credit: [**AI**](https://chatgpt.com/)""
 ---
 
