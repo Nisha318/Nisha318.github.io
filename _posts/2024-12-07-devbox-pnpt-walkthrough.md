@@ -14,7 +14,6 @@ tags:
   - Linux 
 title: "Compromising the Dev Box: A PNPT Walkthrough with Mitigation and MITRE ATT&CK Mapping"
 date: 2024-12-07
-tags: [PNPT, TCM Security, Dev Box, MITRE ATT&CK, exploitation, mitigation]
 excerpt: "A step-by-step walkthrough of compromising the Dev Box from TCM Security’s PNPT training course, including detailed explanations, mitigation steps, and a comprehensive mapping to MITRE ATT&CK tactics and techniques."
 toc: true
 toc_sticky: true
