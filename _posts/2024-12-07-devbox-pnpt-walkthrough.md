@@ -17,7 +17,7 @@ date: 2024-12-07
 tags: [PNPT, TCM Security, Dev Box, MITRE ATT&CK, exploitation, mitigation]
 excerpt: "A step-by-step walkthrough of compromising the Dev Box from TCM Security’s PNPT training course, including detailed explanations, mitigation steps, and a comprehensive mapping to MITRE ATT&CK tactics and techniques."
 toc: true
-toc_sticky: true
+toc_sticky: false
 toc_label: "Walkthrough Outline"
 ---
 
@@ -60,7 +60,7 @@ Visiting the web service on port **80** in the browser revealed a default Apache
 
 This Bolt - Installation Error page is a default message that appears when Bolt CMS is installed in the wrong web directory. Instead of pointing to /var/www/html/public/, the web server is configured to serve from /var/www/html/. This misconfiguration inadvertently exposes internal application files and setup instructions.
 
-### Why This Matters
+#### Why This Matters
 
 - **Information Disclosure:** Confirms Bolt CMS use and reveals internal paths.
 
@@ -93,7 +93,7 @@ ffuf -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt:FUZZ -u htt
 
 With scans in progress, I turned to explore services revealed by Nmap.
 
-### NFS Enumeration and Credential Discovery
+#### NFS Enumeration and Credential Discovery
 
 Port **2049** revealed a running NFS service. Using showmount, I queried the exported directories:
 
@@ -180,12 +180,12 @@ ssh -I id_rsa jp@10.0.100.12
 However, this prompted for a passphrase for the key, indicating additional protection was in play.
 
 
-### Directory Busting Results and Discovery
+#### Directory Busting Results and Discovery
 
 At this point I decided to continue on with my post-scan analysis, revisiting the results of the FFUF directory brute-force scans.
 
 
-### Port 80 Directory Results
+**Port 80 Directory Results**
 
 Several directories responded with **301 Moved Permanently** HTTP status codes, indicating redirection. These included:
 
@@ -205,7 +205,7 @@ This suggested the presence of potentially accessible internal application folde
 <img src="/assets/images/tcm-academy/dev-09.png">  
 
 
-### Port 8080 Directory Results
+**Port 8080 Directory Results**
 
 On port **8080**, the FFUF scan revealed a /dev directory that responded with a **301 redirect** and a **200 OK**, indicating successful content retrieval. This was especially interesting in the context of the earlier discovery in `todo.txt`, where the user “jp” mentioned working on a development website and their love for Java.
 
@@ -216,7 +216,7 @@ This clue aligned perfectly with the `/dev` path and prompted me to investigate 
 
 
 
-### Discovering BoltWire CMS on Port 8080
+#### Discovering BoltWire CMS on Port 8080
 
 From the results of my FFUF scan on port **8080**, the `/dev` directory really stood out. Based on earlier hints in the `todo.txt` file referencing a development website and the user's interest in Java, this directory warranted further exploration.
 
@@ -232,7 +232,7 @@ To my surprise, this led to a BoltWire CMS setup page confirming the application
 
 This page indicated that the CMS instance was live and functional—an excellent opportunity to enumerate further and possibly find a way to exploit the system.
 
-### Exploring Web-Exposed Directories
+#### Exploring Web-Exposed Directories
 
 I explored several of the directories discovered during the directory brute-force scan on port 80:
 
@@ -254,7 +254,7 @@ This included a username of bolt and a password of I_love_java, which immediatel
 
 
 
-### Identifying BoltWire Version and Planning Exploitation
+#### Identifying BoltWire Version and Planning Exploitation
 
 After logging into the BoltWire CMS running on port `8080` BoltWire CMS running on port 8080, I explored various available actions. Although I was able to register and log in successfully, no direct administrative functionality was accessible from the dashboard.
 
@@ -281,7 +281,7 @@ A quick search on Google and Exploit-DB surfaced a known Local File Inclusion (L
 
 
 
-### Choosing the Exploitation Path
+## Choosing the Exploitation Path
 
 After reviewing the available options, I determined that the **Local File Inclusion (LFI)** exploit was the most appropriate path forward for the following reasons:
 
@@ -297,7 +297,7 @@ Armed with this information, I proceeded to test the vulnerability.
 
 
 
-## Performing Local File Inclusion
+#### Performing Local File Inclusion
 
 The exploit format from ExploitDB ID 48411 requires a GET request to:
 
@@ -318,7 +318,7 @@ This successfully disclosed the contents of the `/etc/passwd` file.
 
 
 
-### Identifying Valid User Accounts
+#### Identifying Valid User Accounts
 
 Scrolling through the output, I came across a user named jeanpaul. This stood out because it aligned with the initials jp from the previously recovered todo.txt file found inside the NFS share.
 
@@ -327,7 +327,7 @@ This was a strong lead — it suggested a valid system user, potentially with a 
 <img src="/assets/images/tcm-academy/dev-37.png">
 
 
-### Gaining SSH Access as JeanPaul
+#### Gaining SSH Access as JeanPaul
 
 Now that I had a valid username (jeanpaul) and a private key (id_rsa) recovered from the mounted NFS share, I attempted to SSH into the target system using the following command:
 
@@ -367,7 +367,7 @@ From the output of `sudo -l`, I discovered that `jeanpaul` had `NOPASSWD` permis
 
 This revealed that the zip binary could be run with root privileges. To investigate potential abuses, I consulted <a href="https://gtfobins.github.io/gtfobins/zip/#sudo" target="_blank">GTFOBins</a>, which confirmed that `zip` is a known escalation vector if misconfigured this way.
 
-### GTFOBins Guidance
+**GTFOBins Guidance**
 
 If the zip binary is allowed to run as superuser by sudo, it does not drop the elevated privileges and may be used to escalate or maintain privileged access.
 
@@ -407,12 +407,10 @@ And there it was—the flag:
 
 # Detection Opportunities and ATT&CK Matrix
 
-## MITRE ATT&CK Framework Mapping and Mitigation Strategies
+### MITRE ATT&CK Framework Mapping and Mitigation Strategies
 
 
 To strengthen the defensive posture of environments against similar exploitation paths, it's crucial to align the observed attacker techniques with the MITRE ATT&CK framework. This provides defenders with visibility into how adversaries operate, and what countermeasures can be implemented to reduce risk.
-
-## Mapped ATT&CK Techniques
 
 
 | Technique | Description | Tactic |
@@ -426,7 +424,7 @@ To strengthen the defensive posture of environments against similar exploitation
 | [T1068 - Exploitation for Privilege Escalation](https://attack.mitre.org/techniques/T1068/) | GTFOBins technique via `zip` used for local privilege escalation. | Privilege Escalation |
 | [T1078 - Valid Accounts](https://attack.mitre.org/techniques/T1078/) | SSH login was performed using cracked private key and password. | Persistence |
 
-## Mitigation Strategies
+### Mitigation Strategies
 
 | Mitigation | Description |
 |------------|-------------|
@@ -438,11 +436,9 @@ To strengthen the defensive posture of environments against similar exploitation
 | **M1047 - Audit** | Log and monitor usage of sensitive paths like `/etc/`, access to SSH keys, and execution of privilege escalation binaries. |
 
 
-## Detection Opportunities
+### Detection Opportunities
 
 These are specific areas where defenders could have detected malicious activity during the compromise of the Dev Box. Mapping them to log sources and behaviors helps defenders create alerts, dashboards, and hunt queries.
-
-## Detection Opportunities
 
 | Log Source / Control Point       | Detection Focus                                                                 |
 |----------------------------------|----------------------------------------------------------------------------------|
