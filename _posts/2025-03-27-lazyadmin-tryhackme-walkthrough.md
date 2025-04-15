@@ -3,6 +3,7 @@ title: "LazyAdmin TryHackMe Walkthrough"
 layout: single
 classes: wide
 author_profile: true
+excerpt: "A complete walkthrough of the LazyAdmin room on TryHackMe, demonstrating enumeration, exploitation, and privilege escalation."
 read_time: true
 comments: no
 share: true

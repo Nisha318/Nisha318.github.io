@@ -38,7 +38,7 @@ header:
 
 ---
 
-In this TryHackMe Ignite room walkthrough, I exploit a Remote Code Execution (RCE) vulnerability in Fuel CMS version 1.4.1 (CVE-2018-16763). The objective was to gain command execution on the target, understand how the exploit works, and identify ways to defend against such vulnerabilities.
+In this TryHackMe Ignite room walkthrough, I exploit a Remote Code Execution (RCE) vulnerability in Fuel CMS version 1.4.1 (CVE-2018-16763). The objective was to gain command execution on the target, understand how the exploit works, and identify ways to defend against such vulnerabilities. This walkthrough covers not only how to gain remote command execution but also how to escalate privileges using credential reuse via misconfigured application credentials to achieve root access.
 
 👉 [TryHackMe Ignite Room](https://tryhackme.com/room/ignite)
 
