@@ -2,6 +2,9 @@
 layout: single
 classes: wide
 author_profile: true
+toc: true
+toc_sticky: true
+toc_label: "Walkthrough Outline"
 categories: 
   - Blog
 tags: 
@@ -15,9 +18,6 @@ tags:
 title: "Compromising the Dev Box: A PNPT Walkthrough with Mitigation and MITRE ATT&CK Mapping"
 date: 2024-12-07
 excerpt: "A step-by-step walkthrough of compromising the Dev Box from TCM Security’s PNPT training course, including detailed explanations, mitigation steps, and a comprehensive mapping to MITRE ATT&CK tactics and techniques."
-toc: true
-toc_sticky: true
-toc_label: "Walkthrough Outline"
 tagline:  "A step-by-step walkthrough of compromising the Dev Box from TCM Security’s PNPT training course, including detailed explanations, mitigation steps, and a comprehensive mapping to MITRE ATT&CK tactics and techniques."
 header:
   image: /assets/images/tcm-security/dev-00.png
