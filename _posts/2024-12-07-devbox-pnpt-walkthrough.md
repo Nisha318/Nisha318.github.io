@@ -17,8 +17,16 @@ date: 2024-12-07
 tags: [PNPT, TCM Security, Dev Box, MITRE ATT&CK, exploitation, mitigation]
 excerpt: "A step-by-step walkthrough of compromising the Dev Box from TCM Security’s PNPT training course, including detailed explanations, mitigation steps, and a comprehensive mapping to MITRE ATT&CK tactics and techniques."
 toc: true
-toc_sticky: false
+toc_sticky: true
 toc_label: "Walkthrough Outline"
+tagline:  "A step-by-step walkthrough of compromising the Dev Box from TCM Security’s PNPT training course, including detailed explanations, mitigation steps, and a comprehensive mapping to MITRE ATT&CK tactics and techniques."
+header:
+  image: /assets/images/tcm-security/dev-00.png
+  caption: "Dev"
+  teaser: /assets/images/tcm-security/dev-00.png
+  overlay_filter: rgba(0, 0, 0, 0.5)
+  overlay_image: /assets/images/tcm-security/dev-00.png
+  caption: "Photo credit: [**AI**](https://chatgpt.com/)""
 ---
 
 ## Introduction
@@ -60,7 +68,7 @@ Visiting the web service on port **80** in the browser revealed a default Apache
 
 This Bolt - Installation Error page is a default message that appears when Bolt CMS is installed in the wrong web directory. Instead of pointing to /var/www/html/public/, the web server is configured to serve from /var/www/html/. This misconfiguration inadvertently exposes internal application files and setup instructions.
 
-#### Why This Matters
+**Why This Matters**
 
 - **Information Disclosure:** Confirms Bolt CMS use and reveals internal paths.
 
@@ -93,7 +101,7 @@ ffuf -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt:FUZZ -u htt
 
 With scans in progress, I turned to explore services revealed by Nmap.
 
-#### NFS Enumeration and Credential Discovery
+**NFS Enumeration and Credential Discovery**
 
 Port **2049** revealed a running NFS service. Using showmount, I queried the exported directories:
 
@@ -180,7 +188,7 @@ ssh -I id_rsa jp@10.0.100.12
 However, this prompted for a passphrase for the key, indicating additional protection was in play.
 
 
-#### Directory Busting Results and Discovery
+**Directory Busting Results and Discovery**
 
 At this point I decided to continue on with my post-scan analysis, revisiting the results of the FFUF directory brute-force scans.
 
@@ -216,7 +224,7 @@ This clue aligned perfectly with the `/dev` path and prompted me to investigate 
 
 
 
-#### Discovering BoltWire CMS on Port 8080
+**Discovering BoltWire CMS on Port 8080**
 
 From the results of my FFUF scan on port **8080**, the `/dev` directory really stood out. Based on earlier hints in the `todo.txt` file referencing a development website and the user's interest in Java, this directory warranted further exploration.
 
@@ -232,7 +240,7 @@ To my surprise, this led to a BoltWire CMS setup page confirming the application
 
 This page indicated that the CMS instance was live and functional—an excellent opportunity to enumerate further and possibly find a way to exploit the system.
 
-#### Exploring Web-Exposed Directories
+**Exploring Web-Exposed Directories**
 
 I explored several of the directories discovered during the directory brute-force scan on port 80:
 
@@ -254,7 +262,7 @@ This included a username of bolt and a password of I_love_java, which immediatel
 
 
 
-#### Identifying BoltWire Version and Planning Exploitation
+**Identifying BoltWire Version and Planning Exploitation**
 
 After logging into the BoltWire CMS running on port `8080` BoltWire CMS running on port 8080, I explored various available actions. Although I was able to register and log in successfully, no direct administrative functionality was accessible from the dashboard.
 
@@ -297,7 +305,7 @@ Armed with this information, I proceeded to test the vulnerability.
 
 
 
-#### Performing Local File Inclusion
+**Performing Local File Inclusion**
 
 The exploit format from ExploitDB ID 48411 requires a GET request to:
 
@@ -318,7 +326,7 @@ This successfully disclosed the contents of the `/etc/passwd` file.
 
 
 
-#### Identifying Valid User Accounts
+**Identifying Valid User Accounts**
 
 Scrolling through the output, I came across a user named jeanpaul. This stood out because it aligned with the initials jp from the previously recovered todo.txt file found inside the NFS share.
 
@@ -327,7 +335,7 @@ This was a strong lead — it suggested a valid system user, potentially with a 
 <img src="/assets/images/tcm-academy/dev-37.png">
 
 
-#### Gaining SSH Access as JeanPaul
+**Gaining SSH Access as JeanPaul**
 
 Now that I had a valid username (jeanpaul) and a private key (id_rsa) recovered from the mounted NFS share, I attempted to SSH into the target system using the following command:
 
