@@ -24,10 +24,10 @@ tags:
   - Linux 
 tagline: "A step-by-step walkthrough of compromising the Dev Box from TCM Security’s PNPT training course, including detailed explanations, mitigation steps, and a comprehensive mapping to MITRE ATT&CK tactics and techniques."
 header:
-  image: /assets/images/tcm-security/dev-00.png
+  image: /assets/images/tcm-security/dev-01.png
   teaser: /assets/images/tcm-security/dev-00.png
   overlay_filter: rgba(0, 0, 0, 0.5)
-  overlay_image: /assets/images/tcm-security/dev-00.png
+  overlay_image: /assets/images/00-hero.jpg
   caption: "Photo credit: [**AI-generated**](https://chat.openai.com/)"
 ---
 
@@ -399,7 +399,7 @@ cd /root
 cat flag.txt
 ```
 
-<img src="/assets/images/tcm-academy/dev-44.png">
+<img src="/assets/images/tcm-academy/dev-45.png">
 
 And there it was—the flag:
 
