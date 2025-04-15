@@ -36,16 +36,6 @@ header:
 In this article, I walk through my successful compromise of the Dev Box from TCM Security’s PNPT training course. The process spans reconnaissance, exploitation, and privilege escalation. I’ll also detail relevant mitigation strategies and map the techniques used to the MITRE ATT&CK framework to enhance threat defense practices.
 
 
-## Table of Contents
-
-- [Introduction](#introduction)
-- [Reconnaissance and Initial Enumeration](#reconnaissance-and-initial-enumeration)
-- [Exploitation and Privilege Escalation](#exploitation-and-privilege-escalation)
-- [MITRE ATT&CK Framework Mitigations](#mitre-attck-framework-mitigations)
-- [Mitigation and Remediation Steps](#mitigation-and-remediation-steps)
-- [Detection Opportunities and ATT&CK Matrix](#detection-opportunities-and-attck-matrix)
-- [Conclusion and Final Thoughts](#conclusion-and-final-thoughts)
-
 ## Reconnaissance and Initial Enumeration
 
 I began by conducting a full TCP port and service version scan using Nmap:
