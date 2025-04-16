@@ -106,6 +106,7 @@ defaults:
     values:
       teaser: true
       teaser_position: left
+      image: /assets/images/00-hero.jpg
       layout: single
       author_profile: true
       read_time: true
