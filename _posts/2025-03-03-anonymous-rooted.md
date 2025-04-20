@@ -2,6 +2,7 @@
 title: "Anonymous Rooted: A TryHackMe Walkthrough"
 date: 2025-03-03
 layout: single
+classes: wide
 author_profile: true
 toc: true
 toc_label: "Table of Contents"
@@ -34,6 +35,8 @@ seo:
 ## Introduction
 
 The **Anonymous** room on TryHackMe presents a classic CTF-style Linux machine that's ideal for practicing enumeration, lateral thinking, and privilege escalation. In this walkthrough, I’ll guide you through how I leveraged a misconfigured FTP service and an insecure cleanup script to gain a reverse shell on the target system — and how a single misconfigured binary handed me root.
+
+Room URL: <a target="_blank" rel="noopener noreferrer" href="https://tryhackme.com/room/anonymous"> https://tryhackme.com/room/anonymous</a>
 
 ---
 
@@ -164,7 +167,7 @@ cat user.txt
 
 ---
 
-## Investigating the Environment
+### Investigating the Environment
 
 While poking around the user's home directory, I noticed a `pics` folder. Naturally, I took a look:
 
@@ -179,7 +182,7 @@ It contained only two `.jpg` files. No hidden credentials or encoded data here �
 
 ---
 
-## Failed Sudo Escalation Attempt
+### Failed Sudo Escalation Attempt
 
 I tried to list `sudo` privileges:
 
