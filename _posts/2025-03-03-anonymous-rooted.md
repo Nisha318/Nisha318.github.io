@@ -48,7 +48,7 @@ As always, I started with **network enumeration** to get the lay of the land. I 
 sudo nmap -p- -T4 -A 10.10.64.179
 ```
 
-![Nmap Scan Results](/assets/images/tcm-security/anonymous/anonymous-02.png)
+![Nmap Scan Results](/assets/images/tcm-academy/anonymous/anonymous-02.png)
 
 ### Results Summary
 
