@@ -23,6 +23,9 @@ minimal_mistakes_skin: neon
 search: true
 url: "https://notesbynisha.com"
 baseurl: ""  # Leave as "" if your blog is at the root domain
+author:
+  name: Notes by Nisha
+  email: eunishap+tech@gmail.com
 
 
 # Build settings
@@ -99,7 +102,7 @@ footer:
       url: "https://github.com/Nisha318"
     - label: "LinkedIn"
       icon: "fab fa-linkedin-in"
-      url: "https://www.linkedin.com/in/nishaprudhomme/"
+      url: "https://www.linkedin.com/in/nmc/"
     - label: "YouTube"
       icon: "fab fa-youtube"
       url: "https://www.youtube.com/@notesbynisha281"
@@ -119,6 +122,11 @@ defaults:
       comments: true
       share: true
       related: true
+      seo:
+        image: /assets/images/00-hero.jpg
+        type: "article"
+      header:
+        image: /assets/images/00-hero.jpg
   # _pages
   - scope:
       path: "_pages"
