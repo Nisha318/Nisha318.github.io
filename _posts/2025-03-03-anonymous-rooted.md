@@ -1,7 +1,8 @@
 ---
-layout: post
 title: "Anonymous Rooted: A TryHackMe Walkthrough"
 date: 2025-03-03
+layout: single
+classes: wide
 author_profile: true
 categories: Blog
 tags: [TryHackMe, initial-access, ftp, reverse-shell, linux, privilege-escalation, suid]
