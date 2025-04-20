@@ -1,5 +1,6 @@
 ---
 title: "Anonymous Rooted: A TryHackMe Walkthrough"
+canonical_url: https://notesbynisha.com/blog/tryhackme/anonymous-rooted/
 date: 2025-03-03
 layout: single
 classes: wide
