@@ -20,7 +20,7 @@ tags:
   - suid
 excerpt: "This walkthrough covers the TryHackMe 'Anonymous' room. I gain user-level access via FTP and a writable script, capture the user flag, and escalate to root via a SUID misconfiguration."
 header:
-  image: /assets/images/tcm-academy/anonymous/anonymous-01.png
+  image: /assets/images/tcm-academy/anonymous/anonymous-00.png
   teaser: /assets/images/tcm-academy/anonymous/anonymous-00.png
   overlay_filter: "rgba(0, 0, 0, 0.5)"
   overlay_image: /assets/images/00-hero.jpg
@@ -29,7 +29,7 @@ seo:
   title: "Anonymous Room Walkthrough | TryHackMe"
   description: "A complete walkthrough of the TryHackMe Anonymous room: initial access via FTP, privilege escalation with a SUID env binary, and root flag capture."
   type: "article"
-  image: /assets/images/tcm-academy/anonymous/anonymous-01.png
+  image: /assets/images/tcm-academy/anonymous/anonymous-00.png
 ---
 
 ## Introduction

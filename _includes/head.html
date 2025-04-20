@@ -1,4 +1,17 @@
 <meta charset="utf-8">
+<!-- Open Graph Meta Tags -->
+<meta property="og:title" content="{{ page.title | escape }}" />
+<meta property="og:description" content="{{ page.excerpt | strip_html | escape }}" />
+<meta property="og:image" content="{{ page.header.image | relative_url }}" />
+<meta property="og:url" content="{{ page.url | absolute_url }}" />
+<meta property="og:type" content="article" />
+
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{{ page.title | escape }}" />
+<meta name="twitter:description" content="{{ page.excerpt | strip_html | escape }}" />
+<meta name="twitter:image" content="{{ page.header.image | relative_url }}" />
+
 
 {% seo %}
 
