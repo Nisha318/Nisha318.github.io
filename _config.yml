@@ -123,7 +123,6 @@ defaults:
       share: true
       related: true
       seo:
-        image: /assets/images/00-hero.jpg
         type: "article"
       header:
         image: /assets/images/00-hero.jpg
