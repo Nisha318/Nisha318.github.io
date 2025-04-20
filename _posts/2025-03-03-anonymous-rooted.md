@@ -6,15 +6,22 @@ author_profile: true
 toc: true
 toc_label: "Table of Contents"
 toc_sticky: true
-categories: 
+categories:
   - Blog
   - TryHackMe
-tags: [TryHackMe, initial-access, ftp, reverse-shell, linux, privilege-escalation, suid]
+tags:
+  - TryHackMe
+  - initial-access
+  - ftp
+  - reverse-shell
+  - linux
+  - privilege-escalation
+  - suid
 excerpt: "This walkthrough covers the TryHackMe 'Anonymous' room. I gain user-level access via FTP and a writable script, capture the user flag, and escalate to root via a SUID misconfiguration."
 header:
   image: /assets/images/tcm-academy/anonymous/anonymous-01.png
   teaser: /assets/images/tcm-academy/anonymous/anonymous-00.png
-  overlay_filter: rgba(0, 0, 0, 0.5)
+  overlay_filter: "rgba(0, 0, 0, 0.5)"
   overlay_image: /assets/images/00-hero.jpg
   caption: "TryHackMe Anonymous Room - Rooted"
 seo:
