@@ -1,4 +1,3 @@
-
 ---
 title: "Exploiting AlwaysInstallElevated for Windows Privilege Escalation"
 date: 2025-05-06

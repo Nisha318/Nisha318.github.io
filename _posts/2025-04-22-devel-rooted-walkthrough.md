@@ -1,4 +1,3 @@
-
 ---
 title: "Devel Rooted: A Hack The Box Walkthrough"
 canonical_url: https://notesbynisha.com/blog/hackthebox/devel-rooted/
