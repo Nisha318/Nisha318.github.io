@@ -20,6 +20,7 @@ keywords: ["TryHackMe Kenobi Walkthrough", "Linux Privilege Escalation", "ProFTP
 image: /assets/images/thm/ctf/kenobi-02.png
 ---
 
+Explore the official TryHackMe Kenobi room here:
 <a href="https://tryhackme.com/room/kenobi" class="btn btn--primary" target="_blank">🔗 View the Kenobi Room on TryHackMe</a>
 
 
@@ -58,7 +59,7 @@ sudo nmap -sC -sV -T4 10.10.223.18
 - 445 (Samba)
 - 2049 (NFS)
 
-![Default Web Page on Port 80](https://notesbynisha.com/assets/images/thm/ctf/kenobi/thm-kenobi-03.png)
+![Default Web Page on Port 80](https://notesbynisha.com/assets/images/thm/ctf/kenobi/thm-kenobi-20.png)
 ---
 
 ## Task 2: Enumerate Samba for Shares
