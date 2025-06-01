@@ -11,3 +11,8 @@ main:
     url: /certificates/
   - title: "Resources"
     url: /resources/
+    children:
+      - title: "Recommended Courses"
+        url: /courses/
+      - title: "IT Support Prep"
+        url: /it-support/
