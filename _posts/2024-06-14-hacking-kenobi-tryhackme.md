@@ -73,7 +73,7 @@ To enumerate SMB shares, I ran the following `nmap` script:
 nmap -p 445 --script=smb-enum-shares.nse,smb-enum-users.nse 10.10.223.18
 ```
 
-![SMB Share Enumeration](https://notesbynisha.com/assets/images/thm/ctf/kenobi/thm-kenobi-03.png))
+![SMB Share Enumeration](https://notesbynisha.com/assets/images/thm/ctf/kenobi/thm-kenobi-04.png)
 
 **Answer:** 3 shares were found:
 - `IPC$`
@@ -95,7 +95,7 @@ Once connected, I listed the contents of the share:
 dir
 ```
 
-![SMB Share File Listing](https://notesbynisha.com/assets/images/thm/ctf/kenobi/thm-kenobi-04.png)
+![SMB Share File Listing](https://notesbynisha.com/assets/images/thm/ctf/kenobi/thm-kenobi-05.png)
 
 **Answer:** The file present on the share was `log.txt`.
 
@@ -107,7 +107,7 @@ dir
 cat log.txt
 ```
 
-![log.txt contents](https://notesbynisha.com/assets/images/thm/ctf/kenobi/thm-kenobi-05.png)
+![log.txt contents](https://notesbynisha.com/assets/images/thm/ctf/kenobi/thm-kenobi-05-1.png)
 
 This file revealed two key findings:
 1. An RSA key was generated for user `kenobi' at `/home/kenobi/.ssh/id_rsa`
