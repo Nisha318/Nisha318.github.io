@@ -16,7 +16,6 @@ header:
   overlay_filter: 0.4
   caption: "Cyber Jedi duel in the shadows of the terminal."
   teaser: /assets/images/thm/ctf/kenobi/thm-kenobi-00.png
-  image: /assets/images/thm/ctf/kenobi/thm-kenobi-00.png
 description: "A complete walkthrough of the Kenobi TryHackMe room, covering enumeration, exploiting ProFTPD, and privilege escalation using SUID PATH hijacking."
 keywords: ["TryHackMe Kenobi Walkthrough", "Linux Privilege Escalation", "ProFTPD mod_copy exploit", "SUID PATH hijacking", "penetration testing"]
 image: /assets/images/thm/ctf/thm-kenobi-02.png
@@ -60,7 +59,11 @@ sudo nmap -sC -sV -T4 10.10.223.18
 - 445 (Samba)
 - 2049 (NFS)
 
-![Default Web Page on Port 80](https://notesbynisha.com/assets/images/thm/ctf/kenobi/thm-kenobi-20.png)
+![Browser rendering on port 80](https://notesbynisha.com/assets/images/thm/ctf/kenobi/thm-kenobi-20.png)
+*Figure: Visiting the target's IP in a browser reveals a Star Wars-themed splash page hosted on port 80.*
+
+Navigating to the machine’s IP address in a browser confirmed that a web server was active on port 80. Rather than the default Apache page, we were greeted with a stylized Star Wars-themed image, adding some fun flair while confirming the HTTP service is live. This page didn’t expose sensitive info, but confirmed Apache or similar is configured to serve custom content.
+
 ---
 
 ## Task 2: Enumerate Samba for Shares
