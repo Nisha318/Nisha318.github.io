@@ -245,7 +245,7 @@ But one binary stood out:
 /usr/bin/menu
 ```
 
-![Find SUID files](https://notesbynisha.com/assets/images/thm/ctf/kenobi/thm-kenobi-14.png)
+![Find SUID files2](https://notesbynisha.com/assets/images/thm/ctf/kenobi/thm-kenobi-14.png)
 
 
 This is **not** a standard utility on Linux systems, and it’s unusual for a custom binary to have SUID permissions. This made it a prime candidate for further analysis.
