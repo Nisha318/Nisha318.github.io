@@ -29,10 +29,6 @@ header:
   overlay_filter: rgba(0, 0, 0, 0.5)
   overlay_image: /assets/images/thm/thm-ice-0.png
   caption: "Photo credit: [**imgur**](https://imgur.com/6Ijftag)"
-
-
-
-
 categories: 
   - Blog
 tags: 
@@ -46,11 +42,6 @@ tags:
   - Linux Privilege Escalation
 toc: true
 toc_sticky: true
-header:
-  teaser: /assets/images/thm/ctf/lazyadmin-01.png
-  overlay_image: /assets/images/00-hero.jpg
-  overlay_filter: 0.3
-  caption: "Pwned the LazyAdmin machine on TryHackMe"
 ---
 
 ## Overview
