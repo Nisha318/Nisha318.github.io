@@ -25,10 +25,9 @@ tags:
   - Privilege Escalation
 tagline: "Steel Mountain - TryHackMe Walkthrough by Nisha"
 header:
-  teaser: /assets/images/thm/ctf/steelmountain/
+  teaser: /assets/images/thm/steelmountain/thm-steel-mountain-00.png
   overlay_filter: rgba(0, 0, 0, 0.5)
-  overlay_image: /assets/images/thm/thm-ice-0.png
-  caption: "Photo credit: [**imgur**](https://imgur.com/6Ijftag)"
+  overlay_image: /assets/images/00-hero.jpg
 categories: 
   - Blog
 tags: 
