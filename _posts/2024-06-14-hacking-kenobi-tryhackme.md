@@ -20,6 +20,9 @@ keywords: ["TryHackMe Kenobi Walkthrough", "Linux Privilege Escalation", "ProFTP
 image: /assets/images/thm/ctf/kenobi-02.png
 ---
 
+<a href="https://tryhackme.com/room/kenobi" class="btn btn--primary" target="_blank">🔗 View the Kenobi Room on TryHackMe</a>
+
+
 ![Featured Image: Jedi Duel](https://notesbynisha.com/assets/images/thm/ctf/kenobi/thm-kenobi-02.png)
 
 The **Kenobi** room on TryHackMe is a beginner-friendly Linux box focused on enumeration, exploiting Samba, leveraging a vulnerable ProFTPD service, and escalating privileges using SUID binaries. It’s a great room for anyone learning about Linux enumeration and privilege escalation paths.
@@ -165,9 +168,7 @@ SITE CPTO /var/tmp/id_rsa
 ### Mounting /var and Retrieving the Private Key
 
 **Lets mount the /var/tmp directory to our machine**
-mkdir /mnt/kenobiNFS
-mount MACHINE_IP:/var /mnt/kenobiNFS
-ls -la /mnt/kenobiNFS
+
 
 ```bash
 sudo mkdir /mnt/kenobiNFS
