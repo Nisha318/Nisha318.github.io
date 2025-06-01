@@ -2,8 +2,8 @@
 layout: single
 title: "Hacking Kenobi: From Anonymous Access to Root like a Rebel"
 date: 2024-06-14
-categories: [Blog, TryHackMe, Walkthrough, Linux, Privilege Escalation]
-tags: [Nmap, Samba, FTP, Apache, SUID, Netcat, Linux PrivEsc, Kenobi, MITRE ATT&CK]
+categories: Blog
+tags: [Nmap, Samba, FTP, Apache, SUID, Netcat, Linux PrivEsc, Kenobi, MITRE ATT&CK, TryHackMe, Walkthrough, Privilege Escalation]
 author_profile: true
 read_time: true
 related: true
@@ -15,8 +15,8 @@ header:
   overlay_image: /assets/images/thm/ctf/kenobi-02.png
   overlay_filter: 0.4
   caption: "Cyber Jedi duel in the shadows of the terminal."
-  teaser: /assets/images/thm/ctf/kenobi-02.png
-  image: /assets/images/thm/ctf/kenobi-02.png
+  teaser: /assets/images/thm/ctf/kenobi/kenobi-02.png
+  image: /assets/images/thm/ctf/kenobi/kenobi-02.png
 description: "A complete walkthrough of the Kenobi TryHackMe room, covering enumeration, exploiting ProFTPD, and privilege escalation using SUID PATH hijacking."
 keywords: ["TryHackMe Kenobi Walkthrough", "Linux Privilege Escalation", "ProFTPD mod_copy exploit", "SUID PATH hijacking", "penetration testing"]
 image: /assets/images/thm/ctf/kenobi-02.png
