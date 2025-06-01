@@ -22,10 +22,6 @@ keywords: ["TryHackMe Kenobi Walkthrough", "Linux Privilege Escalation", "ProFTP
 image: /assets/images/thm/ctf/thm-kenobi-02.png
 ---
 
-Explore the official TryHackMe Kenobi room here:
-<a href="https://tryhackme.com/room/kenobi" class="btn btn--primary" target="_blank">🔗 View the Kenobi Room on TryHackMe</a>
-
-
 ![Featured Image: Jedi Duel](https://notesbynisha.com/assets/images/thm/ctf/kenobi/thm-kenobi-02.png)
 
 The **Kenobi** room on TryHackMe is a beginner-friendly Linux box focused on enumeration, exploiting Samba, leveraging a vulnerable ProFTPD service, and escalating privileges using SUID binaries. It’s a great room for anyone learning about Linux enumeration and privilege escalation paths.
@@ -36,6 +32,9 @@ This walkthrough is structured around the key tasks provided in the room:
 - **Task 2**: Enumerate Samba for shares
 - **Task 3**: Gain initial access with ProFtpd
 - **Task 4**: Escalate privileges via Path Variable Manipulation
+
+Explore the official TryHackMe Kenobi room here:
+<a href="https://tryhackme.com/room/kenobi" class="btn btn--primary" target="_blank">🔗 View the Kenobi Room on TryHackMe</a>
 
 ---
 
@@ -51,7 +50,7 @@ sudo nmap -sC -sV -T4 10.10.223.18
 ```
 ![Nmap Full Scan Output](https://notesbynisha.com/assets/images/thm/ctf/kenobi/thm-kenobi-03.png)
 
-
+**Question:**Scan the machine with nmap, how many ports are open?
 **Answer:** There were **7** open ports:
 - 21 (FTP)
 - 22 (SSH)
@@ -75,6 +74,8 @@ nmap -p 445 --script=smb-enum-shares.nse,smb-enum-users.nse 10.10.223.18
 
 ![SMB Share Enumeration](https://notesbynisha.com/assets/images/thm/ctf/kenobi/thm-kenobi-04.png)
 
+
+**Question:** Using the nmap command above, how many shares have been found?
 **Answer:** 3 shares were found:
 - `IPC$`
 - `anonymous`
@@ -82,8 +83,6 @@ nmap -p 445 --script=smb-enum-shares.nse,smb-enum-users.nse 10.10.223.18
 
 We then accessed the `anonymous` share using `smbclient`:
 
-**Discovered Shares:** IPC$, anonymous, print$  
-**Answer:** 3 shares
 
 ```bash
 smbclient //10.10.223.18/anonymous
@@ -96,6 +95,9 @@ dir
 ```
 
 ![SMB Share File Listing](https://notesbynisha.com/assets/images/thm/ctf/kenobi/thm-kenobi-05.png)
+
+**Question:** Once you're connected, list the files on the share. What is the file can you see?
+
 
 **Answer:** The file present on the share was `log.txt`.
 
@@ -113,12 +115,15 @@ This file revealed two key findings:
 1. An RSA key was generated for user `kenobi' at `/home/kenobi/.ssh/id_rsa`
 2. A ProFTPD configuration was mentioned—suggesting anonymous FTP is active and potentially exploitable via `mod_copy`.
 
+**Question:** What port is FTP running on?
+
+**Answer:** FTP is running on port **21**.
+
 
 ---
 
 ### Enumerating Network File System (NFS)
 
-**Answer:** FTP is running on port **21**.
 
 We knew port **111** was open, which can indicate NFS. I ran the following:
 
@@ -128,15 +133,29 @@ nmap -p 111 --script=nfs-ls,nfs-statfs,nfs-showmount 10.10.223.18
 
 ![NFS Mount Enumeration](https://notesbynisha.com/assets/images/thm/ctf/kenobi/thm-kenobi-06.png)
 
+**Question:** What mount can we see?
+
+
 **Answer:** `/var` is mountable via NFS.
 
 ---
 
 ## Task 3: Gain Initial Access with ProFtpd
 
+Lets get the version of ProFtpd. Use netcat to connect to the machine on the FTP port.
+
+**Question:**  What is the version?
+
 From the initial `nmap` scan:
 
 **Answer:** Version **1.3.5**
+
+
+We can use searchsploit to find exploits for a particular software version.
+
+Searchsploit is basically just a command line search tool for exploit-db.com.
+
+**Question:**  How many exploits are there for the ProFTPd running?
 
 I used `searchsploit` to find matching exploits:
 
@@ -156,6 +175,9 @@ We know that the FTP service is running as the Kenobi user (from the file on the
 
 ### Exploiting ProFTPD mod_copy to Retrieve the Private Key
 
+We're now going to copy Kenobi's private key using SITE CPFR and SITE CPTO commands.
+
+
 I connected to FTP using netcat and issued:
 
 ```bash
@@ -165,6 +187,10 @@ SITE CPTO /var/tmp/id_rsa
 ```
 
 ![ProFTPD mod_copy usage](https://notesbynisha.com/assets/images/thm/ctf/kenobi/thm-kenobi-08.png)
+
+We knew that the /var directory was a mount we could see (task 2, question 4). So we've now moved Kenobi's private key to the /var/tmp directory.
+
+
 
 ---
 
@@ -215,6 +241,10 @@ cat /home/kenobi/user.txt
 
 This confirmed access as `kenobi`. Now we move on to privilege escalation.
 
+**Question:**  What is Kenobi's user flag (/home/kenobi/user.txt)?
+
+**Answer:**  d0b0f3f53b6caa532a83915e19224899
+
 ![SSH Login](https://notesbynisha.com/assets/images/thm/ctf/kenobi/thm-kenobi-12.png)
 
 
@@ -239,6 +269,8 @@ find / -perm -u=s -type f 2>/dev/null
 
 This command returned a list of binaries, many of which are expected system utilities like `/usr/bin/passwd`, `/bin/su`, and `/usr/bin/sudo`.
 
+
+
 But one binary stood out:
 
 ```bash
@@ -253,6 +285,10 @@ This is **not** a standard utility on Linux systems, and it’s unusual for a cu
 **Q: What file looks particularly out of the ordinary?**  
 **A: /usr/bin/menu**
 
+
+**Q: Run the binary, how many options appear?**  
+**A: 3**
+
 Running this binary:
 
 ```bash
@@ -261,8 +297,6 @@ Running this binary:
 
 presents a list of system-related options. 
 
-**Q: Run the binary, how many options appear?**  
-**A: 3**
 
 
 ![Binary execution](https://notesbynisha.com/assets/images/thm/ctf/kenobi/thm-kenobi-15.png)
@@ -321,10 +355,11 @@ This sets up a classic and powerful privilege escalation vector known as **PATH 
 
 With root access achieved, I navigated to the root user's home directory and retrieved the final flag:
 
+
 ```bash
 cat /root/root.txt
 ```
-
+**Q:  What is the root flag (/root/root.txt)?
 **Root Flag:** `177b3cd8562289f37382721c28381f02`
 
 ![Capture the root flag](https://notesbynisha.com/assets/images/thm/ctf/kenobi/thm-kenobi-19.png)

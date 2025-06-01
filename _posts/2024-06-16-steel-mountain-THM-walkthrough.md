@@ -45,7 +45,7 @@ toc_sticky: true
 
 ## Overview
 
-This walkthrough demonstrates how I exploited the **LazyAdmin** room on [TryHackMe](https://tryhackme.com/room/steelmountain"). Each section includes detailed explanations of the enumeration, exploitation, and privilege escalation processes. 
+This walkthrough demonstrates how I exploited the **Steel Mountain** room on [TryHackMe](https://tryhackme.com/room/steelmountain). Each section includes detailed explanations of the enumeration, exploitation, and privilege escalation processes. 
 
 
 ## Task 1 - Introduction
