@@ -18,7 +18,6 @@ header:
   teaser: /assets/images/thm/ctf/kenobi/thm-kenobi-00.png
 description: "A complete walkthrough of the Kenobi TryHackMe room, covering enumeration, exploiting ProFTPD, and privilege escalation using SUID PATH hijacking."
 keywords: ["TryHackMe Kenobi Walkthrough", "Linux Privilege Escalation", "ProFTPD mod_copy exploit", "SUID PATH hijacking", "penetration testing"]
-image: /assets/images/thm/ctf/thm-kenobi-02.png
 ---
 
 ![Featured Image: Jedi Duel](https://notesbynisha.com/assets/images/thm/ctf/kenobi/thm-kenobi-02.png)
