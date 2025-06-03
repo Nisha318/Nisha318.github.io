@@ -12,6 +12,7 @@ toc: true
 toc_label: "Table of Contents"
 toc_sticky: true
 header:
+  image: /assets/images/00-hero.jpg
   overlay_image: /assets/images/00-hero.jpg
   overlay_filter: 0.4
   caption: "Cyber Jedi duel in the shadows of the terminal."
