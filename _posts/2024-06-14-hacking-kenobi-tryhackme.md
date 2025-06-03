@@ -21,7 +21,7 @@ description: "A complete walkthrough of the Kenobi TryHackMe room, covering enum
 keywords: ["TryHackMe Kenobi Walkthrough", "Linux Privilege Escalation", "ProFTPD mod_copy exploit", "SUID PATH hijacking", "penetration testing"]
 ---
 
-![Featured Image: Jedi Duel](https://notesbynisha.com/assets/images/thm/ctf/kenobi/thm-kenobi-02.png)
+![Jedi Duel](https://notesbynisha.com/assets/images/thm/ctf/kenobi/thm-kenobi-02.png)
 
 The **Kenobi** room on TryHackMe is a beginner-friendly Linux box focused on enumeration, exploiting Samba, leveraging a vulnerable ProFTPD service, and escalating privileges using SUID binaries. It’s a great room for anyone learning about Linux enumeration and privilege escalation paths.
 
