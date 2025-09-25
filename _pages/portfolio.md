@@ -30,17 +30,16 @@ feature_row_projects:
 ---
 
 ## Quick Links
-- [Resume (PDF)](YOUR-RESUME-LINK)
 - [LinkedIn](https://www.linkedin.com/in/nishapmcd)
 - [GitHub](https://github.com/Nisha318)
-- [Certifications (Credly)](YOUR-CREDLY-LINK)
+- [Certifications (Credly)](https://www.credly.com/users/nishapmcd/badges#credly)
 
 ## Projects
 {% include feature_row id="feature_row_projects" type="left" %}
 
 ## Writing Highlights
 - [STIG Hardening in AWS for RMF Compliance](YOUR-POST-LINK)
-- [Investigating Web Attacks in Splunk](YOUR-POST-LINK)
+- [Investigating Web Attacks in Splunk](https://medium.com/bugbountywriteup/investigate-web-attacks-challenge-lets-defend-24ea96524290)
 - [Zero Trust Strategy in AWS](YOUR-POST-LINK)
 
 ## Contact
