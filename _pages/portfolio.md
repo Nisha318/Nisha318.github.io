@@ -4,44 +4,44 @@ title: "Portfolio"
 permalink: /portfolio/
 header:
   overlay_image: /assets/images/00-hero.jpg
-  caption: "Photo credit: [AI](https://chatgpt.com/)"
+  caption: "Photo credit: Unsplash"
 author_profile: true
 classes: wide
 date: April 30, 2023
+last_modified_at: 2025-09-24
 
-feature_row0-1:
+excerpt: "Senior Cybersecurity Engineer specializing in RMF compliance, Zero Trust strategy, and cloud security across AWS and Azure. This page provides quick access to my resume, certifications, selected projects, and writing."
+feature_row_projects:
   - image_path: assets/images/aws/aws-three-tier-vpc.png
     alt: "AWS Networking"
-    title: "Use"
-    text: "I built and deployed a scalable three-tier AWS network architecture using Terraform modules. This project included configuring a VPC with route tables, subnets, and an internet gateway. I automated the provisioning of EC2 instances for application hosting within the tiers and integrated S3 for secure data storage. Additionally, I deployed Application Load Balancers to ensure high availability. This project enhanced my understanding of cloud infrastructure automation and AWS networking best practices."
-    url: "https://github.com/Nisha318/Terraform-Modules/blob/main/README.md"
-    btn_label: "View Code"
+    title: "Three-Tier AWS VPC (Terraform)"
+    text: "Scalable VPC with public, private, and DB tiers. Applied Zero Trust through workload isolation and identity-centric access."
+    url: "https://github.com/Nisha318/Terraform-Modules"
+    btn_label: "View on GitHub"
     btn_class: "btn--primary"
-    tags:
-      - AWS
-      - VPC
-      - Terraform
-      - EC2
-      - S3
 
-feature_row0-2:
   - image_path: /assets/images/aws/aws-dev-environment.jpg
-    alt: "AWS DevOps"
-    title: "Build a Dev Environment with Terraform and AWS"
-    text: "I built a development environment on AWS using Terraform for infrastructure as code. The project included configuring a VPC with a public subnet, an internet gateway, and a public route table. I deployed an EC2 instance within the public subnet and configured security groups to manage access. Terraform templates were utilized to automate resource provisioning and setup."
-    url: "https://github.com/Nisha318/Terraform-AWS-Configs/blob/main/README.md"
-    btn_label: "View Code"
+    alt: "AWS Dev Environment"
+    title: "AWS Dev Environment (Terraform)"
+    text: "Development VPC provisioned with Terraform. Emphasis on least privilege and scoped access."
+    url: "https://github.com/Nisha318/Terraform-AWS-Configs"
+    btn_label: "View on GitHub"
     btn_class: "btn--primary"
-    tags:
-      - AWS
-      - EC2
-      - Terraform
-      - Security Groups
-      - Subnets
-
 ---
 
-## Projects in Cloud Computing
+## Quick Links
+- [Resume (PDF)](YOUR-RESUME-LINK)
+- [LinkedIn](https://www.linkedin.com/in/nishapmcd)
+- [GitHub](https://github.com/Nisha318)
+- [Certifications (Credly)](YOUR-CREDLY-LINK)
 
-{% include feature_row id="feature_row0-1" type="left" %}
-{% include feature_row id="feature_row0-2" type="left" %}
+## Projects
+{% include feature_row id="feature_row_projects" type="left" %}
+
+## Writing Highlights
+- [STIG Hardening in AWS for RMF Compliance](YOUR-POST-LINK)
+- [Investigating Web Attacks in Splunk](YOUR-POST-LINK)
+- [Zero Trust Strategy in AWS](YOUR-POST-LINK)
+
+## Contact
+- Best way to connect: [LinkedIn](https://www.linkedin.com/in/nishapmcd)
