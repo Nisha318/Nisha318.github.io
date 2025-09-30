@@ -9,14 +9,22 @@ author_profile: true
 classes: wide
 date: April 30, 2023
 last_modified_at: 2025-09-24
-
 excerpt: "A Senior Cybersecurity Engineer focused on achieving Cloud Security Compliance and implementing Zero Trust architectures in AWS and Azure. Expertise includes NIST RMF, policy development, and Infrastructure as Code (IaC) security."
+
 feature_row_projects:
   - image_path: assets/images/aws/aws-three-tier-vpc.png
     alt: "AWS Networking"
     title: "Three-Tier AWS VPC (Terraform): Compliance-Driven Network"
     text: "Scalable VPC provisioned with Terraform, designed to align with NIST SP 800-53 controls (e.g., SC-7 Boundary Protection and AC-4 Information Flow Enforcement). Demonstrates Zero Trust principles through network segmentation and least privilege IAM policies."
     url: "https://github.com/Nisha318/Terraform-Modules"
+    btn_label: "View on GitHub"
+    btn_class: "btn--primary"
+ 
+  - image_path: assets/images/aws/aws-config-automated-enforcement.png
+    alt: "Automated RMF Enforcement"
+    title: "Automated RMF Enforcement: Config-Driven Revocation of Public Ingress (AC/SC) 🛡️"
+    text: "This project implements a critical Risk Management Framework (RMF) control automation pipeline in AWS to maintain a strict network security posture. Leveraging AWS Config for continuous auditing (CA-7), it automatically detects and remediates severe configuration drift—specifically the unauthorized opening of SSH (22) or RDP (3389) ports to the public internet (0.0.0.0/0)."
+    url: "https://github.com/Nisha318/AWS-Repo/config-ssm-auto-revoke-sg/"
     btn_label: "View on GitHub"
     btn_class: "btn--primary"
 
