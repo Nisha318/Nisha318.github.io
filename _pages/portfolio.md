@@ -2,9 +2,9 @@
 layout: single
 title: "Portfolio"
 permalink: /portfolio/
-header:
-  overlay_image: /assets/images/00-hero.jpg
-  caption: "Photo credit: Unsplash"
+#header:
+#  overlay_image: /assets/images/00-hero.jpg
+#  caption: "Photo credit: Unsplash"
 author_profile: true
 classes: wide
 date: April 30, 2023
@@ -41,7 +41,7 @@ feature_row_projects:
 - [STIG Hardening in AWS for RMF Compliance](YOUR-POST-LINK)
 - [Zero Trust Strategy in AWS](YOUR-POST-LINK)
 - [Investigating Web Attacks](https://notesbynisha.com/blog/investigate-web-attacks-lets-defend-walkthrough/)
-- [STIG Hardening in AWS for RMF Compliance](YOUR-POST-LINK)
+
 
 ## Contact
 - Best way to connect: [LinkedIn](https://www.linkedin.com/in/nishapmcd)
