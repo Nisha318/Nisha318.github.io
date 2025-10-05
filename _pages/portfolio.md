@@ -22,7 +22,7 @@ feature_row_projects:
  
   - image_path: assets/images/aws/aws-config-automated-enforcement.png
     alt: "Automated RMF Enforcement"
-    title: "Automated EC2 Network Security: RMF Continuous Control Enforcement 🛡️"
+    title: "<a id='automated-rmf-enforcement'></a><a id='automated-rmf-enforcement'></a>Automated EC2 Network Security: RMF Continuous Control Enforcement 🛡️"
     text: "This project implements a critical **Risk Management Framework (RMF)** control automation pipeline in AWS to maintain a strict security posture. Leveraging **AWS Config** for **continuous auditing (CA-7)**, it automatically detects and remediates severe configuration drift (specifically the unauthorized opening of SSH (22) or RDP (3389) ports to the public internet). This solution directly enforces **Access Control (AC)** and **System and Communications Protection (SC)** controls, minimizing public exposure and ensuring **continuous compliance** for high-risk assets."
     url: "https://github.com/Nisha318/AWS-Repo/blob/main/config-auto-revoke-sg/README.md"
     btn_label: "View on GitHub"
