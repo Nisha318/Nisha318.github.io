@@ -1,10 +1,19 @@
 ---
 title: "Secure Secret Retrieval in AWS Lambda"
-subtitle: "A Practical Lab in Eliminating Hardcoded Credentials Using AWS Secrets Manager and IAM"
+author: "Notes By Nisha"
+ 
+excerpt: "A Practical Lab in Eliminating Hardcoded Credentials Using AWS Secrets Manager and IAM"
 date: 2026-01-01
+read_time: true
+comments: no
+share: true
+related: true
 layout: single
+classes: wide
+author_profile: true
 toc: true
-toc_label: "On This Page"
+toc_label: "Table of Contents"
+toc_sticky: true
 toc_icon: "lock"
 categories:
   - Cloud Security
@@ -18,6 +27,12 @@ tags:
   - DevSecOps
   - NIST-800-53
   - Zero-Trust
+
+header:
+  teaser: /assets/images/aws/secrets-manager/lambda-secrets-01.png
+  overlay_image: /assets/images/00-hero.jpg
+  overlay_filter: 0.3
+  caption: "Secure credential handling in AWS serverless workloads"
 ---
 
 ## Overview
@@ -43,7 +58,8 @@ The focus of this write-up is **security reasoning and validation**, not step-by
 
 {: .text-center}
 ![Architecture Diagram](/assets/images/aws/secrets-manager/architecture-diagram.png){: .align-center}
-*Figure 1: Architecture Diagram*
+*Figure 1: Architecture diagram showing removal of embedded credentials and enforcement of IAM-governed secret retrieval, reducing credential exposure and blast radius.*
+ 
 {: .text-center}
 
 ---
@@ -56,7 +72,7 @@ This lab evaluated three credential-handling approaches within a serverless work
 2. Centralized credential storage using AWS Secrets Manager  
 3. Runtime secret retrieval governed by IAM permissions  
 
-The Lambda function was used to:
+The Lambda workload was exercised to:
 - Create DynamoDB tables and insert items  
 - Retrieve and return table data  
 
@@ -94,6 +110,11 @@ Key improvements include:
 
 The Lambda execution role was scoped to retrieve only the required secret ARN, enforcing least-privilege access.
 
+{: .text-center}
+![Lambda execution role permissions](/assets/images/aws/secrets-manager/iam-execution-role-permissions.png){: .align-center}
+*Figure 3: Lambda execution role scoped to retrieve a single Secrets Manager ARN and required DynamoDB resources.*
+{: .text-center}
+
 ---
 
 ## Validation Results
@@ -104,17 +125,53 @@ After updating the Lambda function to retrieve credentials from Secrets Manager:
 - DynamoDB tables and items were created as expected  
 - No credentials were embedded in code or exposed in logs  
 
-This confirmed that security improvements did not introduce functional regressions while materially improving credential handling.
+This validated that the security control change did not introduce functional regressions while materially improving credential handling.
 
 {: .text-center}
-![Validation of Lambda Secrets Retrieval](/assets/images/aws/secrets-manager/dynamodb-validation-1.png){: .align-center}
+![Lambda execution with secure secret retrieval](/assets/images/aws/secrets-manager/successful-lambda-execution-1.png){: .align-center}
+![Lambda execution with secure secret retrieval](/assets/images/aws/secrets-manager/successful-lambda-execution-2.png){: .align-center}
 
-{: .text-center}
-![Validation of Lambda Secrets Retrieval](/assets/images/aws/secrets-manager/dynamodb-validation-2.png){: .align-center}
-
-*Figure 3: Validation of Lambda Secrets Retrieval*
+*Figure 4: Successful Lambda execution retrieving secrets at runtime. Ownership attribution included for portfolio traceability.*
 {: .text-center}
 
+
+{: .text-center}
+![CloudTrail Secrets Manager access event](/assets/images/aws/secrets-manager/cloudtrail-evidence-1.png){: .align-center}
+![CloudTrail Secrets Manager access event](/assets/images/aws/secrets-manager/cloudtrail-evidence-2.png){: .align-center}
+*Figure 5: CloudTrail records Secrets Manager access by the Lambda execution role, enabling audit and forensic visibility.*
+{: .text-center}
+
+{: .text-center}
+![CloudWatch Logs for Lambda execution](/assets/images/aws/secrets-manager/cloudwatch-lambda-runtime-logs-1.png){: .align-center}
+![CloudWatch Logs for Lambda execution](/assets/images/aws/secrets-manager/cloudwatch-lambda-runtime-logs-2.png){: .align-center}
+![CloudWatch Logs for Lambda execution](/assets/images/aws/secrets-manager/cloudwatch-lambda-runtime-logs-3.png){: .align-center}
+*Figure 6: CloudWatch logs showing successful Lambda execution without exposure of secret material.*
+{: .text-center}
+
+---
+## Optional: SOC Visibility and Threat Hunting Pattern
+
+While this lab focused on secure secret retrieval and IAM enforcement, the same telemetry can be leveraged by SOC teams for detection and investigation.
+
+In environments where CloudTrail logs are forwarded to CloudWatch Logs or a SIEM, analysts can hunt for Secrets Manager access using a simple CloudWatch Logs Insights query.
+
+Example hunting query:
+
+fields eventTime, eventSource, eventName, userIdentity.arn
+| filter eventSource = "secretsmanager.amazonaws.com"
+| sort eventTime desc
+
+This query allows analysts to identify:
+
+Which principals accessed Secrets Manager
+
+When secrets were retrieved
+
+Whether access patterns align with expected application behavior
+
+In this lab environment, CloudTrail logs were validated directly via CloudTrail event history rather than CloudWatch Logs forwarding. In production environments, this query pattern can be operationalized for continuous monitoring and alerting.
+
+*In production, this telemetry would typically be forwarded to a centralized SIEM where Secrets Manager access could be correlated with application identity, source context, and anomaly detection workflows.*
 ---
 
 ## Key Tradeoff Decisions
@@ -125,11 +182,29 @@ This confirmed that security improvements did not introduce functional regressio
 - **Deferred automated rotation**  
   Automated rotation was intentionally deferred to focus this lab on validating secure retrieval and access controls. This increases credential exposure duration, which was accepted for a scoped environment and mitigated through least-privilege permissions, monitoring, and a defined production rotation strategy.
 
-- **API-level authorization over network controls**  
+- **Access is enforced through IAM and API-level authorization, not network segmentation.**  
   Access controls were enforced at the IAM and resource policy layer rather than through network segmentation. This prioritizes workload identity and fine-grained authorization in line with Zero Trust principles, while allowing network controls to be layered in as the environment scales.
 
 These tradeoffs were appropriate for a constrained lab environment and are addressed through IAM hardening, monitoring, and phased migration in production.
 
+---
+## Security Tradeoffs and Migration Path
+
+AWS Secrets Manager was intentionally used as a **transitional control**, not the end state.
+
+This lab addressed the most immediate risk: hardcoded credentials embedded in application code. Secrets Manager removes credentials from the codebase, encrypts them at rest, scopes access through IAM, and provides audit visibility through CloudTrail. This materially reduces exposure while preserving compatibility with legacy access patterns that still rely on static credentials.
+
+However, Secrets Manager does not eliminate static credentials. It centralizes and protects them.
+
+The long-term secure architecture replaces stored credentials entirely with **IAM role-based access using STS-issued temporary credentials**. In that model, the Lambda function authenticates through its execution role, receives short-lived credentials automatically, and never retrieves or handles secrets directly.
+
+**Migration path:**
+1. Eliminate hardcoded credentials using Secrets Manager
+2. Validate functionality, IAM scoping, and audit visibility
+3. Remove static credentials and rely exclusively on IAM roles and STS
+4. Use Secrets Manager only for non-AWS secrets or external integrations
+
+Secrets Manager is therefore a risk-reduction step, not the final destination, in a Zero Trust workload identity model.
 ---
 
 ## Security Controls Mapped (RMF / NIST 800-53)
@@ -152,7 +227,6 @@ AWS-managed cryptographic services protect sensitive authentication material wit
 Secret access and resource interactions are logged via AWS CloudTrail to support monitoring and investigation.
 
 ---
-
 ## Zero Trust Architecture Context
 
 This implementation supports Zero Trust principles by replacing implicit trust with verified, policy-driven access controls.
@@ -169,20 +243,25 @@ Access is restricted at the API level. The function can retrieve a single secret
 All access to Secrets Manager and DynamoDB is logged via CloudTrail, enabling post-access verification and detection workflows.
 
 ---
-
 ## Path to Maturity
 
 While this lab uses AWS Secrets Manager to eliminate hardcoded credentials, the long-term Zero Trust objective is exclusive use of IAM role-based access with STS-issued temporary credentials. This approach removes static credentials entirely and consolidates authentication and authorization within the identity and policy layer.
 
 ---
-
 ## Key Takeaways
 
 - Hardcoded credentials materially increase cloud security risk  
 - AWS Secrets Manager enables secure, auditable credential retrieval without embedding secrets in code  
 - IAM design and permission scoping are critical to limiting blast radius in serverless workloads  
-- Guided labs can be effective tools for validating real-world security patterns when paired with architectural reasoning  
 
 ---
-
 *Note: This implementation was validated in a controlled lab environment to demonstrate secure credential management patterns applicable to production workloads.*
+
+## Appendix: Evidence Index
+
+- Figure 1: Architecture Diagram
+- Figure 2: Lambda function with hardcoded credentials
+- Figure 3: IAM execution role permissions
+- Figure 4: Successful Lambda execution retrieving secrets
+- Figure 5: CloudTrail Secrets Manager access event
+- Figure 6: CloudWatch Lambda runtime logs
