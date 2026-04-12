@@ -1,5 +1,6 @@
 ---
 title: "Secure Secret Retrieval in AWS Lambda"
+published: false
 author: "Notes By Nisha"
  
 excerpt: "A Practical Lab in Eliminating Hardcoded Credentials Using AWS Secrets Manager and IAM"
@@ -163,11 +164,9 @@ fields eventTime, eventSource, eventName, userIdentity.arn
 
 This query allows analysts to identify:
 
-Which principals accessed Secrets Manager
-
-When secrets were retrieved
-
-Whether access patterns align with expected application behavior
+- Which principals accessed Secrets Manager
+- When secrets were retrieved
+- Whether access patterns align with expected application behavior
 
 In this lab environment, CloudTrail logs were validated directly via CloudTrail event history rather than CloudWatch Logs forwarding. In production environments, this query pattern can be operationalized for continuous monitoring and alerting.
 
@@ -205,6 +204,7 @@ The long-term secure architecture replaces stored credentials entirely with **IA
 4. Use Secrets Manager only for non-AWS secrets or external integrations
 
 Secrets Manager is therefore a risk-reduction step, not the final destination, in a Zero Trust workload identity model.
+
 ---
 
 ## Security Controls Mapped (RMF / NIST 800-53)
