@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /assets/
+Disallow: /search/
+Disallow: /categories/
+Sitemap: https://notesbynisha.com/sitemap.xml

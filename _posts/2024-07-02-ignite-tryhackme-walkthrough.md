@@ -1,5 +1,6 @@
 ---
 title: "TryHackMe Ignite Room Walkthrough: Exploiting Fuel CMS 1.4.1 RCE"
+canonical_url: https://notesbynisha.com/blog/ignite-tryhackme-walkthrough
 date: 2024-03-17
 author: "Notes By Nisha"
 excerpt: "Walkthrough of TryHackMe's Ignite room where we exploit a Remote Code Execution vulnerability in Fuel CMS 1.4.1 (CVE-2018-16763). Learn the steps of enumeration, exploitation, privilege escalation, and defense strategies."
@@ -148,7 +149,7 @@ id
 ```
 <img src="/assets/images/thm/ctf/ignite-10.png">
 
-During this phase, I observed some unusual behavior. Running sudo -l returned the word system instead of the expected output. This was likely due to the exploit leveraging the PHP system() function, causing inconsistent responses.
+During this phase, I observed some unusual behavior. Running sudo -l returned the word system instead of the expected output. This was likely due to the exploit leveraging the PHP system() function.
 
 Despite this, I confirmed command execution as the www-data user.
 
@@ -258,5 +259,4 @@ Follow me for more hands-on cybersecurity content, CTF write-ups, and practical 
 
 🔗 TryHackMe Ignite Room
 🛡️ #NotesByNisha | #TryHackMe | #CTF | #PenetrationTesting | #RedTeam | #CyberSecurity
-
 
