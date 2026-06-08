@@ -69,7 +69,6 @@ The application remains the same at every stage of this project. What changes ar
 
 Most Docker tutorials I've completed only showed how to get an app running. My goal was to learn how to run it securely, with security built into the image from the start. Here's my Dockerfile with the main security decisions explained:
 
-While working through this project and learning more about application container security, I noticed that many of these decisions aligned with principles from the [12 Factor App methodology](https://12factor.net), a set of guidelines for building modern, cloud-native web applications.
 
 ```dockerfile
 # ---- Build Stage ----
@@ -114,6 +113,9 @@ HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
 # No shell in distroless -- run uvicorn directly via the Python module flag
 CMD ["-m", "uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000", "--no-access-log"]
 ```
+
+
+While working through this project and learning more about application container security, I noticed that many of these decisions aligned with principles from the [12 Factor App methodology](https://12factor.net), a set of guidelines for building modern, cloud-native web applications.
 
 While going through the Dockerfile decisions during this project and reading through [Liz Rice's *Container Security*](https://www.oreilly.com/library/view/container-security/9781492056690/), I came to understand the security reasoning behind each one. The multi-stage build keeps build tools and package managers out of the production image. The distroless runtime reduces the attack surface by removing shells, package managers, and extra utilities that have no place in a production container. Running as a non-root user limits what an attacker can do if the container is ever compromised. The HEALTHCHECK gives orchestration platforms a way to detect and respond to unhealthy containers automatically.
 
@@ -165,7 +167,7 @@ For production workloads, the tradeoff seemed worth it. Reducing the number of u
 
 ## The Dependency Treadmill
 
-After switching to distroless, my Python package scan still showed a HIGH-severity CVE in starlette. My first thought was to pin the package directly in `requirements.txt`. That failed because FastAPI manages starlette as a transitive dependency -- a package I never installed directly, but one that FastAPI pulled in automatically as part of its own requirements -- and wouldn't accept my pin:
+After switching to distroless, my Python package scan still showed a HIGH-severity CVE in starlette. My first thought was to pin the package directly in requirements.txt. That failed because FastAPI manages starlette as a transitive dependency, so my version pin created a dependency conflict:
 
 ```
 ERROR: Cannot install -r requirements.txt (line 1) and starlette==0.40.0
