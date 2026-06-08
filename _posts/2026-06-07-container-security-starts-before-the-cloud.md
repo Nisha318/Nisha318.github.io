@@ -29,7 +29,7 @@ toc_icon: "shield-alt"
 
 *Series: From Docker to EKS: A Security-First Progression*
 
-![Trivy scan results: python:3.12-slim (105 findings, 2 CRITICAL) vs gcr.io/distroless/python3-debian12 (7 findings, 0 CRITICAL)](/docs/images/stage-1/featured-image.png)
+![Trivy scan results: python:3.12-slim (105 findings, 2 CRITICAL) vs gcr.io/distroless/python3-debian12 (7 findings, 0 CRITICAL)](/assets/images/container-security-progression/stage-1/featured-image.png)
 
 ---
 
