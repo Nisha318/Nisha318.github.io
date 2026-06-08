@@ -55,13 +55,13 @@ Three endpoints. That's it:
 
 The application remains the same at every stage of this project. What changes are in the infrastructure and security around it. That is the point.
 
-![FastAPI /health endpoint returning service health status](/docs/images/stage-1/fastapi-health-endpoint.png)
+![FastAPI /health endpoint returning service health status](/assets/images/container-security-progression/stage-1/fastapi-health-endpoint.png)
 
-![FastAPI /status endpoint returning app name, version, and current stage](/docs/images/stage-1/fastapi-status-endpoint.png)
+![FastAPI /status endpoint returning app name, version, and current stage](/assets/images/container-security-progression/stage-1/fastapi-status-endpoint.png)
 
-![FastAPI container running locally on Docker Desktop](/docs/images/stage-1/docker-desktop-running-container.png)
+![FastAPI container running locally on Docker Desktop](/assets/images/container-security-progression/stage-1/docker-desktop-running-container.png)
 
-![FastAPI auto-generated interactive API documentation](/docs/images/stage-1/fastapi-docs-ui.png)
+![FastAPI auto-generated interactive API documentation](/assets/images/container-security-progression/stage-1/fastapi-docs-ui.png)
 
 ---
 
@@ -133,11 +133,11 @@ Before switching to distroless, I was using `python:3.12-slim` as the base image
 Total: 105 (UNKNOWN: 4, LOW: 63, MEDIUM: 29, HIGH: 7, CRITICAL: 2)
 ```
 
-![Trivy scan of python:3.12-slim -- 105 findings including 2 CRITICAL](/docs/images/stage-1/trivy-scan-python-slim.png)
+![Trivy scan of python:3.12-slim -- 105 findings including 2 CRITICAL](/assets/images/container-security-progression/stage-1/trivy-scan-python-slim.png)
 
 Two CRITICAL severity level vulnerabilities. Both in `perl-base`.
 
-![Trivy CRITICAL findings in python:3.12-slim -- both in perl-base](/docs/images/stage-1/trivy-scan-python-slim-critical.png)
+![Trivy CRITICAL findings in python:3.12-slim -- both in perl-base](/assets/images/container-security-progression/stage-1/trivy-scan-python-slim-critical.png)
 
 My app is a Python API, not a Perl one. However, `python:3.12-slim` included it anyway because slim images, while smaller than full OS images, still carry packages your app never requested. This created an issue because I ended up with a bigger attack surface than I wanted and could not remove it without rebuilding the image or changing base images entirely.
 
@@ -214,7 +214,7 @@ This creates an auditable record. Anyone reviewing the repository can see exactl
 
 After applying the ignore file, the scan passed with all remaining findings documented as accepted risk.
 
-![Trivy scan of distroless image -- 0 HIGH or CRITICAL findings](/docs/images/stage-1/trivy-scan-clean.png)
+![Trivy scan of distroless image -- 0 HIGH or CRITICAL findings](/assets/images/container-security-progression/stage-1/trivy-scan-clean.png)
 
 ---
 
@@ -231,7 +231,7 @@ The `--ignore-unfixed` flag is important because it tells Trivy to fail builds o
 
 Publishing the scan results as artifacts means that every scan is retained and auditable. You can download reports from previous runs and see what vulnerabilities existed when a particular image was built.
 
-![GitHub Actions pipeline passing after .trivyignore applied](/docs/images/stage-1/github-actions-pipeline-success.png)
+![GitHub Actions pipeline passing after .trivyignore applied](/assets/images/container-security-progression/stage-1/github-actions-pipeline-success.png)
 
 ---
 
