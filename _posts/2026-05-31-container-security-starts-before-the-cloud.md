@@ -19,10 +19,10 @@ tags:
 header:
   image: false
   teaser: /assets/images/container-security-progression/stage-1/featured-image.png
-classes: wide
 toc: true
 toc_label: "In This Post"
 toc_icon: "shield-alt"
+toc_sticky: true
 ---
 
 # Container Security Starts Before the Cloud
@@ -116,7 +116,7 @@ HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
 CMD ["-m", "uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000", "--no-access-log"]
 ```
 
-While going through the Dockerfile decisions during this project and reading through Liz Rice's *Container Security*, I came to understand the security reasoning behind each one. The multi-stage build keeps build tools and package managers out of the production image. The distroless runtime reduces the attack surface by removing shells, package managers, and extra utilities that have no place in a production container. Running as a non-root user limits what an attacker can do if the container is ever compromised. The HEALTHCHECK gives orchestration platforms a way to detect and respond to unhealthy containers automatically.
+While going through the Dockerfile decisions during this project and reading through Liz Rice's [*Container Security*](https://www.oreilly.com/library/view/container-security/9781492056690/), I came to understand the security reasoning behind each one. The multi-stage build keeps build tools and package managers out of the production image. The distroless runtime reduces the attack surface by removing shells, package managers, and extra utilities that have no place in a production container. Running as a non-root user limits what an attacker can do if the container is ever compromised. The HEALTHCHECK gives orchestration platforms a way to detect and respond to unhealthy containers automatically.
 
 One thing that stood out to me was how the no-secrets-in-image pattern connects to Factor III of the 12 Factor App methodology, strengthening the idea that configuration that varies between deployments should live in the environment, not directly in the code or the image. The `.dockerignore` file, which excludes `.env` files, and the environment variable pattern in the Dockerfile are direct implementations of that principle. I didn't set out to implement 12 Factor, but I learned some of these patterns as I built the project. Identifying the connection afterward was one of those moments where concepts from different disciplines started to click together. Having worked previously in RMF and ATO processes, I have seen these principles documented as security controls: least privilege, configuration management, and attack surface minimization. However, this was the first time I had implemented them at the container layer rather than assessed them. That shift from evaluator to builder gave me a different appreciation for why these controls exist.
 
