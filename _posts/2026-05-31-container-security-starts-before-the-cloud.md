@@ -17,8 +17,9 @@ tags:
   - AWS
   - CIS Benchmark
 header:
-  image: /assets/images/container-security-progression/stage-1/featured-image.png
+  image: false
   teaser: /assets/images/container-security-progression/stage-1/featured-image.png
+classes: wide
 toc: true
 toc_label: "In This Post"
 toc_icon: "shield-alt"
