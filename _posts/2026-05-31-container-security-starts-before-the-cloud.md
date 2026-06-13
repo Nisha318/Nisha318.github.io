@@ -25,7 +25,6 @@ toc_icon: "shield-alt"
 toc_sticky: true
 ---
 
-# Container Security Starts Before the Cloud
 ## From Docker to EKS: Stage 1 | Container Image Security Baseline
 
 *Series: From Docker to EKS: A Security-First Progression*
