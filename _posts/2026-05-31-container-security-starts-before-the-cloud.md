@@ -185,7 +185,7 @@ At some point, you have to decide when to stop chasing every new finding and sta
 
 ## Accepted Risk and the .trivyignore Approach
 
-After all the remediation work, two HIGH findings remained. Both existed in the distroless base image, and both already had upstream fixes available. The problem was that updated distroless image digests containing those fixes had not yet been released.
+After all the remediation work, two HIGH findings remained. Both were in the distroless base image itself, not in my application code or Python dependencies. The fixes for both CVEs already existed upstream, meaning the software maintainers had already released patched versions of the affected packages. The problem was that Google had not yet published an updated distroless image digest that included those patches. Without a package manager inside the distroless image, there was no way to apply the fixes manually. I had to wait for Google to release an updated image.
 
 At that point, I had two options:
 
