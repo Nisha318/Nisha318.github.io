@@ -29,7 +29,7 @@ toc_icon: "shield-alt"
 
 *Series: From Docker to EKS: A Security-First Progression*
 
-![Trivy scan results: python:3.12-slim (105 findings, 2 CRITICAL) vs gcr.io/distroless/python3-debian12 (7 findings, 0 CRITICAL)](/assets/images/container-security-progression/stage-1/featured-image.png)
+![Trivy scan results: python:3.12-slim (105 findings, 2 CRITICAL) vs gcr.io/distroless/python3-debian12 (7 findings, 0 CRITICAL)](../docs/images/stage-1/featured-image.png)
 
 ---
 
@@ -55,13 +55,13 @@ Three endpoints. That's it:
 
 The application remains the same at every stage of this project. What changes are in the infrastructure and security around it. That is the point.
 
-![FastAPI /health endpoint returning service health status](/assets/images/container-security-progression/stage-1/fastapi-health-endpoint.png)
+![FastAPI /health endpoint returning service health status](../docs/images/stage-1/fastapi-health-endpoint.png)
 
-![FastAPI /status endpoint returning app name, version, and current stage](/assets/images/container-security-progression/stage-1/fastapi-status-endpoint.png)
+![FastAPI /status endpoint returning app name, version, and current stage](../docs/images/stage-1/fastapi-status-endpoint.png)
 
-![FastAPI container running locally on Docker Desktop](/assets/images/container-security-progression/stage-1/docker-desktop-running-container.png)
+![FastAPI container running locally on Docker Desktop](../docs/images/stage-1/docker-desktop-running-container.png)
 
-![FastAPI auto-generated interactive API documentation](/assets/images/container-security-progression/stage-1/fastapi-docs-ui.png)
+![FastAPI auto-generated interactive API documentation](../docs/images/stage-1/fastapi-docs-ui.png)
 
 ---
 
@@ -69,6 +69,7 @@ The application remains the same at every stage of this project. What changes ar
 
 Most Docker tutorials I've completed only showed how to get an app running. My goal was to learn how to run it securely, with security built into the image from the start. Here's my Dockerfile with the main security decisions explained:
 
+While working through this project and learning more about application container security, I noticed that many of these decisions aligned with principles from the [12 Factor App methodology](https://12factor.net), a set of guidelines for building modern, cloud-native web applications.
 
 ```dockerfile
 # ---- Build Stage ----
@@ -114,10 +115,7 @@ HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
 CMD ["-m", "uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000", "--no-access-log"]
 ```
 
-
-While working through this project and learning more about application container security, I noticed that many of these decisions aligned with principles from the [12 Factor App methodology](https://12factor.net), a set of guidelines for building modern, cloud-native web applications.
-
-While going through the Dockerfile decisions during this project and reading through [Liz Rice's *Container Security*](https://www.oreilly.com/library/view/container-security/9781492056690/), I came to understand the security reasoning behind each one. The multi-stage build keeps build tools and package managers out of the production image. The distroless runtime reduces the attack surface by removing shells, package managers, and extra utilities that have no place in a production container. Running as a non-root user limits what an attacker can do if the container is ever compromised. The HEALTHCHECK gives orchestration platforms a way to detect and respond to unhealthy containers automatically.
+While going through the Dockerfile decisions during this project and reading through Liz Rice's *Container Security*, I came to understand the security reasoning behind each one. The multi-stage build keeps build tools and package managers out of the production image. The distroless runtime reduces the attack surface by removing shells, package managers, and extra utilities that have no place in a production container. Running as a non-root user limits what an attacker can do if the container is ever compromised. The HEALTHCHECK gives orchestration platforms a way to detect and respond to unhealthy containers automatically.
 
 One thing that stood out to me was how the no-secrets-in-image pattern connects to Factor III of the 12 Factor App methodology, strengthening the idea that configuration that varies between deployments should live in the environment, not directly in the code or the image. The `.dockerignore` file, which excludes `.env` files, and the environment variable pattern in the Dockerfile are direct implementations of that principle. I didn't set out to implement 12 Factor, but I learned some of these patterns as I built the project. Identifying the connection afterward was one of those moments where concepts from different disciplines started to click together. Having worked previously in RMF and ATO processes, I have seen these principles documented as security controls: least privilege, configuration management, and attack surface minimization. However, this was the first time I had implemented them at the container layer rather than assessed them. That shift from evaluator to builder gave me a different appreciation for why these controls exist.
 
@@ -133,11 +131,11 @@ Before switching to distroless, I was using `python:3.12-slim` as the base image
 Total: 105 (UNKNOWN: 4, LOW: 63, MEDIUM: 29, HIGH: 7, CRITICAL: 2)
 ```
 
-![Trivy scan of python:3.12-slim -- 105 findings including 2 CRITICAL](/assets/images/container-security-progression/stage-1/trivy-scan-python-slim.png)
+![Trivy scan of python:3.12-slim -- 105 findings including 2 CRITICAL](../docs/images/stage-1/trivy-scan-python-slim.png)
 
 Two CRITICAL severity level vulnerabilities. Both in `perl-base`.
 
-![Trivy CRITICAL findings in python:3.12-slim -- both in perl-base](/assets/images/container-security-progression/stage-1/trivy-scan-python-slim-critical.png)
+![Trivy CRITICAL findings in python:3.12-slim -- both in perl-base](../docs/images/stage-1/trivy-scan-python-slim-critical.png)
 
 My app is a Python API, not a Perl one. However, `python:3.12-slim` included it anyway because slim images, while smaller than full OS images, still carry packages your app never requested. This created an issue because I ended up with a bigger attack surface than I wanted and could not remove it without rebuilding the image or changing base images entirely.
 
@@ -167,7 +165,7 @@ For production workloads, the tradeoff seemed worth it. Reducing the number of u
 
 ## The Dependency Treadmill
 
-After switching to distroless, my Python package scan still showed a HIGH-severity CVE in starlette. My first thought was to pin the package directly in requirements.txt. That failed because FastAPI manages starlette as a transitive dependency, so my version pin created a dependency conflict:
+After switching to distroless, my Python package scan still showed a HIGH-severity CVE in starlette. My first thought was to pin the package directly in `requirements.txt`. That failed because FastAPI manages starlette as a transitive dependency -- a package I never installed directly, but one that FastAPI pulled in automatically as part of its own requirements -- and wouldn't accept my pin:
 
 ```
 ERROR: Cannot install -r requirements.txt (line 1) and starlette==0.40.0
@@ -214,7 +212,7 @@ This creates an auditable record. Anyone reviewing the repository can see exactl
 
 After applying the ignore file, the scan passed with all remaining findings documented as accepted risk.
 
-![Trivy scan of distroless image -- 0 HIGH or CRITICAL findings](/assets/images/container-security-progression/stage-1/trivy-scan-clean.png)
+![Trivy scan of distroless image -- 0 HIGH or CRITICAL findings](../docs/images/stage-1/trivy-scan-clean.png)
 
 ---
 
@@ -231,13 +229,13 @@ The `--ignore-unfixed` flag is important because it tells Trivy to fail builds o
 
 Publishing the scan results as artifacts means that every scan is retained and auditable. You can download reports from previous runs and see what vulnerabilities existed when a particular image was built.
 
-![GitHub Actions pipeline passing after .trivyignore applied](/assets/images/container-security-progression/stage-1/github-actions-pipeline-success.png)
+![GitHub Actions pipeline passing after .trivyignore applied](../docs/images/stage-1/github-actions-pipeline-success.png)
 
 ---
 
 ## NIST 800-53 Controls Implemented
 
-Part of my goal for this project was to map security decisions to NIST 800-53 controls. I wanted to connect implementation choices to the compliance standard that I work with professionally. The implementation decisions themselves are grounded in **NIST SP 800-190 (Application Container Security Guide)**, which is the NIST publication specifically focused on container security. It covers image security, registry security, orchestration, and runtime protection -- and is the appropriate reference for this type of work rather than DISA STIGs, which address OS-level configuration hardening. Here's what Stage 1 covers:
+Part of my goal for this project was to map security decisions to NIST 800-53 controls. I wanted to connect implementation choices to the compliance standard that I work with professionally. The implementation decisions in this project are grounded in **NIST SP 800-190 (Application Container Security Guide)**, which is the NIST publication specifically focused on container security. DoD environments have additional requirements governed by DISA STIGs and the Container Platform SRG. Here's what Stage 1 covers:
 
 | Control | Implementation |
 |---|---|
