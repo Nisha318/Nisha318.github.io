@@ -33,7 +33,7 @@ toc_icon: "shield-alt"
 
 ---
 
-Many companies have already made the push towards containerizing applications in their production environments, with Kubernetes as the prevalent platform for cloud-native deployments. The real challenge involves ensuring that they're secure from the start.
+Many companies have already made the push towards containerizing applications in their production environments, with Kubernetes as the prevalent platform for cloud-native deployments. The real challenge involves ensuring that their containerized workloads are secure from the start.
 
 I started this container security project series to fill that gap for myself. I wanted to learn not just how containers work, but how to deploy them securely at every step. Every decision about container image security controls, every tradeoff, every pipeline control, and every CVE became part of my process.
 
@@ -256,7 +256,7 @@ A few honest takeaways from Stage 1:
 
 **Choose distroless early if your workload supports it.** Keeping `python:3.11-slim` in the build stage still made sense for dependency installation, but using it as my runtime image introduced unnecessary rework and additional vulnerabilities I later had to remove.
 
-**CVE remediation is a process, not a one-time goal.** New CVEs are found all the time. The goal isn't zero findings, but to have a mature, documented response to the ones you do have.
+**CVE remediation is a process, not a one-time goal.** This one was more of a reminder to me. New CVEs are found all the time. The goal isn't zero findings, but to have a mature, documented response to the ones you do have.
 
 **The pipeline becomes the enforcement mechanism.** Writing a secure Dockerfile is important, but without a pipeline that checks it on every push, you're relying on people to always make the right security choices. Automated, secure defaults are more reliable than expecting people to get it right every time.
 
