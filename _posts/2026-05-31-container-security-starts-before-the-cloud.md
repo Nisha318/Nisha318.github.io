@@ -225,6 +225,9 @@ The GitHub Actions pipeline does four things whenever changes are pushed to `app
 3. Runs Trivy with `--ignore-unfixed` and the `.trivyignore` file applied
 4. Uploads the scan results as a pipeline artifact
 
+![GitHub Actions CI/CD pipeline: Stage 1 security scan flow](/assets/images/container-security-progression/stage-1/featured-image-2.png)
+
+
 The `--ignore-unfixed` flag is important because it tells Trivy to fail builds only when remediation exists. Failing builds for vulnerabilities without available fixes creates alert fatigue, and eventually people stop paying attention to pipeline failures.
 
 Publishing the scan results as artifacts means that every scan is retained and auditable. You can download reports from previous runs and see what vulnerabilities existed when a particular image was built.
@@ -247,6 +250,8 @@ Part of my goal for this project was to map security decisions to NIST 800-53 co
 | SI-2 Flaw Remediation | CVE threshold gates pipeline success, accepted risks documented in .trivyignore |
 
 The full control mapping is maintained in [`compliance/nist-800-53-mapping.md`](https://github.com/nisha318/container-security-progression/blob/main/compliance/nist-800-53-mapping.md) in the project repo.
+
+After completing Stage 1, I developed a STRIDE-based threat model to formally document the threats this architecture addresses. That document lives in the ['project repo'](https://github.com/Nisha318/container-security-progression/blob/main/compliance/threat-model.md).
 
 ---
 
