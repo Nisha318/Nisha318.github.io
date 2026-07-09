@@ -1,27 +1,56 @@
-# Minimal Mistakes remote theme starter
+# Notes by Nisha
 
-Click [**Use this template**](https://github.com/mmistakes/mm-github-pages-starter/generate) button above for the quickest method of getting started with the [Minimal Mistakes Jekyll theme](https://github.com/mmistakes/minimal-mistakes).
+Personal blog of Nisha — a cybersecurity engineer sharing field notes on cloud
+security, offensive & defensive tradecraft, and hands-on lab walkthroughs.
 
-Contains basic configuration to get you a site with:
+Live at **[notesbynisha.com](https://notesbynisha.com)**.
 
-- Sample posts.
-- Sample top navigation.
-- Sample author sidebar with social links.
-- Sample footer links.
-- Paginated home page.
-- Archive pages for posts grouped by year, category, and tag.
-- Sample about page.
-- Sample 404 page.
-- Site wide search.
+## Stack
 
-Replace sample content with your own and [configure as necessary](https://mmistakes.github.io/minimal-mistakes/docs/configuration/).
+- [Hugo](https://gohugo.io/) (extended, `0.147.9`) — static site generator
+- [Congo](https://github.com/jpanther/congo) theme (git submodule under `themes/congo`)
+- Custom **nisha** colour scheme (Black Panther / Wakanda palette) — dark mode only
+- Deployed to GitHub Pages via `.github/workflows/hugo.yml`
 
+## Local development
+
+```bash
+# Clone with the theme submodule
+git clone --recurse-submodules https://github.com/Nisha318/Nisha318.github.io.git
+cd Nisha318.github.io
+
+# If you already cloned without submodules:
+git submodule update --init --recursive
+
+# Run the dev server (requires Hugo extended)
+hugo server
+```
+
+## Structure
+
+| Path | Purpose |
+| --- | --- |
+| `config/_default/` | Site configuration (params, menus, languages) |
+| `content/posts/` | Blog posts |
+| `content/about.md` | About page |
+| `assets/css/custom.css` | Fonts, gradient bar, homepage styling |
+| `assets/css/schemes/nisha.css` | Wakanda colour scheme |
+| `layouts/partials/home/custom.html` | Custom homepage (hero + post grid) |
+| `layouts/partials/extend-head.html` | Google Fonts |
+| `static/assets/` | Images and documents |
+| `static/CNAME` | Custom domain (`notesbynisha.com`) |
+
+## Writing a post
+
+Create a Markdown file in `content/posts/` with front matter:
+
+```yaml
 ---
-
-## Troubleshooting
-
-If you have a question about using Jekyll, start a discussion on the [Jekyll Forum](https://talk.jekyllrb.com/) or [StackOverflow](https://stackoverflow.com/questions/tagged/jekyll). Other resources:
-
-- [Ruby 101](https://jekyllrb.com/docs/ruby-101/)
-- [Setting up a Jekyll site with GitHub Pages](https://jekyllrb.com/docs/github-pages/)
-- [Configuring GitHub Metadata](https://github.com/jekyll/github-metadata/blob/master/docs/configuration.md#configuration) to work properly when developing locally and avoid `No GitHub API authentication could be found. Some fields may be missing or have incorrect data.` warnings.
+title: "My Post Title"
+date: 2026-07-09
+categories: ["Cloud Security"]
+tags: ["AWS", "IAM"]
+summary: "A one-line summary shown in listings."
+showTableOfContents: true
+---
+```

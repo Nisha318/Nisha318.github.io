@@ -1,69 +1,422 @@
-/* main strollbar */
+/* ==========================================================================
+   Notes by Nisha — Wakanda design layer on top of the Congo theme
+   Fonts are loaded in layouts/partials/extend-head.html
+   ========================================================================== */
 
-/* width */
-::-webkit-scrollbar {
-    width: 15px;
-    }
-    
-    /* Track */
-    ::-webkit-scrollbar-track {
-    background: black; 
-    border: 1px solid #f01367;
-    border-radius: 10px;
-    }
-    
-    /* Handle */
-    ::-webkit-scrollbar-thumb {
-    background: #f01367; 
-    border-radius: 10px;
-    }
-    
-    /* Handle on hover */
-    ::-webkit-scrollbar-thumb:hover {
-    background: #f01367; 
-    }
-    
-    /* sidebar strollbar */
-    
-    /* width */
-    .sidebar::-webkit-scrollbar {
-    width: 7px;
-    }
-    
-    /* Track */
-    .sidebar::-webkit-scrollbar-track {
-    background: black; 
-    }
-    .sidebar::-webkit-scrollbar-track {
-    border-radius: 10px;
-    border: 1px solid #f01367;
-    }
-    
-    /* Handle */
-    .sidebar::-webkit-scrollbar-thumb {
-    background: #f01367; 
-    border-radius: 10px;
-    }
-    
-    /* Handle on hover */
-    .sidebar::-webkit-scrollbar-thumb:hover {
-    background: #721b3c; 
-    }
+:root {
+  --font-heading: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 
-    .content {
-        max-width: 800px; /* Adjust this value as needed */
-        margin: 0 auto; /* Center the content */
-        padding: 20px; /* Add some padding */
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: add a subtle shadow for depth */
-      }
-      
-      h1, h2, h3, h4, h5, h6 {
-        margin-bottom: 20px; /* Space between headings and paragraphs */
-      }
-      
-      p {
-        line-height: 1.6; /* Improve readability */
-        margin-bottom: 15px; /* Space between paragraphs */
-      }
-      
-  
+  /* Surfaces & ink (violet-tinted Wakanda dark) */
+  --nisha-bg: #07060f;
+  --nisha-surface: #0f0c1a;
+  --nisha-surface-alt: #160f24;
+  --nisha-border: #281d3f;
+  --nisha-text: #f0ebff;
+  --nisha-body: #c4b5fd;
+  --nisha-muted: #7c6f9a;
+  --nisha-faint: #3a2a55;
+
+  /* Category accents */
+  --nisha-gold: #f0b429;
+  --nisha-violet: #a855f7;
+  --nisha-azure: #60a5fa;
+  --nisha-gcp: #fb923c;
+  --nisha-magenta: #e879f9;
+  --nisha-teal: #2dd4bf;
+}
+
+/* -- Typography ----------------------------------------------------------- */
+
+html,
+body {
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+  font-family: var(--font-heading);
+  letter-spacing: -0.015em;
+}
+
+/* Monospace for labels, navigation and tags */
+code,
+kbd,
+pre,
+samp,
+tt,
+header nav,
+header nav a,
+header nav button,
+.article-meta,
+main a[href*="/tags/"],
+main a[href*="/categories/"] {
+  font-family: var(--font-mono);
+}
+
+header nav {
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+}
+
+/* -- Gradient bar at the very top of every page --------------------------- */
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  z-index: 60;
+  background: linear-gradient(
+    90deg,
+    var(--nisha-gold),
+    var(--nisha-violet),
+    var(--nisha-magenta),
+    var(--nisha-violet),
+    var(--nisha-gold)
+  );
+  background-size: 300% 100%;
+  animation: nisha-gradient 12s linear infinite;
+}
+
+@keyframes nisha-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 300% 50%;
+  }
+}
+
+.nisha-bar {
+  height: 3px;
+  width: 100%;
+  border-radius: 2px;
+  background: linear-gradient(
+    90deg,
+    var(--nisha-gold) 0%,
+    var(--nisha-violet) 40%,
+    var(--nisha-magenta) 70%,
+    var(--nisha-gold) 100%
+  );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body::before {
+    animation: none;
+  }
+}
+
+/* -- Small geometric diamond marker --------------------------------------- */
+
+.nisha-diamond {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  transform: rotate(45deg);
+  opacity: 0.85;
+  flex-shrink: 0;
+}
+
+/* -- Homepage hero -------------------------------------------------------- */
+
+.nisha-hero {
+  max-width: 46rem;
+  padding: 2.5rem 0 2.25rem;
+  border-bottom: 1px solid var(--nisha-border);
+}
+
+.nisha-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--nisha-gold);
+  margin-bottom: 1.1rem;
+}
+
+.nisha-hero-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(2.1rem, 5vw, 2.75rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin: 0 0 1.1rem;
+}
+
+.nisha-hero-title .accent {
+  color: var(--nisha-gold);
+}
+
+.nisha-hero-lead {
+  font-size: 1.02rem;
+  max-width: 36rem;
+  line-height: 1.7;
+  color: var(--nisha-body);
+  margin: 0 0 1.6rem;
+}
+
+.nisha-tagrow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.nisha-hero-tag {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+  padding: 3px 10px;
+  border-radius: 3px;
+  color: var(--pill, var(--nisha-gold));
+  border: 1px solid color-mix(in srgb, var(--pill, var(--nisha-gold)) 40%, transparent);
+  background: color-mix(in srgb, var(--pill, var(--nisha-gold)) 12%, transparent);
+}
+
+/* -- Section label + divider --------------------------------------------- */
+
+.nisha-section {
+  padding-top: 2.25rem;
+}
+
+.nisha-label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.4rem;
+}
+
+.nisha-label span {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--nisha-muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.nisha-label .rule {
+  flex: 1;
+  height: 1px;
+  background: var(--nisha-border);
+}
+
+/* -- Filter pills --------------------------------------------------------- */
+
+.nisha-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--nisha-border);
+}
+
+.nisha-pill {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  padding: 4px 12px;
+  border-radius: 3px;
+  cursor: pointer;
+  color: var(--nisha-muted);
+  border: 1px solid var(--nisha-border);
+  background: transparent;
+  transition: all 0.15s ease;
+}
+
+.nisha-pill:hover {
+  color: var(--pill);
+  border-color: color-mix(in srgb, var(--pill) 45%, transparent);
+}
+
+.nisha-pill.is-active {
+  color: var(--pill);
+  border-color: color-mix(in srgb, var(--pill) 55%, transparent);
+  background: color-mix(in srgb, var(--pill) 15%, transparent);
+}
+
+/* -- Post cards ----------------------------------------------------------- */
+
+.nisha-grid {
+  display: grid;
+  gap: 0.875rem;
+}
+
+.nisha-card {
+  background: var(--nisha-surface);
+  border: 1px solid var(--nisha-border);
+  border-left: 3px solid var(--accent, var(--nisha-gold));
+  border-radius: 8px;
+  padding: 1.4rem 1.6rem;
+  transition: border-color 0.2s ease, box-shadow 0.25s ease, transform 0.2s ease;
+}
+
+.nisha-card:hover {
+  border-color: color-mix(in srgb, var(--accent, var(--nisha-gold)) 40%, transparent);
+  transform: translateY(-2px);
+}
+
+.nisha-card--featured {
+  border: 1px solid color-mix(in srgb, var(--nisha-gold) 50%, transparent);
+  border-left: 3px solid var(--nisha-gold);
+  padding: 1.75rem 1.9rem;
+  box-shadow: 0 0 18px rgba(240, 180, 41, 0.1);
+}
+
+.nisha-card--featured:hover {
+  box-shadow: 0 0 32px rgba(240, 180, 41, 0.16);
+}
+
+.nisha-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 0.6rem;
+}
+
+.nisha-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  color: var(--nisha-gold);
+  background: #3a2a08;
+  border: 1px solid color-mix(in srgb, var(--nisha-gold) 40%, transparent);
+  padding: 2px 8px;
+  border-radius: 3px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.nisha-cat {
+  font-family: var(--font-mono);
+  font-size: 0.64rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 3px;
+  color: var(--accent, var(--nisha-gold));
+  background: color-mix(in srgb, var(--accent, var(--nisha-gold)) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent, var(--nisha-gold)) 30%, transparent);
+}
+
+.nisha-code {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--accent, var(--nisha-gold));
+  opacity: 0.55;
+  white-space: nowrap;
+}
+
+.nisha-card-title {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1.1rem;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.5rem;
+}
+
+.nisha-card--featured .nisha-card-title {
+  font-weight: 700;
+  font-size: 1.35rem;
+}
+
+.nisha-card-title a {
+  color: var(--nisha-text);
+  text-decoration: none;
+}
+
+.nisha-card:hover .nisha-card-title a {
+  color: color-mix(in srgb, var(--accent, var(--nisha-gold)) 65%, var(--nisha-text));
+}
+
+.nisha-card-excerpt {
+  font-size: 0.875rem;
+  color: var(--nisha-body);
+  line-height: 1.7;
+  margin: 0 0 0.875rem;
+}
+
+.nisha-meta {
+  display: flex;
+  gap: 0.875rem;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--nisha-muted);
+}
+
+.nisha-meta .dot {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--nisha-faint);
+  filter: brightness(2);
+}
+
+/* -- Empty state + all-posts button -------------------------------------- */
+
+.nisha-empty {
+  padding: 3rem 0;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--nisha-muted);
+}
+
+.nisha-empty span {
+  display: block;
+  font-size: 0.7rem;
+  color: var(--nisha-faint);
+  filter: brightness(2);
+  margin-top: 0.4rem;
+}
+
+.nisha-allposts {
+  margin-top: 1.75rem;
+  text-align: center;
+}
+
+.nisha-allposts a {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: var(--nisha-gold);
+  text-decoration: none;
+  border: 1px solid color-mix(in srgb, var(--nisha-gold) 40%, transparent);
+  padding: 0.5rem 1.25rem;
+  border-radius: 3px;
+  background: color-mix(in srgb, var(--nisha-gold) 10%, transparent);
+  transition: background 0.2s ease;
+}
+
+.nisha-allposts a:hover {
+  background: color-mix(in srgb, var(--nisha-gold) 18%, transparent);
+}
+
+.nisha-foot-bar {
+  margin-top: 3rem;
+}

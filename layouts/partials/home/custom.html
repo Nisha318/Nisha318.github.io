@@ -1,0 +1,181 @@
+{{/* Custom homepage: Wakanda hero + filterable post grid */}}
+
+{{/* -- Filter category definitions (value, label, colour, match keywords) -- */}}
+{{ $defs := slice
+  (dict "val" "aws"        "label" "AWS Security"       "color" "#F0B429" "kw" (slice "aws"))
+  (dict "val" "azure"      "label" "Azure Security"     "color" "#60A5FA" "kw" (slice "azure"))
+  (dict "val" "gcp"        "label" "GCP Security"       "color" "#FB923C" "kw" (slice "gcp" "google cloud"))
+  (dict "val" "htb"        "label" "Hack The Box"       "color" "#E879F9" "kw" (slice "hackthebox" "hack the box" "htb"))
+  (dict "val" "thm"        "label" "TryHackMe"          "color" "#E879F9" "kw" (slice "tryhackme" "thm"))
+  (dict "val" "containers" "label" "Container Security" "color" "#A855F7" "kw" (slice "container" "docker" "kubernetes" "eks" "distroless"))
+  (dict "val" "devsecops"  "label" "DevSecOps"          "color" "#2DD4BF" "kw" (slice "devsecops"))
+}}
+
+{{/* -- Enrich each post with its matched buckets + accent colour -- */}}
+{{ $posts := sort (where site.RegularPages "Type" "posts") "Date" "desc" }}
+{{ $enriched := slice }}
+{{ range $posts }}
+  {{ $page := . }}
+  {{ $all := slice .Title }}
+  {{ with .File }}{{ $all = $all | append (replace .ContentBaseName "-" " ") }}{{ end }}
+  {{ with .Params.categories }}{{ $all = $all | append . }}{{ end }}
+  {{ with .Params.tags }}{{ $all = $all | append . }}{{ end }}
+  {{ $hay := lower (delimit $all " ") }}
+  {{ $matched := slice }}
+  {{ $accent := "#F0B429" }}
+  {{ $accentLabel := "" }}
+  {{ range $defs }}
+    {{ $d := . }}
+    {{ $hit := false }}
+    {{ range $d.kw }}{{ if findRE (printf "\\b%s\\b" .) $hay }}{{ $hit = true }}{{ end }}{{ end }}
+    {{ if $hit }}
+      {{ if not (in $matched $d.val) }}{{ $matched = $matched | append $d.val }}{{ end }}
+      {{ if not $accentLabel }}{{ $accent = $d.color }}{{ $accentLabel = $d.label }}{{ end }}
+    {{ end }}
+  {{ end }}
+  {{ $enriched = $enriched | append (dict
+    "page" $page
+    "cats" (delimit $matched " ")
+    "accent" $accent
+    "accentLabel" $accentLabel
+  ) }}
+{{ end }}
+
+{{/* ----------------------------- Hero ----------------------------------- */}}
+<section class="nisha-hero">
+  <p class="nisha-eyebrow">
+    <span class="nisha-diamond" style="background:#F0B429;"></span>
+    {{ site.Params.author.headline | default "Cloud Security Engineer" }}
+  </p>
+  <h1 class="nisha-hero-title">
+    Bridging Cybersecurity<br />
+    Defense and Offense,<br />
+    <span class="accent">One Note at a Time.</span>
+  </h1>
+  <p class="nisha-hero-lead">
+    Practical write-ups on AWS, Azure, GCP, containers, zero trust, and the
+    offensive context (HTB, THM) that makes defensive choices mean something.
+  </p>
+  <div class="nisha-tagrow">
+    {{ $herotags := slice
+      (dict "label" "aws"          "color" "#F0B429")
+      (dict "label" "azure"        "color" "#60A5FA")
+      (dict "label" "gcp"          "color" "#FB923C")
+      (dict "label" "hack the box" "color" "#E879F9")
+      (dict "label" "tryhackme"    "color" "#E879F9")
+      (dict "label" "containers"   "color" "#A855F7")
+      (dict "label" "MITRE ATT&CK" "color" "#F0B429")
+    }}
+    {{ range $herotags }}
+      <span class="nisha-hero-tag" style="--pill:{{ .color }};">{{ .label }}</span>
+    {{ end }}
+  </div>
+</section>
+
+{{/* --------------------------- Posts + filter --------------------------- */}}
+<section class="nisha-section">
+  <div class="nisha-label">
+    <span class="nisha-diamond" style="background:#F0B429;"></span>
+    <span id="nisha-section-label">latest posts</span>
+    <div class="rule"></div>
+  </div>
+
+  {{/* Filter pills */}}
+  <div class="nisha-filters">
+    <button class="nisha-pill is-active" data-filter="all" data-label="latest posts" style="--pill:#F0B429;">all</button>
+    {{ range $defs }}
+      <button class="nisha-pill" data-filter="{{ .val }}" data-label="{{ .label | lower }}" style="--pill:{{ .color }};">{{ .label | lower }}</button>
+    {{ end }}
+  </div>
+
+  <div class="nisha-grid">
+    {{/* Featured card — newest post, shown only in the "all" view */}}
+    {{ with index $enriched 0 }}
+      {{ $p := .page }}
+      <article class="nisha-card nisha-card--featured" data-role="featured" style="--accent:{{ .accent }};">
+        <div class="nisha-card-top">
+          <div>
+            <div class="nisha-badge">
+              <span class="nisha-diamond" style="background:#F0B429;width:5px;height:5px;"></span>
+              featured
+            </div>
+            {{ with $p.Params.categories }}<div><span class="nisha-cat" style="--accent:#F0B429;">{{ index . 0 }}</span></div>{{ end }}
+          </div>
+          {{ with $p.Params.tags }}<span class="nisha-code" style="--accent:#F0B429;">[{{ index . 0 }}]</span>{{ end }}
+        </div>
+        <h2 class="nisha-card-title"><a href="{{ $p.RelPermalink }}">{{ $p.Title | emojify }}</a></h2>
+        {{ with $p.Summary }}<p class="nisha-card-excerpt">{{ . | plainify | truncate 200 }}</p>{{ end }}
+        <div class="nisha-meta">
+          <time>{{ $p.Date.Format (site.Params.dateFormat | default "Jan 2, 2006") }}</time>
+          <span class="dot"></span>
+          <span>{{ $p.ReadingTime }} min read</span>
+        </div>
+      </article>
+    {{ end }}
+
+    {{/* Every post as a normal card; JS shows/hides by filter */}}
+    {{ range $i, $e := $enriched }}
+      {{ $p := $e.page }}
+      <article class="nisha-card" data-role="normal" data-first="{{ if eq $i 0 }}true{{ else }}false{{ end }}" data-categories="{{ $e.cats }}" style="--accent:{{ $e.accent }};{{ if eq $i 0 }}display:none;{{ end }}">
+        <div class="nisha-card-top">
+          {{ with $p.Params.categories }}<span class="nisha-cat">{{ index . 0 }}</span>{{ else }}<span></span>{{ end }}
+          {{ with $p.Params.tags }}<span class="nisha-code">[{{ index . 0 }}]</span>{{ end }}
+        </div>
+        <h2 class="nisha-card-title"><a href="{{ $p.RelPermalink }}">{{ $p.Title | emojify }}</a></h2>
+        {{ with $p.Summary }}<p class="nisha-card-excerpt">{{ . | plainify | truncate 170 }}</p>{{ end }}
+        <div class="nisha-meta">
+          <time>{{ $p.Date.Format (site.Params.dateFormat | default "Jan 2, 2006") }}</time>
+          <span class="dot"></span>
+          <span>{{ $p.ReadingTime }} min read</span>
+        </div>
+      </article>
+    {{ end }}
+
+    <div class="nisha-empty" id="nisha-empty" style="display:none;">
+      no posts yet in this category
+      <span>check back soon</span>
+    </div>
+  </div>
+
+  <div class="nisha-allposts">
+    <a href="{{ "posts/" | relLangURL }}">all posts</a>
+  </div>
+</section>
+
+<div class="nisha-bar nisha-foot-bar"></div>
+
+{{ with .Content }}
+  <section class="prose max-w-full dark:prose-invert mt-10">{{ . | emojify }}</section>
+{{ end }}
+
+<script>
+  (function () {
+    var pills = document.querySelectorAll(".nisha-pill");
+    var cards = document.querySelectorAll('.nisha-card[data-role="normal"]');
+    var featured = document.querySelector('.nisha-card[data-role="featured"]');
+    var empty = document.getElementById("nisha-empty");
+    var label = document.getElementById("nisha-section-label");
+
+    function apply(f, labelText) {
+      pills.forEach(function (p) {
+        p.classList.toggle("is-active", p.dataset.filter === f);
+      });
+      var visible = 0;
+      cards.forEach(function (c) {
+        var cats = (c.dataset.categories || "").split(" ").filter(Boolean);
+        var show = f === "all" ? c.dataset.first !== "true" : cats.indexOf(f) > -1;
+        c.style.display = show ? "" : "none";
+        if (show) visible++;
+      });
+      if (featured) featured.style.display = f === "all" ? "" : "none";
+      if (empty) empty.style.display = f !== "all" && visible === 0 ? "" : "none";
+      if (label) label.textContent = labelText || (f === "all" ? "latest posts" : f);
+    }
+
+    pills.forEach(function (p) {
+      p.addEventListener("click", function () {
+        apply(p.dataset.filter, p.dataset.label);
+      });
+    });
+  })();
+</script>

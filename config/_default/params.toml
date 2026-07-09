@@ -1,0 +1,61 @@
+# -- Theme Options --
+colorScheme = "nisha"
+defaultAppearance = "dark" # dark mode only
+autoSwitchAppearance = false
+
+defaultThemeColor = "#07060F"
+
+enableSearch = true
+enableCodeCopy = true
+enableImageLazyLoading = true
+enableImageWebp = true
+
+fingerprintAlgorithm = "sha256"
+
+[header]
+  layout = "basic" # valid options: basic, hamburger, hybrid, custom
+  showTitle = true
+
+[footer]
+  showCopyright = true
+  showThemeAttribution = false
+  showAppearanceSwitcher = false # dark mode only — no toggle
+  showScrollToTop = true
+
+[homepage]
+  layout = "custom" # custom hero + filterable post grid
+  showRecent = false
+  recentLimit = 6
+
+[article]
+  showDate = true
+  showDateUpdated = false
+  showAuthor = true
+  showBreadcrumbs = true
+  showDraftLabel = false
+  showEdit = false
+  showHeadingAnchors = true
+  showPagination = true
+  invertPagination = false
+  showReadingTime = true
+  showTableOfContents = true
+  showTaxonomies = true
+  showWordCount = false
+  showComments = false
+
+[list]
+  showBreadcrumbs = false
+  showSummary = true
+  showTableOfContents = false
+  showTaxonomies = true
+  groupByYear = false
+  paginationWidth = 1
+
+[sitemap]
+  excludedKinds = ["taxonomy", "term"]
+
+[taxonomy]
+  showTermCount = true
+
+[verification]
+  google = "Apib7-x98H0j5cPqHWwSMm6dNU4GmODRoqxLiDzdx9I"

@@ -1,4 +1,8 @@
-_site
-.sass-cache
-.jekyll-metadata
-Gemfile.lock
+# Hugo
+/public/
+/resources/_gen/
+/.hugo_build.lock
+.DS_Store
+
+# Node (Congo theme tooling, only if building CSS locally)
+node_modules/

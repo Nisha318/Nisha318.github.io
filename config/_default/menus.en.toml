@@ -1,0 +1,17 @@
+# -- Main Menu --
+[[main]]
+  name = "Writing"
+  pageRef = "posts"
+  weight = 10
+
+[[main]]
+  name = "Projects"
+  url = "https://nishacloud.com"
+  weight = 20
+  [main.params]
+    rel = "external"
+
+[[main]]
+  name = "About"
+  pageRef = "about"
+  weight = 30

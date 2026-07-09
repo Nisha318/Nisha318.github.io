@@ -1,0 +1,12 @@
+# -- Markup --
+[goldmark]
+  [goldmark.renderer]
+    unsafe = true
+
+[highlight]
+  noClasses = false
+  style = "dracula"
+
+[tableOfContents]
+  startLevel = 2
+  endLevel = 4
