@@ -4,17 +4,18 @@ languageDirection = "ltr"
 weight = 1
 
 title = "Notes by Nisha"
-copyright = "© Notes by Nisha"
+copyright = "&copy; 2026 Nisha"
 
 [params]
-  dateFormat = "2 January 2006"
-  description = "Field notes on cloud security, offensive & defensive tradecraft, and everything I learn along the way."
+  locale = "en-US"
+  dateFormat = "January 2, 2006"
+  description = "Bridging Cybersecurity Defense and Offense, One Note at a Time."
   mainSections = ["posts"]
 
 [params.author]
-  name = "Notes by Nisha"
-  headline = "Cybersecurity Engineer"
-  bio = "Cybersecurity engineer sharing field notes on cloud security and hands-on hacking."
+  name = "Nisha"
+  headline = "Cloud Security Engineer"
+  bio = "Bridging Cybersecurity Defense and Offense, One Note at a Time. Writing about AWS, Azure, GCP, containers, zero trust, and the offensive context that makes defensive choices mean something."
   links = [
     { github = "https://github.com/Nisha318" },
     { linkedin = "https://www.linkedin.com/in/nishapmcd" },

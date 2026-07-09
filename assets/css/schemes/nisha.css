@@ -1,39 +1,40 @@
-/* Nisha scheme — Black Panther / Wakanda palette
- *   Background : near-black  #07060F
- *   Primary    : Wakandan gold    #F0B429
- *   Secondary  : vibranium violet #A855F7
+/* Nisha / Wakanda color scheme
+ *   Primary   = Wakandan Gold    (#F0B429)
+ *   Secondary = Vibranium Violet (#A855F7)
+ *   Neutral   = Deep violet-black backgrounds (#07060F base)
  * Congo expects each colour as an "R, G, B" triple across the 50–950 range.
  */
 :root {
-  --color-neutral: 7, 6, 15;
+  /* Base white for light-mode surfaces (unused — site is dark only) */
+  --color-neutral: 245, 240, 255;
 
-  /* Neutral — cool near-black slate tuned toward the #07060F background */
-  --color-neutral-50: 245, 245, 250;
-  --color-neutral-100: 232, 231, 240;
-  --color-neutral-200: 205, 204, 221;
-  --color-neutral-300: 165, 164, 189;
-  --color-neutral-400: 124, 123, 150;
-  --color-neutral-500: 90, 89, 115;
-  --color-neutral-600: 63, 62, 84;
-  --color-neutral-700: 43, 42, 60;
-  --color-neutral-800: 26, 24, 41;
-  --color-neutral-900: 15, 13, 28;
+  /* Neutrals — violet-tinted dark scale */
+  --color-neutral-50: 250, 248, 255;
+  --color-neutral-100: 243, 238, 255;
+  --color-neutral-200: 229, 221, 255;
+  --color-neutral-300: 207, 193, 254;
+  --color-neutral-400: 170, 148, 212;
+  --color-neutral-500: 124, 111, 154;
+  --color-neutral-600: 90, 78, 110;
+  --color-neutral-700: 58, 42, 85;
+  --color-neutral-800: 40, 29, 63;
+  --color-neutral-900: 22, 15, 36;
   --color-neutral-950: 7, 6, 15;
 
-  /* Primary — Wakandan gold (#F0B429) */
-  --color-primary-50: 254, 249, 231;
-  --color-primary-100: 253, 242, 200;
-  --color-primary-200: 250, 229, 148;
-  --color-primary-300: 246, 212, 92;
-  --color-primary-400: 242, 197, 57;
+  /* Primary — Wakandan Gold */
+  --color-primary-50: 255, 253, 235;
+  --color-primary-100: 255, 248, 205;
+  --color-primary-200: 254, 237, 153;
+  --color-primary-300: 252, 215, 80;
+  --color-primary-400: 247, 200, 55;
   --color-primary-500: 240, 180, 41;
-  --color-primary-600: 213, 148, 20;
-  --color-primary-700: 176, 114, 15;
-  --color-primary-800: 140, 89, 18;
-  --color-primary-900: 116, 74, 22;
-  --color-primary-950: 67, 41, 8;
+  --color-primary-600: 212, 148, 20;
+  --color-primary-700: 168, 110, 12;
+  --color-primary-800: 126, 80, 8;
+  --color-primary-900: 100, 60, 6;
+  --color-primary-950: 68, 38, 3;
 
-  /* Secondary — vibranium violet (#A855F7) */
+  /* Secondary — Vibranium Violet */
   --color-secondary-50: 250, 245, 255;
   --color-secondary-100: 243, 232, 255;
   --color-secondary-200: 233, 213, 255;

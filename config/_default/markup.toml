@@ -5,6 +5,7 @@
 
 [highlight]
   noClasses = false
+  style = "dracula"
 
 [tableOfContents]
   startLevel = 2

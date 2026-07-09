@@ -11,6 +11,9 @@ summaryLength = 30
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+  term = ["HTML", "RSS"]
 
 [taxonomies]
   tag = "tags"
