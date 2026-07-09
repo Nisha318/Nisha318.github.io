@@ -1,0 +1,48 @@
+/* Nisha scheme — Black Panther / Wakanda palette
+ *   Background : near-black  #07060F
+ *   Primary    : Wakandan gold    #F0B429
+ *   Secondary  : vibranium violet #A855F7
+ * Congo expects each colour as an "R, G, B" triple across the 50–950 range.
+ */
+:root {
+  --color-neutral: 7, 6, 15;
+
+  /* Neutral — cool near-black slate tuned toward the #07060F background */
+  --color-neutral-50: 245, 245, 250;
+  --color-neutral-100: 232, 231, 240;
+  --color-neutral-200: 205, 204, 221;
+  --color-neutral-300: 165, 164, 189;
+  --color-neutral-400: 124, 123, 150;
+  --color-neutral-500: 90, 89, 115;
+  --color-neutral-600: 63, 62, 84;
+  --color-neutral-700: 43, 42, 60;
+  --color-neutral-800: 26, 24, 41;
+  --color-neutral-900: 15, 13, 28;
+  --color-neutral-950: 7, 6, 15;
+
+  /* Primary — Wakandan gold (#F0B429) */
+  --color-primary-50: 254, 249, 231;
+  --color-primary-100: 253, 242, 200;
+  --color-primary-200: 250, 229, 148;
+  --color-primary-300: 246, 212, 92;
+  --color-primary-400: 242, 197, 57;
+  --color-primary-500: 240, 180, 41;
+  --color-primary-600: 213, 148, 20;
+  --color-primary-700: 176, 114, 15;
+  --color-primary-800: 140, 89, 18;
+  --color-primary-900: 116, 74, 22;
+  --color-primary-950: 67, 41, 8;
+
+  /* Secondary — vibranium violet (#A855F7) */
+  --color-secondary-50: 250, 245, 255;
+  --color-secondary-100: 243, 232, 255;
+  --color-secondary-200: 233, 213, 255;
+  --color-secondary-300: 216, 180, 254;
+  --color-secondary-400: 192, 132, 252;
+  --color-secondary-500: 168, 85, 247;
+  --color-secondary-600: 147, 51, 234;
+  --color-secondary-700: 126, 34, 206;
+  --color-secondary-800: 107, 33, 168;
+  --color-secondary-900: 88, 28, 135;
+  --color-secondary-950: 59, 7, 100;
+}

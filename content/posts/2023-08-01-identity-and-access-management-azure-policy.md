@@ -1,0 +1,30 @@
+---
+title: "Identity And Access Management Azure Policy"
+date: 2023-08-01
+---
+
+## IAM:  Configure Azure Policy
+
+<img src="/assets/images/IAM AZ Policy 1.png">
+<img src="/assets/images/IAM AZ Policy 2.png">
+<img src="/assets/images/IAM AZ Policy 3.png">
+<img src="/assets/images/IAM AZ Policy 4.png">
+<img src="/assets/images/IAM AZ Policy 5.png">
+<img src="/assets/images/IAM AZ Policy 6.png">
+<img src="/assets/images/IAM AZ Policy 7.png">
+<img src="/assets/images/IAM AZ Policy 8.png">
+<img src="/assets/images/IAM AZ Policy 9.png">
+<img src="/assets/images/IAM AZ Policy 10.png">
+<img src="/assets/images/IAM AZ Policy 11.png">
+<img src="/assets/images/IAM AZ Policy 12.png">
+<img src="/assets/images/IAM AZ Policy 13.png">
+<img src="/assets/images/IAM AZ Policy 14.png">
+<img src="/assets/images/IAM AZ Policy 15.png">
+<img src="/assets/images/IAM AZ Policy 16.png">
+<img src="/assets/images/IAM AZ Policy 17.png">
+<img src="/assets/images/IAM AZ Policy 18.png">
+<img src="/assets/images/IAM AZ Policy 19.png">
+<img src="/assets/images/IAM AZ Policy 20.png">
+<img src="/assets/images/IAM AZ Policy 21.png">
+<img src="/assets/images/IAM AZ Policy 22.png">
+<img src="/assets/images/IAM AZ Policy 23.png">

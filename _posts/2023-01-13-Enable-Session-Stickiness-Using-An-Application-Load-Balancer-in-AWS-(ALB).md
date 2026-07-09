@@ -1,1 +1,0 @@
-## Enable Session Stickiness Using an Application Load Balancer (ALB) in AWS

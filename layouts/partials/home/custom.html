@@ -1,0 +1,51 @@
+{{/* Custom homepage: hero + recent-post card grid */}}
+<section class="nisha-hero">
+  <p class="nisha-hero-eyebrow">Cybersecurity Engineer</p>
+  <h1 class="nisha-hero-title">
+    Notes by <span class="accent">Nisha</span>
+  </h1>
+  <p class="nisha-hero-lead">
+    {{ with .Site.Params.description }}{{ . }}{{ else }}Field notes on cloud
+    security, offensive &amp; defensive tradecraft, and everything I learn along
+    the way.{{ end }}
+  </p>
+  <div class="nisha-hero-actions">
+    <a class="nisha-btn nisha-btn-primary" href="{{ "posts/" | relLangURL }}"
+      >Read the writing</a
+    >
+    <a class="nisha-btn nisha-btn-ghost" href="https://nishacloud.com"
+      >View projects &#8599;</a
+    >
+  </div>
+</section>
+
+{{ $pages := where .Site.RegularPages "Type" "in" (.Site.Params.mainSections | default (slice "posts")) }}
+{{ $limit := .Site.Params.homepage.recentLimit | default 6 }}
+
+<div class="nisha-section-head">
+  <h2 class="nisha-section-title">Latest writing</h2>
+  <a class="nisha-section-link" href="{{ "posts/" | relLangURL }}">all posts &rarr;</a>
+</div>
+
+<div class="nisha-grid">
+  {{ range first $limit $pages }}
+    <article class="nisha-card">
+      <span class="nisha-card-date">{{ .Date.Format (.Site.Params.dateFormat | default "2 Jan 2006") }}</span>
+      <h3 class="nisha-card-title">
+        <a href="{{ .RelPermalink }}">{{ .Title | emojify }}</a>
+      </h3>
+      <p class="nisha-card-summary">{{ .Summary | plainify | truncate 140 }}</p>
+      {{ with .Params.tags }}
+        <div class="nisha-card-tags">
+          {{ range first 3 . }}
+            <span class="nisha-tag">{{ . }}</span>
+          {{ end }}
+        </div>
+      {{ end }}
+    </article>
+  {{ end }}
+</div>
+
+{{ with .Content }}
+  <section class="prose max-w-full dark:prose-invert mt-10">{{ . | emojify }}</section>
+{{ end }}

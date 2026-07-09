@@ -1,69 +1,283 @@
-/* main strollbar */
+/* ==========================================================================
+   Notes by Nisha — custom styling on top of the Congo theme
+   Fonts are loaded in layouts/partials/extend-head.html
+   ========================================================================== */
 
-/* width */
-::-webkit-scrollbar {
-    width: 15px;
-    }
-    
-    /* Track */
-    ::-webkit-scrollbar-track {
-    background: black; 
-    border: 1px solid #f01367;
-    border-radius: 10px;
-    }
-    
-    /* Handle */
-    ::-webkit-scrollbar-thumb {
-    background: #f01367; 
-    border-radius: 10px;
-    }
-    
-    /* Handle on hover */
-    ::-webkit-scrollbar-thumb:hover {
-    background: #f01367; 
-    }
-    
-    /* sidebar strollbar */
-    
-    /* width */
-    .sidebar::-webkit-scrollbar {
-    width: 7px;
-    }
-    
-    /* Track */
-    .sidebar::-webkit-scrollbar-track {
-    background: black; 
-    }
-    .sidebar::-webkit-scrollbar-track {
-    border-radius: 10px;
-    border: 1px solid #f01367;
-    }
-    
-    /* Handle */
-    .sidebar::-webkit-scrollbar-thumb {
-    background: #f01367; 
-    border-radius: 10px;
-    }
-    
-    /* Handle on hover */
-    .sidebar::-webkit-scrollbar-thumb:hover {
-    background: #721b3c; 
-    }
+:root {
+  --font-heading: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 
-    .content {
-        max-width: 800px; /* Adjust this value as needed */
-        margin: 0 auto; /* Center the content */
-        padding: 20px; /* Add some padding */
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: add a subtle shadow for depth */
-      }
-      
-      h1, h2, h3, h4, h5, h6 {
-        margin-bottom: 20px; /* Space between headings and paragraphs */
-      }
-      
-      p {
-        line-height: 1.6; /* Improve readability */
-        margin-bottom: 15px; /* Space between paragraphs */
-      }
-      
-  
+  --nisha-gold: #f0b429;
+  --nisha-violet: #a855f7;
+  --nisha-magenta: #ec4899;
+}
+
+/* -- Typography ----------------------------------------------------------- */
+
+html,
+body {
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+  font-family: var(--font-heading);
+  letter-spacing: -0.015em;
+}
+
+/* Monospace for labels, navigation and tags */
+code,
+kbd,
+pre,
+samp,
+tt,
+header nav,
+header nav a,
+header nav button,
+.article-meta,
+main a[href*="/tags/"],
+main a[href*="/categories/"] {
+  font-family: var(--font-mono);
+}
+
+header nav {
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+}
+
+/* -- Gradient bar at the very top of every page --------------------------- */
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  z-index: 60;
+  background: linear-gradient(
+    90deg,
+    var(--nisha-gold),
+    var(--nisha-violet),
+    var(--nisha-magenta),
+    var(--nisha-violet),
+    var(--nisha-gold)
+  );
+  background-size: 300% 100%;
+  animation: nisha-gradient 12s linear infinite;
+}
+
+@keyframes nisha-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 300% 50%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body::before {
+    animation: none;
+  }
+}
+
+/* -- Custom homepage ------------------------------------------------------ */
+
+.nisha-hero {
+  padding: 2.5rem 0 1rem;
+}
+
+.nisha-hero-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgb(var(--color-primary-500));
+}
+
+.nisha-hero-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(2.25rem, 5vw, 3.75rem);
+  line-height: 1.05;
+  margin: 0.75rem 0 0;
+}
+
+.nisha-hero-title .accent {
+  background: linear-gradient(
+    90deg,
+    var(--nisha-gold),
+    var(--nisha-violet),
+    var(--nisha-magenta)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.nisha-hero-lead {
+  font-size: 1.125rem;
+  max-width: 42rem;
+  margin-top: 1.25rem;
+  color: rgb(var(--color-neutral-300));
+}
+
+.nisha-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.75rem;
+}
+
+.nisha-btn {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.03em;
+  padding: 0.6rem 1.1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.nisha-btn:hover {
+  transform: translateY(-2px);
+}
+
+.nisha-btn-primary {
+  background: rgb(var(--color-primary-500));
+  color: #07060f;
+  font-weight: 600;
+}
+
+.nisha-btn-ghost {
+  border: 1px solid rgb(var(--color-neutral-700));
+  color: rgb(var(--color-neutral-100));
+}
+
+.nisha-btn-ghost:hover {
+  border-color: rgb(var(--color-secondary-500));
+  color: rgb(var(--color-secondary-300));
+}
+
+.nisha-section-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin: 3.5rem 0 0.5rem;
+}
+
+.nisha-section-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+.nisha-section-link {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  color: rgb(var(--color-primary-500));
+  text-decoration: none;
+}
+
+.nisha-section-link:hover {
+  text-decoration: underline;
+}
+
+.nisha-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .nisha-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .nisha-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.nisha-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1.25rem;
+  border-radius: 0.85rem;
+  border: 1px solid rgb(var(--color-neutral-800));
+  background: rgba(var(--color-neutral-900), 0.6);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.nisha-card:hover {
+  transform: translateY(-3px);
+  border-color: rgb(var(--color-primary-600));
+}
+
+.nisha-card-date {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: rgb(var(--color-neutral-400));
+}
+
+.nisha-card-title {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1.15rem;
+  line-height: 1.25;
+  margin: 0.4rem 0 0.6rem;
+}
+
+.nisha-card-title a {
+  color: rgb(var(--color-neutral-100));
+  text-decoration: none;
+}
+
+.nisha-card:hover .nisha-card-title a {
+  color: rgb(var(--color-primary-400));
+}
+
+.nisha-card-summary {
+  font-size: 0.92rem;
+  color: rgb(var(--color-neutral-400));
+  flex-grow: 1;
+}
+
+.nisha-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.9rem;
+}
+
+.nisha-tag {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.03em;
+  padding: 0.15rem 0.5rem;
+  border-radius: 0.35rem;
+  color: rgb(var(--color-secondary-300));
+  background: rgba(var(--color-secondary-900), 0.35);
+}
